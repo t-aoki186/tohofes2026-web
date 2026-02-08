@@ -345,7 +345,7 @@
 			</a>
 			<p class="text-white">{school_address}</p>
 		</div>
-		<!---->
+		<!--アコーディオン-->
 		<div class="overflow-hidden rounded-lg border">
 			<button
 				class="justfy-between flex w-full items-center bg-gray-100 p-4 transition"
