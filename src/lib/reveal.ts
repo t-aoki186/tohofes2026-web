@@ -1,4 +1,4 @@
-export function revealOnScroll(node: HTMLElement) {
+export function reveal(node: HTMLElement) {
   const observer = new IntersectionObserver(
     ([entry]) => {
       if (entry.isIntersecting) {
@@ -6,7 +6,7 @@ export function revealOnScroll(node: HTMLElement) {
         observer.unobserve(node);
       }
     },
-    { threshold: 0.2 }
+    { threshold: 0.1 }
   );
 
   observer.observe(node);

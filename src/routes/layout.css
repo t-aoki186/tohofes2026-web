@@ -172,8 +172,10 @@ body {
 	border-bottom: 2px solid var(--main-text-color);
 	overflow: hidden;
 	background-color: white;
-	width: 95%;
+	width: 100%;
+	max-width: 500px;
 	padding: 10px 15px;
+	margin: 0 auto;
 }
 
 .s-search-input {
