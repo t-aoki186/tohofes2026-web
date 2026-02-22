@@ -14,6 +14,7 @@
 :root {
 	--main-text-color: #cb3565;
 	--sub-text-color: #ffffff;
+	--ats-text-color: #ccc;
 }
 
 body {
@@ -55,7 +56,8 @@ body {
 	font-size: 1.8rem;
 	font-weight: 600;
 	margin-bottom: 1.25rem;
-	text-align: center;
+	margin-left: 0.5rem;
+	text-align: left;
 }
 
 #scroll-down {

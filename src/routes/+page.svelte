@@ -26,9 +26,11 @@
 </div>
 
 <main>
-	<div class="">
-		<img src="" alt="test" />
-		<p class="">来場者の皆様へ</p>
+	<div class="container mx-auto mt-4">
+		<p class="tf26-page-title"><i class="fa-solid fa-circle-info"></i>来場者の皆様の皆様へ</p>
+	</div>
+	<div class="container mx-auto rounded-xl p-4 shadow-[0_4px_10px_var(--ats-text-color)]">
+		<p>test</p>
 	</div>
 	<hr />
 </main>

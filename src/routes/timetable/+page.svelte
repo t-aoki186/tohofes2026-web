@@ -10,7 +10,7 @@
 
 <main class="mt-15 mr-1 ml-1">
 	<div class="container mx-auto">
-		<p class="tf26-page-title">桐朋祭とは</p>
+		<p class="tf26-page-title">タイムテーブル</p>
 	</div>
 	<div class="container mx-auto rounded-xl p-4 shadow-[0_4px_10px_var(--ats-text-color)]">
 		<p>test</p>

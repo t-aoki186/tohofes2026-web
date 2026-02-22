@@ -123,12 +123,12 @@
 					<a href="/about" class="header-text ml-3 text-xs tracking-wider transition">桐朋祭とは</a>
 				</li>
 				<li>
-					<a href="/for-visitors" class="header-text ml-3 text-xs tracking-wider transition"
+					<a href="/visitor" class="header-text ml-3 text-xs tracking-wider transition"
 						>来場者の皆様へ</a
 					>
 				</li>
 				<li>
-					<a href="/circle" class="header-text ml-3 text-xs tracking-wider transition"
+					<a href="/organizations" class="header-text ml-3 text-xs tracking-wider transition"
 						>団体/飲食/イベント</a
 					>
 				</li>
@@ -153,8 +153,8 @@
 			<ul class="flex flex-col gap-4 text-sm tracking-wide">
 				<li><a href="/" class="header-text">ホーム</a></li>
 				<li><a href="/about" class="header-text">桐朋祭とは</a></li>
-				<li><a href="/for-visitors" class="header-text">来場者の皆様へ</a></li>
-				<li><a href="/circle" class="header-text">団体/飲食/イベント</a></li>
+				<li><a href="/visitor" class="header-text">来場者の皆様へ</a></li>
+				<li><a href="/organizations" class="header-text">団体/飲食/イベント</a></li>
 				<li><a href="/timetable" class="header-text">タイムテーブル</a></li>
 				<li>
 					<button class="header-text" onclick={() => (otherOpen = !otherOpen)}>その他</button>
@@ -295,7 +295,7 @@
 				<h4>参加団体</h4>
 				<ul>
 					<li>
-						<a href="/circle/club/tcc">
+						<a href="/organizations/club/tcc">
 							<span>コンピューター部</span>
 						</a>
 					</li>
