@@ -14,6 +14,7 @@
 :root {
 	--main-text-color: #cb3565;
 	--sub-text-color: #ffffff;
+	--hover-main-text-color: #b02e58;
 	--ats-text-color: #ccc;
 }
 
@@ -22,15 +23,20 @@ body {
 	background-color: #ffffff;
 }
 
+/*== nprogress関係 ==*/
 #nprogress .bar {
 	background: var(--main-text-color) !important;
 }
 
 #nprogress .spinner-icon {
-  border-top-color: var(--main-text-color) !important;
-  border-left-color: var(--main-text-color) !important;
+	border-top-color: var(--main-text-color) !important;
+	border-left-color: var(--main-text-color) !important;
 }
+/**/
 
+/*== タグ共通スタイル ==*/
+
+/*hrタグ*/
 .main-hr {
 	border: none;
 	height: 1px;
@@ -45,6 +51,39 @@ body {
 	margin: 10px 0;
 }
 
+/*aタグ*/
+.link-main {
+	display: flex;
+	background-color: none;
+	border: var(--main-text-color) solid 1.5px;
+	color: var(--main-text-color);
+	transition: 0.5s;
+	text-decoration: none;
+	border-radius: 50px;
+	padding: 5px 10px;
+	width: fit-content;
+	margin: 4px auto;
+	text-align: center;
+	text-transform: uppercase;
+	vertical-align: middle;
+	align-items: center;
+	cursor: pointer;
+}
+
+.link-main:hover {
+	background-color: color-mix(in srgb, var(--hover-main-text-color), transparent 90%);
+}
+
+/*container*/
+.container-s {
+	@apply mx-auto rounded-xl p-4 shadow-[0_4px_10px_var(--ats-text-color)];
+}
+
+/**/
+
+/*== 共通 ==*/
+
+/*btn-icon*/
 .other-close-ico {
 	color: var(--main-text-color);
 	transition-property: all;
@@ -52,12 +91,150 @@ body {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.tf26-page-title{
+/*title*/
+.tf26-page-title {
 	font-size: 1.8rem;
 	font-weight: 600;
 	margin-bottom: 1.25rem;
 	margin-left: 0.5rem;
 	text-align: left;
+	color: var(--main-text-color);
+}
+
+/*header*/
+.header-hamburger {
+	background-color: var(--main-text-color);
+}
+
+.header-text {
+	color: var(--main-text-color);
+	cursor: pointer;
+}
+
+/*footer*/
+.footer {
+	background-color: var(--main-text-color);
+	margin: 0;
+}
+
+.footer-top-content {
+	width: 90%;
+	margin: 20px auto;
+	padding: 20px;
+	border-radius: 10px;
+	display: flex;
+}
+
+.footer-bottom-content {
+	width: 90%;
+	margin: 20px auto;
+	padding: 20px;
+}
+
+.footer-flex-content {
+	width: calc(100% / 4);
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	padding: 15px;
+	border-radius: 8px;
+}
+
+.footer-flex-content a,
+.footer-span,
+.footer-link,
+.footer-text {
+	color: var(--sub-text-color);
+	font-size: 0.9rem;
+	gap: 10px;
+	text-decoration: none;
+	margin-top: 5px;
+}
+
+.footer-flex-content h4 {
+	color: var(--sub-text-color);
+	margin-bottom: 10px;
+	border-left: 3px solid var(--sub-text-color);
+	padding-left: 6px;
+	letter-spacing: 2px;
+}
+
+.footer-flex-content li {
+	list-style: none;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+/*検索フォーム*/
+.s-search-form {
+	display: flex;
+	align-items: center;
+	border-bottom: 2px solid var(--main-text-color);
+	overflow: hidden;
+	background-color: white;
+	width: 95%;
+	padding: 10px 15px;
+}
+
+.s-search-input {
+	border: none;
+	flex: 1;
+	background-color: transparent;
+	color: black;
+	min-width: 10vw;
+}
+
+.s-search-input:focus {
+	outline: none;
+	box-shadow: none;
+}
+
+.m-search-button {
+	border: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0; /* ボタンの幅を縮めないように */
+}
+
+.m-search-button i {
+	font-size: 18px;
+	color: var(--main-text-color);
+}
+
+.m-search-button:hover i {
+	color: #000;
+}
+
+@media (max-width: 768px) {
+	.footer_link {
+		font-size: 0.7rem;
+	}
+
+	.footer_text {
+		color: #c5c5c5;
+		font-size: 0.7rem;
+	}
+
+	.footer_logo {
+		width: 120px;
+		height: auto;
+	}
+
+	.footer-top-content {
+		width: 95%;
+	}
+
+	.footer-bottom-content {
+		width: 95%;
+	}
+}
+/**/
+
+/*== トップページ ==*/
+.tp-info {
+	background-color: color-mix(in srgb, var(--main-text-color), transparent 60%);
 }
 
 #scroll-down {
@@ -295,95 +472,5 @@ body {
 		-moz-transform: scale(1, 0);
 		-o-transform: scale(1, 0);
 		transform: scale(1, 0);
-	}
-}
-
-/*===============*/
-/*--- 共通部品 ---*/
-/*===============*/
-.header-hamburger {
-	background-color: var(--main-text-color);
-}
-
-.header-text {
-	color: var(--main-text-color);
-	cursor: pointer;
-}
-
-/*---footer---*/
-.footer{
-	background-color: var(--main-text-color);
-	margin: 0;
-}
-
-.footer-top-content {
-	width: 90%;
-	margin: 20px auto;
-	padding: 20px;
-	border-radius: 10px;
-	display: flex;
-}
-
-.footer-bottom-content {
-	width: 90%;
-	margin: 20px auto;
-	padding: 20px;
-}
-
-.footer-flex-content {
-	width: calc(100% / 4);
-	display: flex;
-	flex-direction: column;
-	flex: 1;
-	padding: 15px;
-	border-radius: 8px;
-}
-
-.footer-flex-content a,
-.footer-span,
-.footer-link,
-.footer-text {
-	color: var(--sub-text-color);
-	font-size: 0.9rem;
-	gap: 10px;
-	text-decoration: none;
-	margin-top: 5px;
-}
-
-.footer-flex-content h4 {
-	color: var(--sub-text-color);
-	margin-bottom: 10px;
-	border-left: 3px solid var(--sub-text-color);
-	padding-left: 6px;
-	letter-spacing: 2px;
-}
-
-.footer-flex-content li {
-	list-style: none;
-	margin-left: 5px;
-	margin-top: 5px;
-}
-
-@media (max-width: 768px) {
-	.footer_link {
-		font-size: 0.7rem;
-	}
-
-	.footer_text {
-		color: #c5c5c5;
-		font-size: 0.7rem;
-	}
-
-	.footer_logo {
-		width: 120px;
-		height: auto;
-	}
-
-	.footer-top-content {
-		width: 95%
-	}
-
-	.footer-bottom-content {
-		width: 95%
 	}
 }

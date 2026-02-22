@@ -360,10 +360,10 @@
 		<br />
 		<hr class="sub-hr" />
 		<br />
-		<a href="/site/terms" class="footer-link" style="margin-right: 10px;">利用規約</a><span
+		<a href="/site/site-policy" class="footer-link" style="margin-right: 10px;">サイトポリシー</a><span
 			class="footer-span">|</span
 		>
-		<a href="/site/privacy" class="footer-link" style="margin-right: 10px; margin-left: 10px;"
+		<a href="/site/privacy-policy" class="footer-link" style="margin-right: 10px; margin-left: 10px;"
 			>プライバシーポリシー</a
 		><span class="footer-span">|</span>
 		<a href="/site/contact" class="footer-link" style="margin-left: 10px;">お問い合わせ</a>
