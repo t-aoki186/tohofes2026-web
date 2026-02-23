@@ -12,7 +12,7 @@
 
 <div class="relative h-screen w-full">
 	<img
-		src="https://pic.atserver186.jp/img/tohofes/toho.webp"
+		src="https://cdn.atserver186.jp/img/tf26/material/top-img.webp"
 		alt="桐朋画像"
 		class="h-full w-full object-cover"
 	/>
@@ -44,26 +44,53 @@
 	<!--e:来場者の皆様へ-->
 	<!---->
 	<!--s:お知らせ-->
-	<div class="container m-auto mt-10 rounded-xl bg-(--title-bg-color)">
-		<p use:reveal class="tf26-page-title">
-			{#each 'お知らせ'.split('') as char, i}
-				<span class="char" style={`--d: ${i * 0.05}s`}>{char}</span>
-			{/each}
-		</p>
-	</div>
+	<div class="container m-auto mt-10 rounded-xl bg-(--title-bg-color)"></div>
 	<div class="container mx-auto">
-		{#each data.latest as item}
-			<li class="mb-4">
-				<a href="/news/{item.id}">
-					<div>
-						<p class="font-bold">{item.title}</p>
-						<p class="text-sm text-gray-600">{new Date(item.date).toLocaleDateString()}</p>
-						<p>{item.heading}</p>
-					</div>
-				</a>
-			</li>
-		{/each}
-
+		<div class="main-link">
+			<div class="link-3" style="margin: 0 5px 5px 5px; ">
+				<p use:reveal class="news-section-title" style="padding: 0 0 10px 0;">
+					{#each '・お知らせ'.split('') as char, i}
+						<span class="char text-(--main-text-color)" style={`--d: ${i * 0.05}s`}>{char}</span>
+					{/each}
+				</p>
+				<hr class="main-hr" />
+				{#each data.latest as item}
+					<ul>
+						<li class="mx-auto mb-4 w-full list-none">
+							<a href="/news/{item.id}">
+								<div
+									class="news-list flex border-l-2 pl-4"
+									style="border-left-color: var(--main-text-color);"
+								>
+									<div class="news-list-date-box mr-4">
+										<span class="news-list-month"
+											>{String(new Date(item.date).getMonth() + 1).padStart(2, '0')}</span
+										>
+										<span class="news-list-slash">/</span>
+										<span class="news-list-date"
+											>{String(new Date(item.date).getDate()).padStart(2, '0')}</span
+										>
+									</div>
+									<div class="truncate-parent flex-col">
+										<p class="truncate-title ml-2 text-xl font-bold">{item.title}</p>
+										<p class="truncate-heading mb-2">{item.heading}</p>
+									</div>
+									<div class="news-list-icon my-auto ml-auto">
+										<i class="fa-solid fa-angles-right left-auto mr-2"></i>
+									</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+				{/each}
+			</div>
+			<div class="link-4 flex items-center justify-center">
+				<i
+					class="fa-solid fa-bullhorn news-megaphone m-10 block -scale-x-100 rotate-30 transform text-[12rem]"
+				></i>
+			</div>
+		</div>
+		<br />
 		<a href="/news" class="link-main">
 			<div class="link-main-underline">
 				<i class="fa-solid fa-arrow-right-long"></i>
@@ -86,20 +113,14 @@
 			<div class="link-2">
 				<!--テーマ説明-->
 				<div class="map-text">
-					<p
-						class="my-auto text-(--main-text-color)"
-						style="font-size: calc(1.5rem * var(--mantine-scale));"
-					>
+					<p class="my-auto text-xl text-(--main-text-color)">
 						桐朋中学・高等学校<br />〒186-0004<br /><i class="fa-solid fa-location-dot mr-1 text-xs"
 						></i>東京都国立市中3-1-10
 					</p>
 				</div>
 				<hr class="main-hr" />
 				<div class="map-text">
-					<p
-						class="my-auto text-(--main-text-color)"
-						style="font-size: calc(1.5rem * var(--mantine-scale));"
-					>
+					<p class="my-auto text-xl text-(--main-text-color)">
 						<i class="fa-solid fa-train mr-1 text-xs"></i>JR中央線国立駅より徒歩20分<br /><i
 							class="fa-solid fa-train mr-1 text-xs"
 						></i>JR南武線谷保駅より徒歩15分
@@ -119,7 +140,7 @@
 			</div>
 		</div>
 		<br />
-		<a href="/theme" class="link-main">
+		<a href="/access" class="link-main">
 			<div class="link-main-underline">
 				<i class="fa-solid fa-arrow-right-long"></i>
 				<span>アクセスの詳細はこちら</span>
@@ -304,8 +325,33 @@
 		transition: border-color 0.3s;
 	}
 
-	.link-2:hover {
+	.link-2:hover,
+	.link-3:hover,
+	.link-4:hover {
 		border-color: var(--main-text-color);
+	}
+
+	.link-3 {
+		width: 62.5%; /* 10/16 */
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		padding: 15px;
+		margin: 5px;
+		border: 1px solid transparent;
+		transition: border-color 0.3s;
+	}
+	.link-4 {
+		width: 37.5%; /* 6/16 */
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		padding: 15px;
+		margin: 5px;
+		border: 1px solid transparent;
+		transition: border-color 0.3s;
 	}
 
 	.map-text {
@@ -320,8 +366,266 @@
 			flex-direction: column;
 		}
 
-		.link-2 {
+		.link-2,
+		.link-3,
+		.link-4 {
 			width: 100%;
 		}
+	}
+
+	#scroll-down {
+		display: block;
+		position: relative;
+		padding-top: 79px;
+		text-align: center;
+	}
+
+	#scroll-title {
+		display: block;
+		text-transform: uppercase;
+		color: white;
+		font-family: 'raleway';
+		font-size: 16px;
+		font-weight: bold;
+		letter-spacing: 0.4em;
+		text-align: center;
+		transform: rotate(90deg);
+		margin-bottom: 45px;
+	}
+	#scroll-down::before {
+		-webkit-animation: elasticus 2.9s cubic-bezier(1, 0, 0, 1) infinite;
+		/* Safari 4+ */
+		-moz-animation: elasticus 2.9s cubic-bezier(1, 0, 0, 1) infinite;
+		/* Fx 5+ */
+		-o-animation: elasticus 2.9s cubic-bezier(1, 0, 0, 1) infinite;
+		/* Opera 12+ */
+		animation: elasticus 2.9s cubic-bezier(1, 0, 0, 1) infinite;
+		/* IE 10+, Fx 29+ */
+		position: absolute;
+		top: 0px;
+		left: 50%;
+		margin-left: -1px;
+		width: 2px;
+		height: 90px;
+		background: white;
+		content: ' ';
+	}
+	@-webkit-keyframes elasticus {
+		0% {
+			-webkit-transform-origin: 0% 0%;
+			-ms-transform-origin: 0% 0%;
+			-moz-transform-origin: 0% 0%;
+			-o-transform-origin: 0% 0%;
+			transform-origin: 0% 0%;
+			-webkit-transform: scale(1, 0);
+			-ms-transform: scale(1, 0);
+			-moz-transform: scale(1, 0);
+			-o-transform: scale(1, 0);
+			transform: scale(1, 0);
+		}
+		50% {
+			-webkit-transform-origin: 0% 0%;
+			-ms-transform-origin: 0% 0%;
+			-moz-transform-origin: 0% 0%;
+			-o-transform-origin: 0% 0%;
+			transform-origin: 0% 0%;
+			-webkit-transform: scale(1, 1);
+			-ms-transform: scale(1, 1);
+			-moz-transform: scale(1, 1);
+			-o-transform: scale(1, 1);
+			transform: scale(1, 1);
+		}
+		50.1% {
+			-webkit-transform-origin: 0% 100%;
+			-ms-transform-origin: 0% 100%;
+			-moz-transform-origin: 0% 100%;
+			-o-transform-origin: 0% 100%;
+			transform-origin: 0% 100%;
+			-webkit-transform: scale(1, 1);
+			-ms-transform: scale(1, 1);
+			-moz-transform: scale(1, 1);
+			-o-transform: scale(1, 1);
+			transform: scale(1, 1);
+		}
+		100% {
+			-webkit-transform-origin: 0% 100%;
+			-ms-transform-origin: 0% 100%;
+			-moz-transform-origin: 0% 100%;
+			-o-transform-origin: 0% 100%;
+			transform-origin: 0% 100%;
+			-webkit-transform: scale(1, 0);
+			-ms-transform: scale(1, 0);
+			-moz-transform: scale(1, 0);
+			-o-transform: scale(1, 0);
+			transform: scale(1, 0);
+		}
+	}
+	@-moz-keyframes elasticus {
+		0% {
+			-webkit-transform-origin: 0% 0%;
+			-ms-transform-origin: 0% 0%;
+			-moz-transform-origin: 0% 0%;
+			-o-transform-origin: 0% 0%;
+			transform-origin: 0% 0%;
+			-webkit-transform: scale(1, 0);
+			-ms-transform: scale(1, 0);
+			-moz-transform: scale(1, 0);
+			-o-transform: scale(1, 0);
+			transform: scale(1, 0);
+		}
+		50% {
+			-webkit-transform-origin: 0% 0%;
+			-ms-transform-origin: 0% 0%;
+			-moz-transform-origin: 0% 0%;
+			-o-transform-origin: 0% 0%;
+			transform-origin: 0% 0%;
+			-webkit-transform: scale(1, 1);
+			-ms-transform: scale(1, 1);
+			-moz-transform: scale(1, 1);
+			-o-transform: scale(1, 1);
+			transform: scale(1, 1);
+		}
+		50.1% {
+			-webkit-transform-origin: 0% 100%;
+			-ms-transform-origin: 0% 100%;
+			-moz-transform-origin: 0% 100%;
+			-o-transform-origin: 0% 100%;
+			transform-origin: 0% 100%;
+			-webkit-transform: scale(1, 1);
+			-ms-transform: scale(1, 1);
+			-moz-transform: scale(1, 1);
+			-o-transform: scale(1, 1);
+			transform: scale(1, 1);
+		}
+		100% {
+			-webkit-transform-origin: 0% 100%;
+			-ms-transform-origin: 0% 100%;
+			-moz-transform-origin: 0% 100%;
+			-o-transform-origin: 0% 100%;
+			transform-origin: 0% 100%;
+			-webkit-transform: scale(1, 0);
+			-ms-transform: scale(1, 0);
+			-moz-transform: scale(1, 0);
+			-o-transform: scale(1, 0);
+			transform: scale(1, 0);
+		}
+	}
+	@-o-keyframes elasticus {
+		0% {
+			-webkit-transform-origin: 0% 0%;
+			-ms-transform-origin: 0% 0%;
+			-moz-transform-origin: 0% 0%;
+			-o-transform-origin: 0% 0%;
+			transform-origin: 0% 0%;
+			-webkit-transform: scale(1, 0);
+			-ms-transform: scale(1, 0);
+			-moz-transform: scale(1, 0);
+			-o-transform: scale(1, 0);
+			transform: scale(1, 0);
+		}
+		50% {
+			-webkit-transform-origin: 0% 0%;
+			-ms-transform-origin: 0% 0%;
+			-moz-transform-origin: 0% 0%;
+			-o-transform-origin: 0% 0%;
+			transform-origin: 0% 0%;
+			-webkit-transform: scale(1, 1);
+			-ms-transform: scale(1, 1);
+			-moz-transform: scale(1, 1);
+			-o-transform: scale(1, 1);
+			transform: scale(1, 1);
+		}
+		50.1% {
+			-webkit-transform-origin: 0% 100%;
+			-ms-transform-origin: 0% 100%;
+			-moz-transform-origin: 0% 100%;
+			-o-transform-origin: 0% 100%;
+			transform-origin: 0% 100%;
+			-webkit-transform: scale(1, 1);
+			-ms-transform: scale(1, 1);
+			-moz-transform: scale(1, 1);
+			-o-transform: scale(1, 1);
+			transform: scale(1, 1);
+		}
+		100% {
+			-webkit-transform-origin: 0% 100%;
+			-ms-transform-origin: 0% 100%;
+			-moz-transform-origin: 0% 100%;
+			-o-transform-origin: 0% 100%;
+			transform-origin: 0% 100%;
+			-webkit-transform: scale(1, 0);
+			-ms-transform: scale(1, 0);
+			-moz-transform: scale(1, 0);
+			-o-transform: scale(1, 0);
+			transform: scale(1, 0);
+		}
+	}
+	@keyframes elasticus {
+		0% {
+			-webkit-transform-origin: 0% 0%;
+			-ms-transform-origin: 0% 0%;
+			-moz-transform-origin: 0% 0%;
+			-o-transform-origin: 0% 0%;
+			transform-origin: 0% 0%;
+			-webkit-transform: scale(1, 0);
+			-ms-transform: scale(1, 0);
+			-moz-transform: scale(1, 0);
+			-o-transform: scale(1, 0);
+			transform: scale(1, 0);
+		}
+		50% {
+			-webkit-transform-origin: 0% 0%;
+			-ms-transform-origin: 0% 0%;
+			-moz-transform-origin: 0% 0%;
+			-o-transform-origin: 0% 0%;
+			transform-origin: 0% 0%;
+			-webkit-transform: scale(1, 1);
+			-ms-transform: scale(1, 1);
+			-moz-transform: scale(1, 1);
+			-o-transform: scale(1, 1);
+			transform: scale(1, 1);
+		}
+		50.1% {
+			-webkit-transform-origin: 0% 100%;
+			-ms-transform-origin: 0% 100%;
+			-moz-transform-origin: 0% 100%;
+			-o-transform-origin: 0% 100%;
+			transform-origin: 0% 100%;
+			-webkit-transform: scale(1, 1);
+			-ms-transform: scale(1, 1);
+			-moz-transform: scale(1, 1);
+			-o-transform: scale(1, 1);
+			transform: scale(1, 1);
+		}
+		100% {
+			-webkit-transform-origin: 0% 100%;
+			-ms-transform-origin: 0% 100%;
+			-moz-transform-origin: 0% 100%;
+			-o-transform-origin: 0% 100%;
+			transform-origin: 0% 100%;
+			-webkit-transform: scale(1, 0);
+			-ms-transform: scale(1, 0);
+			-moz-transform: scale(1, 0);
+			-o-transform: scale(1, 0);
+			transform: scale(1, 0);
+		}
+	}
+	.truncate-parent {
+		min-width: 0;
+		max-width: 100%;
+	}
+	.truncate-title {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: block;
+		max-width: 100%;
+	}
+	.truncate-heading {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: block;
+		max-width: 100%;
 	}
 </style>

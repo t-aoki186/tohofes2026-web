@@ -21,12 +21,13 @@
 
 body {
 	font-family: 'Noto Sans JP', sans-serif;
-	  /* 方眼紙模様に必須のスタイル */
-  background-image: linear-gradient(0deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px)),
-                    linear-gradient(90deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px));
-  background-size: 16px 16px;
-  background-repeat: repeat;
-  background-position: center center;
+	/* 方眼紙模様に必須のスタイル */
+	background-image:
+		linear-gradient(0deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px)),
+		linear-gradient(90deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px));
+	background-size: 16px 16px;
+	background-repeat: repeat;
+	background-position: center center;
 }
 
 /*== nprogress関係 ==*/
@@ -98,7 +99,6 @@ body {
 	background: var(--main-text-color);
 	transition: 0.3s;
 }
-
 
 /* 親aタグのホバーで下線を表示 */
 .link-main:hover .link-main-underline::after {
@@ -304,240 +304,75 @@ body {
 	color: white;
 }
 
-#scroll-down {
-	display: block;
-	position: relative;
-	padding-top: 79px;
-	text-align: center;
+/*== ニュース ==*/
+.news-section-title {
+	font-size: 1.8rem;
+	font-weight: 600;
+	text-align: left;
+	color: var(--main-text-color);
+	padding: 10px 0;
 }
 
-#scroll-title {
-	display: block;
-	text-transform: uppercase;
-	color: white;
-	font-family: 'raleway';
-	font-size: 16px;
-	font-weight: bold;
-	letter-spacing: 0.4em;
-	text-align: center;
-	transform: rotate(90deg);
-	margin-bottom: 45px;
+.news-megaphone {
+	color: color-mix(in srgb, var(--main-text-color), transparent 50%);
 }
-#scroll-down::before {
-	-webkit-animation: elasticus 2.9s cubic-bezier(1, 0, 0, 1) infinite;
-	/* Safari 4+ */
-	-moz-animation: elasticus 2.9s cubic-bezier(1, 0, 0, 1) infinite;
-	/* Fx 5+ */
-	-o-animation: elasticus 2.9s cubic-bezier(1, 0, 0, 1) infinite;
-	/* Opera 12+ */
-	animation: elasticus 2.9s cubic-bezier(1, 0, 0, 1) infinite;
-	/* IE 10+, Fx 29+ */
+
+.news-list {
+	position: relative;
+}
+
+.news-list::after {
+	content: '';
 	position: absolute;
-	top: 0px;
-	left: 50%;
-	margin-left: -1px;
-	width: 2px;
-	height: 90px;
-	background: white;
-	content: ' ';
+	left: auto;
+	right: 0;
+	bottom: 0;
+	width: 0; /* 初期状態は幅0 */
+	height: 2px;
+	background: var(--main-text-color);
+	transition: width 0.3s;
 }
-@-webkit-keyframes elasticus {
-	0% {
-		-webkit-transform-origin: 0% 0%;
-		-ms-transform-origin: 0% 0%;
-		-moz-transform-origin: 0% 0%;
-		-o-transform-origin: 0% 0%;
-		transform-origin: 0% 0%;
-		-webkit-transform: scale(1, 0);
-		-ms-transform: scale(1, 0);
-		-moz-transform: scale(1, 0);
-		-o-transform: scale(1, 0);
-		transform: scale(1, 0);
-	}
-	50% {
-		-webkit-transform-origin: 0% 0%;
-		-ms-transform-origin: 0% 0%;
-		-moz-transform-origin: 0% 0%;
-		-o-transform-origin: 0% 0%;
-		transform-origin: 0% 0%;
-		-webkit-transform: scale(1, 1);
-		-ms-transform: scale(1, 1);
-		-moz-transform: scale(1, 1);
-		-o-transform: scale(1, 1);
-		transform: scale(1, 1);
-	}
-	50.1% {
-		-webkit-transform-origin: 0% 100%;
-		-ms-transform-origin: 0% 100%;
-		-moz-transform-origin: 0% 100%;
-		-o-transform-origin: 0% 100%;
-		transform-origin: 0% 100%;
-		-webkit-transform: scale(1, 1);
-		-ms-transform: scale(1, 1);
-		-moz-transform: scale(1, 1);
-		-o-transform: scale(1, 1);
-		transform: scale(1, 1);
-	}
-	100% {
-		-webkit-transform-origin: 0% 100%;
-		-ms-transform-origin: 0% 100%;
-		-moz-transform-origin: 0% 100%;
-		-o-transform-origin: 0% 100%;
-		transform-origin: 0% 100%;
-		-webkit-transform: scale(1, 0);
-		-ms-transform: scale(1, 0);
-		-moz-transform: scale(1, 0);
-		-o-transform: scale(1, 0);
-		transform: scale(1, 0);
-	}
+
+.news-list:hover::after {
+	width: 98%;
 }
-@-moz-keyframes elasticus {
-	0% {
-		-webkit-transform-origin: 0% 0%;
-		-ms-transform-origin: 0% 0%;
-		-moz-transform-origin: 0% 0%;
-		-o-transform-origin: 0% 0%;
-		transform-origin: 0% 0%;
-		-webkit-transform: scale(1, 0);
-		-ms-transform: scale(1, 0);
-		-moz-transform: scale(1, 0);
-		-o-transform: scale(1, 0);
-		transform: scale(1, 0);
-	}
-	50% {
-		-webkit-transform-origin: 0% 0%;
-		-ms-transform-origin: 0% 0%;
-		-moz-transform-origin: 0% 0%;
-		-o-transform-origin: 0% 0%;
-		transform-origin: 0% 0%;
-		-webkit-transform: scale(1, 1);
-		-ms-transform: scale(1, 1);
-		-moz-transform: scale(1, 1);
-		-o-transform: scale(1, 1);
-		transform: scale(1, 1);
-	}
-	50.1% {
-		-webkit-transform-origin: 0% 100%;
-		-ms-transform-origin: 0% 100%;
-		-moz-transform-origin: 0% 100%;
-		-o-transform-origin: 0% 100%;
-		transform-origin: 0% 100%;
-		-webkit-transform: scale(1, 1);
-		-ms-transform: scale(1, 1);
-		-moz-transform: scale(1, 1);
-		-o-transform: scale(1, 1);
-		transform: scale(1, 1);
-	}
-	100% {
-		-webkit-transform-origin: 0% 100%;
-		-ms-transform-origin: 0% 100%;
-		-moz-transform-origin: 0% 100%;
-		-o-transform-origin: 0% 100%;
-		transform-origin: 0% 100%;
-		-webkit-transform: scale(1, 0);
-		-ms-transform: scale(1, 0);
-		-moz-transform: scale(1, 0);
-		-o-transform: scale(1, 0);
-		transform: scale(1, 0);
-	}
+
+.news-list-icon {
+	color: color-mix(in srgb, var(--hover-main-text-color), transparent 25%);
 }
-@-o-keyframes elasticus {
-	0% {
-		-webkit-transform-origin: 0% 0%;
-		-ms-transform-origin: 0% 0%;
-		-moz-transform-origin: 0% 0%;
-		-o-transform-origin: 0% 0%;
-		transform-origin: 0% 0%;
-		-webkit-transform: scale(1, 0);
-		-ms-transform: scale(1, 0);
-		-moz-transform: scale(1, 0);
-		-o-transform: scale(1, 0);
-		transform: scale(1, 0);
-	}
-	50% {
-		-webkit-transform-origin: 0% 0%;
-		-ms-transform-origin: 0% 0%;
-		-moz-transform-origin: 0% 0%;
-		-o-transform-origin: 0% 0%;
-		transform-origin: 0% 0%;
-		-webkit-transform: scale(1, 1);
-		-ms-transform: scale(1, 1);
-		-moz-transform: scale(1, 1);
-		-o-transform: scale(1, 1);
-		transform: scale(1, 1);
-	}
-	50.1% {
-		-webkit-transform-origin: 0% 100%;
-		-ms-transform-origin: 0% 100%;
-		-moz-transform-origin: 0% 100%;
-		-o-transform-origin: 0% 100%;
-		transform-origin: 0% 100%;
-		-webkit-transform: scale(1, 1);
-		-ms-transform: scale(1, 1);
-		-moz-transform: scale(1, 1);
-		-o-transform: scale(1, 1);
-		transform: scale(1, 1);
-	}
-	100% {
-		-webkit-transform-origin: 0% 100%;
-		-ms-transform-origin: 0% 100%;
-		-moz-transform-origin: 0% 100%;
-		-o-transform-origin: 0% 100%;
-		transform-origin: 0% 100%;
-		-webkit-transform: scale(1, 0);
-		-ms-transform: scale(1, 0);
-		-moz-transform: scale(1, 0);
-		-o-transform: scale(1, 0);
-		transform: scale(1, 0);
-	}
+
+/* .news-listホバー時のアイコンアニメーション */
+.news-list:hover .fa-angles-right {
+	font-size: 1.2rem;
+	margin-right: 0;
+	color: #b02e58;
+	transition:
+		font-size 0.3s,
+		margin-right 0.3s,
+		color 0.3s;
 }
-@keyframes elasticus {
-	0% {
-		-webkit-transform-origin: 0% 0%;
-		-ms-transform-origin: 0% 0%;
-		-moz-transform-origin: 0% 0%;
-		-o-transform-origin: 0% 0%;
-		transform-origin: 0% 0%;
-		-webkit-transform: scale(1, 0);
-		-ms-transform: scale(1, 0);
-		-moz-transform: scale(1, 0);
-		-o-transform: scale(1, 0);
-		transform: scale(1, 0);
-	}
-	50% {
-		-webkit-transform-origin: 0% 0%;
-		-ms-transform-origin: 0% 0%;
-		-moz-transform-origin: 0% 0%;
-		-o-transform-origin: 0% 0%;
-		transform-origin: 0% 0%;
-		-webkit-transform: scale(1, 1);
-		-ms-transform: scale(1, 1);
-		-moz-transform: scale(1, 1);
-		-o-transform: scale(1, 1);
-		transform: scale(1, 1);
-	}
-	50.1% {
-		-webkit-transform-origin: 0% 100%;
-		-ms-transform-origin: 0% 100%;
-		-moz-transform-origin: 0% 100%;
-		-o-transform-origin: 0% 100%;
-		transform-origin: 0% 100%;
-		-webkit-transform: scale(1, 1);
-		-ms-transform: scale(1, 1);
-		-moz-transform: scale(1, 1);
-		-o-transform: scale(1, 1);
-		transform: scale(1, 1);
-	}
-	100% {
-		-webkit-transform-origin: 0% 100%;
-		-ms-transform-origin: 0% 100%;
-		-moz-transform-origin: 0% 100%;
-		-o-transform-origin: 0% 100%;
-		transform-origin: 0% 100%;
-		-webkit-transform: scale(1, 0);
-		-ms-transform: scale(1, 0);
-		-moz-transform: scale(1, 0);
-		-o-transform: scale(1, 0);
-		transform: scale(1, 0);
-	}
+
+.news-list-date-box {
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 24px;
+	color: #666;
+	flex-shrink: 0;
+}
+
+.news-list-slash {
+	color: var(--main-text-color);
+	margin: 0 -8px;
+}
+
+.news-list-date {
+	display: inline-block;
+	vertical-align: sub;
+	font-size: 0.8em;
+}
+
+.news-list-month {
+	display: inline-block;
+	vertical-align: super;
+	font-size: 0.8em;
 }
