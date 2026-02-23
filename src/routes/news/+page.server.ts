@@ -1,6 +1,5 @@
-import { fetchNews } from "$lib/server/news";
+import { redirect } from '@sveltejs/kit';
 
-export async function load() {
-  const news = await fetchNews();
-  return { news };
+export function load() {
+  throw redirect(302, '/organizations/?category=news');
 }

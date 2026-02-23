@@ -108,7 +108,61 @@ body {
 }
 
 /*container*/
+.main-link {
+	width: 100%;
+	margin: 0 auto;
+	padding: 20px;
+	display: flex;
+	border: 1px solid transparent;
+	transition: border-color 0.3s;
+	border-color: var(--main-text-color);
+	border-radius: 10px;
+}
 
+.link-2 {
+	width: calc(100% / 2);
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	padding: 15px;
+	margin: 5px;
+}
+
+.link-3 {
+	width: 62.5%; /* 10/16 */
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	margin: 5px;
+}
+.link-4 {
+	width: 37.5%; /* 6/16 */
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	margin: 5px;
+}
+
+.map-text {
+	height: calc(100% / 2);
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+@media (max-width: 768px) {
+	.main-link {
+		flex-direction: column;
+	}
+
+	.link-2,
+	.link-3,
+	.link-4 {
+		width: 100%;
+	}
+}
 /**/
 
 /*== 共通 ==*/
@@ -126,7 +180,6 @@ body {
 	font-size: 1.8rem;
 	font-weight: 600;
 	margin-bottom: 1.25rem;
-	margin-left: 0.5rem;
 	text-align: center;
 	color: white;
 	padding: 10px 0;

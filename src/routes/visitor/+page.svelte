@@ -9,15 +9,15 @@
 	<title>{data.site_title}</title>
 </svelte:head>
 
-<main class="mt-15 mr-1 ml-1">
-	<div class="container mx-auto">
+<main class="mt-15 mr-1 ml-1 min-h-screen">
+	<div class="container m-auto mt-25 rounded-xl bg-(--title-bg-color)">
 		<p use:reveal class="tf26-page-title">
 			{#each '来場者の皆様へ'.split('') as char, i}
 				<span class="char" style={`--d: ${i * 0.05}s`}>{char}</span>
 			{/each}
 		</p>
 	</div>
-	<div class="container mx-auto rounded-xl p-4 shadow-[0_4px_10px_var(--ats-text-color)]">
-		<p>test</p>
-	</div>
+	<section class="container mx-auto mt-25 mb-25">
+		<p class="text-lg">テスト</p>
+	</section>
 </main>

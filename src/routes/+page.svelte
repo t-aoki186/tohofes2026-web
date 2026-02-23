@@ -304,75 +304,6 @@
 		opacity: 0.9;
 	}
 
-	.main-link {
-		width: 100%;
-		margin: 0 auto;
-		padding: 20px;
-		display: flex;
-		border: 1px solid transparent;
-		transition: border-color 0.3s;
-		border-color: var(--main-text-color);
-	}
-
-	.link-2 {
-		width: calc(100% / 2);
-		display: flex;
-		flex-direction: column;
-		flex: 1;
-		padding: 15px;
-		margin: 5px;
-		border: 1px solid transparent;
-		transition: border-color 0.3s;
-	}
-
-	.link-2:hover,
-	.link-3:hover,
-	.link-4:hover {
-		border-color: var(--main-text-color);
-	}
-
-	.link-3 {
-		width: 62.5%; /* 10/16 */
-		flex-grow: 1;
-		display: flex;
-		flex-direction: column;
-		flex: 1;
-		padding: 15px;
-		margin: 5px;
-		border: 1px solid transparent;
-		transition: border-color 0.3s;
-	}
-	.link-4 {
-		width: 37.5%; /* 6/16 */
-		flex-grow: 1;
-		display: flex;
-		flex-direction: column;
-		flex: 1;
-		padding: 15px;
-		margin: 5px;
-		border: 1px solid transparent;
-		transition: border-color 0.3s;
-	}
-
-	.map-text {
-		height: calc(100% / 2);
-		display: flex;
-		flex-direction: column;
-		flex: 1;
-	}
-
-	@media (max-width: 768px) {
-		.main-link {
-			flex-direction: column;
-		}
-
-		.link-2,
-		.link-3,
-		.link-4 {
-			width: 100%;
-		}
-	}
-
 	#scroll-down {
 		display: block;
 		position: relative;
@@ -383,7 +314,7 @@
 	#scroll-title {
 		display: block;
 		text-transform: uppercase;
-		color: white;
+		color: var(--main-text-color);
 		font-family: 'raleway';
 		font-size: 16px;
 		font-weight: bold;
@@ -407,7 +338,7 @@
 		margin-left: -1px;
 		width: 2px;
 		height: 90px;
-		background: white;
+		background: var(--main-text-color);
 		content: ' ';
 	}
 	@-webkit-keyframes elasticus {
