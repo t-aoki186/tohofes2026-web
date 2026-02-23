@@ -19,6 +19,18 @@
 		</p>
 	</div>
 	<section class="container mx-auto mt-25 mb-25">
+			<form class="s-search-form mb-4" action="/organizations/" method="GET">
+			<input
+				class="s-search-input"
+				type="text"
+				id="searchTerm"
+				name="search"
+				placeholder="検索..."
+			/>
+			<button class="m-search-button" type="submit" title="検索する"
+				><i class="fas fa-search"></i></button
+			>
+		</form>
 		{#each data.results as item}
 			<li class="mb-4">
 				<a href={getUrl(item)}>{item.title}</a>

@@ -4,10 +4,11 @@
 
 	import { onMount } from 'svelte';
 	import { reveal } from '$lib/reveal';
+    import { mdToHtml } from '$lib/utils/markdown';
 </script>
 
 <svelte:head>
-	<title>{data.site_title}</title>
+	<title>{item.title} | {data.site_title}</title>
 </svelte:head>
 
 <main class="mt-15 mr-1 ml-1 min-h-screen">
@@ -19,6 +20,6 @@
 		</p>
 	</div>
 	<section class="container mx-auto mt-25 mb-25">
-		<p class="text-lg">{item.body}</p>
+		<div class="prose mt-4 min-w-full">{@html mdToHtml(item.body)}</div>
 	</section>
 </main>
