@@ -16,11 +16,17 @@
 	--sub-text-color: #ffffff;
 	--hover-main-text-color: #b02e58;
 	--ats-text-color: #ccc;
+	--title-bg-color: #cb3565;
 }
 
 body {
 	font-family: 'Noto Sans JP', sans-serif;
-	background-color: #ffffff;
+	  /* 方眼紙模様に必須のスタイル */
+  background-image: linear-gradient(0deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px)),
+                    linear-gradient(90deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px));
+  background-size: 16px 16px;
+  background-repeat: repeat;
+  background-position: center center;
 }
 
 /*== nprogress関係 ==*/
@@ -54,30 +60,54 @@ body {
 /*aタグ*/
 .link-main {
 	display: flex;
-	background-color: none;
+	position: relative;
+	background-color: white;
 	border: var(--main-text-color) solid 1.5px;
-	color: var(--main-text-color);
+	color: var(--title-bg-color);
 	transition: 0.5s;
 	text-decoration: none;
 	border-radius: 50px;
-	padding: 5px 10px;
+	padding: 10px 15px;
 	width: fit-content;
-	margin: 4px auto;
-	text-align: center;
 	text-transform: uppercase;
 	vertical-align: middle;
 	align-items: center;
 	cursor: pointer;
+	@apply mx-auto text-center;
 }
 
-.link-main:hover {
+/* .link-main-underline: 下線アニメーション用 */
+.link-main-underline {
+	position: relative;
+	display: inline-block;
+	@apply mx-auto;
+}
+
+/*.link-main:hover {
 	background-color: color-mix(in srgb, var(--hover-main-text-color), transparent 90%);
+}*/
+
+.link-main-underline::after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -2px;
+	width: 0; /* 初期状態は幅0 */
+	height: 1px;
+	background: var(--main-text-color);
+	transition: 0.3s;
+}
+
+
+/* 親aタグのホバーで下線を表示 */
+.link-main:hover .link-main-underline::after {
+	width: 95%;
+	text-align: center;
+	align-items: center;
 }
 
 /*container*/
-.container-s {
-	@apply mx-auto rounded-xl p-4 shadow-[0_4px_10px_var(--ats-text-color)];
-}
 
 /**/
 
@@ -97,8 +127,9 @@ body {
 	font-weight: 600;
 	margin-bottom: 1.25rem;
 	margin-left: 0.5rem;
-	text-align: left;
-	color: var(--main-text-color);
+	text-align: center;
+	color: white;
+	padding: 10px 0;
 }
 
 /*header*/
@@ -127,7 +158,6 @@ body {
 
 .footer-bottom-content {
 	width: 90%;
-	margin: 20px auto;
 	padding: 20px;
 }
 
@@ -198,6 +228,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	flex-shrink: 0; /* ボタンの幅を縮めないように */
+	transform: 0.3s;
 }
 
 .m-search-button i {
@@ -206,7 +237,7 @@ body {
 }
 
 .m-search-button:hover i {
-	color: #000;
+	color: var(--hover-main-text-color);
 }
 
 @media (max-width: 768px) {
@@ -232,11 +263,45 @@ body {
 		width: 95%;
 	}
 }
+
+/*アニメーション関連*/
+.char {
+	display: inline-block;
+	opacity: 0;
+	transform: translateY(10px);
+}
+
+.visible .char {
+	animation: rise 0.4s ease forwards;
+	animation-delay: var(--d);
+}
+
+.split-text .char {
+	opacity: 0;
+	animation: none;
+}
+
+.visible .split-text .char {
+	animation: rise 0.4s ease forwards;
+	animation-delay: calc(var(--index) * 0.05s);
+}
+
+@keyframes rise {
+	0% {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
 /**/
 
 /*== トップページ ==*/
 .tp-info {
-	background-color: color-mix(in srgb, var(--main-text-color), transparent 60%);
+	background-color: var(--title-bg-color);
+	color: white;
 }
 
 #scroll-down {
