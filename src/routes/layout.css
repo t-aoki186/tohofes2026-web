@@ -177,12 +177,22 @@ body {
 
 /*title*/
 .tf26-page-title {
-	font-size: 1.8rem;
+	font-size: 2.5rem;
 	font-weight: 600;
 	margin-bottom: 1.25rem;
 	text-align: center;
 	color: white;
 	padding: 10px 0;
+}
+
+.tf26-section-title {
+	font-size: 1.8rem;
+	font-weight: 600;
+	text-align: left;
+	padding: 0.1em 0.5em;
+	color: var(--main-text-color);
+	background: transparent;
+	border-left: solid 5px var(--main-text-color); 
 }
 
 /*header*/

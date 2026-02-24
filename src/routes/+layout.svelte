@@ -203,8 +203,8 @@
 					>
 				</li>
 				<li>
-					<a href="/site/about" class="header-text"
-						><i class="fa-solid fa-circle-info mr-1 text-xs"></i>このサイトについて</a
+					<a href="/site/info" class="header-text"
+						><i class="fa-solid fa-circle-info mr-1 text-xs"></i>情報</a
 					>
 				</li>
 				<li>
@@ -306,20 +306,20 @@
 				<ul>
 					<li>
 						<a href="https://x.com" target="_blank">
-							<i class="fa-solid fa-arrow-up-right-from-square mr-1 text-xs"></i>
-							<span>公式Twitter(現X)</span>
+							<i class="fa-brands fa-x-twitter mr-1 text-xs"></i>
+							<span>X(Twitter)</span>
 						</a>
 					</li>
 					<li>
 						<a href="https://www.instagram.com" target="_blank">
-							<i class="fa-solid fa-arrow-up-right-from-square mr-1 text-xs"></i>
-							<span>公式Instagram</span>
+							<i class="fa-brands fa-instagram mr-1 text-xs"></i>
+							<span>Instagram</span>
 						</a>
 					</li>
 					<li>
 						<a href="https://atserver186.jp" target="_blank">
 							<i class="fa-solid fa-arrow-up-right-from-square mr-1 text-xs"></i>
-							<span>公式ATSocial</span>
+							<span>ATSocial</span>
 						</a>
 					</li>
 					<li>

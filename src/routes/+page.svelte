@@ -232,7 +232,21 @@
 		</p>
 	</div>
 	<div class="container mx-auto">
-		<p>桐朋祭は、毎年6月に開催される桐朋中学・高等学校の学園祭です。</p>
+		<div class="main-link">
+			<div class="link-2 bg-white" style="padding: 0 !important;">
+				<img
+					src="https://pic.atserver186.jp/tohofes2025.JPG"
+					alt="桐朋祭画像"
+					class="m-auto ml-auto block h-auto w-full"
+				/>
+			</div>
+			<div class="link-2">
+				<!--テーマ説明-->
+				<p use:reveal class="split-text my-auto text-(--main-text-color)">
+					桐朋祭は、毎年6月に開催される桐朋中学・高等学校の学園祭です。
+				</p>
+			</div>
+		</div>
 		<br />
 		<a href="/about" class="link-main">
 			<div class="link-main-underline">

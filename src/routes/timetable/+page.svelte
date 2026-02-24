@@ -9,15 +9,9 @@
 	<title>{data.site_title}</title>
 </svelte:head>
 
-<main class="mt-15 mr-1 ml-1">
-	<div class="container mx-auto">
-		<p use:reveal class="tf26-page-title">
-			{#each 'タイムテーブル'.split('') as char, i}
-				<span class="char" style={`--d: ${i * 0.05}s`}>{char}</span>
-			{/each}
-		</p>
+<main class="mt-15 mr-1 ml-1 min-h-screen">
+	<div class="container m-auto mt-25 border-b-2 border-b-(--main-text-color)">
+		<p class="tf26-page-title" style="color: black; margin-bottom: 0;">タイムテーブル</p>
 	</div>
-	<div class="container mx-auto rounded-xl p-4 shadow-[0_4px_10px_var(--ats-text-color)]">
-		<p>test</p>
-	</div>
+	<section class="container mx-auto mt-25 mb-25"></section>
 </main>

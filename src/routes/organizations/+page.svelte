@@ -11,15 +11,11 @@
 </svelte:head>
 
 <main class="mt-15 mr-1 ml-1 min-h-screen">
-	<div class="container m-auto mt-25 rounded-xl bg-(--title-bg-color)">
-		<p use:reveal class="tf26-page-title">
-			{#each '参加団体'.split('') as char, i}
-				<span class="char" style={`--d: ${i * 0.05}s`}>{char}</span>
-			{/each}
-		</p>
+	<div class="container m-auto mt-25 border-b-2 border-b-(--main-text-color)">
+		<p class="tf26-page-title" style="color: black; margin-bottom: 0;">参加団体</p>
 	</div>
 	<section class="container mx-auto mt-25 mb-25">
-			<form class="s-search-form mb-4" action="/organizations/" method="GET">
+		<form class="s-search-form mb-4" action="/organizations/" method="GET">
 			<input
 				class="s-search-input"
 				type="text"
@@ -27,6 +23,9 @@
 				name="search"
 				placeholder="検索..."
 			/>
+			<button class="m-search-button mr-4" type="button" title="絞り込み検索する"
+				><i class="fa-solid fa-sliders"></i></button
+			>
 			<button class="m-search-button" type="submit" title="検索する"
 				><i class="fas fa-search"></i></button
 			>
