@@ -29,18 +29,6 @@
 		'17:00'
 	];
 
-	// 時刻を分に変換
-	const toMinutes = (t: string) => {
-		const [h, m] = t.split(':').map(Number);
-		return h * 60 + m;
-	};
-
-	// t の次の時間ブロック
-	const nextTime = (t: string) => {
-		const i = times.indexOf(t);
-		return times[i + 1] ?? t; // 最後は自分自身
-	};
-
 	type value = 'ステージ' | '生徒による授業' | '部活' | 'バンド' | 'その他';
 
 	const timetableColors: Record<string, string> = {
@@ -82,11 +70,13 @@
 							{#each venues as v}
 								<td class="border p-1 align-top">
 									{#each data.timetable[day][v] as ev}
-										{#if toMinutes(ev.start) < toMinutes(nextTime(t)) && toMinutes(ev.end) > toMinutes(t)}
-											<div class={`mb-1 rounded p-1 ${timetableColors[v]}`}>
-												<div class="font-bold">{ev.title}</div>
-												<div class="text-sm">{ev.start} - {ev.end}</div>
-											</div>
+										{#if ev.start === t}
+											<a href={ev.url}>
+												<div class={`mb-1 rounded p-1 ${timetableColors[v]}`}>
+													<div class="font-bold">{ev.title}</div>
+													<div class="text-sm">{ev.start} - {ev.end}</div>
+												</div>
+											</a>
 										{/if}
 									{/each}
 								</td>

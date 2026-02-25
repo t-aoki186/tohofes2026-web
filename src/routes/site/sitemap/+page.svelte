@@ -3,10 +3,12 @@
 
 	import { onMount } from 'svelte';
 	import { reveal } from '$lib/reveal';
+
+    let pageTitle = 'サイトマップ';
 </script>
 
 <svelte:head>
-	<title>{data.site_title}</title>
+	<title>{ pageTitle } | {data.site_title}</title>
 </svelte:head>
 
 <main class="mt-15 mr-1 ml-1 min-h-screen">

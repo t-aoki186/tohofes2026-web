@@ -5,23 +5,23 @@ export async function load({ url }) {
   const category = url.searchParams.get("category");
   const search = url.searchParams.get("search");
 
-  // まず両方読み込む
+  //まず両方読み込む
   const news = await fetchNews();
   const orgs = await fetchOrganizations();
 
   let results = [];
 
-  // カテゴリ絞り込み
+  //カテゴリ絞り込み
   if (category === "news") {
     results = news;
   } else if (category === "organizations") {
     results = orgs;
   } else {
-    // カテゴリ指定なし → 全部
+    //カテゴリ指定がない場合はすべて表示する
     results = [...news, ...orgs];
   }
 
-  // キーワード検索
+  //キーワード検索の処理
   if (search) {
     const lower = search.toLowerCase();
     results = results.filter((item:any) =>
