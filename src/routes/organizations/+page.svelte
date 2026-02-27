@@ -8,7 +8,7 @@
 	import Modal from '$lib/components/Modal.svelte';
 	let show = $state(false);
 
-	let pageTitle = '団体/飲食/イベント';
+	let pageTitle = '団体/飲食/企画/イベント';
 </script>
 
 <svelte:head>
@@ -36,7 +36,10 @@
 					<a href="/organizations/?category=news">ニュース</a>
 				</li>
 				<li>
-					<a href="/organizations/?category=organizations">団体/飲食/イベント</a>
+					<a href="/organizations/?category=organizations">{pageTitle}</a>
+				</li>
+				<li>
+					<a href="/organizations/?category=organization-blogs">参加団体ブログ</a>
 				</li>
 			</ul>
 		</div>
