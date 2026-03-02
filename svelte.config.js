@@ -1,5 +1,8 @@
 import { mdsvex } from 'mdsvex';
-import adapter from '@sveltejs/adapter-auto';
+//import adapter from '@sveltejs/adapter-auto';
+
+import adapter from '@sveltejs/adapter-node';//nodeサーバーとしてビルドするためのアダプターを読み込む
+
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
