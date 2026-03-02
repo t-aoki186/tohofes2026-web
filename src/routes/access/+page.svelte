@@ -3,15 +3,17 @@
 
 	import { onMount } from 'svelte';
 	import { reveal } from '$lib/reveal';
+
+	let pageTitle = 'アクセス';
 </script>
 
 <svelte:head>
-	<title>{data.site_title}</title>
+	<title>{pageTitle} | {data.site_title}</title>
 </svelte:head>
 
 <main class="mt-15 mr-1 ml-1 min-h-screen">
 	<div class="container m-auto mt-25 border-b-2 border-b-(--main-text-color)">
-		<p class="tf26-page-title" style="color: black; margin-bottom: 0;">アクセス</p>
+		<p class="tf26-page-title" style="color: black; margin-bottom: 0;">{pageTitle}</p>
 	</div>
 	<section class="container mx-auto mt-25 mb-25">
 		<p class="my-auto mb-4 text-2xl text-(--main-text-color)">
@@ -39,18 +41,32 @@
 		</a>
 		<h1 class="tf26-section-title">路線図</h1>
 		<ul class="mb-4">
-			<li class="mt-4 text-(--main-text-color) text-xl">
-				<i class="fa-solid fa-train mr-1 text-xs"></i>JR中央線国立駅より徒歩20分<br /><i
-					class="fa-solid fa-train mr-1 text-xs"
-				></i>JR南武線谷保駅より徒歩15分
+			<li class="mt-4 mb-2 text-xl text-(--main-text-color)">
+				<i class="fa-solid fa-square mr-2"></i>JR中央線 国立駅南口下車
+			</li>
+			<li>
+				大学通りを南へ徒歩15分
+				<br />立川バス「矢川駅」方面行き5分バス停「桐朋」徒歩1分
+			</li>
+			<li class="mt-4 mb-2 text-xl text-(--main-text-color)">
+				<i class="fa-solid fa-square mr-2"></i>JR南武線 谷保駅下車
+			</li>
+			<li>
+				北へ徒歩15分
+				<br />
+				立川バス「国立駅南口」方面行き5分バス停「桐朋」徒歩1分
 			</li>
 		</ul>
 		<img
 			src="https://www.toho.ed.jp/wp/wp-content/uploads/2023/12/accessmap.png"
 			alt="桐朋中学・高等学校付近の路線図"
 			style="max-width: 95%;"
-            class="mb-4"
+			class="mb-4"
 		/>
 		<h1 class="tf26-section-title">校内マップ</h1>
 	</section>
 </main>
+<ol class="main-breadcrumb container mx-auto">
+	<li><a href="/">ホーム</a></li>
+	<li>{pageTitle}</li>
+</ol>

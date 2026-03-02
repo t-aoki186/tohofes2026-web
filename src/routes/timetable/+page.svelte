@@ -38,10 +38,12 @@
 		バンド: 'bg-yellow-100',
 		その他: 'bg-purple-100'
 	};
+
+	let pageTitle = 'タイムテーブル';
 </script>
 
 <svelte:head>
-	<title>{data.site_title}</title>
+	<title>{pageTitle} | {data.site_title}</title>
 </svelte:head>
 
 <main class="mt-15 mr-1 ml-1 min-h-screen">
@@ -88,6 +90,10 @@
 		</div>
 	</section>
 </main>
+<ol class="main-breadcrumb container mx-auto">
+	<li><a href="/">ホーム</a></li>
+	<li>{pageTitle}</li>
+</ol>
 
 <style>
 </style>

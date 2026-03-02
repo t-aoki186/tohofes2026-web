@@ -4,7 +4,7 @@
 
 	import { onMount } from 'svelte';
 	import { reveal } from '$lib/reveal';
-    import { mdToHtml } from '$lib/utils/markdown';
+	import { mdToHtml } from '$lib/utils/markdown';
 </script>
 
 <svelte:head>
@@ -12,10 +12,15 @@
 </svelte:head>
 
 <main class="mt-15 mr-1 ml-1 min-h-screen">
-	<div class="container m-auto mt-25 border-b-(--main-text-color) border-b-2">
+	<div class="container m-auto mt-25 border-b-2 border-b-(--main-text-color)">
 		<p class="tf26-page-title" style="color: black; margin-bottom: 0;">{item.title}</p>
 	</div>
 	<section class="container mx-auto mt-25 mb-25">
 		<div class="prose mt-4 min-w-full">{@html mdToHtml(item.body)}</div>
 	</section>
 </main>
+<ol class="main-breadcrumb container mx-auto">
+	<li><a href="/">ホーム</a></li>
+	<li><a href="/news">ニュース</a></li>
+	<li>{item.title}</li>
+</ol>

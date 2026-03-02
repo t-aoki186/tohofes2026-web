@@ -92,6 +92,10 @@
 		</div>
 	</section>
 </main>
+<ol class="main-breadcrumb container mx-auto">
+	<li><a href="/">ホーム</a></li>
+	<li>{pageTitle}</li>
+</ol>
 
 <style>
 	.sp-search-result-card {

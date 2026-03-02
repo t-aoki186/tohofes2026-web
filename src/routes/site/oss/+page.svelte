@@ -3,19 +3,23 @@
 
 	import { onMount } from 'svelte';
 	import { reveal } from '$lib/reveal';
+
+	let pageTitle = '使用しているOSS';
 </script>
 
 <svelte:head>
-	<title>{data.site_title}</title>
+	<title>{pageTitle} | {data.site_title}</title>
 </svelte:head>
 
 <main class="mt-15 mr-1 ml-1 min-h-screen">
 	<div class="container m-auto mt-25 border-b-2 border-b-(--main-text-color)">
-		<p class="tf26-page-title" style="color: black; margin-bottom: 0;">使用しているOSS一覧</p>
+		<p class="tf26-page-title" style="color: black; margin-bottom: 0;">{pageTitle}</p>
 	</div>
 	<section class="container mx-auto mt-25 mb-25">
 		<div class="mt-4 min-w-full">
-			<h1 class="tf26-section-title">当サイトで使用しているライブラリのライセンスは以下の通りです。</h1>
+			<h1 class="tf26-section-title">
+				当サイトで使用しているライブラリのライセンスは以下の通りです。
+			</h1>
 		</div>
 
 		<div class="mt-4">
@@ -45,6 +49,11 @@
 				公式サイト:<a href="https://tailwindcss.com/" class="underline">tailwindcss.com</a><br />
 				利用内容:ユーティリティファーストなスタイル適用に使用
 			</p>
+			https://pote-chil.com/css-stock/ja/breadcrumb
 		</div>
 	</section>
 </main>
+<ol class="main-breadcrumb container mx-auto">
+	<li><a href="/">ホーム</a></li>
+	<li>{pageTitle}</li>
+</ol>
