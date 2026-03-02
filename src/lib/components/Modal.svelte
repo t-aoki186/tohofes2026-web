@@ -29,7 +29,8 @@
 		onclick={(e) => e.target === e.currentTarget && close()}
 	>
 		<div class="main-modal {closing ? 'pop-out' : 'pop-in'}">
-			{@render children?.()}
+			<!--{@render children?.()}-->
+			<slot />
 			<div class="dialog-bottom">
 				<hr class="main-hr" />
 				<button onclick={close} class="link-main" type="button">
@@ -133,10 +134,10 @@
 			min-height: 70%;
 			margin-top: auto;
 			margin-bottom: 0;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
 		}
 	}
 </style>

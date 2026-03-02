@@ -4,11 +4,28 @@
 	import { onMount } from 'svelte';
 	import { reveal } from '$lib/reveal';
 	/**/
+	import Modal from '$lib/components/Modal.svelte';
+
+	let showModal = $state(false);
+	let modalType = '';
+
+	function openModal(type) {
+		showModal = true;
+		modalType = type;
+	}
 </script>
 
 <svelte:head>
 	<title>{data.site_title}</title>
 </svelte:head>
+
+<Modal bind:showModal>
+	{#if modalType === 'a'}
+		<p>落とし物。迷子の内容</p>
+	{:else if modalType === 'b'}
+		<p>テスト</p>
+	{/if}
+</Modal>
 
 <div class="relative h-screen w-full">
 	<img
@@ -158,10 +175,95 @@
 		</p>
 	</div>
 	<div class="container mx-auto">
-		<p>Q&A</p>
-		<p>ご来場の際の注意点</p>
-		<p>校内マップ</p>
-		<p>その他</p>
+		<div class="main-link" style="border: none !important;">
+			<div class="link-2" style="padding: 0 !important;">
+				<ul>
+					<li class="mx-auto mb-4 w-full list-none">
+						<a on:click={() => openModal('a')} class="cursor-pointer">
+							<div
+								class="news-list flex border-l-2 p-4"
+								style="border-left-color: var(--main-text-color);"
+							>
+								<div class="truncate-parent flex-col">
+									<p class="truncate-title ml-2 text-3xl font-bold text-(--main-text-color)">
+										<i class="fa-solid fa-circle-info mr-2"></i>落とし物・迷子
+									</p>
+								</div>
+								<div class="news-list-icon my-auto ml-auto">
+									<i class="fa-solid fa-angles-right left-auto mr-2"></i>
+								</div>
+							</div>
+						</a>
+						<a on:click={() => openModal('b')} class="cursor-pointer">
+							<div
+								class="news-list flex border-l-2 p-4"
+								style="border-left-color: var(--main-text-color);"
+							>
+								<div class="truncate-parent flex-col">
+									<p class="truncate-title ml-2 text-3xl font-bold text-(--main-text-color)">
+										<i class="fa-solid fa-circle-question mr-2"></i>よくあるご質問
+									</p>
+								</div>
+								<div class="news-list-icon my-auto ml-auto">
+									<i class="fa-solid fa-angles-right left-auto mr-2"></i>
+								</div>
+							</div>
+						</a>
+						<a href="/visitor">
+							<div
+								class="news-list flex border-l-2 p-4"
+								style="border-left-color: var(--main-text-color);"
+							>
+								<div class="truncate-parent flex-col">
+									<p class="truncate-title ml-2 text-3xl font-bold text-(--main-text-color)">
+										<i class="fa-solid fa-triangle-exclamation mr-2"></i>来場者の皆様へ
+									</p>
+								</div>
+								<div class="news-list-icon my-auto ml-auto">
+									<i class="fa-solid fa-angles-right left-auto mr-2"></i>
+								</div>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="link-2" style="padding: 0 !important;">
+				<ul>
+					<li class="mx-auto mb-4 w-full list-none">
+						<a href="/qa">
+							<div
+								class="news-list flex border-r-2 p-4"
+								style="border-right-color: var(--main-text-color); left: 0 !important; right: auto !important;"
+							>
+								<div class="truncate-parent flex-col">
+									<p class="truncate-title ml-2 text-3xl font-bold text-(--main-text-color)">
+										<i class="fa-solid fa-map mr-2"></i>校内マップ
+									</p>
+								</div>
+								<div class="news-list-icon my-auto ml-auto">
+									<i class="fa-solid fa-angles-right left-auto mr-2"></i>
+								</div>
+							</div>
+						</a>
+						<a href="/qa">
+							<div
+								class="news-list flex border-r-2 p-4"
+								style="border-right-color: var(--main-text-color);"
+							>
+								<div class="truncate-parent flex-col">
+									<p class="truncate-title ml-2 text-3xl font-bold text-(--main-text-color)">
+										<i class="fa-solid fa-map mr-2"></i>校内マップ
+									</p>
+								</div>
+								<div class="news-list-icon my-auto ml-auto">
+									<i class="fa-solid fa-angles-right left-auto mr-2"></i>
+								</div>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</div>
 	<!--e:ご案内-->
 	<!---->
