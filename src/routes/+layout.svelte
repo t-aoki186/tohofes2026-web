@@ -1,6 +1,7 @@
 <script lang="ts">
 	//import
 	import './layout.css';
+	import './icon.css';
 	import favicon from '$lib/assets/favicon.ico';
 	import { onMount } from 'svelte';
 	import { fade, slide } from 'svelte/transition';

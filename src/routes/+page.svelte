@@ -20,10 +20,76 @@
 </svelte:head>
 
 <Modal bind:showModal>
+	<!--s:M.お困りの場合-->
 	{#if modalType === 'a'}
-		<p>落とし物。迷子の内容</p>
+		<p class="mb-4 text-center text-xl font-bold text-(--main-text-color)">お困りの場合</p>
+		<hr class="main-hr" />
+		<p>
+			道に迷った場合、落とし物をした場合、その他のお困りの場合は、お近くの桐朋祭スタッフまでお声がけください。総合案内所までご案内いたします。<br
+			/>また不審者、不審物を見かけたら絶対に近づかず、お近くの桐朋祭スタッフにお知らせください。
+		</p>
+	<!--e:M.お困りの場合-->
+	<!---->
+	<!--s:M.お支払いについて-->
 	{:else if modalType === 'b'}
-		<p>テスト</p>
+		<p class="mb-4 text-center text-xl font-bold text-(--main-text-color)">お支払いについて</p>
+		<hr class="main-hr" />
+		<p>支払いの簡単な説明</p>
+		<a href="/visitor/#payment" class="mt-2 text-(--main-text-color)"
+			><i class="fa-solid fa-link mr-2 text-sm"></i>詳しくはこちらをご覧ください
+		</a>
+	<!--e:M.お支払いについて-->
+	<!---->
+	<!--s:M.災害が発生した場合-->
+	{:else if modalType === 'c'}
+		<p class="mb-4 text-center text-xl font-bold text-(--main-text-color)">災害が発生した場合</p>
+		<hr class="main-hr" />
+		<p>火災についての簡単な説明</p>
+		<a href="/visitor/#dsaster" class="mt-2 text-(--main-text-color)"
+			><i class="fa-solid fa-link mr-2 text-sm"></i>詳しくはこちらをご覧ください
+		</a>
+	<!--e:M.災害が発生した場合-->
+	<!---->
+	<!--s:M.校内でのお食事について-->
+	{:else if modalType === 'd'}
+		<p class="mb-4 text-center text-xl font-bold text-(--main-text-color)">
+			校内でのお食事について
+		</p>
+		<hr class="main-hr" />
+		<p>
+			水分補給に関しましては校内どこでも可能ですが、お食事は指定された場所(食堂、飲食スペース用テント、特別教室5・6)以外ではご遠慮ください。<br
+			/>
+			<a href="/visitor/#campus_map">詳しはこちらの校内マップをご覧ください。</a>
+			<br />
+			また、校内で出たゴミにつきましては、指定の場所に分別して処分していただきますようお願いいたします。
+		</p>
+	<!--e:M.校内でのお食事について-->
+	<!---->
+	<!--s:M.乳幼児をお連れのご来場者様へ-->
+	{:else if modalType === 'e'}
+		<p class="mb-4 text-center text-xl font-bold text-(--main-text-color)">
+			乳幼児をお連れのご来場者様へ
+		</p>
+		<hr class="main-hr" />
+		<p>
+			乳幼児をお連れのご来場者様は、保健室の個室で授乳が可能です。授乳室をご利用の際は、お近くの桐朋祭スタッフにお声がけいただくか、総合案内所までお越しください
+			<br />
+			また、1回の総合案内所付近と食堂横中庭付近におむつ交換台付き多目的トイレがございます。
+			<br />
+					<a href="/visitor/#payment" class="mt-2 text-(--main-text-color)"
+			><i class="fa-solid fa-link mr-2 text-sm"></i>詳しい場所につきましてはこちらの校内マップををご覧ください。
+		</a>
+		</p>
+	<!--e:M.乳幼児をお連れのご来場者様へ-->
+	<!---->
+	<!--s:M.体調不良について-->
+	{:else if modalType === 'f'}
+		<p class="mb-4 text-center text-xl font-bold text-(--main-text-color)">体調不良について</p>
+		<hr class="main-hr" />
+		<p>
+			気分が悪くなった際は、無理をなさらずお近くの桐朋祭スタッフまでお声がけください。保健室までお連れいたします。
+		</p>
+	<!--e:M.体調不良について-->
 	{/if}
 </Modal>
 
@@ -186,7 +252,7 @@
 							>
 								<div class="truncate-parent flex-col">
 									<p class="truncate-title ml-2 text-3xl font-bold text-(--main-text-color)">
-										<i class="fa-solid fa-circle-info mr-2"></i>落とし物・迷子
+										<i class="fa-solid fa-circle-info mr-2"></i>お困りの場合
 									</p>
 								</div>
 								<div class="news-list-icon my-auto ml-auto">
@@ -201,7 +267,7 @@
 							>
 								<div class="truncate-parent flex-col">
 									<p class="truncate-title ml-2 text-3xl font-bold text-(--main-text-color)">
-										<i class="fa-solid fa-circle-question mr-2"></i>よくあるご質問
+										<i class="fa-solid fa-money-check-dollar mr-2"></i>お支払いについて
 									</p>
 								</div>
 								<div class="news-list-icon my-auto ml-auto">
@@ -209,14 +275,14 @@
 								</div>
 							</div>
 						</a>
-						<a href="/visitor">
+						<a on:click={() => openModal('c')} class="cursor-pointer">
 							<div
 								class="news-list flex border-l-2 p-4"
 								style="border-left-color: var(--main-text-color);"
 							>
 								<div class="truncate-parent flex-col">
 									<p class="truncate-title ml-2 text-3xl font-bold text-(--main-text-color)">
-										<i class="fa-solid fa-triangle-exclamation mr-2"></i>来場者の皆様へ
+										<i class="fa-solid fa-circle-exclamation mr-2"></i>災害が発生した場合
 									</p>
 								</div>
 								<div class="news-list-icon my-auto ml-auto">
@@ -230,14 +296,14 @@
 			<div class="link-2" style="padding: 0 !important;">
 				<ul>
 					<li class="mx-auto mb-4 w-full list-none">
-						<a href="/qa">
+						<a on:click={() => openModal('d')} class="cursor-pointer">
 							<div
 								class="news-list flex border-r-2 p-4"
 								style="border-right-color: var(--main-text-color); left: 0 !important; right: auto !important;"
 							>
 								<div class="truncate-parent flex-col">
 									<p class="truncate-title ml-2 text-3xl font-bold text-(--main-text-color)">
-										<i class="fa-solid fa-map mr-2"></i>校内マップ
+										<i class="fa-solid fa-utensils mr-2"></i>校内でのお食事について
 									</p>
 								</div>
 								<div class="news-list-icon my-auto ml-auto">
@@ -245,14 +311,30 @@
 								</div>
 							</div>
 						</a>
-						<a href="/qa">
+						<a on:click={() => openModal('e')} class="cursor-pointer">
 							<div
 								class="news-list flex border-r-2 p-4"
 								style="border-right-color: var(--main-text-color);"
 							>
 								<div class="truncate-parent flex-col">
 									<p class="truncate-title ml-2 text-3xl font-bold text-(--main-text-color)">
-										<i class="fa-solid fa-map mr-2"></i>校内マップ
+										<i class="tf26-icon-material icon-baby-bottle mr-2"></i>
+										乳幼児をお連れのご来場者様へ
+									</p>
+								</div>
+								<div class="news-list-icon my-auto ml-auto">
+									<i class="fa-solid fa-angles-right left-auto mr-2"></i>
+								</div>
+							</div>
+						</a>
+						<a on:click={() => openModal('f')} class="cursor-pointer">
+							<div
+								class="news-list flex border-r-2 p-4"
+								style="border-right-color: var(--main-text-color);"
+							>
+								<div class="truncate-parent flex-col">
+									<p class="truncate-title ml-2 text-3xl font-bold text-(--main-text-color)">
+										<i class="tf26-icon-material icon-poor-health mr-2"></i>体調不良について
 									</p>
 								</div>
 								<div class="news-list-icon my-auto ml-auto">
@@ -264,6 +346,12 @@
 				</ul>
 			</div>
 		</div>
+		<a href="/visitor" class="link-main">
+			<div class="link-main-underline">
+				<i class="fa-solid fa-arrow-right-long"></i>
+				<span>詳しくはこちら</span>
+			</div>
+		</a>
 	</div>
 	<!--e:ご案内-->
 	<!---->

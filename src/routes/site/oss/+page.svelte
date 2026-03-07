@@ -50,6 +50,7 @@
 				利用内容:ユーティリティファーストなスタイル適用に使用
 			</p>
 			https://pote-chil.com/css-stock/ja/breadcrumb
+			https://icooon-mono.com/license/
 		</div>
 	</section>
 </main>

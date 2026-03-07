@@ -30,6 +30,11 @@ body {
 	background-position: center center;
 }
 
+.container {
+	justify-content: center;
+	width: 90%;
+	@apply mx-auto;
+}
 /*== nprogress関係 ==*/
 #nprogress .bar {
 	background: var(--main-text-color) !important;
