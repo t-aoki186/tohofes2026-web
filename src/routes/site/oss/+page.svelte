@@ -51,6 +51,7 @@
 			</p>
 			https://pote-chil.com/css-stock/ja/breadcrumb
 			https://icooon-mono.com/license/
+			https://www.silhouette-illust.com/policy
 		</div>
 	</section>
 </main>

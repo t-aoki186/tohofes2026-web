@@ -1,12 +1,20 @@
 <script lang="ts">
-	//import
+	//====import====//
+	//
+	//共通css
 	import './layout.css';
 	import './icon.css';
+	//favicon
 	import favicon from '$lib/assets/favicon.ico';
+	//svelte関連
 	import { onMount } from 'svelte';
 	import { fade, slide } from 'svelte/transition';
+	//nprogress
 	import NProgress from 'nprogress';
 	import 'nprogress/nprogress.css';
+	//AOS(Animate On Scroll)
+	import AOS from 'aos';
+	import 'aos/dist/aos.css';
 
 	import { afterNavigate, beforeNavigate } from '$app/navigation';
 
@@ -63,6 +71,15 @@
 		};
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
+	});
+
+	//AOSの初期化
+	onMount(() => {
+		AOS.init({
+			// オプション（任意）
+			duration: 800, //アニメーションの時間（ミリ秒）
+			once: false //何度でもアニメーションを発火させる
+		});
 	});
 </script>
 
@@ -361,11 +378,12 @@
 		<br />
 		<hr class="sub-hr" />
 		<br />
-		<a href="/site/site-policy" class="footer-link" style="margin-right: 10px;">サイトポリシー</a><span
-			class="footer-span">|</span
-		>
-		<a href="/site/privacy-policy" class="footer-link" style="margin-right: 10px; margin-left: 10px;"
-			>プライバシーポリシー</a
+		<a href="/site/site-policy" class="footer-link" style="margin-right: 10px;">サイトポリシー</a
+		><span class="footer-span">|</span>
+		<a
+			href="/site/privacy-policy"
+			class="footer-link"
+			style="margin-right: 10px; margin-left: 10px;">プライバシーポリシー</a
 		><span class="footer-span">|</span>
 		<a href="/site/contact" class="footer-link" style="margin-left: 10px;">お問い合わせ</a>
 		<p class="footer-text">

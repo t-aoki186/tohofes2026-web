@@ -112,7 +112,7 @@
 
 <main>
 	<!--s:来場者の皆様へ-->
-	<div class="tp-info container mx-auto mt-10 rounded-xl p-4">
+	<div class="tp-info container mx-auto mt-10 rounded-xl p-4" data-aos="fade-up">
 		<p class="mb-2 text-center font-bold"><i class="fa-solid fa-circle-info"></i>持ち物について</p>
 		<p class="mb-2 text-center">
 			校内は土足禁止ですので、<strong>必ず上履きをご持参ください</strong>。
@@ -127,13 +127,12 @@
 	<!--e:来場者の皆様へ-->
 	<!---->
 	<!--s:お知らせ-->
-	<div class="container m-auto mt-10 rounded-xl bg-(--title-bg-color)"></div>
-	<div class="container mx-auto">
+	<div class="container mx-auto mt-10" data-aos="fade-up">
 		<div class="main-link">
 			<div class="link-3" style="margin: 0 5px 5px 5px; ">
 				<p use:reveal class="news-section-title" style="padding: 0 0 10px 0;">
 					{#each '・お知らせ'.split('') as char, i}
-						<span class="char text-(--main-text-color)" style={`--d: ${i * 0.05}s`}>{char}</span>
+						<span class="char text-(--main-text-color)" style={`--d: ${i * 0.12	}s`}>{char}</span>
 					{/each}
 				</p>
 				<hr class="main-hr" />
@@ -184,14 +183,14 @@
 	<!--e:お知らせ-->
 	<!---->
 	<!--s:アクセス-->
-	<div class="container m-auto mt-10 rounded-xl bg-(--title-bg-color)">
+	<div class="container m-auto mt-10 rounded-xl bg-(--title-bg-color)" data-aos="fade-up">
 		<p use:reveal class="tf26-page-title">
 			{#each 'アクセス'.split('') as char, i}
-				<span class="char" style={`--d: ${i * 0.05}s`}>{char}</span>
+				<span class="char" style={`--d: ${i * 0.12}s`}>{char}</span>
 			{/each}
 		</p>
 	</div>
-	<div class="container mx-auto mb-4">
+	<div class="container mx-auto mb-4" data-aos="fade-up">
 		<div class="main-link">
 			<div class="link-2">
 				<!--テーマ説明-->
@@ -233,14 +232,14 @@
 	<!--e:アクセス-->
 	<!---->
 	<!--s:ご案内-->
-	<div class="container m-auto mt-10 rounded-xl bg-(--title-bg-color)">
+	<div class="container m-auto mt-10 rounded-xl bg-(--title-bg-color)" data-aos="fade-up">
 		<p use:reveal class="tf26-page-title">
 			{#each 'ご案内'.split('') as char, i}
-				<span class="char" style={`--d: ${i * 0.05}s`}>{char}</span>
+				<span class="char" style={`--d: ${i * 0.12}s`}>{char}</span>
 			{/each}
 		</p>
 	</div>
-	<div class="container mx-auto">
+	<div class="container mx-auto" data-aos="fade-up">
 		<div class="main-link" style="border: none !important;">
 			<div class="link-2" style="padding: 0 !important;">
 				<ul>
@@ -356,14 +355,14 @@
 	<!--e:ご案内-->
 	<!---->
 	<!--s:おすすめ企画-->
-	<div class="container m-auto mt-10 rounded-xl bg-(--title-bg-color)">
+	<div class="container m-auto mt-10 rounded-xl bg-(--title-bg-color)" data-aos="fade-up">
 		<p use:reveal class="tf26-page-title">
 			{#each '企画情報'.split('') as char, i}
-				<span class="char" style={`--d: ${i * 0.05}s`}>{char}</span>
+				<span class="char" style={`--d: ${i * 0.12}s`}>{char}</span>
 			{/each}
 		</p>
 	</div>
-	<div class="container mx-auto">
+	<div class="container mx-auto" data-aos="fade-up">
 		<form class="s-search-form mb-4" action="/organizations/" method="GET">
 			<input
 				class="s-search-input"
@@ -414,14 +413,14 @@
 	<!--e:おすすめ企画-->
 	<!---->
 	<!--s:桐朋祭とは-->
-	<div class="container m-auto mt-10 rounded-xl bg-(--title-bg-color)">
+	<div class="container m-auto mt-10 rounded-xl bg-(--title-bg-color)" data-aos="fade-up">
 		<p use:reveal class="tf26-page-title">
 			{#each '桐朋祭とは'.split('') as char, i}
-				<span class="char" style={`--d: ${i * 0.05}s`}>{char}</span>
+				<span class="char" style={`--d: ${i * 0.12}s`}>{char}</span>
 			{/each}
 		</p>
 	</div>
-	<div class="container mx-auto">
+	<div class="container mx-auto" data-aos="fade-up">
 		<div class="main-link">
 			<div class="link-2 bg-white" style="padding: 0 !important;">
 				<img
@@ -448,14 +447,14 @@
 	<!--e:桐朋祭とは-->
 	<!---->
 	<!--s:桐朋祭のテーマ-->
-	<div class="container m-auto mt-10 rounded-xl bg-(--title-bg-color)">
+	<div class="container m-auto mt-10 rounded-xl bg-(--title-bg-color)" data-aos="fade-up">
 		<p use:reveal class="tf26-page-title">
 			{#each 'テーマについて'.split('') as char, i}
-				<span class="char" style={`--d: ${i * 0.05}s`}>{char}</span>
+				<span class="char" style={`--d: ${i * 0.12}s`}>{char}</span>
 			{/each}
 		</p>
 	</div>
-	<div class="container mx-auto mb-10">
+	<div class="container mx-auto mb-10" data-aos="fade-up">
 		<div class="main-link">
 			<div class="link-2">
 				<!--テーマ説明-->

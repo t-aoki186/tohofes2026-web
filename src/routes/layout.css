@@ -9,6 +9,23 @@
 		@apply mx-2 mt-2 rounded-xl border border-white/2 px-0 shadow-md backdrop-blur-md;
 	}
 }
+
+@theme {
+  /* アニメーション名と設定を定義（animate-fade-up クラスが生成されます） */
+  --animate-fade-up: fade-up 0.5s ease-out forwards;
+
+  /* keyframes の定義 */
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
 /*============*/
 /*--- root ---*/
 :root {
@@ -31,7 +48,6 @@ body {
 }
 
 .container {
-	justify-content: center;
 	width: 90%;
 	@apply mx-auto;
 }
@@ -208,6 +224,20 @@ body {
 	color: var(--main-text-color);
 	background: transparent;
 	border-left: solid 5px var(--main-text-color);
+}
+
+@media (max-width: 768px) {
+	.tf26-page-title {
+		font-size: 1.8rem;
+	}
+
+	.tf26-section-title {
+		font-size: 1.5rem;
+	}
+
+	.tf26-dialog-title {
+		font-size: 1.2rem;
+	}
 }
 
 /*パンクズリスト*/
