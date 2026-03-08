@@ -52,6 +52,8 @@
 			https://pote-chil.com/css-stock/ja/breadcrumb
 			https://icooon-mono.com/license/
 			https://www.silhouette-illust.com/policy
+			AOS(Animate On Scroll) https://michalsnik.github.io/aos/ <br />
+			NProgress https://ricostacruz.com/nprogress/ <br />
 		</div>
 	</section>
 </main>

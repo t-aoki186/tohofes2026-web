@@ -154,8 +154,8 @@
 										>
 									</div>
 									<div class="truncate-parent flex-col">
-										<p class="truncate-title ml-2 text-xl font-bold">{item.title}</p>
-										<p class="truncate-heading mb-2">{item.heading}</p>
+										<p class="truncate-title ml-2 font-bold news-list-title">{item.title}</p>
+										<p class="truncate-heading mb-2 news-list-heading">{item.heading}</p>
 									</div>
 									<div class="news-list-icon my-auto ml-auto">
 										<i class="fa-solid fa-angles-right left-auto mr-2"></i>
@@ -167,9 +167,7 @@
 				{/each}
 			</div>
 			<div class="link-4 flex items-center justify-center">
-				<i
-					class="fa-solid fa-bullhorn news-megaphone m-10 block -scale-x-100 rotate-30 transform text-[12rem]"
-				></i>
+				<i class="tf26-icon-material icon-megaphone -scale-x-100 rotate-30 transform text-[12rem] text-(--main-text-color)"></i>
 			</div>
 		</div>
 		<br />
@@ -250,7 +248,7 @@
 								style="border-left-color: var(--main-text-color);"
 							>
 								<div class="truncate-parent flex-col">
-									<p class="truncate-title ml-2 text-3xl font-bold text-(--main-text-color)">
+									<p class="truncate-title ml-2 guid-title-text font-bold text-(--main-text-color)">
 										<i class="fa-solid fa-circle-info mr-2"></i>お困りの場合
 									</p>
 								</div>
@@ -265,7 +263,7 @@
 								style="border-left-color: var(--main-text-color);"
 							>
 								<div class="truncate-parent flex-col">
-									<p class="truncate-title ml-2 text-3xl font-bold text-(--main-text-color)">
+									<p class="truncate-title ml-2 guid-title-text font-bold text-(--main-text-color)">
 										<i class="fa-solid fa-money-check-dollar mr-2"></i>お支払いについて
 									</p>
 								</div>
@@ -280,7 +278,7 @@
 								style="border-left-color: var(--main-text-color);"
 							>
 								<div class="truncate-parent flex-col">
-									<p class="truncate-title ml-2 text-3xl font-bold text-(--main-text-color)">
+									<p class="truncate-title ml-2 guid-title-text font-bold text-(--main-text-color)">
 										<i class="fa-solid fa-circle-exclamation mr-2"></i>災害が発生した場合
 									</p>
 								</div>
@@ -301,7 +299,7 @@
 								style="border-right-color: var(--main-text-color); left: 0 !important; right: auto !important;"
 							>
 								<div class="truncate-parent flex-col">
-									<p class="truncate-title ml-2 text-3xl font-bold text-(--main-text-color)">
+									<p class="truncate-title ml-2 guid-title-text font-bold text-(--main-text-color)">
 										<i class="fa-solid fa-utensils mr-2"></i>校内でのお食事について
 									</p>
 								</div>
@@ -316,7 +314,7 @@
 								style="border-right-color: var(--main-text-color);"
 							>
 								<div class="truncate-parent flex-col">
-									<p class="truncate-title ml-2 text-3xl font-bold text-(--main-text-color)">
+									<p class="truncate-title ml-2 guid-title-text font-bold text-(--main-text-color)">
 										<i class="tf26-icon-material icon-baby-bottle mr-2"></i>
 										乳幼児をお連れのご来場者様へ
 									</p>
@@ -332,7 +330,7 @@
 								style="border-right-color: var(--main-text-color);"
 							>
 								<div class="truncate-parent flex-col">
-									<p class="truncate-title ml-2 text-3xl font-bold text-(--main-text-color)">
+									<p class="truncate-title ml-2 guid-title-text font-bold text-(--main-text-color)">
 										<i class="tf26-icon-material icon-poor-health mr-2"></i>体調不良について
 									</p>
 								</div>

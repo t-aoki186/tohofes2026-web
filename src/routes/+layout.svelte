@@ -55,7 +55,7 @@
 
 	/*動的クラス*/
 	//ヘッダー
-	const headerClass = $derived(
+	/*const headerClass = $derived(
 		`fixed top-0 right-0 left-0 z-20 border border-black/10 bg-white backdrop-blur-md transition-all duration-500 overflow-hidden` +
 			(scrolled ? ' scroll-nav' : '') +
 			(otherOpen
@@ -63,7 +63,16 @@
 				: open
 					? ' max-h-[400px] rounded-b-[1.0rem]'
 					: ' max-h-[56px]')
-	);
+	);*/
+	const headerClass = $derived(
+    `fixed top-0 right-0 left-0 z-20 border border-black/10 bg-white backdrop-blur-md transition-all duration-500 overflow-hidden` +
+        (scrolled ? ' scroll-nav' : '') +
+        (otherOpen
+            ? ' max-h-[100vh] rounded-b-[1.0rem]'
+            : open
+                ? ' max-h-[400px] rounded-b-[1.0rem]'
+                : ' max-h-[70px]') //メニュー展開前のheaderの高さ
+);
 
 	onMount(() => {
 		const handleScroll = () => {
@@ -92,7 +101,7 @@
 	<div class="flex items-center justify-between px-2 py-2">
 		<!-- ロゴ -->
 		<a href="/" class="flex shrink-0 whitespace-nowrap transition">
-			<img src={logo} alt="" class="h-10 w-auto rounded-xl" />
+			<img src={logo} alt="" class="h-13 w-auto rounded-xl" />
 			<!--<p class="m-auto header-text">TOHO FES 2026</p>-->
 		</a>
 		<!-- ハンバーガー / その他メニュー閉じる（スマホ用） -->

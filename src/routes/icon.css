@@ -22,3 +22,8 @@
   -webkit-mask-image: url("https://cdn.atserver186.jp/img/tf26/material/poor-health.webp");
   mask-image: url("https://cdn.atserver186.jp/img/tf26/material/poor-health.webp");
 }
+
+.icon-megaphone{
+  -webkit-mask-image: url("https://cdn.atserver186.jp/img/tf26/material/megaphone.svg");
+  mask-image: url("https://cdn.atserver186.jp/img/tf26/material/megaphone.svg");
+}

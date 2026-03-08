@@ -11,20 +11,20 @@
 }
 
 @theme {
-  /* アニメーション名と設定を定義（animate-fade-up クラスが生成されます） */
-  --animate-fade-up: fade-up 0.5s ease-out forwards;
+	/* アニメーション名と設定を定義（animate-fade-up クラスが生成されます） */
+	--animate-fade-up: fade-up 0.5s ease-out forwards;
 
-  /* keyframes の定義 */
-  @keyframes fade-up {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+	/* keyframes の定義 */
+	@keyframes fade-up {
+		from {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
 }
 /*============*/
 /*--- root ---*/
@@ -157,6 +157,7 @@ body {
 	flex: 1;
 	margin: 5px;
 }
+
 .link-4 {
 	max-width: 35.5%; /* 6/16 */
 	flex-grow: 1;
@@ -176,12 +177,16 @@ body {
 @media (max-width: 768px) {
 	.main-link {
 		flex-direction: column;
+		padding: 10px;
 	}
 
 	.link-2,
-	.link-3,
-	.link-4 {
+	.link-3 {
 		width: 100%;
+	}
+
+	.link-4{
+		max-width: 100%;
 	}
 }
 /**/
@@ -523,4 +528,45 @@ body {
 	display: inline-block;
 	vertical-align: super;
 	font-size: 0.8em;
+}
+
+.news-list-title {
+	font-size: 1.25rem;
+}
+
+.news-list-heading {
+	font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+	.news-section-title {
+		font-size: 1.5rem;
+	}
+
+	.news-list-date,
+	.news-list-month {
+		font-size: 0.6em;
+	}
+
+	.news-list-title {
+		font-size: 1.125rem;
+	}
+
+	.news-list-heading {
+		font-size: 0.75rem;
+	}
+
+	.news-list:hover .fa-angles-right {
+		font-size: 1rem;
+	}
+}
+
+.guid-title-text {
+	font-size: 1.875rem;
+}
+
+@media (max-width: 768px) {
+	.guid-title-text {
+		font-size: 1.25rem;
+	}
 }
