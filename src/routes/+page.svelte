@@ -24,72 +24,85 @@
 	{#if modalType === 'a'}
 		<p class="mb-4 text-center text-xl font-bold text-(--main-text-color)">お困りの場合</p>
 		<hr class="main-hr" />
-		<p>
+		<p class="leading-[1.8rem]">
 			道に迷った場合、落とし物をした場合、その他のお困りの場合は、お近くの桐朋祭スタッフまでお声がけください。総合案内所までご案内いたします。<br
 			/>また不審者、不審物を見かけたら絶対に近づかず、お近くの桐朋祭スタッフにお知らせください。
 		</p>
-	<!--e:M.お困りの場合-->
-	<!---->
-	<!--s:M.お支払いについて-->
+		<!--e:M.お困りの場合-->
+		<!---->
+		<!--s:M.お支払いについて-->
 	{:else if modalType === 'b'}
 		<p class="mb-4 text-center text-xl font-bold text-(--main-text-color)">お支払いについて</p>
 		<hr class="main-hr" />
-		<p>支払いの簡単な説明</p>
+		<p class="leading-[1.8rem]">支払いの簡単な説明</p>
 		<a href="/visitor/#payment" class="mt-2 text-(--main-text-color)"
 			><i class="fa-solid fa-link mr-2 text-sm"></i>詳しくはこちらをご覧ください
 		</a>
-	<!--e:M.お支払いについて-->
-	<!---->
-	<!--s:M.災害が発生した場合-->
+		<!--e:M.お支払いについて-->
+		<!---->
+		<!--s:M.災害が発生した場合-->
 	{:else if modalType === 'c'}
 		<p class="mb-4 text-center text-xl font-bold text-(--main-text-color)">災害が発生した場合</p>
 		<hr class="main-hr" />
-		<p>火災についての簡単な説明</p>
+		<p class="leading-[1.8rem] mb-2">
+			地震: まずはその場で身を守ってください。本校舎は耐震構造のため、<strong
+				>安全が確保されるまで校舎内に留まってください。</strong
+			>
+		</p>
+		<p class="leading-[1.8rem] mb-2">
+			火災: <strong>火元には絶対に近づかず、速やかに離れてください。</strong>
+		</p>
+		<p class="leading-[1.8rem]">
+			避難誘導: 災害時は教職員が避難を案内しますので、指示に従って行動してください。<strong
+				>避難場所は東グラウンド</strong
+			>です。
+		</p>
 		<a href="/visitor/#dsaster" class="mt-2 text-(--main-text-color)"
 			><i class="fa-solid fa-link mr-2 text-sm"></i>詳しくはこちらをご覧ください
 		</a>
-	<!--e:M.災害が発生した場合-->
-	<!---->
-	<!--s:M.校内でのお食事について-->
+		<!--e:M.災害が発生した場合-->
+		<!---->
+		<!--s:M.校内でのお食事について-->
 	{:else if modalType === 'd'}
 		<p class="mb-4 text-center text-xl font-bold text-(--main-text-color)">
 			校内でのお食事について
 		</p>
 		<hr class="main-hr" />
-		<p>
+		<p class="leading-[1.8rem]">
 			水分補給に関しましては校内どこでも可能ですが、お食事は指定された場所(食堂、飲食スペース用テント、特別教室5・6)以外ではご遠慮ください。<br
 			/>
 			<a href="/visitor/#campus_map">詳しはこちらの校内マップをご覧ください。</a>
 			<br />
 			また、校内で出たゴミにつきましては、指定の場所に分別して処分していただきますようお願いいたします。
 		</p>
-	<!--e:M.校内でのお食事について-->
-	<!---->
-	<!--s:M.乳幼児をお連れのご来場者様へ-->
+		<!--e:M.校内でのお食事について-->
+		<!---->
+		<!--s:M.乳幼児をお連れのご来場者様へ-->
 	{:else if modalType === 'e'}
 		<p class="mb-4 text-center text-xl font-bold text-(--main-text-color)">
 			乳幼児をお連れのご来場者様へ
 		</p>
 		<hr class="main-hr" />
-		<p>
+		<p class="leading-[1.8rem]">
 			乳幼児をお連れのご来場者様は、保健室の個室で授乳が可能です。授乳室をご利用の際は、お近くの桐朋祭スタッフにお声がけいただくか、総合案内所までお越しください
 			<br />
 			また、1回の総合案内所付近と食堂横中庭付近におむつ交換台付き多目的トイレがございます。
 			<br />
-					<a href="/visitor/#payment" class="mt-2 text-(--main-text-color)"
-			><i class="fa-solid fa-link mr-2 text-sm"></i>詳しい場所につきましてはこちらの校内マップををご覧ください。
-		</a>
+			<a href="/visitor/#payment" class="mt-2 text-(--main-text-color)"
+				><i class="fa-solid fa-link mr-2 text-sm"
+				></i>詳しい場所につきましてはこちらの校内マップををご覧ください。
+			</a>
 		</p>
-	<!--e:M.乳幼児をお連れのご来場者様へ-->
-	<!---->
-	<!--s:M.体調不良について-->
+		<!--e:M.乳幼児をお連れのご来場者様へ-->
+		<!---->
+		<!--s:M.体調不良について-->
 	{:else if modalType === 'f'}
 		<p class="mb-4 text-center text-xl font-bold text-(--main-text-color)">体調不良について</p>
 		<hr class="main-hr" />
-		<p>
+		<p class="leading-[1.8rem]">
 			気分が悪くなった際は、無理をなさらずお近くの桐朋祭スタッフまでお声がけください。保健室までお連れいたします。
 		</p>
-	<!--e:M.体調不良について-->
+		<!--e:M.体調不良について-->
 	{/if}
 </Modal>
 
@@ -132,7 +145,7 @@
 			<div class="link-3" style="margin: 0 5px 5px 5px; ">
 				<p use:reveal class="news-section-title" style="padding: 0 0 10px 0;">
 					{#each '・お知らせ'.split('') as char, i}
-						<span class="char text-(--main-text-color)" style={`--d: ${i * 0.12	}s`}>{char}</span>
+						<span class="char text-(--main-text-color)" style={`--d: ${i * 0.12}s`}>{char}</span>
 					{/each}
 				</p>
 				<hr class="main-hr" />
@@ -154,8 +167,8 @@
 										>
 									</div>
 									<div class="truncate-parent flex-col">
-										<p class="truncate-title ml-2 font-bold news-list-title">{item.title}</p>
-										<p class="truncate-heading mb-2 news-list-heading">{item.heading}</p>
+										<p class="truncate-title news-list-title ml-2 font-bold">{item.title}</p>
+										<p class="truncate-heading news-list-heading mb-2">{item.heading}</p>
 									</div>
 									<div class="news-list-icon my-auto ml-auto">
 										<i class="fa-solid fa-angles-right left-auto mr-2"></i>
@@ -167,7 +180,9 @@
 				{/each}
 			</div>
 			<div class="link-4 flex items-center justify-center">
-				<i class="tf26-icon-material icon-megaphone -scale-x-100 rotate-30 transform text-[12rem] text-(--main-text-color)"></i>
+				<i
+					class="tf26-icon-material icon-megaphone -scale-x-100 rotate-30 transform text-[12rem] text-(--main-text-color)"
+				></i>
 			</div>
 		</div>
 		<br />
@@ -216,6 +231,7 @@
 					loading="lazy"
 					referrerpolicy="no-referrer-when-downgrade"
 					title="Google Map"
+					class="rounded-lg"
 				></iframe>
 			</div>
 		</div>
@@ -248,7 +264,7 @@
 								style="border-left-color: var(--main-text-color);"
 							>
 								<div class="truncate-parent flex-col">
-									<p class="truncate-title ml-2 guid-title-text font-bold text-(--main-text-color)">
+									<p class="truncate-title guid-title-text ml-2 font-bold text-(--main-text-color)">
 										<i class="fa-solid fa-circle-info mr-2"></i>お困りの場合
 									</p>
 								</div>
@@ -263,7 +279,7 @@
 								style="border-left-color: var(--main-text-color);"
 							>
 								<div class="truncate-parent flex-col">
-									<p class="truncate-title ml-2 guid-title-text font-bold text-(--main-text-color)">
+									<p class="truncate-title guid-title-text ml-2 font-bold text-(--main-text-color)">
 										<i class="fa-solid fa-money-check-dollar mr-2"></i>お支払いについて
 									</p>
 								</div>
@@ -278,7 +294,7 @@
 								style="border-left-color: var(--main-text-color);"
 							>
 								<div class="truncate-parent flex-col">
-									<p class="truncate-title ml-2 guid-title-text font-bold text-(--main-text-color)">
+									<p class="truncate-title guid-title-text ml-2 font-bold text-(--main-text-color)">
 										<i class="fa-solid fa-circle-exclamation mr-2"></i>災害が発生した場合
 									</p>
 								</div>
@@ -299,7 +315,7 @@
 								style="border-right-color: var(--main-text-color); left: 0 !important; right: auto !important;"
 							>
 								<div class="truncate-parent flex-col">
-									<p class="truncate-title ml-2 guid-title-text font-bold text-(--main-text-color)">
+									<p class="truncate-title guid-title-text ml-2 font-bold text-(--main-text-color)">
 										<i class="fa-solid fa-utensils mr-2"></i>校内でのお食事について
 									</p>
 								</div>
@@ -314,7 +330,7 @@
 								style="border-right-color: var(--main-text-color);"
 							>
 								<div class="truncate-parent flex-col">
-									<p class="truncate-title ml-2 guid-title-text font-bold text-(--main-text-color)">
+									<p class="truncate-title guid-title-text ml-2 font-bold text-(--main-text-color)">
 										<i class="tf26-icon-material icon-baby-bottle mr-2"></i>
 										乳幼児をお連れのご来場者様へ
 									</p>
@@ -330,7 +346,7 @@
 								style="border-right-color: var(--main-text-color);"
 							>
 								<div class="truncate-parent flex-col">
-									<p class="truncate-title ml-2 guid-title-text font-bold text-(--main-text-color)">
+									<p class="truncate-title guid-title-text ml-2 font-bold text-(--main-text-color)">
 										<i class="tf26-icon-material icon-poor-health mr-2"></i>体調不良について
 									</p>
 								</div>
@@ -424,7 +440,7 @@
 				<img
 					src="https://pic.atserver186.jp/tohofes2025.JPG"
 					alt="桐朋祭画像"
-					class="m-auto ml-auto block h-auto w-full"
+					class="h-auto w-full"
 				/>
 			</div>
 			<div class="link-2">
