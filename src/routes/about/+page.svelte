@@ -68,3 +68,6 @@
 	<li><a href="/">ホーム</a></li>
 	<li>{pageTitle}</li>
 </ol>
+
+<style>
+</style>

@@ -44,12 +44,12 @@
 	{:else if modalType === 'c'}
 		<p class="mb-4 text-center text-xl font-bold text-(--main-text-color)">災害が発生した場合</p>
 		<hr class="main-hr" />
-		<p class="leading-[1.8rem] mb-2">
+		<p class="mb-2 leading-[1.8rem]">
 			地震: まずはその場で身を守ってください。本校舎は耐震構造のため、<strong
 				>安全が確保されるまで校舎内に留まってください。</strong
 			>
 		</p>
-		<p class="leading-[1.8rem] mb-2">
+		<p class="mb-2 leading-[1.8rem]">
 			火災: <strong>火元には絶対に近づかず、速やかに離れてください。</strong>
 		</p>
 		<p class="leading-[1.8rem]">
@@ -507,6 +507,10 @@
 </main>
 
 <style>
+	@view-transition {
+		navigation: auto;
+	}
+
 	.tp-search-method {
 		text-decoration: none;
 		width: 48%;

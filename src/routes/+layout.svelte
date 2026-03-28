@@ -15,7 +15,9 @@
 	//AOS(Animate On Scroll)
 	import AOS from 'aos';
 	import 'aos/dist/aos.css';
-
+	/*Sveltekit-View-Transition(ページ遷移時のアニメーション)*/
+	import { setupViewTransition } from 'sveltekit-view-transition';
+	//
 	import { afterNavigate, beforeNavigate } from '$app/navigation';
 
 	beforeNavigate(() => {
@@ -65,14 +67,14 @@
 					: ' max-h-[56px]')
 	);*/
 	const headerClass = $derived(
-    `fixed top-0 right-0 left-0 z-20 border border-black/10 bg-white backdrop-blur-md transition-all duration-500 overflow-hidden` +
-        (scrolled ? ' scroll-nav' : '') +
-        (otherOpen
-            ? ' max-h-[100vh] rounded-b-[1.0rem]'
-            : open
-                ? ' max-h-[400px] rounded-b-[1.0rem]'
-                : ' max-h-[70px]') //メニュー展開前のheaderの高さ
-);
+		`fixed top-0 right-0 left-0 z-20 border border-black/10 bg-white backdrop-blur-md transition-all duration-500 overflow-hidden` +
+			(scrolled ? ' scroll-nav' : '') +
+			(otherOpen
+				? ' max-h-[100vh] rounded-b-[1.0rem]'
+				: open
+					? ' max-h-[400px] rounded-b-[1.0rem]'
+					: ' max-h-[70px]') //メニュー展開前のheaderの高さ
+	);
 
 	onMount(() => {
 		const handleScroll = () => {
@@ -90,6 +92,10 @@
 			once: false //何度でもアニメーションを発火させる
 		});
 	});
+
+	/*s:View Transition*/
+	setupViewTransition();
+	/*e:View Transition*/
 </script>
 
 <svelte:head>
@@ -401,3 +407,6 @@
 		</p>
 	</div>
 </footer>
+
+<style>
+</style>
