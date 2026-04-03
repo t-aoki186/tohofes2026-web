@@ -4,7 +4,7 @@
 	import { onMount } from 'svelte';
 	import { reveal } from '$lib/reveal';
 
-	let pageTitle = 'お問い合わせ';
+	let pageTitle = 'テストページ';
 </script>
 
 <svelte:head>
@@ -16,8 +16,8 @@
 		<p class="tf26-page-title" style="color: black; margin-bottom: 0;">{pageTitle}</p>
 	</div>
 	<section class="container mx-auto mt-25 mb-25">
-		<div class="">
-			<p>お問い合わせフォームは現在準備中です。</p>
+		<div>
+			<p>テスト</p>
 		</div>
 	</section>
 </main>
