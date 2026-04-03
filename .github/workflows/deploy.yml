@@ -15,9 +15,6 @@ jobs:
 
       - name: Install and Build
         run: |
-          # Gitのセキュリティ警告を回避する設定を追加
-          git config --global --add safe.directory /opt/tohofes2026-web
-          
           # 1. プロジェクトディレクトリへ移動
           cd /opt/tohofes2026-web
           
@@ -29,4 +26,4 @@ jobs:
           npm run build
           
           # 4. PM2で再起動（反映）
-          pm2 restart tf26-dweb01 || pm2 start build/index.js --name tf26-dweb01
+          pm2 restart web01 || pm2 start build/index.js --name tf26-dweb01
