@@ -1,0 +1,29 @@
+name: Deploy SvelteKit (Self-hosted)
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install and Build
+        run: |
+          # 1. プロジェクトディレクトリへ移動
+          cd /opt/tohofes2026-web
+          
+          # 2. ソースを最新にする
+          git pull origin main
+          
+          # 3. 依存関係のインストールとビルド
+          npm install
+          npm run build
+          
+          # 4. PM2で再起動（反映）
+          pm2 restart tf26-dweb01 || pm2 start build/index.js --name tf26-dweb01
