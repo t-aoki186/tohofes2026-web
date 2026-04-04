@@ -17,6 +17,9 @@
 
 <main class="mt-15 mr-1 ml-1 min-h-screen">
 	<Modal bind:showModal={show}>
+		<p class="mb-4 text-center text-xl font-bold text-(--main-text-color)">
+			絞り込み検索
+		</p>
 		<div>
 			<p class="tf26-dialog-title">公開日</p>
 			<ul>

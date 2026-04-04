@@ -37,10 +37,9 @@
 	--title-bg-color: #cb3565;
 }
 
+/*font-family: 'Noto Sans JP', sans-serif;*/
 body {
-	/*font-family: 'Noto Sans JP', sans-serif;*/
 	font-family: "LINE Seed JP", sans-serif;
-	/* 方眼紙模様に必須のスタイル */
 	background-image:
 		linear-gradient(0deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px)),
 		linear-gradient(90deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px));
@@ -207,8 +206,7 @@ body {
 /*title*/
 .tf26-page-title {
 	font-size: 2.5rem;
-	font-weight: 600;
-	margin-bottom: 1.25rem;
+	font-weight: 700;
 	text-align: center;
 	color: white;
 	padding: 10px 0;
@@ -216,7 +214,7 @@ body {
 
 .tf26-section-title {
 	font-size: 1.8rem;
-	font-weight: 600;
+	font-weight: 700;
 	text-align: left;
 	padding: 0.1em 0.5em;
 	color: var(--main-text-color);
@@ -226,7 +224,7 @@ body {
 
 .tf26-dialog-title {
 	font-size: 1.3rem;
-	font-weight: 600;
+	font-weight: 700;
 	text-align: left;
 	padding: 0 0.5em;
 	color: var(--main-text-color);
@@ -463,7 +461,7 @@ body {
 /*== ニュース ==*/
 .news-section-title {
 	font-size: 1.8rem;
-	font-weight: 600;
+	font-weight: 700;
 	text-align: left;
 	color: var(--main-text-color);
 	padding: 10px 0;

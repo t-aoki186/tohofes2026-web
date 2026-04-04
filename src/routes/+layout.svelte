@@ -36,8 +36,8 @@
 	let accordionOpen = $state(false);
 
 	//共通変数
-	let logo = 'https://pic.atserver186.jp/img/tohofes/logo-main.webp';
-	let logo_2 = 'https://cdn.atserver186.jp/img/tf26/logo/logo_2.webp';
+	let logo = 'https://pic.atserver186.jp/img/tohofes/tf26-logo-m.webp';
+	let logo_2 = 'https://pic.atserver186.jp/img/tohofes/tf26-logo-s.webp';
 	let logo_alt = '第75回桐朋祭ロゴ';
 	let school_address = '東京都国立市中3-1-10';
 
