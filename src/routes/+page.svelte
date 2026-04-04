@@ -478,7 +478,7 @@
 			</div>
 			<div class="link-2 bg-white">
 				<img
-					src="https://pic.atserver186.jp/img/tohofes/tf26-logo-m.webp"
+					src="https://pic.atserver186.jp/img/tohofes/tf26-logo-m-v2.webp"
 					alt="第75回桐朋祭ロゴ"
 					class="m-auto ml-auto block h-auto w-[50%]"
 				/>

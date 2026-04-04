@@ -1,25 +1,24 @@
 <script lang="ts">
-	//====import====//
-	//
-	//共通css
+	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
+	/*独自スタイル*/
 	import './layout.css';
 	import './icon.css';
-	//favicon
+	/*favicon*/
 	import favicon from '$lib/assets/favicon.ico';
-	//svelte関連
-	import { onMount } from 'svelte';
-	import { fade, slide } from 'svelte/transition';
-	//nprogress
+	/*NProgress*/
 	import NProgress from 'nprogress';
 	import 'nprogress/nprogress.css';
+	import { afterNavigate, beforeNavigate } from '$app/navigation';
 	//AOS(Animate On Scroll)
 	import AOS from 'aos';
 	import 'aos/dist/aos.css';
 	/*Sveltekit-View-Transition(ページ遷移時のアニメーション)*/
 	import { setupViewTransition } from 'sveltekit-view-transition';
-	//
-	import { afterNavigate, beforeNavigate } from '$app/navigation';
+	/*モーダル*/
+	import Modal from '$lib/components/Modal.svelte';
 
+	/*s:NProgressの設定*/
 	beforeNavigate(() => {
 		NProgress.start();
 	});
@@ -30,13 +29,14 @@
 		open = false;
 		otherOpen = false;
 	});
+	/*e:NProgressの設定*/
 
 	//export
 	let { data, children } = $props();
 	let accordionOpen = $state(false);
 
 	//共通変数
-	let logo = 'https://pic.atserver186.jp/img/tohofes/tf26-logo-m.webp';
+	let logo = 'https://pic.atserver186.jp/img/tohofes/tf26-logo-m-v2.webp';
 	let logo_2 = 'https://pic.atserver186.jp/img/tohofes/tf26-logo-s.webp';
 	let logo_alt = '第75回桐朋祭ロゴ';
 	let school_address = '東京都国立市中3-1-10';
@@ -55,17 +55,6 @@
 	//100pxスクロールでヘッダーの表示を変更
 	let scrolled = $state(false);
 
-	/*動的クラス*/
-	//ヘッダー
-	/*const headerClass = $derived(
-		`fixed top-0 right-0 left-0 z-20 border border-black/10 bg-white backdrop-blur-md transition-all duration-500 overflow-hidden` +
-			(scrolled ? ' scroll-nav' : '') +
-			(otherOpen
-				? ' max-h-[100vh] rounded-b-[1.0rem]'
-				: open
-					? ' max-h-[400px] rounded-b-[1.0rem]'
-					: ' max-h-[56px]')
-	);*/
 	const headerClass = $derived(
 		`fixed top-0 right-0 left-0 z-20 border border-black/10 bg-white backdrop-blur-md transition-all duration-500 overflow-hidden` +
 			(scrolled ? ' scroll-nav' : '') +
@@ -83,6 +72,16 @@
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
 	});
+
+	/*s:モーダル*/
+	let showModal = $state(false);
+	let modalType = $state('');
+
+	function openModal(type: string) {
+		showModal = true;
+		modalType = type;
+	}
+	/*e:モーダル*/
 
 	//AOSの初期化
 	onMount(() => {
@@ -103,51 +102,82 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
+<Modal bind:showModal>
+	{#if modalType === 'search'}
+		<form class="s-search-form mb-4" action="/search/" method="GET">
+			<input
+				class="s-search-input"
+				type="text"
+				id="searchTerm"
+				name="search"
+				placeholder="検索..."
+			/>
+			<button class="m-search-button" type="submit" title="検索する"
+				><i class="fas fa-search"></i></button
+			>
+		</form>
+		<p class="mt-4 text-lg">現在検索機能は実装されていません。</p>
+	{/if}
+</Modal>
+
 <header class={headerClass}>
 	<div class="flex items-center justify-between px-2 py-2">
-		<!-- ロゴ -->
+		<!--s:ロゴ-->
 		<a href="/" class="flex shrink-0 whitespace-nowrap transition">
-			<img src={logo} alt="" class="h-13 w-auto rounded-xl" />
+			<img src={logo} alt="" class="ml-2 h-13 w-auto rounded-xl" />
 			<!--<p class="m-auto header-text">TOHO FES 2026</p>-->
 		</a>
-		<!-- ハンバーガー / その他メニュー閉じる（スマホ用） -->
-		<div class="grid md:hidden">
-			{#if !otherOpen}
-				<button
-					class="col-start-1 row-start-1 flex cursor-pointer flex-col gap-1.5"
-					transition:fade={{ duration: 300 }}
-					onclick={() => (open = !open)}
-					title="メニュー"
-				>
-					<div class="flex h-10 w-9 cursor-pointer flex-col items-center justify-center">
-						<input class="peer hidden" type="checkbox" checked={open} />
-						<div
-							class="header-hamburger h-0.5 w-[50%] origin-left translate-y-[0.45rem] rounded-sm bg-black transition-all duration-300 peer-checked:rotate-[-45deg]"
-						></div>
-						<div
-							class="header-hamburger h-0.5 w-[50%] origin-center rounded-md bg-black transition-all duration-300 peer-checked:hidden"
-						></div>
-						<div
-							class="header-hamburger h-0.5 w-[50%] origin-left -translate-y-[0.45rem] rounded-md bg-black transition-all duration-300 peer-checked:rotate-[45deg]"
-						></div>
-					</div>
-				</button>
-			{/if}
+		<!--e:ロゴ-->
+		<!---->
+		<div class="flex items-center md:hidden">
+			<!--s:スマホ用検索ボタン-->
+			<button
+				onclick={() => openModal('search')}
+				type="button"
+				title="検索する"
+				class="mr-4 cursor-pointer text-sm"
+				><i class="fa-solid fa-magnifying-glass text-(--main-text-color)"></i></button
+			>
+			<!--e:スマホ用検索ボタン-->
+			<!-- ハンバーガー / その他メニュー閉じる（スマホ用） -->
+			<div class="grid">
+				{#if !otherOpen}
+					<button
+						class="col-start-1 row-start-1 flex cursor-pointer flex-col gap-1.5"
+						transition:fade={{ duration: 300 }}
+						onclick={() => (open = !open)}
+						title="メニュー"
+					>
+						<div class="flex h-10 w-9 cursor-pointer flex-col items-center justify-center">
+							<input class="peer hidden" type="checkbox" checked={open} />
+							<div
+								class="header-hamburger h-0.5 w-[50%] origin-left translate-y-[0.45rem] rounded-sm bg-black transition-all duration-300 peer-checked:rotate-[-45deg]"
+							></div>
+							<div
+								class="header-hamburger h-0.5 w-[50%] origin-center rounded-md bg-black transition-all duration-300 peer-checked:hidden"
+							></div>
+							<div
+								class="header-hamburger h-0.5 w-[50%] origin-left -translate-y-[0.45rem] rounded-md bg-black transition-all duration-300 peer-checked:rotate-[45deg]"
+							></div>
+						</div>
+					</button>
+				{/if}
 
-			{#if otherOpen}
-				<button
-					class="col-start-1 row-start-1 flex cursor-pointer flex-col gap-1.5"
-					transition:fade={{ duration: 300 }}
-					onclick={() => closeOther(open)}
-					title="メニュー"
-				>
-					<div class="flex h-10 w-9 cursor-pointer flex-col items-center justify-center">
-						<i class="fa-solid fa-angle-left other-close-ico"></i>
-					</div>
-				</button>
-			{/if}
+				{#if otherOpen}
+					<button
+						class="col-start-1 row-start-1 flex cursor-pointer flex-col gap-1.5"
+						transition:fade={{ duration: 300 }}
+						onclick={() => closeOther(open)}
+						title="メニュー"
+					>
+						<div class="flex h-10 w-9 cursor-pointer flex-col items-center justify-center">
+							<i class="fa-solid fa-angle-left other-close-ico"></i>
+						</div>
+					</button>
+				{/if}
+			</div>
 		</div>
-
+		<!---->
 		<!--PC用メニュー-->
 		<nav class="hidden md:flex">
 			<ul class="flex items-center gap-5 whitespace-nowrap transition">
