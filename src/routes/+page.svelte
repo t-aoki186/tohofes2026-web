@@ -772,7 +772,7 @@
 	}
 
 	.auto-scroll-organization-section {
-		width: 70%;
+		width: 80%;
 	}
 
 	@media (max-width: 768px) {
