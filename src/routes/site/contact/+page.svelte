@@ -19,28 +19,37 @@
 	<section class="container mx-auto mt-10 mb-25 flex flex-col">
 		<div class="mx-auto w-[50%] rounded-2xl bg-gray-50 p-10">
 			<form class="flex flex-col">
-				<label class="mb-4 text-xl">
+				<label class="mb-4">
 					<div class="mb-1 flex items-end justify-between">
-						<span>お名前</span>
+						<span class="text-xl">お名前</span>
 						<span class="text-lg font-normal text-gray-500">(例: &nbsp;桐朋&nbsp;太郎)</span>
 					</div>
-					<input type="text" class="w-full" />
+					<input type="text" class="w-full rounded-3xl outline-none appearance-none" />
 				</label>
-				<label class="mb-4 text-xl">
+				<label class="mb-4">
 					<div class="mb-1 flex items-end justify-between">
-						<span>メールアドレス</span>
-						<span class="text-lg font-normal text-gray-500">(例: &nbsp;hoge@example.com)</span>
+						<span class="text-xl">メールアドレス</span>
+						<span class="text-lg font-normal text-gray-500">(例: &nbsp;hogehoge@example.com)</span>
 					</div>
-					<input type="text" class="w-full" />
+					<input type="text" class="w-full rounded-3xl outline-none appearance-none" />
 				</label>
-				<label class="mb-4 text-xl">
-					お問い合わせ内容<br />
-					<textarea class="w-full min-h-[20vh]"></textarea>
+				<label>
+					<div class="mb-1">
+						<span class="text-xl">お問い合わせ内容</span>
+					</div>
+					<textarea class="min-h-[20vh] w-full appearance-none rounded-3xl outline-none"></textarea>
 				</label>
-				<div>
-					<input type="checkbox" /><a href="/site/privacy">当サイトのプライバシーポリシーに同意する</a>
+				<div class="my-8">
+					<input type="checkbox" class="mr-2 cursor-pointer" /><a
+						href="/site/privacy"
+						class="appearance-none underline outline-none">当サイトのプライバシーポリシー</a
+					>に同意する
 				</div>
-				<button type="submit">送信</button>
+				<button
+					type="submit"
+					class="w-full cursor-pointer rounded-3xl border border-black bg-white p-2 text-xl"
+					>送信</button
+				>
 			</form>
 		</div>
 	</section>
