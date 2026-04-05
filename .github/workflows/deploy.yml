@@ -18,12 +18,15 @@ jobs:
           # 1. プロジェクトディレクトリへ移動
           cd /opt/tohofes2026-web
           
-          # 2. ソースを最新にする
-          git pull origin main
+          # 1. GitHubから最新情報を取ってくる（まだ合体させない）
+          git fetch origin main
+          
+          # 2. 【重要】サーバー側の変更をすべて捨てて、GitHubの最新状態に強制一致させる
+          git reset --hard origin/main
           
           # 3. 依存関係のインストールとビルド
           npm install
           npm run build
           
           # 4. PM2で再起動（反映）
-          pm2 restart web01 || pm2 start build/index.js --name tf26-dweb01
+          pm2 restart tf26-dweb01 || pm2 start build/index.js --name tf26-dweb01
