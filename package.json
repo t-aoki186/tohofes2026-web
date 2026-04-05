@@ -55,6 +55,8 @@
 		"@mantine/hooks": "^8.3.15",
 		"@mantine/styles": "^6.0.22",
 		"@node-rs/argon2": "^2.0.2",
+		"@splidejs/splide-extension-auto-scroll": "^0.5.3",
+		"@splidejs/svelte-splide": "^0.2.9",
 		"aos": "^2.3.4",
 		"marked": "^17.0.3",
 		"nprogress": "^0.2.0",

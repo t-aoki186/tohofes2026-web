@@ -1,18 +1,47 @@
-<script>
-	/*共通*/
+<script lang="ts">
 	const { data } = $props();
 	import { onMount } from 'svelte';
 	import { reveal } from '$lib/reveal';
-	/**/
 	import Modal from '$lib/components/Modal.svelte';
+	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
+	import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
+	import '@splidejs/svelte-splide/css';
+	import { Pagination } from '@mantine/core';
 
+	/*s:モーダル*/
 	let showModal = $state(false);
-	let modalType = '';
+	let modalType = $state('');
 
 	function openModal(type) {
 		showModal = true;
 		modalType = type;
 	}
+	/*e:モーダル*/
+	/*s:Auto Scroll*/
+	const options = {
+		type: 'loop',
+		drag: 'free',
+		focus: 'center',
+		// --- サイズ/余白などの設定
+		perPage: 3,
+		gap: '2rem',
+		padding: '5%',
+		height: 'auto',
+		pagination: false, // 下のドットを消す
+		// autoScrollの設定
+		autoScroll: {
+			speed: 2
+		},
+		// --- レスポンシブ関係
+		breakpoints: {
+			// 768px以下のとき
+			768: {
+				perPage: 1,
+				gap: '1rem',
+			}
+		}
+	};
+	/*e:Auto Scroll*/
 </script>
 
 <svelte:head>
@@ -258,7 +287,7 @@
 			<div class="link-2" style="padding: 0 !important;">
 				<ul>
 					<li class="mx-auto mb-4 w-full list-none">
-						<a on:click={() => openModal('a')} class="cursor-pointer">
+						<button onclick={() => openModal('a')} class="w-full cursor-pointer">
 							<div
 								class="news-list flex border-l-2 p-4"
 								style="border-left-color: var(--main-text-color);"
@@ -272,8 +301,8 @@
 									<i class="fa-solid fa-angles-right left-auto mr-2"></i>
 								</div>
 							</div>
-						</a>
-						<a on:click={() => openModal('b')} class="cursor-pointer">
+						</button>
+						<button onclick={() => openModal('b')} class="w-full cursor-pointer">
 							<div
 								class="news-list flex border-l-2 p-4"
 								style="border-left-color: var(--main-text-color);"
@@ -287,8 +316,8 @@
 									<i class="fa-solid fa-angles-right left-auto mr-2"></i>
 								</div>
 							</div>
-						</a>
-						<a on:click={() => openModal('c')} class="cursor-pointer">
+						</button>
+						<button onclick={() => openModal('c')} class="w-full cursor-pointer">
 							<div
 								class="news-list flex border-l-2 p-4"
 								style="border-left-color: var(--main-text-color);"
@@ -302,14 +331,14 @@
 									<i class="fa-solid fa-angles-right left-auto mr-2"></i>
 								</div>
 							</div>
-						</a>
+						</button>
 					</li>
 				</ul>
 			</div>
 			<div class="link-2" style="padding: 0 !important;">
 				<ul>
 					<li class="mx-auto mb-4 w-full list-none">
-						<a on:click={() => openModal('d')} class="cursor-pointer">
+						<button onclick={() => openModal('d')} class="w-full cursor-pointer">
 							<div
 								class="news-list flex border-r-2 p-4"
 								style="border-right-color: var(--main-text-color); left: 0 !important; right: auto !important;"
@@ -323,8 +352,8 @@
 									<i class="fa-solid fa-angles-right left-auto mr-2"></i>
 								</div>
 							</div>
-						</a>
-						<a on:click={() => openModal('e')} class="cursor-pointer">
+						</button>
+						<button onclick={() => openModal('e')} class="w-full cursor-pointer">
 							<div
 								class="news-list flex border-r-2 p-4"
 								style="border-right-color: var(--main-text-color);"
@@ -339,8 +368,8 @@
 									<i class="fa-solid fa-angles-right left-auto mr-2"></i>
 								</div>
 							</div>
-						</a>
-						<a on:click={() => openModal('f')} class="cursor-pointer">
+						</button>
+						<button onclick={() => openModal('f')} class="w-full cursor-pointer">
 							<div
 								class="news-list flex border-r-2 p-4"
 								style="border-right-color: var(--main-text-color);"
@@ -354,7 +383,7 @@
 									<i class="fa-solid fa-angles-right left-auto mr-2"></i>
 								</div>
 							</div>
-						</a>
+						</button>
 					</li>
 				</ul>
 			</div>
@@ -414,6 +443,140 @@
 				</div>
 			</div>
 		</div>
+
+		<section class="mb-20 border border-l-0 border-(--main-text-color) p-4 pl-0 auto-scroll-organization-section">
+			<Splide {options} extensions={{ AutoScroll }}>
+				<SplideSlide>
+					<a href="/organizations/1">
+						<img
+							src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-00.webp"
+							alt="サンプル00"
+						/>
+					</a>
+				</SplideSlide>
+				<SplideSlide>
+					<img
+						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-01.webp"
+						alt="サンプル01"
+					/>
+				</SplideSlide>
+				<SplideSlide>
+					<img
+						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-02.webp"
+						alt="サンプル02"
+					/>
+				</SplideSlide>
+				<SplideSlide>
+					<img
+						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-03.webp"
+						alt="サンプル03"
+					/>
+				</SplideSlide>
+				<SplideSlide>
+					<img
+						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-04.webp"
+						alt="サンプル04"
+					/>
+				</SplideSlide>
+				<SplideSlide>
+					<img
+						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-05.webp"
+						alt="サンプル05"
+					/>
+				</SplideSlide>
+				<SplideSlide>
+					<img
+						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-06.webp"
+						alt="サンプル06"
+					/>
+				</SplideSlide>
+				<SplideSlide>
+					<img
+						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-07.webp"
+						alt="サンプル07"
+					/>
+				</SplideSlide>
+				<SplideSlide>
+					<img
+						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-08.webp"
+						alt="サンプル08"
+					/>
+				</SplideSlide>
+				<SplideSlide>
+					<img
+						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-09.webp"
+						alt="サンプル09"
+					/>
+				</SplideSlide>
+			</Splide>
+		</section>
+		<section class="ml-auto mb-20 border border-r-0 border-(--main-text-color) p-4 pr-0 auto-scroll-organization-section">
+			<Splide {options} extensions={{ AutoScroll }}>
+				<SplideSlide>
+					<a href="/organizations/1">
+						<img
+							src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-00.webp"
+							alt="サンプル00"
+						/>
+					</a>
+				</SplideSlide>
+				<SplideSlide>
+					<img
+						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-01.webp"
+						alt="サンプル01"
+					/>
+				</SplideSlide>
+				<SplideSlide>
+					<img
+						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-02.webp"
+						alt="サンプル02"
+					/>
+				</SplideSlide>
+				<SplideSlide>
+					<img
+						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-03.webp"
+						alt="サンプル03"
+					/>
+				</SplideSlide>
+				<SplideSlide>
+					<img
+						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-04.webp"
+						alt="サンプル04"
+					/>
+				</SplideSlide>
+				<SplideSlide>
+					<img
+						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-05.webp"
+						alt="サンプル05"
+					/>
+				</SplideSlide>
+				<SplideSlide>
+					<img
+						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-06.webp"
+						alt="サンプル06"
+					/>
+				</SplideSlide>
+				<SplideSlide>
+					<img
+						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-07.webp"
+						alt="サンプル07"
+					/>
+				</SplideSlide>
+				<SplideSlide>
+					<img
+						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-08.webp"
+						alt="サンプル08"
+					/>
+				</SplideSlide>
+				<SplideSlide>
+					<img
+						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-09.webp"
+						alt="サンプル09"
+					/>
+				</SplideSlide>
+			</Splide>
+		</section>
+
 		<p>[右から左]横に流れる団体/飲食/イベントサムネイル</p>
 		<hr />
 		<p class="mb-4">[左から右]横に流れる団体/飲食/イベントのブログのサムネイル</p>
@@ -523,6 +686,16 @@
 	.tp-search-method:hover {
 		transform: scale(1.03);
 		opacity: 0.9;
+	}
+
+	.auto-scroll-organization-section{
+		width: 70%;
+	}
+
+	@media (max-width: 768px) {
+		.auto-scroll-organization-section{
+			width: 100%;
+		}
 	}
 
 	#scroll-down {

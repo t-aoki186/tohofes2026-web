@@ -151,13 +151,13 @@
 						<div class="flex h-10 w-9 cursor-pointer flex-col items-center justify-center">
 							<input class="peer hidden" type="checkbox" checked={open} />
 							<div
-								class="header-hamburger h-0.5 w-[50%] origin-left translate-y-[0.45rem] rounded-sm bg-black transition-all duration-300 peer-checked:rotate-[-45deg]"
+								class="header-hamburger h-0.5 w-[50%] origin-left translate-y-[0.45rem] rounded-sm bg-black transition-all duration-300 peer-checked:-rotate-45"
 							></div>
 							<div
 								class="header-hamburger h-0.5 w-[50%] origin-center rounded-md bg-black transition-all duration-300 peer-checked:hidden"
 							></div>
 							<div
-								class="header-hamburger h-0.5 w-[50%] origin-left -translate-y-[0.45rem] rounded-md bg-black transition-all duration-300 peer-checked:rotate-[45deg]"
+								class="header-hamburger h-0.5 w-[50%] origin-left -translate-y-[0.45rem] rounded-md bg-black transition-all duration-300 peer-checked:rotate-45"
 							></div>
 						</div>
 					</button>
@@ -192,7 +192,7 @@
 				</li>
 				<li>
 					<a href="/organizations" class="header-text ml-3 text-xs tracking-wider transition"
-						>団体/飲食/イベント</a
+						>団体/飲食/企画/イベント</a
 					>
 				</li>
 				<li>
@@ -217,7 +217,7 @@
 				<li><a href="/" class="header-text">ホーム</a></li>
 				<li><a href="/about" class="header-text">桐朋祭とは</a></li>
 				<li><a href="/visitor" class="header-text">来場者の皆様へ</a></li>
-				<li><a href="/organizations" class="header-text">団体/飲食/イベント</a></li>
+				<li><a href="/organizations" class="header-text">団体/飲食/企画/イベント</a></li>
 				<li><a href="/timetable" class="header-text">タイムテーブル</a></li>
 				<li>
 					<button class="header-text" onclick={() => (otherOpen = !otherOpen)}>その他</button>
