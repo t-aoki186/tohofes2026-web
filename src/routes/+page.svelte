@@ -18,26 +18,39 @@
 	}
 	/*e:モーダル*/
 	/*s:Auto Scroll*/
-	const options = {
+	const optionsLeft = {
 		type: 'loop',
 		drag: 'free',
 		focus: 'center',
-		// --- サイズ/余白などの設定
 		perPage: 3,
 		gap: '2rem',
 		padding: '5%',
-		height: 'auto',
-		pagination: false, // 下のドットを消す
-		// autoScrollの設定
+		pagination: false,
 		autoScroll: {
-			speed: 2
+			speed: 2 // 右→左
 		},
-		// --- レスポンシブ関係
 		breakpoints: {
-			// 768px以下のとき
 			768: {
 				perPage: 1,
-				gap: '1rem',
+				gap: '1rem'
+			}
+		}
+	};
+	const optionsRight = {
+		type: 'loop',
+		drag: 'free',
+		focus: 'center',
+		perPage: 3,
+		gap: '2rem',
+		padding: '5%',
+		pagination: false,
+		autoScroll: {
+			speed: -2 // 左→右
+		},
+		breakpoints: {
+			768: {
+				perPage: 1,
+				gap: '1rem'
 			}
 		}
 	};
@@ -444,142 +457,212 @@
 			</div>
 		</div>
 
-		<section class="mb-20 border border-l-0 border-(--main-text-color) p-4 pl-0 auto-scroll-organization-section">
-			<Splide {options} extensions={{ AutoScroll }}>
+		<div class="mb-2" style="border-left: solid 4px var(--main-text-color);">
+			<p use:reveal class="news-section-title ml-2" style="padding: 0;">
+				{#each '参加団体一覧'.split('') as char, i}
+					<span class="char text-(--main-text-color)" style={`--d: ${i * 0.12}s`}>{char}</span>
+				{/each}
+			</p>
+		</div>
+		<section
+			class="auto-scroll-organization-section mb-10 rounded-2xl rounded-l-none border border-l-0 border-(--main-text-color) p-4 pl-0"
+		>
+			<Splide options={optionsLeft} extensions={{ AutoScroll }} style="width: 100%;">
 				<SplideSlide>
 					<a href="/organizations/1">
 						<img
 							src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-00.webp"
 							alt="サンプル00"
+							class="rounded-xl"
 						/>
 					</a>
 				</SplideSlide>
 				<SplideSlide>
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-01.webp"
-						alt="サンプル01"
-					/>
+					<a href="/organizations/2">
+						<img
+							src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-01.webp"
+							alt="サンプル01"
+							class="rounded-xl"
+						/>
+					</a>
 				</SplideSlide>
 				<SplideSlide>
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-02.webp"
-						alt="サンプル02"
-					/>
+					<a href="/organizations/3">
+						<img
+							src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-02.webp"
+							alt="サンプル02"
+							class="rounded-xl"
+						/>
+					</a>
 				</SplideSlide>
 				<SplideSlide>
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-03.webp"
-						alt="サンプル03"
-					/>
+					<a href="/organizations/4">
+						<img
+							src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-03.webp"
+							alt="サンプル03"
+							class="rounded-xl"
+						/>
+					</a>
 				</SplideSlide>
 				<SplideSlide>
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-04.webp"
-						alt="サンプル04"
-					/>
+					<a href="/organizations/5">
+						<img
+							src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-04.webp"
+							alt="サンプル04"
+							class="rounded-xl"
+						/>
+					</a>
 				</SplideSlide>
 				<SplideSlide>
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-05.webp"
-						alt="サンプル05"
-					/>
+					<a href="/organizations/6">
+						<img
+							src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-05.webp"
+							alt="サンプル05"
+							class="rounded-xl"
+						/>
+					</a>
 				</SplideSlide>
 				<SplideSlide>
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-06.webp"
-						alt="サンプル06"
-					/>
+					<a href="/organizations/7">
+						<img
+							src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-06.webp"
+							alt="サンプル06"
+							class="rounded-xl"
+						/>
+					</a>
 				</SplideSlide>
 				<SplideSlide>
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-07.webp"
-						alt="サンプル07"
-					/>
+					<a href="/organizations/8">
+						<img
+							src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-07.webp"
+							alt="サンプル07"
+							class="rounded-xl"
+						/>
+					</a>
 				</SplideSlide>
 				<SplideSlide>
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-08.webp"
-						alt="サンプル08"
-					/>
+					<a href="/organizations/9">
+						<img
+							src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-08.webp"
+							alt="サンプル08"
+							class="rounded-xl"
+						/>
+					</a>
 				</SplideSlide>
 				<SplideSlide>
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-09.webp"
-						alt="サンプル09"
-					/>
+					<a href="/organizations/10">
+						<img
+							src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-09.webp"
+							alt="サンプル09"
+							class="rounded-xl"
+						/>
+					</a>
 				</SplideSlide>
 			</Splide>
 		</section>
-		<section class="ml-auto mb-20 border border-r-0 border-(--main-text-color) p-4 pr-0 auto-scroll-organization-section">
-			<Splide {options} extensions={{ AutoScroll }}>
+		<div class="mb-2" style="border-right: solid 4px var(--main-text-color);">
+			<p use:reveal class="news-section-title mr-2" style="padding: 0; text-align: right !important;">
+				{#each '参加団体ブログ'.split('') as char, i}
+					<span class="char text-(--main-text-color)" style={`--d: ${i * 0.12}s`}>{char}</span>
+				{/each}
+			</p>
+		</div>
+		<section
+			class="auto-scroll-organization-section mb-10 ml-auto rounded-2xl rounded-r-none border border-r-0 border-(--main-text-color) p-4 pr-0"
+		>
+			<Splide options={optionsRight} extensions={{ AutoScroll }} style="width: 100%;">
 				<SplideSlide>
 					<a href="/organizations/1">
 						<img
 							src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-00.webp"
 							alt="サンプル00"
+							class="rounded-xl"
 						/>
 					</a>
 				</SplideSlide>
 				<SplideSlide>
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-01.webp"
-						alt="サンプル01"
-					/>
+					<a href="/organizations/2">
+						<img
+							src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-01.webp"
+							alt="サンプル01"
+							class="rounded-xl"
+						/>
+					</a>
 				</SplideSlide>
 				<SplideSlide>
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-02.webp"
-						alt="サンプル02"
-					/>
+					<a href="/organizations/3">
+						<img
+							src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-02.webp"
+							alt="サンプル02"
+							class="rounded-xl"
+						/>
+					</a>
 				</SplideSlide>
 				<SplideSlide>
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-03.webp"
-						alt="サンプル03"
-					/>
+					<a href="/organizations/4">
+						<img
+							src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-03.webp"
+							alt="サンプル03"
+							class="rounded-xl"
+						/>
+					</a>
 				</SplideSlide>
 				<SplideSlide>
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-04.webp"
-						alt="サンプル04"
-					/>
+					<a href="/organizations/5">
+						<img
+							src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-04.webp"
+							alt="サンプル04"
+							class="rounded-xl"
+						/>
+					</a>
 				</SplideSlide>
 				<SplideSlide>
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-05.webp"
-						alt="サンプル05"
-					/>
+					<a href="/organizations/6">
+						<img
+							src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-05.webp"
+							alt="サンプル05"
+							class="rounded-xl"
+						/>
+					</a>
 				</SplideSlide>
 				<SplideSlide>
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-06.webp"
-						alt="サンプル06"
-					/>
+					<a href="/organizations/7">
+						<img
+							src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-06.webp"
+							alt="サンプル06"
+							class="rounded-xl"
+						/>
+					</a>
 				</SplideSlide>
 				<SplideSlide>
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-07.webp"
-						alt="サンプル07"
-					/>
+					<a href="/organizations/8">
+						<img
+							src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-07.webp"
+							alt="サンプル07"
+							class="rounded-xl"
+						/>
+					</a>
 				</SplideSlide>
 				<SplideSlide>
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-08.webp"
-						alt="サンプル08"
-					/>
+					<a href="/organizations/9">
+						<img
+							src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-08.webp"
+							alt="サンプル08"
+							class="rounded-xl"
+						/>
+					</a>
 				</SplideSlide>
 				<SplideSlide>
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-09.webp"
-						alt="サンプル09"
-					/>
+					<a href="/organizations/10">
+						<img
+							src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-09.webp"
+							alt="サンプル09"
+							class="rounded-xl"
+						/>
+					</a>
 				</SplideSlide>
 			</Splide>
 		</section>
-
-		<p>[右から左]横に流れる団体/飲食/イベントサムネイル</p>
-		<hr />
-		<p class="mb-4">[左から右]横に流れる団体/飲食/イベントのブログのサムネイル</p>
 		<a href="/organizations" class="link-main">
 			<div class="link-main-underline">
 				<i class="fa-solid fa-magnifying-glass"></i>
@@ -688,12 +771,12 @@
 		opacity: 0.9;
 	}
 
-	.auto-scroll-organization-section{
+	.auto-scroll-organization-section {
 		width: 70%;
 	}
 
 	@media (max-width: 768px) {
-		.auto-scroll-organization-section{
+		.auto-scroll-organization-section {
 			width: 100%;
 		}
 	}
