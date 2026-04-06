@@ -25,7 +25,7 @@
 
 {#if visible}
 	<div
-		class="backdrop {closing ? 'fade-out' : 'fade-in'}"
+		class="modal-backdrop {closing ? 'fade-out' : 'fade-in'}"
 		onclick={(e) => e.target === e.currentTarget && close()}
 	>
 		<div class="main-modal {closing ? 'pop-out' : 'pop-in'}">
@@ -45,10 +45,11 @@
 {/if}
 
 <style>
-	.backdrop {
+	.modal-backdrop {
 		position: fixed;
 		inset: 0;
 		background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(5px);
 		display: flex;
 		justify-content: center;
 		align-items: center;

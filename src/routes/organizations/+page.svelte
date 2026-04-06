@@ -17,9 +17,7 @@
 
 <main class="mt-15 mr-1 ml-1 min-h-screen">
 	<Modal bind:showModal={show}>
-		<p class="mb-4 text-center text-xl font-bold text-(--main-text-color)">
-			絞り込み検索
-		</p>
+		<p class="mb-4 text-center text-xl font-bold text-(--main-text-color)">絞り込み検索</p>
 		<div>
 			<p class="tf26-dialog-title">公開日</p>
 			<ul>
@@ -78,18 +76,30 @@
 						><p class="hidden">hidden:エラー対策</p></a
 					>
 					<div class="mb-2">
-						<p class="text-lg font-bold text-(--main-text-color)">{item.title}</p>
-						<p
-							class="text-sm"
-							style="color: color-mix(in srgb, var(--main-text-color), transparent 50%);"
-						>
-							{item.contributor || 'ニュース'}
-						</p>
+						<p class="text-xl font-bold text-(--main-text-color)">{item.title}</p>
 					</div>
-					<div class="flex"></div>
-					<p class="text-sm text-gray-600">
-						{item.heading}
-					</p>
+					<div class="flex">
+						<div class="mr-2 flex-col" style="min-width: 0; max-width: 100%;">
+							<p
+								class="sp-search-result-text text-xs"
+								style="color: color-mix(in srgb, var(--main-text-color), transparent 50%);"
+							>
+								{item.contributor || 'ニュース'}
+							</p>
+							<p class="sp-search-result-heading h-1/2 text-sm text-gray-600">
+								{item.heading}
+							</p>
+							<p class="sp-search-result-text text-left-decoration items-end text-sm text-gray-600">
+								{item.body}
+							</p>
+						</div>
+						<img
+							src={item.thumbnail ||
+								'https://pic.atserver186.jp/img/tohofes/thumbnail/webp/no-image.webp'}
+							alt="サンプル00"
+							class="ml-auto w-1/2 rounded-lg"
+						/>
+					</div>
 				</article>
 			{/each}
 		</div>
@@ -105,7 +115,6 @@
 		position: relative;
 		display: inline-block;
 		width: calc(100% / 3 - 2rem);
-		height: 20vh;
 		border-radius: 10px;
 		padding: 15px;
 		margin: 10px;
@@ -120,6 +129,31 @@
 		bottom: 0;
 		left: 0;
 		z-index: 1;
+	}
+
+	.sp-search-result-text {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		line-clamp: 2;
+		-webkit-line-clamp: 2; /* ここで行数を指定 */
+		-webkit-box-orient: vertical;
+	}
+
+	.sp-search-result-heading {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		line-clamp: 2;
+		-webkit-line-clamp: 3; /* ここで行数を指定 */
+		-webkit-box-orient: vertical;
+	}
+
+	.text-left-decoration {
+		padding: 0.25em 0.5em;
+		color: #494949;
+		background: transparent;
+		border-left: solid 3px var(--main-text-color);
 	}
 
 	@media (max-width: 1024px) {

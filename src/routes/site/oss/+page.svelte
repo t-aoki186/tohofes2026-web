@@ -54,6 +54,7 @@
 			https://www.silhouette-illust.com/policy
 			AOS(Animate On Scroll) https://michalsnik.github.io/aos/ <br />
 			NProgress https://ricostacruz.com/nprogress/ <br />
+			https://ja.splidejs.com/extensions/auto-scroll/
 		</div>
 	</section>
 </main>
