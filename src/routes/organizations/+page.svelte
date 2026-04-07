@@ -19,30 +19,50 @@
 	<Modal bind:showModal={show}>
 		<p class="mb-4 text-center text-xl font-bold text-(--main-text-color)">絞り込み検索</p>
 		<div>
-			<p class="tf26-dialog-title">公開日</p>
-			<ul>
-				<li>
-					<p class="mb-4">test</p>
-				</li>
-			</ul>
-			<p class="tf26-dialog-title">場所</p>
-			<ul>
-				<li>
-					<p class="mb-4">test</p>
-				</li>
-			</ul>
-			<p class="tf26-dialog-title">カテゴリー</p>
-			<ul>
-				<li>
-					<a href="/organizations/?category=news">ニュース</a>
-				</li>
-				<li>
-					<a href="/organizations/?category=organizations">{pageTitle}</a>
-				</li>
-				<li>
-					<a href="/organizations/?category=organization-blogs">参加団体ブログ</a>
-				</li>
-			</ul>
+			<div class="mb-4">
+				<p class="tf26-dialog-title">公開日</p>
+				<a href="/organizations/?date=1" class="sp-refined-date">
+					<p class="text-lg text-(--main-text-color)">6/0x(x)</p>
+				</a>
+				<a href="/organizations/?date=2" class="sp-refined-date">
+					<p class="text-lg text-(--main-text-color)">6/0x(x)</p>
+				</a>
+				<a href="/organizations/?date=3" class="sp-refined-date">
+					<p class="text-lg text-(--main-text-color)">6/0x(x)</p>
+				</a>
+			</div>
+			<div class="mb-4">
+				<p class="tf26-dialog-title">場所</p>
+				<ul>
+					<li>
+						<p class="mb-4">test</p>
+					</li>
+				</ul>
+			</div>
+			<div>
+				<p class="tf26-dialog-title">カテゴリー</p>
+				<a href="/organizations/?category=" class="sp-refined-date">
+					<p class="text-lg text-(--main-text-color)">参加団体</p>
+				</a>
+				<a href="/organizations/?category=organizations" class="sp-refined-date">
+					<p class="text-lg text-(--main-text-color)">団体</p>
+				</a>
+				<a href="/organizations/?category=food-and-drink" class="sp-refined-date">
+					<p class="text-lg text-(--main-text-color)">飲食</p>
+				</a>
+				<a href="/organizations/?category=plan" class="sp-refined-date">
+					<p class="text-lg text-(--main-text-color)">企画</p>
+				</a>
+				<a href="/organizations/?category=event" class="sp-refined-date">
+					<p class="text-lg text-(--main-text-color)">イベント</p>
+				</a>
+				<a href="/organizations/?category=oganization-blogs" class="sp-refined-date">
+					<p class="text-lg text-(--main-text-color)">参加団体ブログ</p>
+				</a>
+				<a href="/organizations/?category=news" class="sp-refined-date">
+					<p class="text-lg text-(--main-text-color)">お知らせ</p>
+				</a>
+			</div>
 		</div>
 	</Modal>
 
@@ -156,6 +176,16 @@
 		border-left: solid 3px var(--main-text-color);
 	}
 
+	.sp-refined-date {
+		position: relative;
+		display: inline-block;
+		transition: 0.3s;
+		border: 1px solid var(--main-text-color);
+		margin: 2px;
+		padding: 4px 10px;
+		border-radius: 5px;
+	}
+
 	@media (max-width: 1024px) {
 		.sp-search-result-card {
 			width: calc(100% / 2 - 2rem);
@@ -164,7 +194,7 @@
 
 	@media (max-width: 640px) {
 		.sp-search-result-card {
-			width: calc(100% - 2rem);
+			min-width: 100%;
 		}
 	}
 </style>
