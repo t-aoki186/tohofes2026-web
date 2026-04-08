@@ -9,6 +9,8 @@
 	let show = $state(false);
 
 	let pageTitle = '団体/飲食/企画/イベント';
+
+	// --- 絞り込み検索用
 </script>
 
 <svelte:head>
@@ -47,7 +49,7 @@
 				<a href="/organizations/?category=organizations" class="sp-refined-date">
 					<p class="text-lg text-(--main-text-color)">団体</p>
 				</a>
-				<a href="/organizations/?category=food-and-drink" class="sp-refined-date">
+				<a href="/organizations/?category=food" class="sp-refined-date">
 					<p class="text-lg text-(--main-text-color)">飲食</p>
 				</a>
 				<a href="/organizations/?category=plan" class="sp-refined-date">

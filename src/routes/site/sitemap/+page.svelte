@@ -36,6 +36,11 @@
 						</a>
 					</li>
 					<li>
+						<a href="/access">
+							<span>本校へのアクセス</span>
+						</a>
+					</li>
+					<li>
 						<a href="/timetable">
 							<span>タイムテーブル</span>
 						</a>
@@ -48,11 +53,6 @@
 					<li>
 						<a href="/site/info" target="_blank">
 							<span>サイト情報</span>
-						</a>
-					</li>
-					<li>
-						<a href="/access">
-							<span>本校へのアクセス</span>
 						</a>
 					</li>
 					<li>

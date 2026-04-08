@@ -39,7 +39,7 @@
 
 /*font-family: 'Noto Sans JP', sans-serif;*/
 body {
-	font-family: "LINE Seed JP", sans-serif;
+	font-family: 'LINE Seed JP', sans-serif;
 	background-image:
 		linear-gradient(0deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px)),
 		linear-gradient(90deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px));
@@ -187,7 +187,7 @@ body {
 		@apply mx-auto;
 	}
 
-	.link-4{
+	.link-4 {
 		max-width: 100%;
 	}
 }
@@ -244,6 +244,51 @@ body {
 	.tf26-dialog-title {
 		font-size: 1.2rem;
 	}
+}
+
+/*アコーディオン*/
+.accordion-main summary {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	color: white;
+	cursor: pointer;
+}
+
+.accordion-main summary::-webkit-details-marker {
+	display: none;
+}
+
+.accordion-main summary::after {
+	transform: translateY(-25%) rotate(45deg);
+	width: 8px;
+	height: 8px;
+	margin-left: 10px;
+	border-radius: 1px;
+	border-bottom: 2px solid white;
+	border-right: 2px solid white;
+	content: '';
+	transition: transform 0.3s;
+}
+
+.accordion-main[open] summary::after {
+	transform: rotate(225deg);
+}
+
+.accordion-main a {
+	transform: translateY(-10px);
+	opacity: 0;
+	margin: 0;
+	color: white;
+	transition:
+		transform 0.5s,
+		opacity 0.5s;
+}
+
+.accordion-main[open] a {
+	transform: none;
+	opacity: 1;
 }
 
 /*パンクズリスト*/
@@ -303,7 +348,7 @@ body {
 }
 
 .footer-top-content {
-	width: 90%;
+	width: 100%;
 	margin: 20px auto;
 	padding: 20px;
 	border-radius: 10px;
@@ -311,7 +356,7 @@ body {
 }
 
 .footer-bottom-content {
-	width: 90%;
+	width: 100%;
 	padding: 20px;
 }
 
@@ -347,6 +392,13 @@ body {
 	list-style: none;
 	margin-left: 5px;
 	margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+	.footer-top-content,
+	.footer-bottom-content {
+		padding: 2px;
+	}
 }
 
 /*検索フォーム*/
@@ -410,10 +462,6 @@ body {
 	}
 
 	.footer-top-content {
-		width: 95%;
-	}
-
-	.footer-bottom-content {
 		width: 95%;
 	}
 }

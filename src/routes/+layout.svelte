@@ -307,134 +307,198 @@
 {@render children()}
 
 <!--フッター-->
-<footer class="footer m-0 w-full pt-[10] pr-0 pb-[10] pl-0">
-	<div class="hidden md:flex">
-		<div class="footer-top-content">
-			<!-- フッターの左側コンテンツ -->
-			<div class="footer-flex-content">
-				<div class="footer-logo">
-					<a href="/">
-						<img src={logo_2} alt={logo_alt} class="h-auto w-45 rounded-xl" />
-					</a>
+<footer class="footer m-0 w-full">
+	<div class="container">
+		<div class="hidden md:flex">
+			<div class="footer-top-content">
+				<!-- フッターの左側コンテンツ -->
+				<div class="footer-flex-content">
+					<div class="footer-logo">
+						<a href="/">
+							<img src={logo_2} alt={logo_alt} class="h-auto w-45 rounded-xl" />
+						</a>
+					</div>
+					<br />
+					<a href="/access" class="footer-text"
+						><i class="fa-solid fa-location-dot mr-1 text-xs"></i>{school_address}</a
+					>
 				</div>
-				<br />
-				<a href="/access" class="footer-text"
-					><i class="fa-solid fa-location-dot mr-1 text-xs"></i>{school_address}</a
-				>
-			</div>
 
-			<!-- フッターの右側コンテンツ -->
-			<div class="footer-flex-content">
-				<h4>ご案内</h4>
-				<ul>
-					<li>
-						<a href="/about">
-							<span>桐朋祭について</span>
-						</a>
-					</li>
-					<li>
-						<a href="/access">
-							<span>アクセス</span>
-						</a>
-					</li>
-					<li>
-						<a href="/timetable">
-							<span>タイムテーブル</span>
-						</a>
-					</li>
-					<li>
-						<a href="/qa">
-							<span>よくある質問</span>
-						</a>
-					</li>
-					<li>
-						<a href="/site/contact">
-							<span>お問い合わせ</span>
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="footer-flex-content">
-				<h4>参加団体</h4>
-				<ul>
-					<li>
-						<a href="/organizations/club/tcc">
-							<span>コンピューター部</span>
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="footer-flex-content">
-				<h4>各種SNS / リンク</h4>
-				<ul>
-					<li>
-						<a href="https://x.com" target="_blank">
-							<i class="fa-brands fa-x-twitter mr-1 text-xs"></i>
-							<span>X(Twitter)</span>
-						</a>
-					</li>
-					<li>
-						<a href="https://www.instagram.com" target="_blank">
-							<i class="fa-brands fa-instagram mr-1 text-xs"></i>
-							<span>Instagram</span>
-						</a>
-					</li>
-					<li>
-						<a href="https://atserver186.jp" target="_blank">
-							<i class="fa-solid fa-arrow-up-right-from-square mr-1 text-xs"></i>
-							<span>ATSocial</span>
-						</a>
-					</li>
-					<li>
-						<a href="http://toho.ed.jp" target="_blank">
-							<i class="fa-solid fa-arrow-up-right-from-square mr-1 text-xs"></i>
-							<span>桐朋中学校・高等学校HP</span>
-						</a>
-					</li>
-					<li>
-						<a href="https://2026.tcc-archive.club" target="_blank">
-							<i class="fa-solid fa-arrow-up-right-from-square mr-1 text-xs"></i>
-							<span>コンピューター部桐朋祭用特設HP</span>
-						</a>
-					</li>
-				</ul>
+				<!-- フッターの右側コンテンツ -->
+				<div class="footer-flex-content">
+					<h4>ご案内</h4>
+					<ul>
+						<li>
+							<a href="/about">
+								<span>桐朋祭について</span>
+							</a>
+						</li>
+						<li>
+							<a href="/access">
+								<span>アクセス</span>
+							</a>
+						</li>
+						<li>
+							<a href="/timetable">
+								<span>タイムテーブル</span>
+							</a>
+						</li>
+						<li>
+							<a href="/qa">
+								<span>よくある質問</span>
+							</a>
+						</li>
+						<li>
+							<a href="/site/contact">
+								<span>お問い合わせ</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-flex-content">
+					<h4>参加団体</h4>
+					<ul>
+						<li>
+							<a href="/organizations/club/tcc">
+								<span>コンピューター部</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-flex-content">
+					<h4>各種SNS / リンク</h4>
+					<ul>
+						<li>
+							<a href="https://x.com" target="_blank">
+								<i class="fa-brands fa-x-twitter mr-1 text-xs"></i>
+								<span>X(Twitter)</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.instagram.com" target="_blank">
+								<i class="fa-brands fa-instagram mr-1 text-xs"></i>
+								<span>Instagram</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://atserver186.jp" target="_blank">
+								<i class="fa-solid fa-arrow-up-right-from-square mr-1 text-xs"></i>
+								<span>ATSocial</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://toho.ed.jp" target="_blank">
+								<i class="fa-solid fa-arrow-up-right-from-square mr-1 text-xs"></i>
+								<span>桐朋中学校・高等学校HP</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://2026.tcc-archive.club" target="_blank">
+								<i class="fa-solid fa-arrow-up-right-from-square mr-1 text-xs"></i>
+								<span>コンピューター部桐朋祭用特設HP</span>
+							</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="md:hidden">
-		<div class="flex flex-col items-center justify-center gap-4">
-			<a href="/">
-				<img src={logo_2} alt={logo_alt} class="h-auto w-20 rounded-xl" />
-			</a>
-			<p class="text-white">{school_address}</p>
+		<!--s:モバイル表示用-->
+		<div class="footer-top-content flex flex-col md:hidden">
+			<!--s:ロゴ・住所-->
+			<div class="flex flex-col items-center justify-center gap-4">
+				<a href="/">
+					<img src={logo_2} alt={logo_alt} class="mt-4 h-auto w-20 rounded-xl" />
+				</a>
+				<p class="text-white">{school_address}</p>
+			</div>
+			<!--s:ロゴ・住所-->
+			<!---->
+			<!--s:アコーディオン-->
+			<div class="mt-8">
+				<details class="accordion-main mb-4 min-w-full">
+					<summary class="font-bold">ご案内</summary>
+					<ul class="pt-2 pl-2">
+						<li><a href="/about">桐朋祭について</a></li>
+						<li><a href="/visitor">来場者の皆様へ</a></li>
+						<li><a href="/access">本校へのアクセス</a></li>
+						<li><a href="/timetable">タイムテーブル</a></li>
+						<li><a href="/qa">よくある質問</a></li>
+						<li><a href="/site/info">サイト情報</a></li>
+						<li><a href="/contact">お問い合わせ</a></li>
+					</ul>
+				</details>
+				<details class="accordion-main mb-4 min-w-full">
+					<summary class="font-bold">参加団体</summary>
+					<ul class="pt-2 pl-2">
+						<li><a href="/about">桐朋祭について</a></li>
+						<li><a href="/contact">一覧はこちら</a></li>
+					</ul>
+				</details>
+				<details class="accordion-main min-w-full">
+					<summary class="font-bold">各種SNS / リンク</summary>
+					<ul class="pt-2 pl-2">
+						<li>
+							<a href="https://x.com" target="_blank">
+								<i class="fa-brands fa-x-twitter mr-1 text-xs"></i>
+								<span>X(Twitter)</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.instagram.com" target="_blank">
+								<i class="fa-brands fa-instagram mr-1 text-xs"></i>
+								<span>Instagram</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://atserver186.jp" target="_blank">
+								<i class="fa-solid fa-arrow-up-right-from-square mr-1 text-xs"></i>
+								<span>ATSocial</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://toho.ed.jp" target="_blank">
+								<i class="fa-solid fa-arrow-up-right-from-square mr-1 text-xs"></i>
+								<span>桐朋中学校・高等学校HP</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://2026.tcc-archive.club" target="_blank">
+								<i class="fa-solid fa-arrow-up-right-from-square mr-1 text-xs"></i>
+								<span>コンピューター部桐朋祭用特設HP</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://2026.tcc-archive.club" target="_blank">
+								<i class="fa-solid fa-arrow-up-right-from-square mr-1 text-xs"></i>
+								<span>すべてのリンクを確認する</span>
+							</a>
+						</li>
+					</ul>
+				</details>
+			</div>
+			<!--e:アコーディオン-->
 		</div>
-		<!--アコーディオン-->
-		<div class="overflow-hidden rounded-lg border">
-			<button
-				class="justfy-between flex w-full items-center bg-gray-100 p-4 transition"
-				onclick={() => (accordionOpen = !accordionOpen)}
-			>
-				<span>テスト</span>
-			</button>
-		</div>
+		<!--e:モバイル表示用-->
 		<!---->
-	</div>
-	<div class="footer-bottom-content mx-auto">
-		<br />
-		<hr class="sub-hr" />
-		<br />
-		<a href="/site/site-policy" class="footer-link" style="margin-right: 10px;">サイトポリシー</a
-		><span class="footer-span">|</span>
-		<a
-			href="/site/privacy-policy"
-			class="footer-link"
-			style="margin-right: 10px; margin-left: 10px;">プライバシーポリシー</a
-		><span class="footer-span">|</span>
-		<a href="/site/contact" class="footer-link" style="margin-left: 10px;">お問い合わせ</a>
-		<p class="footer-text">
-			&copy; 2026 TohoFes. | atserver186.jp All Rights Reserved.
-			本サイトの無断転載は、固くこれを禁じます。
-		</p>
+		<!--s:フッター最下部-->
+		<div class="footer-bottom-content mx-auto">
+			<br />
+			<hr class="sub-hr" />
+			<br />
+			<a href="/site/site-policy" class="footer-link" style="margin-right: 10px;">サイトポリシー</a
+			><span class="footer-span">|</span>
+			<a
+				href="/site/privacy-policy"
+				class="footer-link"
+				style="margin-right: 10px; margin-left: 10px;">プライバシーポリシー</a
+			><span class="footer-span">|</span>
+			<a href="/site/contact" class="footer-link" style="margin-left: 10px;">お問い合わせ</a>
+			<p class="footer-text">
+				&copy; 2026 TohoFes. | atserver186.jp All Rights Reserved.
+				本サイトの無断転載は、固くこれを禁じます。
+			</p>
+		</div>
+		<!--e:フッター最下部-->
 	</div>
 </footer>
 
