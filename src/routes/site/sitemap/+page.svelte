@@ -56,7 +56,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="/contact">
+						<a href="/site/contact">
 							<span>お問い合わせ</span>
 						</a>
 					</li>
@@ -71,7 +71,7 @@
 				<ul>
 					<li class="flex flex-col gap-2.5">
 						<a href="/">
-							<span>jsonから5件ほどランダムに</span>
+							<span>ランダムに5件表示</span>
 						</a>
 					</li>
 					<li class="flex flex-col gap-2.5">

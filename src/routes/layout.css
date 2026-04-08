@@ -395,7 +395,6 @@ body {
 }
 
 @media (max-width: 768px) {
-	.footer-top-content,
 	.footer-bottom-content {
 		padding: 2px;
 	}
@@ -459,10 +458,6 @@ body {
 	.footer_logo {
 		width: 120px;
 		height: auto;
-	}
-
-	.footer-top-content {
-		width: 95%;
 	}
 }
 

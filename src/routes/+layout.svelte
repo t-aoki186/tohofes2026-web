@@ -309,6 +309,7 @@
 <!--フッター-->
 <footer class="footer m-0 w-full">
 	<div class="container">
+		<!--s:PC表示用-->
 		<div class="hidden md:flex">
 			<div class="footer-top-content">
 				<!-- フッターの左側コンテンツ -->
@@ -328,41 +329,21 @@
 				<div class="footer-flex-content">
 					<h4>ご案内</h4>
 					<ul>
-						<li>
-							<a href="/about">
-								<span>桐朋祭について</span>
-							</a>
-						</li>
-						<li>
-							<a href="/access">
-								<span>アクセス</span>
-							</a>
-						</li>
-						<li>
-							<a href="/timetable">
-								<span>タイムテーブル</span>
-							</a>
-						</li>
-						<li>
-							<a href="/qa">
-								<span>よくある質問</span>
-							</a>
-						</li>
-						<li>
-							<a href="/site/contact">
-								<span>お問い合わせ</span>
-							</a>
-						</li>
+						<li><a href="/about">桐朋祭について</a></li>
+						<li><a href="/visitor">来場者の皆様へ</a></li>
+						<li><a href="/access">本校へのアクセス</a></li>
+						<li><a href="/timetable">タイムテーブル</a></li>
+						<li><a href="/qa">よくある質問</a></li>
+						<li><a href="/site/info">サイト情報</a></li>
+						<li><a href="/site/sitemap">サイトマップ</a></li>
+						<li><a href="/site/contact">お問い合わせ</a></li>
 					</ul>
 				</div>
 				<div class="footer-flex-content">
 					<h4>参加団体</h4>
 					<ul>
-						<li>
-							<a href="/organizations/club/tcc">
-								<span>コンピューター部</span>
-							</a>
-						</li>
+						<li><a href="/">ランダムに5件表示</a></li>
+						<li><a href="/organizations">すべての参加団体を確認する</a></li>
 					</ul>
 				</div>
 				<div class="footer-flex-content">
@@ -398,12 +379,20 @@
 								<span>コンピューター部桐朋祭用特設HP</span>
 							</a>
 						</li>
+						<li>
+							<a href="/link" target="_blank">
+								<i class="fa-solid fa-arrow-up-right-from-square mr-1 text-xs"></i>
+								<span>すべてのリンクを確認する</span>
+							</a>
+						</li>
 					</ul>
 				</div>
 			</div>
 		</div>
+		<!--e:PC表示用-->
+		<!---->
 		<!--s:モバイル表示用-->
-		<div class="footer-top-content flex flex-col md:hidden">
+		<div class="w-full p-1 flex flex-col md:hidden">
 			<!--s:ロゴ・住所-->
 			<div class="flex flex-col items-center justify-center gap-4">
 				<a href="/">
@@ -424,14 +413,15 @@
 						<li><a href="/timetable">タイムテーブル</a></li>
 						<li><a href="/qa">よくある質問</a></li>
 						<li><a href="/site/info">サイト情報</a></li>
-						<li><a href="/contact">お問い合わせ</a></li>
+						<li><a href="/site/sitemap">サイトマップ</a></li>
+						<li><a href="/site/contact">お問い合わせ</a></li>
 					</ul>
 				</details>
 				<details class="accordion-main mb-4 min-w-full">
 					<summary class="font-bold">参加団体</summary>
 					<ul class="pt-2 pl-2">
-						<li><a href="/about">桐朋祭について</a></li>
-						<li><a href="/contact">一覧はこちら</a></li>
+						<li><a href="/">ランダムに5件表示</a></li>
+						<li><a href="/organizations">すべての参加団体を確認する</a></li>
 					</ul>
 				</details>
 				<details class="accordion-main min-w-full">
@@ -468,7 +458,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="https://2026.tcc-archive.club" target="_blank">
+							<a href="/link" target="_blank">
 								<i class="fa-solid fa-arrow-up-right-from-square mr-1 text-xs"></i>
 								<span>すべてのリンクを確認する</span>
 							</a>
