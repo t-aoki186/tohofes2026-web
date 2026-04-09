@@ -15,13 +15,7 @@
 	<div class="container m-auto mt-25 border-b-2 border-b-(--main-text-color)">
 		<p class="tf26-page-title" style="color: black; margin-bottom: 0;">{pageTitle}</p>
 	</div>
-	<section class="container mx-auto mt-25 mb-25">
-		<div class="mt-4 min-w-full">
-			<h1 class="tf26-section-title">
-				当サイトで使用しているライブラリのライセンスは以下の通りです。
-			</h1>
-		</div>
-
+	<section class="container mx-auto mt-15 mb-25">
 		<div class="mt-4">
 			<h2 class="mt-2 text-lg font-semibold">Font Awesome Free</h2>
 			<p class="mt-1 text-sm">

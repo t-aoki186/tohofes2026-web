@@ -19,7 +19,7 @@
 			{/each}
 		</p>
 	</div>
-	<section class="container mx-auto mt-25 mb-25">
+	<section class="container mx-auto mt-15 mb-25">
 		<div class="mt-4 min-w-full">
 			<h1 class="tf26-section-title">桐朋祭の概要</h1>
 			<br />

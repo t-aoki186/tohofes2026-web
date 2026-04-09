@@ -12,20 +12,20 @@
 	<meta property="og:title" content="{pageTitle} | {data.site_title}" />
 </svelte:head>
 
-<main class="mt-15 mr-1 ml-1 min-h-screen">
+<main class="mt-25 mr-1 ml-1 min-h-screen">
 	<div class="container m-auto mt-25 border-b-2 border-b-(--main-text-color)">
 		<p class="tf26-page-title" style="color: black; margin-bottom: 0;">{pageTitle}</p>
 	</div>
-	<section class="container mx-auto mt-25 mb-25">
-		<div class="flex">
+	<section class="container mx-auto mt-15 mb-25">
+		<div class="sitemap-container">
 			<div class="sitemap-content">
 				<h2
 					class="border-l-[3px] border-(--main-text-color) pl-2 text-lg font-bold tracking-[3px] text-(--main-text-color)"
 				>
 					ご案内
 				</h2>
-				<ul>
-					<li class="flex flex-col gap-2.5">
+				<ul class="sitemap-ul">
+					<li>
 						<a href="/about">
 							<span>桐朋祭とは</span>
 						</a>
@@ -64,11 +64,11 @@
 			</div>
 			<div class="sitemap-content">
 				<h2
-					class="border-l-[3px] border-(--main-text-color) pl-2 text-lg font-bold tracking-[3px] text-(--main-text-color)"
+					class="border-l-[3px] border-(--main-text-color) pl-2 text-lg font-bold tracking-[3px] text-(--main-text-color) mt-2"
 				>
 					参加団体
 				</h2>
-				<ul>
+				<ul class="sitemap-ul">
 					<li class="flex flex-col gap-2.5">
 						<a href="/">
 							<span>ランダムに5件表示</span>
@@ -83,11 +83,11 @@
 			</div>
 			<div class="sitemap-content">
 				<h2
-					class="border-l-[3px] border-(--main-text-color) pl-2 text-lg font-bold tracking-[3px] text-(--main-text-color)"
+					class="border-l-[3px] border-(--main-text-color) pl-2 text-lg font-bold tracking-[3px] text-(--main-text-color) mt-2"
 				>
 					各種SNS / リンク
 				</h2>
-				<ul>
+				<ul class="sitemap-ul">
 					<li>
 						<a href="https://x.com" target="_blank">
 							<i class="fa-brands fa-x-twitter mr-1 text-xs"></i>
@@ -129,10 +129,29 @@
 </ol>
 
 <style>
+	.sitemap-container {
+		display: flex;
+	}
+
 	.sitemap-content {
 		display: flex;
 		flex-direction: column;
-		gap: 1rem;
 		width: calc(100% / 3);
+	}
+
+	.sitemap-ul {
+		display: flex;
+		flex-direction: column;
+		gap: 0.2rem;
+	}
+
+	@media (max-width: 768px) {
+		.sitemap-container {
+			flex-direction: column;
+		}
+
+		.sitemap-content {
+			width: 100%;
+		}
 	}
 </style>

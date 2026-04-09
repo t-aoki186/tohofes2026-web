@@ -50,7 +50,7 @@
 	<div class="container m-auto mt-25 border-b-2 border-b-(--main-text-color)">
 		<p class="tf26-page-title" style="color: black; margin-bottom: 0;">タイムテーブル</p>
 	</div>
-	<section class="container mx-auto mt-25 mb-25">
+	<section class="container mx-auto mt-15 mb-25">
 		<div class="flex justify-center">日付選択</div>
 		<div class="md:hidden">ジャンル選択</div>
 		<br />

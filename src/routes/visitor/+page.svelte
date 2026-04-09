@@ -15,7 +15,7 @@
 	<div class="container m-auto mt-25 border-b-2 border-b-(--main-text-color)">
 		<p class="tf26-page-title" style="color: black; margin-bottom: 0;">{pageTitle}</p>
 	</div>
-	<section class="container mx-auto mt-25 mb-25"></section>
+	<section class="container mx-auto mt-15 mb-25"></section>
 </main>
 <ol class="main-breadcrumb container mx-auto">
 	<li><a href="/">ホーム</a></li>
