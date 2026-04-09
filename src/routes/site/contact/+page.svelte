@@ -17,7 +17,7 @@
 		<p class="tf26-page-title" style="color: black; margin-bottom: 0;">{pageTitle}</p>
 	</div>
 	<section class="container mx-auto mt-10 mb-25 flex flex-col">
-		<div class="mx-auto w-[50%] rounded-2xl bg-gray-50 p-10">
+		<div class="mx-auto w-full rounded-2xl bg-gray-50 p-10 md:w-[70%] lg:w-[50%]">
 			<form class="flex flex-col">
 				<label class="mb-4">
 					<div class="mb-1 flex items-end justify-between">

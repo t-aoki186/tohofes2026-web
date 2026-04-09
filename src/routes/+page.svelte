@@ -245,7 +245,7 @@
 			{/each}
 		</p>
 	</div>
-	<div class="container mx-auto mb-4" data-aos="fade-up">
+	<div class="container mx-auto mb-4 mt-4" data-aos="fade-up">
 		<div class="main-link">
 			<div class="link-2">
 				<!--テーマ説明-->
@@ -295,7 +295,7 @@
 			{/each}
 		</p>
 	</div>
-	<div class="container mx-auto" data-aos="fade-up">
+	<div class="container mx-auto mt-4" data-aos="fade-up">
 		<div class="main-link" style="border: none !important;">
 			<div class="link-2" style="padding: 0 !important;">
 				<ul>
@@ -410,7 +410,7 @@
 	</div>
 	<!--e:ご案内-->
 	<!---->
-	<!--s:おすすめ企画-->
+	<!--s:企画情報-->
 	<div class="container m-auto mt-10 rounded-xl bg-(--title-bg-color)" data-aos="fade-up">
 		<p use:reveal class="tf26-page-title">
 			{#each '企画情報'.split('') as char, i}
@@ -418,7 +418,7 @@
 			{/each}
 		</p>
 	</div>
-	<div class="container mx-auto" data-aos="fade-up">
+	<div class="container mx-auto mt-4" data-aos="fade-up">
 		<form class="s-search-form mb-4" action="/organizations/" method="GET">
 			<input
 				class="s-search-input"
@@ -670,7 +670,7 @@
 			</div>
 		</a>
 	</div>
-	<!--e:おすすめ企画-->
+	<!--e:企画情報-->
 	<!---->
 	<!--s:桐朋祭とは-->
 	<div class="container m-auto mt-10 rounded-xl bg-(--title-bg-color)" data-aos="fade-up">
@@ -680,7 +680,7 @@
 			{/each}
 		</p>
 	</div>
-	<div class="container mx-auto" data-aos="fade-up">
+	<div class="container mx-auto mt-4" data-aos="fade-up">
 		<div class="main-link">
 			<div class="link-2 bg-white" style="padding: 0 !important;">
 				<img
@@ -706,7 +706,7 @@
 	</div>
 	<!--e:桐朋祭とは-->
 	<!---->
-	<!--s:桐朋祭のテーマ-->
+	<!--s:テーマについて-->
 	<div class="container m-auto mt-10 rounded-xl bg-(--title-bg-color)" data-aos="fade-up">
 		<p use:reveal class="tf26-page-title">
 			{#each 'テーマについて'.split('') as char, i}
@@ -714,7 +714,7 @@
 			{/each}
 		</p>
 	</div>
-	<div class="container mx-auto mb-10" data-aos="fade-up">
+	<div class="container mx-auto mb-10 mt-4" data-aos="fade-up">
 		<div class="main-link">
 			<div class="link-2">
 				<!--テーマ説明-->
@@ -738,7 +738,7 @@
 			</div>
 		</a>
 	</div>
-	<!--e:桐朋祭のテーマ-->
+	<!--e:テーマについて-->
 	<!---->
 	<hr class="main-hr" />
 	<!--s:アニメーションを再視聴-->
@@ -755,20 +755,6 @@
 <style>
 	@view-transition {
 		navigation: auto;
-	}
-
-	.tp-search-method {
-		text-decoration: none;
-		width: 48%;
-		border-radius: 10px;
-		padding: 15px;
-		transition: 0.3s;
-		text-align: center;
-	}
-
-	.tp-search-method:hover {
-		transform: scale(1.03);
-		opacity: 0.9;
 	}
 
 	.auto-scroll-organization-section {

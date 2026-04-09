@@ -104,7 +104,7 @@
 
 <Modal bind:showModal>
 	{#if modalType === 'search'}
-		<form class="s-search-form mb-4" action="/search/" method="GET">
+		<form class="s-search-form mb-4" action="/organizations/" method="GET">
 			<input
 				class="s-search-input"
 				type="text"
@@ -116,7 +116,31 @@
 				><i class="fas fa-search"></i></button
 			>
 		</form>
-		<p class="mt-4 text-lg">現在検索機能は実装されていません。</p>
+		<div class="relative m-auto mt-10 mb-4 max-w-125 bg-white">
+			<!-- 左下の角 -->
+			<span
+				class="absolute bottom-0 left-0 h-4 w-4 border-b-2 border-l-2 border-(--main-text-color)"
+			></span>
+			<!-- 右下の角 -->
+			<span
+				class="absolute right-0 bottom-0 h-4 w-4 border-r-2 border-b-2 border-(--main-text-color)"
+			></span>
+			<!-- コンテンツ -->
+			<div class="flex justify-center gap-4 font-bold text-(--main-text-color)">
+				<div class="tp-search-method">
+					<a href="/organizations" class="dash-link">
+						<i class="fa-solid fa-list"></i>
+						<p>絞り込む</p>
+					</a>
+				</div>
+				<div class="tp-search-method">
+					<a href="/timetable" class="dash-link">
+						<i class="fa-solid fa-list"></i>
+						<p>タイムテーブルから<br />探す</p>
+					</a>
+				</div>
+			</div>
+		</div>
 	{/if}
 </Modal>
 
@@ -392,13 +416,15 @@
 		<!--e:PC表示用-->
 		<!---->
 		<!--s:モバイル表示用-->
-		<div class="w-full p-1 flex flex-col md:hidden">
+		<div class="flex w-full flex-col p-1 md:hidden">
 			<!--s:ロゴ・住所-->
 			<div class="flex flex-col items-center justify-center gap-4">
 				<a href="/">
 					<img src={logo_2} alt={logo_alt} class="mt-4 h-auto w-20 rounded-xl" />
 				</a>
-				<p class="text-white">{school_address}</p>
+				<p class="text-white">
+					<i class="fa-solid fa-location-dot mr-1 text-xs"></i>{school_address}
+				</p>
 			</div>
 			<!--s:ロゴ・住所-->
 			<!---->

@@ -501,6 +501,20 @@ body {
 	color: white;
 }
 
+.tp-search-method {
+	text-decoration: none;
+	width: 48%;
+	border-radius: 10px;
+	padding: 15px;
+	transition: 0.3s;
+	text-align: center;
+}
+
+.tp-search-method:hover {
+	transform: scale(1.03);
+	opacity: 0.9;
+}
+
 /*== ニュース ==*/
 .news-section-title {
 	font-size: 1.8rem;
