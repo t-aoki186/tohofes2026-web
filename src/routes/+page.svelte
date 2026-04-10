@@ -2,6 +2,8 @@
 	const { data } = $props();
 	import { onMount } from 'svelte';
 	import { reveal } from '$lib/reveal';
+	/*ローディング*/
+	import { isVisible } from '$lib/stores/loader.js';
 	import Modal from '$lib/components/Modal.svelte';
 	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
 	import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
@@ -55,6 +57,12 @@
 		}
 	};
 	/*e:Auto Scroll*/
+
+	/*s:ローディングアニメーションをもう一度視聴する*/
+	function replayAnimation() {
+		isVisible.set(true);
+	}
+	/*e:ローディングアニメーションをもう一度視聴する*/
 </script>
 
 <svelte:head>
@@ -245,7 +253,7 @@
 			{/each}
 		</p>
 	</div>
-	<div class="container mx-auto mb-4 mt-4" data-aos="fade-up">
+	<div class="container mx-auto mt-4 mb-4" data-aos="fade-up">
 		<div class="main-link">
 			<div class="link-2">
 				<!--テーマ説明-->
@@ -561,7 +569,11 @@
 			</Splide>
 		</section>
 		<div class="mb-2" style="border-right: solid 4px var(--main-text-color);">
-			<p use:reveal class="news-section-title mr-2" style="padding: 0; text-align: right !important;">
+			<p
+				use:reveal
+				class="news-section-title mr-2"
+				style="padding: 0; text-align: right !important;"
+			>
 				{#each '参加団体ブログ'.split('') as char, i}
 					<span class="char text-(--main-text-color)" style={`--d: ${i * 0.12}s`}>{char}</span>
 				{/each}
@@ -714,7 +726,7 @@
 			{/each}
 		</p>
 	</div>
-	<div class="container mx-auto mb-10 mt-4" data-aos="fade-up">
+	<div class="container mx-auto mt-4 mb-10" data-aos="fade-up">
 		<div class="main-link">
 			<div class="link-2">
 				<!--テーマ説明-->
@@ -743,12 +755,12 @@
 	<hr class="main-hr" />
 	<!--s:アニメーションを再視聴-->
 	<div class="container m-auto my-10">
-		<a href="/" class="link-main">
+		<button onclick={replayAnimation} class="link-main">
 			<div class="link-main-underline">
 				<i class="fa-solid fa-circle-play"></i>
 				<span>アニメーションをもう一度視聴する</span>
 			</div>
-		</a>
+		</button>
 	</div>
 </main>
 
