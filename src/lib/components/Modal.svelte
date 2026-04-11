@@ -26,12 +26,14 @@
 {#if visible}
 	<div
 		class="modal-backdrop {closing ? 'fade-out' : 'fade-in'}"
+		role="button"
+		tabindex="0"
+		onkeydown={(e) => (e.key === 'Enter' || e.key === ' ') && close()}
 		onclick={(e) => e.target === e.currentTarget && close()}
 	>
-		<div class="main-modal {closing ? 'pop-out' : 'pop-in'}">
-			<!--{@render children?.()}-->
-			<slot />
-			<div class="dialog-bottom">
+		<div class="main-modal {closing ? 'pop-out' : 'pop-in'}" role="dialog" aria-modal="true">
+			{@render children?.()}
+			<div class="mt-auto">
 				<hr class="main-hr" />
 				<button onclick={close} class="link-main" type="button">
 					<div class="link-main-underline">
@@ -49,7 +51,7 @@
 		position: fixed;
 		inset: 0;
 		background: rgba(0, 0, 0, 0.4);
-        backdrop-filter: blur(5px);
+		backdrop-filter: blur(5px);
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -67,11 +69,13 @@
 	}
 
 	.main-modal {
+		display: flex;
+		flex-direction: column;
 		background: white;
 		border-radius: 12px;
 		padding: 1.5rem;
 		width: min(800px, 90vw);
-		max-height: 80vh;
+		height: 80vh;
 		overflow: auto;
 		position: relative;
 	}
@@ -123,10 +127,6 @@
 			opacity: 0;
 			transform: scale(0.95);
 		}
-	}
-
-	.dialog-bottom {
-		text-align: center;
 	}
 
 	@media (max-width: 600px) {
