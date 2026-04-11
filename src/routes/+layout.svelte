@@ -292,13 +292,8 @@
 		>
 			<ul class="flex flex-col gap-4 text-sm tracking-wide">
 				<li>
-					<a href="/site/oss" class="header-text"
-						><i class="fa-solid fa-rectangle-list mr-1 text-xs"></i>使用しているOSS一覧</a
-					>
-				</li>
-				<li>
-					<a href="/site/saucecode" class="header-text"
-						><i class="fa-solid fa-code mr-1 text-xs"></i>ソースコード</a
+					<a href="/access" class="header-text"
+						><i class="fa-solid fa-map mr-1 text-xs"></i>本校へのアクセス</a
 					>
 				</li>
 				<li>
@@ -317,13 +312,23 @@
 					>
 				</li>
 				<li>
+					<a href="/news" class="header-text"
+						><i class="fa-solid fa-arrow-up-right-from-square mr-1 text-xs"></i>お知らせ</a
+					>
+				</li>
+				<li>
 					<a href="/site/info" class="header-text"
 						><i class="fa-solid fa-circle-info mr-1 text-xs"></i>情報</a
 					>
 				</li>
 				<li>
-					<a href="/access" class="header-text"
-						><i class="fa-solid fa-map mr-1 text-xs"></i>本校へのアクセス</a
+					<a href="/site/oss" class="header-text"
+						><i class="fa-solid fa-rectangle-list mr-1 text-xs"></i>使用しているOSS一覧</a
+					>
+				</li>
+				<li>
+					<a href="/site/saucecode" class="header-text"
+						><i class="fa-solid fa-code mr-1 text-xs"></i>ソースコード</a
 					>
 				</li>
 				<li>
@@ -385,6 +390,7 @@
 						<li><a href="/access">本校へのアクセス</a></li>
 						<li><a href="/timetable">タイムテーブル</a></li>
 						<li><a href="/qa">よくある質問</a></li>
+						<li><a href="/news">お知らせ</a></li>
 						<li><a href="/site/info">サイト情報</a></li>
 						<li><a href="/site/sitemap">サイトマップ</a></li>
 						<li><a href="/site/contact">お問い合わせ</a></li>
@@ -431,7 +437,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="/link" target="_blank">
+							<a href="/link">
 								<i class="fa-solid fa-arrow-up-right-from-square mr-1 text-xs"></i>
 								<span>すべてのリンクを確認する</span>
 							</a>
@@ -465,6 +471,7 @@
 						<li><a href="/access">本校へのアクセス</a></li>
 						<li><a href="/timetable">タイムテーブル</a></li>
 						<li><a href="/qa">よくある質問</a></li>
+						<li><a href="/news">お知らせ</a></li>
 						<li><a href="/site/info">サイト情報</a></li>
 						<li><a href="/site/sitemap">サイトマップ</a></li>
 						<li><a href="/site/contact">お問い合わせ</a></li>
@@ -511,7 +518,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="/link" target="_blank">
+							<a href="/link">
 								<i class="fa-solid fa-arrow-up-right-from-square mr-1 text-xs"></i>
 								<span>すべてのリンクを確認する</span>
 							</a>

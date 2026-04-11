@@ -51,6 +51,11 @@
 						</a>
 					</li>
 					<li>
+						<a href="/news" target="_blank">
+							<span>お知らせ</span>
+						</a>
+					</li>
+					<li>
 						<a href="/site/info" target="_blank">
 							<span>サイト情報</span>
 						</a>
@@ -64,7 +69,7 @@
 			</div>
 			<div class="sitemap-content">
 				<h2
-					class="border-l-[3px] border-(--main-text-color) pl-2 text-lg font-bold tracking-[3px] text-(--main-text-color) mt-2"
+					class="mt-2 border-l-[3px] border-(--main-text-color) pl-2 text-lg font-bold tracking-[3px] text-(--main-text-color)"
 				>
 					参加団体
 				</h2>
@@ -83,7 +88,7 @@
 			</div>
 			<div class="sitemap-content">
 				<h2
-					class="border-l-[3px] border-(--main-text-color) pl-2 text-lg font-bold tracking-[3px] text-(--main-text-color) mt-2"
+					class="mt-2 border-l-[3px] border-(--main-text-color) pl-2 text-lg font-bold tracking-[3px] text-(--main-text-color)"
 				>
 					各種SNS / リンク
 				</h2>
