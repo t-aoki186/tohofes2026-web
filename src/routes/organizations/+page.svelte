@@ -1,16 +1,24 @@
-<script>
+<script lang="ts">
 	const { data } = $props();
 
 	import { onMount } from 'svelte';
 	import { reveal } from '$lib/reveal';
 	import { getUrl } from '$lib/utils/getUrl';
+	import { page } from '$app/state';
 
-	import Modal from '$lib/components/Modal.svelte';
+	import Modal from '$lib/components/Modal_Search.svelte';
 	let show = $state(false);
 
 	let pageTitle = '団体/飲食/企画/イベント';
 
 	// --- 絞り込み検索用
+	type QueryKey = 'category' | 'place' | 'date';
+
+	function getChangedUrl(key: QueryKey, value: string | number): string {
+		const searchParams = new URLSearchParams(page.url.searchParams);
+		searchParams.set(key, String(value));
+		return `?${searchParams.toString()}`;
+	}
 </script>
 
 <svelte:head>
@@ -22,7 +30,7 @@
 		<p class="mb-4 text-center text-xl font-bold text-(--main-text-color)">絞り込み検索</p>
 		<div>
 			<div class="mb-4">
-				<p class="tf26-dialog-title">公開日</p>
+				<p class="tf26-dialog-title mb-2">公開日</p>
 				<a href="/organizations/?date=1" class="sp-refined-date">
 					<p class="text-lg text-(--main-text-color)">6/0x(x)</p>
 				</a>
@@ -33,39 +41,56 @@
 					<p class="text-lg text-(--main-text-color)">6/0x(x)</p>
 				</a>
 			</div>
-			<div class="mb-4">
-				<p class="tf26-dialog-title">場所</p>
-				<ul>
-					<li>
-						<p class="mb-4">test</p>
-					</li>
-				</ul>
+			<div class="mb-2">
+				<p class="tf26-dialog-title mb-2">カテゴリー</p>
+				<a href={getChangedUrl('category', 'organizations')} class="sp-refined-date">
+					<p class="text-lg text-(--main-text-color)">参加団体すべて</p>
+				</a>
+				<br />
+				<a href={getChangedUrl('category', 'food')} class="sp-refined-date-s">
+					<p class="text-sm text-(--main-text-color)">飲食</p>
+				</a>
+				<a href={getChangedUrl('category', 'sound')} class="sp-refined-date-s">
+					<p class="text-sm text-(--main-text-color)">音響</p>
+				</a>
+				<a href={getChangedUrl('category', 'plan')} class="sp-refined-date-s">
+					<p class="text-sm text-(--main-text-color)">企画</p>
+				</a>
+				<a href={getChangedUrl('category', 'event')} class="sp-refined-date-s">
+					<p class="text-sm text-(--main-text-color)">イベント</p>
+				</a>
+				<a href={getChangedUrl('category', 'organization-blogs')} class="sp-refined-date-s">
+					<p class="text-sm text-(--main-text-color)">参加団体ブログ</p>
+				</a>
+				<a href={getChangedUrl('category', 'news')} class="sp-refined-date-s">
+					<p class="text-sm text-(--main-text-color)">お知らせ</p>
+				</a>
 			</div>
 			<div>
-				<p class="tf26-dialog-title">カテゴリー</p>
-				<a href="/organizations/?category=" class="sp-refined-date">
-					<p class="text-lg text-(--main-text-color)">参加団体</p>
-				</a>
-				<a href="/organizations/?category=organizations" class="sp-refined-date">
-					<p class="text-lg text-(--main-text-color)">団体</p>
-				</a>
-				<a href="/organizations/?category=food" class="sp-refined-date">
-					<p class="text-lg text-(--main-text-color)">飲食</p>
-				</a>
-				<a href="/organizations/?category=plan" class="sp-refined-date">
-					<p class="text-lg text-(--main-text-color)">企画</p>
-				</a>
-				<a href="/organizations/?category=event" class="sp-refined-date">
-					<p class="text-lg text-(--main-text-color)">イベント</p>
-				</a>
-				<a href="/organizations/?category=oganization-blogs" class="sp-refined-date">
-					<p class="text-lg text-(--main-text-color)">参加団体ブログ</p>
-				</a>
-				<a href="/organizations/?category=news" class="sp-refined-date">
-					<p class="text-lg text-(--main-text-color)">お知らせ</p>
+				<a href={getChangedUrl('category', 'news')} class="sp-refined-date">
+					<p class="text-lg text-(--main-text-color)">ニュース</p>
 				</a>
 			</div>
 		</div>
+		<!--s:閉じる/リセット-->
+		<div class="mt-auto">
+			<hr class="main-hr" />
+			<div class="flex">
+				<a href="/organizations/" class="link-main">
+					<div class="link-main-underline">
+						<i class="fa-solid fa-arrow-rotate-left"></i>
+						<span>リセット</span>
+					</div>
+				</a>
+				<button onclick={close} class="link-main" type="button">
+					<div class="link-main-underline">
+						<i class="fa-solid fa-xmark"></i>
+						<span>閉じる</span>
+					</div>
+				</button>
+			</div>
+		</div>
+		<!--e:閉じる/リセット-->
 	</Modal>
 
 	<div class="container m-auto mt-25 border-b-2 border-b-(--main-text-color)">
@@ -185,6 +210,16 @@
 		border: 1px solid var(--main-text-color);
 		margin: 2px;
 		padding: 4px 10px;
+		border-radius: 5px;
+	}
+
+	.sp-refined-date-s {
+		position: relative;
+		display: inline-block;
+		transition: 0.3s;
+		border: 1px solid var(--main-text-color);
+		margin: 2px;
+		padding: 2px 6px;
 		border-radius: 5px;
 	}
 
