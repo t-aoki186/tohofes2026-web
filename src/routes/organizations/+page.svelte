@@ -32,21 +32,24 @@
 			<div class="mb-4">
 				<p class="tf26-dialog-title mb-2">公開日</p>
 				<a href="/organizations/?date=1" class="sp-refined-date">
-					<p class="text-lg text-(--main-text-color)">6/0x(x)</p>
+					<p class="text-lg text-(--main-text-color)">06/06(土)</p>
 				</a>
 				<a href="/organizations/?date=2" class="sp-refined-date">
-					<p class="text-lg text-(--main-text-color)">6/0x(x)</p>
+					<p class="text-lg text-(--main-text-color)">06/07(日)</p>
 				</a>
 				<a href="/organizations/?date=3" class="sp-refined-date">
-					<p class="text-lg text-(--main-text-color)">6/0x(x)</p>
+					<p class="text-lg text-(--main-text-color)">06/08(月)</p>
 				</a>
 			</div>
 			<div class="mb-2">
 				<p class="tf26-dialog-title mb-2">カテゴリー</p>
 				<a href={getChangedUrl('category', 'organizations')} class="sp-refined-date">
-					<p class="text-lg text-(--main-text-color)">参加団体すべて</p>
+					<p class="text-lg text-(--main-text-color)">参加団体一覧</p>
 				</a>
 				<br />
+				<a href={getChangedUrl('category', 'club')} class="sp-refined-date-s">
+					<p class="text-sm text-(--main-text-color)">部活</p>
+				</a>
 				<a href={getChangedUrl('category', 'food')} class="sp-refined-date-s">
 					<p class="text-sm text-(--main-text-color)">飲食</p>
 				</a>
@@ -62,13 +65,10 @@
 				<a href={getChangedUrl('category', 'organization-blogs')} class="sp-refined-date-s">
 					<p class="text-sm text-(--main-text-color)">参加団体ブログ</p>
 				</a>
-				<a href={getChangedUrl('category', 'news')} class="sp-refined-date-s">
-					<p class="text-sm text-(--main-text-color)">お知らせ</p>
-				</a>
 			</div>
 			<div>
 				<a href={getChangedUrl('category', 'news')} class="sp-refined-date">
-					<p class="text-lg text-(--main-text-color)">ニュース</p>
+					<p class="text-lg text-(--main-text-color)">お知らせ一覧</p>
 				</a>
 			</div>
 		</div>
@@ -115,7 +115,7 @@
 				><i class="fas fa-search"></i></button
 			>
 		</form>
-		<p class="my-4">{data.results.length}件の 団体/飲食/イベント が見つかりました。</p>
+		<p class="my-4">{data.results.length}件の {pageTitle} が見つかりました。</p>
 		<div class="flex flex-wrap justify-center gap-4">
 			{#each data.results as item}
 				<article class="sp-search-result-card">

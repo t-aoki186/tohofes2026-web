@@ -15,7 +15,7 @@
 	<div class="container m-auto mt-25 border-b-2 border-b-(--main-text-color)">
 		<p class="tf26-page-title" style="color: black; margin-bottom: 0;">{item.title}</p>
 	</div>
-	<section class="container mx-auto mt-25 mb-25">
+	<section class="container mx-auto mt-15 mb-25">
 		<div class="prose mt-4 min-w-full">{@html mdToHtml(item.body)}</div>
 	</section>
 </main>
