@@ -230,7 +230,7 @@
 						</ul>
 					{/each}
 				{:else}
-					<p>お知らせの取得を失敗しました</p>
+					<p>お知らせの取得に失敗しました</p>
 				{/if}
 			</div>
 			<div class="link-4 flex items-center justify-center">

@@ -1,30 +1,23 @@
-import { fetchNews } from "$lib/server/news";
 import { fetchOrganizations } from "$lib/server/organizations";
 
 export async function load({ url }) {
   const category = url.searchParams.get("category");
   const search = url.searchParams.get("search");
 
-  //まず両方読み込む
-  const news = await fetchNews();
+  // 組織データのみを取得
   const orgs = await fetchOrganizations();
 
   let results = [];
 
-  //カテゴリ絞り込み
-  if (category === "news") {
-    results = news;
-  } else if (category === "organizations") {
+  // カテゴリが organizations の場合、または指定がない場合に表示
+  if (!category || category === "organizations") {
     results = orgs;
-  } else {
-    //カテゴリ指定がない場合はすべて表示する
-    results = [...news, ...orgs];
   }
 
-  //キーワード検索の処理
+  // キーワード検索の処理
   if (search) {
     const lower = search.toLowerCase();
-    results = results.filter((item:any) =>
+    results = results.filter((item: any) =>
       item.title.toLowerCase().includes(lower) ||
       item.body.toLowerCase().includes(lower)
     );
