@@ -1,20 +1,23 @@
 import { fetchOrganizations } from "$lib/server/organizations";
 
 export async function load({ url }) {
-  const category = url.searchParams.get("category");
+  const categoryParam = url.searchParams.get("category");
   const search = url.searchParams.get("search");
 
-  // 組織データのみを取得
-  const orgs = await fetchOrganizations();
+  //全データを取得
+  const allData = await fetchOrganizations();
 
-  let results = [];
+  let results = allData;
 
-  // カテゴリが organizations の場合、または指定がない場合に表示
-  if (!category || category === "organizations") {
-    results = orgs;
+  //category/typeでの検索
+  if (categoryParam) {
+    results = allData.filter((item: any) => {
+      //パラメータが jsonの "category" または "type" のいずれかに一致するか確認
+      return item.category === categoryParam || item.type === categoryParam;
+    });
   }
 
-  // キーワード検索の処理
+  //キーワード検索
   if (search) {
     const lower = search.toLowerCase();
     results = results.filter((item: any) =>
@@ -23,5 +26,5 @@ export async function load({ url }) {
     );
   }
 
-  return { results, category, search };
+  return { results, category: categoryParam, search };
 }

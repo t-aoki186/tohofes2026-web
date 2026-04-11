@@ -43,10 +43,11 @@
 			</div>
 			<div class="mb-2">
 				<p class="tf26-dialog-title mb-2">カテゴリー</p>
-				<a href={getChangedUrl('category', 'organizations')} class="sp-refined-date">
-					<p class="text-lg text-(--main-text-color)">参加団体一覧</p>
-				</a>
+				<p class="text-lg text-(--main-text-color)">参加団体</p>
 				<br />
+				<a href={getChangedUrl('category', 'organizations')} class="sp-refined-date-s">
+					<p class="text-sm text-(--main-text-color)">すべて</p>
+				</a>
 				<a href={getChangedUrl('category', 'club')} class="sp-refined-date-s">
 					<p class="text-sm text-(--main-text-color)">部活</p>
 				</a>
@@ -67,9 +68,7 @@
 				</a>
 			</div>
 			<div>
-				<a href={getChangedUrl('category', 'news')} class="sp-refined-date">
-					<p class="text-lg text-(--main-text-color)">お知らせ一覧</p>
-				</a>
+				<p class="tf26-dialog-title mb-2">場所</p>
 			</div>
 		</div>
 		<!--s:閉じる/リセット-->
