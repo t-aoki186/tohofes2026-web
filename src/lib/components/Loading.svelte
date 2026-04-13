@@ -1,4 +1,5 @@
 <script>
+	import { fade } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import { isVisible } from '$lib/stores/loader';
 
@@ -17,16 +18,17 @@
 </script>
 
 <div
-	class="fixed inset-0 z-9999 flex items-center justify-center bg-black/90 backdrop-blur-md"
+	transition:fade={{ duration: 300 }}
+	class="fixed inset-0 z-9999 flex items-center justify-center bg-white backdrop-blur-md"
 	onclick={handleClose}
 	role="button"
 	tabindex="0"
 	onkeydown={(e) => e.key === 'Escape' && handleClose()}
 >
 	<video
-		src="https://pic.atserver186.jp/img/tohofes/dev-test/loading-video-test.mp4"
+		src="https://pic.atserver186.jp/img/tohofes/dev-test/loading-v/render_v1.mp4"
 		muted autoplay
-		class="mx-auto my-auto h-32 w-auto rounded-2xl"
+		class="mx-auto my-auto h-64 w-auto rounded-2xl"
 		onended={handleClose}
 	></video>
 	<!--s:ローディングオーバーレイを閉じるボタン-->
