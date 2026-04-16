@@ -700,9 +700,9 @@
 		<div class="main-link">
 			<div class="link-2 bg-white" style="padding: 0 !important;">
 				<img
-					src="https://pic.atserver186.jp/tohofes2025.JPG"
+					src="https://pic.atserver186.jp/img/tohofes/past_tohofes.webp"
 					alt="桐朋祭画像"
-					class="h-auto w-full"
+					class="h-auto w-full rounded-xl"
 				/>
 			</div>
 			<div class="link-2">
