@@ -1,40 +1,54 @@
-<script>
+<script lang="ts">
 	import { fade } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import { isVisible } from '$lib/stores/loader';
+
+	//videoElementにHTMLVideoElement型を指定
+	let videoElement: HTMLVideoElement;
 
 	function handleClose() {
 		isVisible.set(false);
 	}
 
-	/*指定の時間で動画をローディングビデオを閉じる*/
-	/*
-    onMount(() => {
-		setTimeout(() => {
+	onMount(() => {
+		if (videoElement) {
+			videoElement.play().catch((error: Error) => {
+				console.error("再生ブロック:", error.name);
+				//再生に失敗した場合ローディングを閉じる
+				handleClose();
+			});
+		}
+
+		const timer = setTimeout(() => {
 			isVisible.set(false);
-		}, 3800);
+		}, 4700);
+
+		return () => clearTimeout(timer);
 	});
-    */
 </script>
 
 <div
 	transition:fade={{ duration: 300 }}
-	class="fixed inset-0 z-9999 flex items-center justify-center backdrop-blur-md" style="background-color: #ffffff;"
+	class="fixed inset-0 z-9999 flex items-center justify-center"
+	style="background-color: #ffffff;"
 	onclick={handleClose}
 	role="button"
 	tabindex="0"
 	onkeydown={(e) => e.key === 'Escape' && handleClose()}
 >
 	<video
+		bind:this={videoElement}
 		src="https://pic.atserver186.jp/img/tohofes/loading-v/main.mp4"
-		muted autoplay
+		muted
+		autoplay
+		playsinline
 		class="mx-auto my-auto h-64 w-auto rounded-2xl md:h-110"
 		onended={handleClose}
-		playsinline
 	></video>
+	<!---->
 	<!--s:ローディングオーバーレイを閉じるボタン-->
 	<button
-		class="absolute top-6 right-6 text-3xl font-bold text-white opacity-70 hover:opacity-100"
+		class="absolute top-6 right-6 cursor-pointer text-3xl font-bold text-black opacity-70 hover:opacity-100"
 		onclick={(e) => {
 			e.stopPropagation();
 			handleClose();

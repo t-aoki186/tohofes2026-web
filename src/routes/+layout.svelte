@@ -115,7 +115,7 @@
 			//動画の長さに合わせて自動で消す（動画のendedイベントを使わない場合の保険）
 			setTimeout(() => {
 				isVisible.set(false);
-			}, 5000);
+			}, 4700);
 		}
 	});
 </script>
