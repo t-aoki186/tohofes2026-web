@@ -27,3 +27,8 @@
   -webkit-mask-image: url("https://cdn.atserver186.jp/img/tf26/material/megaphone.svg");
   mask-image: url("https://cdn.atserver186.jp/img/tf26/material/megaphone.svg");
 }
+
+.icon-x-mark-thin{
+  -webkit-mask-image: url("https://cdn.atserver186.jp/img/tf26/material/x-mark-thin.svg");
+  mask-image: url("https://cdn.atserver186.jp/img/tf26/material/x-mark-thin.svg");
+}

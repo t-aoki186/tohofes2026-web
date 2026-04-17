@@ -38,7 +38,7 @@
 >
 	<video
 		bind:this={videoElement}
-		src="https://pic.atserver186.jp/img/tohofes/loading-v/main.mp4"
+		src="https://pic.atserver186.jp/img/tohofes/loading-v/main-s.mp4"
 		muted
 		autoplay
 		playsinline
@@ -55,7 +55,7 @@
 		}}
 		title="閉じる"
 	>
-		<i class="fa-solid fa-xmark"></i>
+		<i class="tf26-icon-material icon-x-mark-thin text-(--main-text-color)"></i>
 	</button>
 	<!--s:ローディングオーバーレイを閉じるボタン-->
 </div>
