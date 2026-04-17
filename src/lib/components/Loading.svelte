@@ -19,7 +19,7 @@
 
 <div
 	transition:fade={{ duration: 300 }}
-	class="fixed inset-0 z-9999 flex items-center justify-center bg-white backdrop-blur-md"
+	class="fixed inset-0 z-9999 flex items-center justify-center backdrop-blur-md" style="background-color: #ffffff;"
 	onclick={handleClose}
 	role="button"
 	tabindex="0"
@@ -28,7 +28,7 @@
 	<video
 		src="https://pic.atserver186.jp/img/tohofes/loading-v/main.mp4"
 		muted autoplay
-		class="mx-auto my-auto h-64 w-auto rounded-2xl"
+		class="mx-auto my-auto h-64 w-auto rounded-2xl md:h-110"
 		onended={handleClose}
 		playsinline
 	></video>
