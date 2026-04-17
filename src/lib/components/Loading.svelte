@@ -26,10 +26,11 @@
 	onkeydown={(e) => e.key === 'Escape' && handleClose()}
 >
 	<video
-		src="https://pic.atserver186.jp/img/tohofes/dev-test/loading-v/render_v1.mp4"
+		src="https://pic.atserver186.jp/img/tohofes/loading-v/main.mp4"
 		muted autoplay
 		class="mx-auto my-auto h-64 w-auto rounded-2xl"
 		onended={handleClose}
+		playsinline
 	></video>
 	<!--s:ローディングオーバーレイを閉じるボタン-->
 	<button

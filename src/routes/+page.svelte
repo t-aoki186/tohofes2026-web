@@ -178,7 +178,7 @@
 	<div class="tp-info container mx-auto mt-10 rounded-xl p-4" data-aos="fade-up">
 		<p class="mb-2 text-center font-bold"><i class="fa-solid fa-circle-info"></i>持ち物について</p>
 		<p class="mb-2 text-center">
-			校内は土足禁止ですので、<strong>必ず上履きをご持参ください</strong>。
+			校内は土足禁止ですので	、<strong>必ず上履きをご持参ください</strong>。
 		</p>
 		<a href="/visitor" class="link-main">
 			<div class="link-main-underline">
@@ -257,7 +257,7 @@
 			{/each}
 		</p>
 	</div>
-	<div class="container mx-auto mt-4 mb-4" data-aos="fade-up">
+	<div class="container mx-auto mt-10 mb-4" data-aos="fade-up">
 		<div class="main-link">
 			<div class="link-2">
 				<!--テーマ説明-->
@@ -307,7 +307,7 @@
 			{/each}
 		</p>
 	</div>
-	<div class="container mx-auto mt-4" data-aos="fade-up">
+	<div class="container mx-auto mt-10" data-aos="fade-up">
 		<div class="main-link" style="border: none !important;">
 			<div class="link-2" style="padding: 0 !important;">
 				<ul>
@@ -430,7 +430,7 @@
 			{/each}
 		</p>
 	</div>
-	<div class="container mx-auto mt-4" data-aos="fade-up">
+	<div class="container mx-auto mt-10" data-aos="fade-up">
 		<form class="s-search-form mb-4" action="/organizations/" method="GET">
 			<input
 				class="s-search-input"
@@ -696,7 +696,7 @@
 			{/each}
 		</p>
 	</div>
-	<div class="container mx-auto mt-4" data-aos="fade-up">
+	<div class="container mx-auto mt-10" data-aos="fade-up">
 		<div class="main-link">
 			<div class="link-2 bg-white" style="padding: 0 !important;">
 				<img
@@ -732,7 +732,7 @@
 			{/each}
 		</p>
 	</div>
-	<div class="container mx-auto mt-4 mb-10" data-aos="fade-up">
+	<div class="container mx-auto mt-10 mb-10" data-aos="fade-up">
 		<div class="main-link">
 			<div class="link-2">
 				<!--テーマ説明-->
