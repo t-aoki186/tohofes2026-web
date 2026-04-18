@@ -9,6 +9,7 @@
 
 <svelte:head>
 	<title>{item.title} | {data.site_title}</title>
+	<meta property="og:title" content="{item.title} | {data.site_title}" />
 </svelte:head>
 
 <main class="mt-15 mr-1 ml-1 min-h-screen">

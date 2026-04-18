@@ -8,7 +8,8 @@
 </script>
 
 <svelte:head>
-	<title>{data.site_title}</title>
+	<title>{pageTitle} | {data.site_title}</title>
+	<meta property="og:title" content="{pageTitle} | {data.site_title}" />
 </svelte:head>
 
 <main class="mt-15 mr-1 ml-1 min-h-screen">

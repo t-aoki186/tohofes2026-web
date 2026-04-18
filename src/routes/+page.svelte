@@ -67,6 +67,7 @@
 
 <svelte:head>
 	<title>{data.site_title}</title>
+	<meta property="og:title" content="第75回桐朋祭(桐朋祭2026)" />
 </svelte:head>
 
 <Modal bind:showModal>

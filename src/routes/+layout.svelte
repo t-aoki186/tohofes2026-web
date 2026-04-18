@@ -10,6 +10,8 @@
 	import './icon.css';
 	/*favicon*/
 	import favicon from '$lib/assets/favicon.ico';
+	/*SEO*/
+	import { page } from '$app/stores';
 	/*NProgress*/
 	import NProgress from 'nprogress';
 	import 'nprogress/nprogress.css';
@@ -123,6 +125,23 @@
 <svelte:head>
 	<link rel="stylesheet" href="https://cdn.atserver186.jp/libs/fontawesome/css/all.min.css" />
 	<link rel="icon" href={favicon} />
+	<!--s:SEO-->
+	<!--各ページでheadに内容がなければ以下の内容が表示される-->
+	<title>第75回桐朋祭(桐朋祭2026)</title>
+	<meta
+		name="description"
+		content="桐朋中学・高等学校の学園祭「桐朋祭」の公式ホームページです。2026/06/06(土)-08(月)開催！"
+	/>
+	<meta name="keywords" content="桐朋,桐朋中学校,桐朋高校,桐朋中学高等学校,桐朋祭,学園祭,文化祭" />
+	<meta property="og:site_name" content="第75回桐朋祭(桐朋祭2026)" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="https://tohofes.jp/ogp.png" />
+	<meta property="og:title" content="第75回桐朋祭(桐朋祭2026)" />
+	<link rel="canonical" href={$page.url.href} />
+	<meta property="og:url" content={$page.url.href} />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@tohofes_2026" />
+	<!--e:SEO-->
 </svelte:head>
 
 <Modal bind:showModal>
@@ -167,9 +186,9 @@
 	{/if}
 </Modal>
 
-	{#if $isVisible}
-		<Loading />
-	{/if}
+{#if $isVisible}
+	<Loading />
+{/if}
 
 <header class={headerClass}>
 	<div class="flex items-center justify-between px-2 py-2">
