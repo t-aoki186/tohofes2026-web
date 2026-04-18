@@ -115,7 +115,7 @@
 			//動画の長さに合わせて自動で消す（動画のendedイベントを使わない場合の保険）
 			setTimeout(() => {
 				isVisible.set(false);
-			}, 4700);
+			}, 2000);
 		}
 	});
 </script>
@@ -167,9 +167,9 @@
 	{/if}
 </Modal>
 
-{#if $isVisible}
-	<Loading />
-{/if}
+	{#if $isVisible}
+		<Loading />
+	{/if}
 
 <header class={headerClass}>
 	<div class="flex items-center justify-between px-2 py-2">

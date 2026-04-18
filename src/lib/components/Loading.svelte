@@ -21,7 +21,7 @@
 
 		const timer = setTimeout(() => {
 			isVisible.set(false);
-		}, 4700);
+		}, 2000);
 
 		return () => clearTimeout(timer);
 	});

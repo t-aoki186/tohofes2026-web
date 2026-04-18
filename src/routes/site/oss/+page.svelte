@@ -79,6 +79,15 @@
 				</p>
 			</div>
 			<div class="mt-2 rounded-2xl bg-gray-50 p-4">
+				<h2 class="mt-2 text-lg font-semibold">iconmonstr</h2>
+				<p class="mt-1 text-sm">
+					提供元:iconmonstr<br />
+					ライセンス:独自ライセンス（商用利用可）<br />
+					公式サイト:<a href="https://iconmonstr.com/" class="underline">iconmonstr.com</a><br />
+					利用内容:サイト内のアイコンの一部に使用
+				</p>
+			</div>
+			<div class="mt-2 rounded-2xl bg-gray-50 p-4">
 				<h2 class="mt-2 text-lg font-semibold">シルエットイラスト</h2>
 				<p class="mt-1 text-sm">
 					提供元:TopeconHeroes<br />
