@@ -135,7 +135,7 @@
 	<meta name="keywords" content="桐朋,桐朋中学校,桐朋高校,桐朋中学高等学校,桐朋祭,学園祭,文化祭" />
 	<meta property="og:site_name" content="第75回桐朋祭(桐朋祭2026)" />
 	<meta property="og:type" content="website" />
-	<meta property="og:image" content="https://tohofes.jp/ogp.png" />
+	<!--<meta property="og:image" content="https://tohofes.jp/ogp.png" />-->
 	<meta property="og:title" content="第75回桐朋祭(桐朋祭2026)" />
 	<link rel="canonical" href={$page.url.href} />
 	<meta property="og:url" content={$page.url.href} />
