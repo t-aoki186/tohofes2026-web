@@ -63,6 +63,24 @@
 		isVisible.set(true);
 	}
 	/*e:ローディングアニメーションをもう一度視聴する*/
+
+	/*===*/
+	// video要素への参照を保持する変数（型を指定）
+	let videoElement: HTMLVideoElement;
+
+	onMount(() => {
+		if (videoElement) {
+			// 再生処理
+			videoElement.play().catch((error) => {
+				console.error('オートプレイがブロックされました:', error);
+			});
+		}
+	});
+
+	// 終了時のハンドラー（必要に応じて処理を追加）
+	const handleEnded = () => {
+		console.log('再生終了：最終フレームで停止中');
+	};
 </script>
 
 <svelte:head>
@@ -158,12 +176,34 @@
 </Modal>
 
 <div class="relative h-screen w-full">
-	<img
+	<!--<img
 		src="https://cdn.atserver186.jp/img/tf26/material/top-img.webp"
 		alt="桐朋画像"
 		class="h-full w-full object-cover"
-	/>
-	<!--スクロールインジケーターを重ねる-->
+	/>-->
+
+	<video
+		bind:this={videoElement}
+		onended={handleEnded}
+		muted
+		playsinline
+		preload="auto"
+		class="h-full w-full object-cover"
+	>
+		<source
+			src="https://pic.atserver186.jp/img/tohofes/top-page/top-video/top-v-pc.mp4"
+			type="video/mp4"
+			media="(min-width: 768px)"
+		/>
+		<source
+			src="https://pic.atserver186.jp/img/tohofes/top-page/top-video/top-v-sp.mp4"
+			type="video/mp4"
+			class="block md:hidden"
+		/>
+		ご利用のブラウザは動画再生に対応していません。
+	</video>
+
+	<!--s:スクロールインジケーター-->
 	<div class="absolute right-0 bottom-6 z-10 md:right-6">
 		<div id="scroll-wrapper">
 			<div id="scroll-wrapper-inner">
@@ -172,6 +212,7 @@
 			</div>
 		</div>
 	</div>
+	<!--e:スクロールインジケーター-->
 </div>
 
 <main>
@@ -179,7 +220,7 @@
 	<div class="tp-info container mx-auto mt-10 rounded-xl p-4" data-aos="fade-up">
 		<p class="mb-2 text-center font-bold"><i class="fa-solid fa-circle-info"></i>持ち物について</p>
 		<p class="mb-2 text-center">
-			校内は土足禁止ですので	、<strong>必ず上履きをご持参ください</strong>。
+			校内は土足禁止ですので 、<strong>必ず上履きをご持参ください</strong>。
 		</p>
 		<a href="/visitor" class="link-main">
 			<div class="link-main-underline">
