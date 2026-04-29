@@ -26,14 +26,15 @@
 			width="100%"
 			height="450"
 			style="border:0;"
-			class="mb-4"
+			class="mb-4 rounded-xl"
 			loading="lazy"
 			referrerpolicy="no-referrer-when-downgrade"
 			title="Google Map"
 		></iframe>
 		<a
-			href="/redirect/?url=https://www.google.com/maps?ll=35.689932,139.444952&z=16&t=m&hl=ja&gl=JP&mapclient=embed&cid=17005709833707924776"
+			href="https://www.google.com/maps?ll=35.689932,139.444952&z=16&t=m&hl=ja&gl=JP&mapclient=embed&cid=17005709833707924776"
 			class="link-main"
+			target="_blank"
 		>
 			<div class="link-main-underline">
 				<i class="fa-solid fa-arrow-right-long"></i>

@@ -1,5 +1,5 @@
 /*@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');*/
-@import url('https://fonts.googleapis.com/css2?family=LINE+Seed+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@100;400;700;800&display=swap');
 
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
@@ -36,6 +36,32 @@
 	--ats-text-color: #ccc;
 	--title-bg-color: #cb3565;
 }
+
+/*s:フォント*/
+.line-seed-jp-thin {
+  font-family: "LINE Seed JP", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.line-seed-jp-regular {
+  font-family: "LINE Seed JP", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.line-seed-jp-bold {
+  font-family: "LINE Seed JP", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.line-seed-jp-extrabold {
+  font-family: "LINE Seed JP", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+/*e:フォント*/
 
 /*font-family: 'Noto Sans JP', sans-serif;*/
 body {
@@ -127,6 +153,20 @@ body {
 	width: 95%;
 	text-align: center;
 	align-items: center;
+}
+
+.link-main-underline span{
+	font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+	.link-main {
+		padding: 8px 12px;
+	}
+
+	.link-main-underline span{
+		font-size: 0.9rem;
+	}
 }
 
 /*container*/
@@ -483,12 +523,68 @@ body {
 	animation-delay: calc(var(--index) * 0.05s);
 }
 
+/*s:View Transition*/
+/*
+::view-transition-old(tftheme-hero),
+::view-transition-old(tfnews-hero) {
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+::view-transition-new(tftheme-hero),
+::view-transition-old(tfnews-hero) {
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+  */
+/*s:View Transition*/
+
+/*s:AOS*/
+[data-aos^='fade'][data-aos^='fade'] {
+  transform: translate3d(0, 35px, 0);
+}
+
+[data-aos^='fade'].aos-animate {
+  transform: translate3d(0, 0, 0);
+}
+/*e:AOS*/
+
 @keyframes rise {
 	0% {
 		opacity: 0;
 		transform: translateY(10px);
 	}
 	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.fade-up-o {
+	opacity: 0;
+	transform: translateY(30px); /* 30px下に配置 */
+	animation: fadeUp 0.8s ease forwards;
+}
+
+/* 順番に遅延させる (0.2秒ずつずらす) */
+.fade-up-o:nth-of-type(1) {
+	animation-delay: 0.2s;
+}
+.fade-up-o:nth-of-type(2) {
+	animation-delay: 0.4s;
+}
+.fade-up-o:nth-of-type(3) {
+	animation-delay: 0.6s;
+}
+.fade-up-o:nth-of-type(4) {
+	animation-delay: 0.8s;
+}
+.fade-up-o:nth-of-type(5) {
+	animation-delay: 1s;
+}
+
+@keyframes fadeUp {
+	to {
 		opacity: 1;
 		transform: translateY(0);
 	}

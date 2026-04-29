@@ -185,7 +185,7 @@
 				muted
 				playsinline
 				preload="auto"
-				class="tp-top-v h-full w-full"
+				class="tp-top-v md:my-auto"
 			>
 				<source
 					src="https://pic.atserver186.jp/img/tohofes/top-page/top-video/top-v-pc.mp4"
@@ -243,7 +243,7 @@
 				{#if data.latest && data.latest.length > 0}
 					{#each data.latest as item}
 						<ul>
-							<li class="mx-auto mb-4 w-full list-none">
+							<li class="mx-auto mb-4 w-full list-none" style="view-transition-name: newsp-hero;">
 								<a href="/news/{item.id}">
 									<div
 										class="news-list flex border-l-2 pl-4"
@@ -783,11 +783,12 @@
 					を重視することにしました。
 				</p>
 			</div>
-			<div class="link-2 bg-white">
+			<div class="link-2">
 				<img
-					src="https://pic.atserver186.jp/img/tohofes/tf26-logo-m-v2.webp"
+					src="https://pic.atserver186.jp/img/tohofes/tf26-logo-m-v3.webp"
 					alt="第75回桐朋祭ロゴ"
 					class="m-auto ml-auto block h-auto w-[50%]"
+					style="view-transition-name: tftheme-hero;"
 				/>
 			</div>
 		</div>
@@ -814,54 +815,70 @@
 </main>
 
 <style>
-	@view-transition {
-		navigation: auto;
-	}
-
-	.auto-scroll-organization-section {
-		width: 80%;
-	}
-
-	@media (max-width: 768px) {
-		.auto-scroll-organization-section {
-			width: 100%;
-		}
-	}
-
 	.tp-top-container {
 		position: relative;
 		height: 100vh;
 		width: 100%;
+		overflow: hidden;
+	}
+
+	.tp-top-container::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-image:
+			linear-gradient(rgba(0, 0, 0, 0.1)),
+			url('https://pic.atserver186.jp/img/tohofes/top-page/top-video/top-i-pc-v2.webp');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		filter: blur(10px);
+		z-index: -1;
+		transform: scale(1.1);
 	}
 
 	.tp-top-content {
 		width: 100%;
 		height: 100%;
+		display: flex;
+		flex-direction: column;
 	}
 
 	.tp-top-v {
 		object-fit: cover;
+		height: 100%;
+		width: 100%;
 	}
 
 	@media (max-width: 1280px) {
 		.tp-top-content {
 			width: 90%;
 			margin-inline: auto;
+			overflow: hidden;
 		}
 
 		.tp-top-v {
 			object-fit: contain;
-			border-radius: 1.5rem;
+			border-radius: 24px;
+			height: auto;
+			width: 100%;
+
+			background-color: white;
 		}
 	}
-
 	@media (max-width: 768px) {
 		.tp-top-content {
-			width: 100%;
+			width: auto;
+			height: 100%;
 		}
 
 		.tp-top-v {
 			object-fit: cover;
+			height: 100%;
+			border-radius: 0;
 		}
 	}
 </style>

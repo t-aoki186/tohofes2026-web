@@ -4,14 +4,13 @@
 	/*ローディング*/
 	import { isVisible, hasInitialized } from '$lib/stores/loader';
 	import Loading from '$lib/components/Loading.svelte';
-	import { get } from 'svelte/store';
 	/*独自スタイル*/
 	import './layout.css';
 	import './icon.css';
+	import './components.css';
 	/*favicon*/
 	import favicon from '$lib/assets/favicon.ico';
-	/*SEO*/
-	import { page } from '$app/stores';
+	import { get } from 'svelte/store';
 	/*NProgress*/
 	import NProgress from 'nprogress';
 	import 'nprogress/nprogress.css';
@@ -23,6 +22,8 @@
 	import { setupViewTransition } from 'sveltekit-view-transition';
 	/*モーダル*/
 	import Modal from '$lib/components/Modal.svelte';
+	/*SEO*/
+	import { page } from '$app/stores';
 
 	/*s:NProgressの設定*/
 	beforeNavigate(() => {
@@ -41,28 +42,37 @@
 	let { data, children } = $props();
 	let accordionOpen = $state(false);
 
-	//共通変数
-	let logo = 'https://pic.atserver186.jp/img/tohofes/tf26-logo-m-v2.webp';
-	let logo_2 = 'https://pic.atserver186.jp/img/tohofes/tf26-logo-s.webp';
+	/*s:共通変数*/
+	let logo = 'https://pic.atserver186.jp/img/tohofes/tf26-logo-m-v3.webp';
+	let logo_2 = 'https://pic.atserver186.jp/img/tohofes/tf26-logo-s-v2.webp';
 	let logo_alt = '第75回桐朋祭ロゴ';
 	let school_address = '東京都国立市中3-1-10';
+	/*e:共通変数*/
 
-	//ハンバーガーメニュー
+	/*s:ハンバーガーメニュー*/
 	let open = $state(false);
 	let isOtherClosing = $state(false);
 	let otherOpen = $state(false);
 	let pendingOpen = false;
+	/*e;ハンバーガーメニュー*/
 
+	/*s:target="_blank"モーダル*/
+	let targetUrl = $state('');
+	let showLinkModal = $state(false);
+	/*e:target="_blank"モーダル*/
+
+	/*s:ヘッダーその他メニュー*/
 	function closeOther(goBackToMenu: boolean = false) {
 		if (goBackToMenu) pendingOpen = true;
 		otherOpen = false;
 	}
+	/*e:ヘッダーその他メニュー*/
 
-	//100pxスクロールでヘッダーの表示を変更
+	/*s:スクロールでヘッダーサイズ変更*/
 	let scrolled = $state(false);
 
 	const headerClass = $derived(
-		`fixed top-0 right-0 left-0 z-20 border border-black/10 bg-white backdrop-blur-md transition-all duration-500 overflow-hidden` +
+		`fixed top-0 right-0 left-0 z-20 border border-black/10 bg-white backdrop-blur-md transition-all duration-500 overflow-hidden z-19999` +
 			(scrolled ? ' scroll-nav' : '') +
 			(otherOpen
 				? ' max-h-[100vh] rounded-b-[1.0rem]'
@@ -78,6 +88,7 @@
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
 	});
+	/*e:スクロールでヘッダーサイズ変更*/
 
 	/*s:モーダル*/
 	let showModal = $state(false);
@@ -89,7 +100,7 @@
 	}
 	/*e:モーダル*/
 
-	//AOSの初期化
+	/*s:AOSの初期化*/
 	onMount(() => {
 		AOS.init({
 			// オプション（任意）
@@ -97,12 +108,13 @@
 			once: false //何度でもアニメーションを発火させる
 		});
 	});
+	/*e:AOSの初期化*/
 
 	/*s:View Transition*/
 	setupViewTransition();
 	/*e:View Transition*/
 
-	/*ローディングアニメーション*/
+	/*s:ローディングアニメーション*/
 	onMount(() => {
 		// localStorage をチェック
 		const alreadySeen = localStorage.getItem('hasSeenIntro');
@@ -120,6 +132,31 @@
 			}, 2000);
 		}
 	});
+	/*e:ローディングアニメーション*/
+
+	/*s:target="_blank"モーダル*/
+	function openExternalLink(event) {
+		//クリックされた要素から一番近いaタグを探す
+		const anchor = event.target.closest('a');
+		//`target="_blank"`が設定されている場合にのみ発火
+		if (anchor && anchor.target === '_blank') {
+			event.preventDefault();
+			targetUrl = anchor.href;
+			showLinkModal = true;
+		}
+	}
+
+	function copyLink() {
+		navigator.clipboard.writeText(targetUrl);
+		alert('URLをコピーしました'); //将来的にはトースト通知などに変更
+		showLinkModal = false;
+	}
+
+	function openLink() {
+		window.open(targetUrl, '_blank', 'noopener.noreferrer');
+		showLinkModal = false;
+	}
+	/*e:target="_blank"モーダル*/
 </script>
 
 <svelte:head>
@@ -185,6 +222,40 @@
 		</div>
 	{/if}
 </Modal>
+
+<svelte:window onclick={openExternalLink} />
+
+{#if showLinkModal}
+	<div class="modal-backdrop">
+		<div class="main-modal">
+			<p class="mb-4 text-center text-xl font-bold text-(--main-text-color)">
+				外部サイトへ移動しますか？
+			</p>
+			<hr class="main-hr" />
+			<p class="mb-5 text-[0.8rem] leading-[1.8rem] break-all text-gray-600">{targetUrl}</p>
+			<div class="redirect-link-actions">
+				<button onclick={openLink} class="link-main">
+					<div class="link-main-underline">
+						<i class="fa-solid fa-up-right-from-square"></i>
+						<span>リンクを開く</span>
+					</div>
+				</button>
+				<button onclick={copyLink} class="link-main">
+					<div class="link-main-underline">
+						<i class="fa-solid fa-copy"></i>
+						<span>リンクをコピー</span>
+					</div>
+				</button>
+				<button onclick={() => (showLinkModal = false)} class="link-main">
+					<div class="link-main-underline">
+						<i class="fa-solid fa-arrow-right-long"></i>
+						<span>キャンセル</span>
+					</div>
+				</button>
+			</div>
+		</div>
+	</div>
+{/if}
 
 {#if $isVisible}
 	<Loading />
@@ -563,7 +634,7 @@
 			><span class="footer-span">|</span>
 			<a href="/site/contact" class="footer-link" style="margin-left: 10px;">お問い合わせ</a>
 			<p class="footer-text">
-				&copy; 2026 TohoFes. | atserver186.jp All Rights Reserved.
+				&copy; 2026 TohoFes. | tohofes.jp All Rights Reserved.
 				本サイトの無断転載は、固くこれを禁じます。
 			</p>
 		</div>
@@ -572,4 +643,19 @@
 </footer>
 
 <style>
+	.redirect-link-actions {
+		display: flex;
+		gap: 10px;
+		justify-content: center;
+	}
+
+	@media (max-width: 768px) {
+		.redirect-link-actions {
+			flex-direction: column;
+		}
+
+		.link-main {
+			width: 100%;
+		}
+	}
 </style>

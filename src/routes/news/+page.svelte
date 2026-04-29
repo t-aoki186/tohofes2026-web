@@ -19,7 +19,7 @@
 		{#if data.news && data.news.length > 0}
 			{#each data.news as item}
 				<ul>
-					<li class="mx-auto mb-4 w-full list-none">
+					<li class="mx-auto mb-4 w-full list-none" style="view-transition-name: newsp-hero;">
 						<a href="/news/{item.id}">
 							<div
 								class="news-list flex border-l-2 pl-4"
