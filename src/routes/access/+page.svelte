@@ -14,7 +14,7 @@
 
 <main class="mt-15 mr-1 ml-1 min-h-screen">
 	<div class="container m-auto mt-15 border-b-2 border-b-(--main-text-color)">
-		<p class="tf26-page-title" style="color: black; margin-bottom: 0;">{pageTitle}</p>
+		<p class="tf26-page-title" style="color: black; margin-bottom: 0; view-transition-name: tfaccesstitle-hero;">{pageTitle}</p>
 	</div>
 	<section class="container mx-auto mt-25 mb-25">
 		<p class="my-auto mb-4 text-2xl text-(--main-text-color)">

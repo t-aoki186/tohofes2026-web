@@ -24,6 +24,7 @@
 	import Modal from '$lib/components/Modal.svelte';
 	/*SEO*/
 	import { page } from '$app/stores';
+	import { onNavigate } from '$app/navigation';
 
 	/*s:NProgressの設定*/
 	beforeNavigate(() => {
@@ -157,6 +158,18 @@
 		showLinkModal = false;
 	}
 	/*e:target="_blank"モーダル*/
+
+onNavigate((navigation) => {
+    // ブラウザが View Transitions API に対応していない場合は何もしない
+    if (!document.startViewTransition) return;
+
+    return new Promise((resolve) => {
+      document.startViewTransition(async () => {
+        resolve();
+        await navigation.complete;
+      });
+    });
+  });
 </script>
 
 <svelte:head>

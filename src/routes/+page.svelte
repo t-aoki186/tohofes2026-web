@@ -243,7 +243,7 @@
 				{#if data.latest && data.latest.length > 0}
 					{#each data.latest as item}
 						<ul>
-							<li class="mx-auto mb-4 w-full list-none" style="view-transition-name: newsp-hero;">
+							<li class="mx-auto mb-4 w-full list-none">
 								<a href="/news/{item.id}">
 									<div
 										class="news-list flex border-l-2 pl-4"
@@ -292,7 +292,7 @@
 	<!---->
 	<!--s:アクセス-->
 	<div class="container m-auto mt-10 rounded-xl bg-(--title-bg-color)" data-aos="fade-up">
-		<p use:reveal class="tf26-page-title">
+		<p use:reveal class="tf26-page-title" style="view-transition-name: tfaccesstitle-hero;">
 			{#each 'アクセス'.split('') as char, i}
 				<span class="char" style={`--d: ${i * 0.12}s`}>{char}</span>
 			{/each}
@@ -342,7 +342,7 @@
 	<!---->
 	<!--s:ご案内-->
 	<div class="container m-auto mt-10 rounded-xl bg-(--title-bg-color)" data-aos="fade-up">
-		<p use:reveal class="tf26-page-title">
+		<p use:reveal class="tf26-page-title" style="view-transition-name: tfvisitortitle-hero;">
 			{#each 'ご案内'.split('') as char, i}
 				<span class="char" style={`--d: ${i * 0.12}s`}>{char}</span>
 			{/each}
@@ -465,7 +465,7 @@
 	<!---->
 	<!--s:企画情報-->
 	<div class="container m-auto mt-10 rounded-xl bg-(--title-bg-color)" data-aos="fade-up">
-		<p use:reveal class="tf26-page-title">
+		<p use:reveal class="tf26-page-title" style="view-transition-name: tforgtitle-hero;">
 			{#each '企画情報'.split('') as char, i}
 				<span class="char" style={`--d: ${i * 0.12}s`}>{char}</span>
 			{/each}
@@ -729,7 +729,7 @@
 	<!---->
 	<!--s:桐朋祭とは-->
 	<div class="container m-auto mt-10 rounded-xl bg-(--title-bg-color)" data-aos="fade-up">
-		<p use:reveal class="tf26-page-title">
+		<p use:reveal class="tf26-page-title" style="view-transition-name: tfabouttitle-hero;">
 			{#each '桐朋祭とは'.split('') as char, i}
 				<span class="char" style={`--d: ${i * 0.12}s`}>{char}</span>
 			{/each}
@@ -742,6 +742,7 @@
 					src="https://pic.atserver186.jp/img/tohofes/past_tohofes.webp"
 					alt="桐朋祭画像"
 					class="h-auto w-full rounded-xl"
+					style="view-transition-name: tfabout-hero;"
 				/>
 			</div>
 			<div class="link-2">
@@ -765,7 +766,7 @@
 	<!---->
 	<!--s:テーマについて-->
 	<div class="container m-auto mt-10 rounded-xl bg-(--title-bg-color)" data-aos="fade-up">
-		<p use:reveal class="tf26-page-title">
+		<p use:reveal class="tf26-page-title" style="view-transition-name: tfthemetitle-hero;">
 			{#each 'テーマについて'.split('') as char, i}
 				<span class="char" style={`--d: ${i * 0.12}s`}>{char}</span>
 			{/each}

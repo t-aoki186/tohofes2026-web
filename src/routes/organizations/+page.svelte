@@ -94,7 +94,7 @@
 	</Modal>
 
 	<div class="container m-auto mt-25 border-b-2 border-b-(--main-text-color)">
-		<p class="tf26-page-title" style="color: black; margin-bottom: 0;">{pageTitle}</p>
+		<p class="tf26-page-title" style="color: black; margin-bottom: 0; view-transition-name: tforgtitle-hero;">{pageTitle}</p>
 	</div>
 	<section class="container mx-auto mt-10 mb-25 rounded bg-white p-4">
 		<form class="s-search-form mb-4" action="/organizations/" method="GET">
