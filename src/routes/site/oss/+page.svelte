@@ -35,7 +35,9 @@
 				<p class="mt-1 text-sm">
 					提供元:Tailwind Labs, Inc.<br />
 					ライセンス:MIT License<br />
-					公式サイト:<a href="https://tailwindcss.com/" class="underline">tailwindcss.com</a><br />
+					公式サイト:<a href="https://tailwindcss.com/" class="underline" target="_blank"
+						>tailwindcss.com</a
+					><br />
 					利用内容:ユーティリティファーストなスタイル適用に使用
 				</p>
 			</div>
@@ -44,7 +46,7 @@
 				<p class="mt-1 text-sm">
 					提供元: Rico Sta. Cruz<br />
 					ライセンス: MIT License<br />
-					公式サイト:<a href="https://ricostacruz.com/nprogress/" class="underline"
+					公式サイト:<a href="https://ricostacruz.com/nprogress/" class="underline" target="_blank"
 						>ricostacruz.com/nprogress/</a
 					><br />
 					利用内容: ページ遷移時のプログレスバー表示
@@ -66,7 +68,9 @@
 				<p class="mt-1 text-sm">
 					提供元:CSS Stock<br />
 					ライセンス:独自ライセンス（商用利用可）<br />
-					公式サイト:<a href="https://pote-chil.com" class="underline">://pote-chil.com</a><br />
+					公式サイト:<a href="https://pote-chil.com" class="underline" target="_blank"
+						>://pote-chil.com</a
+					><br />
 					利用内容:ボタンやカードのCSSコンポーネントに使用
 				</p>
 			</div>
@@ -75,7 +79,9 @@
 				<p class="mt-1 text-sm">
 					提供元:TopeconHeroes<br />
 					ライセンス:独自ライセンス（商用利用可）<br />
-					公式サイト:<a href="https://icooon-mono.com" class="underline">icooon-mono.com</a><br />
+					公式サイト:<a href="https://icooon-mono.com" class="underline" target="_blank"
+						>icooon-mono.com</a
+					><br />
 					利用内容:サイト内のアイコンの一部に使用
 				</p>
 			</div>
@@ -84,7 +90,9 @@
 				<p class="mt-1 text-sm">
 					提供元:iconmonstr<br />
 					ライセンス:独自ライセンス（商用利用可）<br />
-					公式サイト:<a href="https://iconmonstr.com/" class="underline">iconmonstr.com</a><br />
+					公式サイト:<a href="https://iconmonstr.com/" class="underline" target="_blank"
+						>iconmonstr.com</a
+					><br />
 					利用内容:サイト内のアイコンの一部に使用
 				</p>
 			</div>
@@ -93,7 +101,7 @@
 				<p class="mt-1 text-sm">
 					提供元:TopeconHeroes<br />
 					ライセンス:独自ライセンス（商用利用可）<br />
-					公式サイト:<a href="https://www.silhouette-illust.com" class="underline"
+					公式サイト:<a href="https://www.silhouette-illust.com" class="underline" target="_blank"
 						>silhouette-illust.com</a
 					><br />
 					利用内容:サイト内のイラストの一部に使用
