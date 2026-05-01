@@ -233,7 +233,7 @@
 	<!--s:お知らせ-->
 	<div class="container mx-auto mt-10" data-aos="fade-up">
 		<div class="main-link">
-			<div class="link-3" style="margin: 0 5px 5px 5px; ">
+			<div class="link-3 tp-news-list" style="margin: 0 5px 5px 5px; ">
 				<p use:reveal class="news-section-title" style="padding: 0 0 10px 0;">
 					{#each '・お知らせ'.split('') as char, i}
 						<span class="char text-(--main-text-color)" style={`--d: ${i * 0.12}s`}>{char}</span>
@@ -274,7 +274,7 @@
 					<p>お知らせの取得に失敗しました</p>
 				{/if}
 			</div>
-			<div class="link-4 flex items-center justify-center">
+			<div class="link-4 tp-news-bg-icon flex items-center justify-center">
 				<i
 					class="tf26-icon-material icon-megaphone -scale-x-100 rotate-30 transform text-[12rem] text-(--main-text-color)"
 				></i>
@@ -519,7 +519,7 @@
 		</p>
 	</div>
 	<section
-		class="auto-scroll-organization-section w-[80%] mb-10 rounded-2xl rounded-l-none border border-l-0 border-(--main-text-color) p-4 pl-0"
+		class="auto-scroll-organization-section mb-10 w-[80%] rounded-2xl rounded-l-none border border-l-0 border-(--main-text-color) p-4 pl-0"
 	>
 		<Splide options={optionsLeft} extensions={{ AutoScroll }} style="width: 100%;">
 			<SplideSlide>
@@ -614,7 +614,7 @@
 			</SplideSlide>
 		</Splide>
 	</section>
-	<div class="mb-2 mr-10" style="border-right: solid 4px var(--main-text-color);">
+	<div class="mr-10 mb-2" style="border-right: solid 4px var(--main-text-color);">
 		<p use:reveal class="news-section-title mr-2" style="padding: 0; text-align: right !important;">
 			{#each '参加団体ブログ'.split('') as char, i}
 				<span class="char text-(--main-text-color)" style={`--d: ${i * 0.12}s`}>{char}</span>
@@ -622,7 +622,7 @@
 		</p>
 	</div>
 	<section
-		class="auto-scroll-organization-section w-[80%] mb-10 ml-auto rounded-2xl rounded-r-none border border-r-0 border-(--main-text-color) p-4 pr-0"
+		class="auto-scroll-organization-section mb-10 ml-auto w-[80%] rounded-2xl rounded-r-none border border-r-0 border-(--main-text-color) p-4 pr-0"
 	>
 		<Splide options={optionsRight} extensions={{ AutoScroll }} style="width: 100%;">
 			<SplideSlide>
@@ -878,6 +878,23 @@
 			object-fit: cover;
 			height: 100%;
 			border-radius: 0;
+		}
+
+		.tp-news-list {
+			z-index: 3;
+		}
+
+		.tp-news-bg-icon {
+			z-index: 2;
+			position: absolute !important;
+			display: flex;
+			margin-top: 4rem;
+			right: 50%;
+			left: 50%;
+		}
+
+		.tp-news-bg-icon i {
+			opacity: 0.5;
 		}
 	}
 </style>
