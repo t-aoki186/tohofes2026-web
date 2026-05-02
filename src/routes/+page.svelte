@@ -317,7 +317,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="link-2">
+			<div class="link-2" style="padding: 0 !important;">
 				<iframe
 					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.4746059148924!2d139.44237747639895!3d35.68993672949453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018e3f60c18b89b%3A0xec006afe5f872d28!2z5qGQ5pyL5Lit5a2m5qCh44O75qGQ5pyL6auY562J5a2m5qCh!5e0!3m2!1sja!2sjp!4v1771772582613!5m2!1sja!2sjp"
 					width="100%"
@@ -519,7 +519,7 @@
 		</p>
 	</div>
 	<section
-		class="auto-scroll-organization-section mb-10 w-[80%] rounded-2xl rounded-l-none border border-l-0 border-(--main-text-color) p-4 pl-0"
+		class="auto-scroll-organization-section mb-10 rounded-2xl rounded-l-none border border-l-0 border-(--main-text-color) p-4 pl-0"
 	>
 		<Splide options={optionsLeft} extensions={{ AutoScroll }} style="width: 100%;">
 			<SplideSlide>
@@ -622,7 +622,7 @@
 		</p>
 	</div>
 	<section
-		class="auto-scroll-organization-section mb-10 ml-auto w-[80%] rounded-2xl rounded-r-none border border-r-0 border-(--main-text-color) p-4 pr-0"
+		class="auto-scroll-organization-section mb-10 ml-auto rounded-2xl rounded-r-none border border-r-0 border-(--main-text-color) p-4 pr-0"
 	>
 		<Splide options={optionsRight} extensions={{ AutoScroll }} style="width: 100%;">
 			<SplideSlide>
@@ -888,13 +888,23 @@
 			z-index: 2;
 			position: absolute !important;
 			display: flex;
-			margin-top: 4rem;
-			right: 50%;
-			left: 50%;
+			margin-top: 5rem;
+			right: 55%;
+			left: 45%;
 		}
 
 		.tp-news-bg-icon i {
 			opacity: 0.5;
+		}
+	}
+
+	.auto-scroll-organization-section{
+		width: 80%;
+	}
+
+	@media (max-width: 768px) {
+		.auto-scroll-organization-section{
+			width: 95%;
 		}
 	}
 </style>
