@@ -60,6 +60,7 @@
 	/*s:target="_blank"モーダル*/
 	let targetUrl = $state('');
 	let showLinkModal = $state(false);
+	let skipExternalLinkConfirmation = $state(false);
 	/*e:target="_blank"モーダル*/
 
 	/*s:ヘッダーその他メニュー*/
@@ -136,11 +137,22 @@
 	/*e:ローディングアニメーション*/
 
 	/*s:target="_blank"モーダル*/
+
+	//外部リンク確認モーダルを非表示にされているかの情報をLocalStorageから取得
+	onMount(() => {
+		skipExternalLinkConfirmation = localStorage.getItem('skipExternalLinkConfirmation') === 'true';
+	});
+
 	function openExternalLink(event) {
 		//クリックされた要素から一番近いaタグを探す
 		const anchor = event.target.closest('a');
 		//`target="_blank"`が設定されている場合にのみ発火
 		if (anchor && anchor.target === '_blank') {
+			if (skipExternalLinkConfirmation) {
+				window.open(anchor.href, '_blank', 'noopener,noreferrer');
+				return;
+			}
+
 			event.preventDefault();
 			targetUrl = anchor.href;
 			showLinkModal = true;
@@ -149,27 +161,31 @@
 
 	function copyLink() {
 		navigator.clipboard.writeText(targetUrl);
-		alert('URLをコピーしました'); //将来的にはトースト通知などに変更
+		alert('URLをコピーしました'); //将来的にはトースト通知などに変更したい
 		showLinkModal = false;
 	}
 
 	function openLink() {
-		window.open(targetUrl, '_blank', 'noopener.noreferrer');
+		if (skipExternalLinkConfirmation) {
+			localStorage.setItem('skipExternalLinkConfirmation', 'true');
+		}
+		window.open(targetUrl, '_blank', 'noopener,noreferrer');
 		showLinkModal = false;
 	}
+
 	/*e:target="_blank"モーダル*/
 
-onNavigate((navigation) => {
-    // ブラウザが View Transitions API に対応していない場合は何もしない
-    if (!document.startViewTransition) return;
+	onNavigate((navigation) => {
+		// ブラウザが View Transitions API に対応していない場合は何もしない
+		if (!document.startViewTransition) return;
 
-    return new Promise((resolve) => {
-      document.startViewTransition(async () => {
-        resolve();
-        await navigation.complete;
-      });
-    });
-  });
+		return new Promise((resolve) => {
+			document.startViewTransition(async () => {
+				resolve();
+				await navigation.complete;
+			});
+		});
+	});
 </script>
 
 <svelte:head>
@@ -246,6 +262,38 @@ onNavigate((navigation) => {
 			</p>
 			<hr class="main-hr" />
 			<p class="mb-5 text-[0.8rem] leading-[1.8rem] break-all text-gray-600">{targetUrl}</p>
+
+			<label class="group flex cursor-pointer items-center mb-5">
+				<input class="peer hidden" type="checkbox" bind:checked={skipExternalLinkConfirmation} />
+
+				<span
+					class="relative flex h-8 w-8 items-center justify-center rounded-md border-2 border-gray-400 bg-gray-100 shadow-md transition-all duration-500 peer-checked:border-(--main-text-color) peer-checked:bg-(--main-text-color) peer-hover:scale-105"
+				>
+					<span
+						class="absolute inset-0 rounded-md bg-linear-to-br from-white/30 to-white/10 opacity-0 transition-all duration-500 peer-checked:animate-pulse peer-checked:opacity-100"
+					></span>
+
+					<svg
+						fill="currentColor"
+						viewBox="0 0 20 20"
+						class="hidden h-5 w-5 scale-50 transform text-white transition-transform duration-500 peer-checked:block peer-checked:scale-100"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							clip-rule="evenodd"
+							d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 10-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"
+							fill-rule="evenodd"
+						></path>
+					</svg>
+				</span>
+
+				<span
+					class="ml-3 font-medium text-gray-700 transition-colors duration-300"
+				>
+					以後確認なしでリンクを開く
+				</span>
+			</label>
+
 			<div class="redirect-link-actions">
 				<button onclick={openLink} class="link-main">
 					<div class="link-main-underline">

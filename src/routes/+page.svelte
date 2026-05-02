@@ -888,9 +888,9 @@
 			z-index: 2;
 			position: absolute !important;
 			display: flex;
-			margin-top: 5rem;
 			right: 55%;
 			left: 45%;
+			margin-top: 6rem;
 		}
 
 		.tp-news-bg-icon i {
