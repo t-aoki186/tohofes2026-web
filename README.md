@@ -1,42 +1,46 @@
-# sv
+# 2026年度桐朋祭Webサイト
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+### 2026年度の桐朋祭のWebサイトです。
+[2026.tcc-archive.club](https://2026.tcc-archive.club/)
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```sh
-# create a new project
-npx sv create my-app
+## 依存関係のインストール
+`node.js`と`npm`が開発用PCに入っていることを確認してください。
+次のコマンドを使って、必要なパッケージを取得します。
+```
+npm i
 ```
 
-To recreate this project with the same configuration:
-
-```sh
-# recreate this project
-npx sv create --template minimal --types ts --add prettier eslint tailwindcss="plugins:typography,forms" lucia="demo:yes" mdsvex drizzle="database:postgresql+postgresql:postgres.js+docker:yes" --install npm test-app
+## 開発サーバを建てる
+通常は`http://localhost:5173`に開発サーバを建てられます。
 ```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
 npm run dev
-
-# or start the server and open the app in a new browser tab
+```
+ウィンドウを開く場合は
+```
 npm run dev -- --open
 ```
 
-## Building
-
-To create a production version of your app:
-
-```sh
+## 本番環境での動かし方
+開発用にビルドするには
+```
 npm run build
 ```
+し、本番サーバを起動するには
+```
+cd build
+npm start
+```
+です。
 
-You can preview the production build with `npm run preview`.
+---
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## ガチ本番環境用
+自己満機能として接続先のサーバーを確認できるようにしたいので本番環境用サーバで以下の設定をしてください。
+```
+nano /etc/environment
+```
+一番下の行に
+```
+SERVER_LOCATION="サーバのざっくりとした場所"
+```
+を追加してください。
