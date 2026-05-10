@@ -137,7 +137,6 @@
 	/*e:ローディングアニメーション*/
 
 	/*s:target="_blank"モーダル*/
-
 	//外部リンク確認モーダルを非表示にされているかの情報をLocalStorageから取得
 	onMount(() => {
 		skipExternalLinkConfirmation = localStorage.getItem('skipExternalLinkConfirmation') === 'true';

@@ -3,6 +3,7 @@
 
 	import { onMount } from 'svelte';
 	import { reveal } from '$lib/reveal';
+
 	let pageTitle = 'サイト情報';
 </script>
 
@@ -17,6 +18,9 @@
 	</div>
 	<section class="container mx-auto mt-15 mb-25">
 		<div class="mt-4">
+		<div class="mb-4 rounded-2xl bg-gray-50 p-4">
+			<p>Connected to: {data.serverLocation}</p>
+		</div>
 			<div class="mb-4 rounded-2xl bg-gray-50 p-4">
 				<h2 class="text-lg font-semibold">サーバ構成</h2>
 				<div class="grid grid-cols-2 gap-4">
