@@ -39,27 +39,27 @@
 
 /*s:フォント*/
 .line-seed-jp-thin {
-  font-family: "LINE Seed JP", sans-serif;
-  font-weight: 100;
-  font-style: normal;
+	font-family: 'LINE Seed JP', sans-serif;
+	font-weight: 100;
+	font-style: normal;
 }
 
 .line-seed-jp-regular {
-  font-family: "LINE Seed JP", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+	font-family: 'LINE Seed JP', sans-serif;
+	font-weight: 400;
+	font-style: normal;
 }
 
 .line-seed-jp-bold {
-  font-family: "LINE Seed JP", sans-serif;
-  font-weight: 700;
-  font-style: normal;
+	font-family: 'LINE Seed JP', sans-serif;
+	font-weight: 700;
+	font-style: normal;
 }
 
 .line-seed-jp-extrabold {
-  font-family: "LINE Seed JP", sans-serif;
-  font-weight: 800;
-  font-style: normal;
+	font-family: 'LINE Seed JP', sans-serif;
+	font-weight: 800;
+	font-style: normal;
 }
 /*e:フォント*/
 
@@ -155,7 +155,7 @@ body {
 	align-items: center;
 }
 
-.link-main-underline span{
+.link-main-underline span {
 	font-size: 1rem;
 }
 
@@ -164,7 +164,7 @@ body {
 		padding: 8px 12px;
 	}
 
-	.link-main-underline span{
+	.link-main-underline span {
 		font-size: 0.9rem;
 	}
 }
@@ -229,6 +229,26 @@ body {
 
 	.link-4 {
 		max-width: 100%;
+	}
+}
+
+.grid-2-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+.grid-2-item {
+	padding: 0.4em;
+}
+
+.ap-message-container {
+	border: 1px solid transparent;
+	border-color: var(--main-text-color);
+}
+
+@media (max-width: 1024px) {
+	.grid-2-container {
+		display: flex;
+		flex-direction: column;
 	}
 }
 /**/
@@ -485,6 +505,84 @@ body {
 	color: var(--hover-main-text-color);
 }
 
+/*参加団体検索結果一覧*/
+.sp-search-result-card {
+	position: relative;
+	display: inline-block;
+	width: calc(100% / 3 - 2rem);
+	border-radius: 10px;
+	padding: 15px;
+	margin: 10px;
+	transition: 0.3s;
+	border: 1px solid var(--main-text-color);
+}
+
+.sp-search-result-card > a.sp-search-result-link-overlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.sp-search-result-text {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	line-clamp: 2;
+	-webkit-line-clamp: 2; /* ここで行数を指定 */
+	-webkit-box-orient: vertical;
+}
+
+.sp-search-result-heading {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	line-clamp: 2;
+	-webkit-line-clamp: 3; /* ここで行数を指定 */
+	-webkit-box-orient: vertical;
+}
+
+.text-left-decoration {
+	padding: 0.25em 0.5em;
+	color: #494949;
+	background: transparent;
+	border-left: solid 3px var(--main-text-color);
+}
+
+.sp-refined-date {
+	position: relative;
+	display: inline-block;
+	transition: 0.3s;
+	border: 1px solid var(--main-text-color);
+	margin: 2px;
+	padding: 4px 10px;
+	border-radius: 5px;
+}
+
+.sp-refined-date-s {
+	position: relative;
+	display: inline-block;
+	transition: 0.3s;
+	border: 1px solid var(--main-text-color);
+	margin: 2px;
+	padding: 2px 6px;
+	border-radius: 5px;
+}
+
+@media (max-width: 1024px) {
+	.sp-search-result-card {
+		width: calc(100% / 2 - 2rem);
+	}
+}
+
+@media (max-width: 640px) {
+	.sp-search-result-card {
+		min-width: 100%;
+	}
+}
+
 @media (max-width: 768px) {
 	.footer_link {
 		font-size: 0.7rem;
@@ -541,11 +639,11 @@ body {
 
 /*s:AOS*/
 [data-aos^='fade'][data-aos^='fade'] {
-  transform: translate3d(0, 35px, 0);
+	transform: translate3d(0, 35px, 0);
 }
 
 [data-aos^='fade'].aos-animate {
-  transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
 }
 /*e:AOS*/
 
