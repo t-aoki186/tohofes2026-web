@@ -465,7 +465,7 @@
 	<!---->
 	<!--s:企画情報-->
 	<div class="container m-auto mt-10 rounded-xl bg-(--title-bg-color)" data-aos="fade-up">
-		<p use:reveal class="tf26-page-title" style="view-transition-name: tforgtitle-hero;">
+		<p use:reveal class="tf26-page-title">
 			{#each '企画情報'.split('') as char, i}
 				<span class="char" style={`--d: ${i * 0.12}s`}>{char}</span>
 			{/each}

@@ -46,7 +46,7 @@
 				<p class="tf26-dialog-title mb-2">カテゴリー</p>
 				<p class="text-lg text-(--main-text-color)">参加団体</p>
 				<br />
-				<a href={getChangedUrl('category', 'organizations')} class="sp-refined-date-s">
+				<a href={getChangedUrl('category', '')} class="sp-refined-date-s">
 					<p class="text-sm text-(--main-text-color)">すべて</p>
 				</a>
 				<a href={getChangedUrl('category', 'club')} class="sp-refined-date-s">
@@ -94,7 +94,7 @@
 	</Modal>
 
 	<div class="container m-auto mt-25 border-b-2 border-b-(--main-text-color)">
-		<p class="tf26-page-title" style="color: black; margin-bottom: 0; view-transition-name: tforgtitle-hero;">{pageTitle}</p>
+		<p class="tf26-page-title" style="color: black; margin-bottom: 0;">{pageTitle}</p>
 	</div>
 	<section class="container mx-auto mt-10 mb-25 rounded bg-white p-4">
 		<form class="s-search-form mb-4" action="/organizations/" method="GET">
@@ -122,8 +122,9 @@
 					<a href={getUrl(item)} class="sp-search-result-link-overlay"
 						><p class="hidden">hidden:エラー対策</p></a
 					>
-					<div class="mb-2">
-						<p class="text-xl font-bold text-(--main-text-color)">{item.title}</p>
+					<div class="mb-2 flex">
+						<p class="text-xl font-bold text-(--main-text-color) w-full">{item.title}</p>
+						<p class="whitespace-nowrap text-right text-(--main-text-color)"><i class="fa-solid fa-location-dot mr-1 text-xs"></i>{item.location}</p>
 					</div>
 					<div class="flex">
 						<div class="mr-2 flex-col" style="min-width: 0; max-width: 100%;">
@@ -131,7 +132,7 @@
 								class="sp-search-result-text text-xs"
 								style="color: color-mix(in srgb, var(--main-text-color), transparent 50%);"
 							>
-								{item.contributor || 'ニュース'}
+								{item.category || 'ニュース'}
 							</p>
 							<p class="sp-search-result-heading h-1/2 text-sm text-gray-600">
 								{item.heading}
