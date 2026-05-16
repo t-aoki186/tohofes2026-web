@@ -232,7 +232,7 @@
 	<!---->
 	<!--s:お知らせ-->
 	<div class="container mx-auto mt-10" data-aos="fade-up">
-		<div class="main-link">
+		<div class="main-link min-h-80">
 			<div class="link-3 tp-news-list" style="margin: 0 5px 5px 5px; ">
 				<p use:reveal class="news-section-title" style="padding: 0 0 10px 0;">
 					{#each '・お知らせ'.split('') as char, i}
