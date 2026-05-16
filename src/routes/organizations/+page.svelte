@@ -9,7 +9,7 @@
 	import Modal from '$lib/components/Modal_Search.svelte';
 	let show = $state(false);
 
-	let pageTitle = '団体/飲食/企画/イベント';
+	let pageTitle = '参加団体';
 
 	// --- 絞り込み検索用
 	type QueryKey = 'category' | 'place' | 'date';

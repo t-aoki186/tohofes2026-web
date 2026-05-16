@@ -4,7 +4,7 @@
 	import { onMount } from 'svelte';
 	import { reveal } from '$lib/reveal';
 
-	let pageTitle = '使用しているOSS';
+	let pageTitle = 'オープンソースライセンス';
 </script>
 
 <svelte:head>

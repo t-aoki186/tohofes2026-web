@@ -393,7 +393,7 @@
 				</li>
 				<li>
 					<a href="/organizations" class="header-text ml-3 text-xs tracking-wider transition"
-						>団体/飲食/企画/イベント</a
+						>参加団体</a
 					>
 				</li>
 				<li>
@@ -418,7 +418,7 @@
 				<li><a href="/" class="header-text">ホーム</a></li>
 				<li><a href="/about" class="header-text">桐朋祭とは</a></li>
 				<li><a href="/visitor" class="header-text">来場者の皆様へ</a></li>
-				<li><a href="/organizations" class="header-text">団体/飲食/企画/イベント</a></li>
+				<li><a href="/organizations" class="header-text">参加団体</a></li>
 				<li><a href="/timetable" class="header-text">タイムテーブル</a></li>
 				<li>
 					<button class="header-text" onclick={() => (otherOpen = !otherOpen)}>その他</button>
@@ -473,7 +473,7 @@
 				</li>
 				<li>
 					<a href="/site/oss" class="header-text"
-						><i class="fa-solid fa-rectangle-list mr-1 text-xs"></i>使用しているOSS一覧</a
+						><i class="fa-solid fa-rectangle-list mr-1 text-xs"></i>オープンソースライセンス</a
 					>
 				</li>
 				<li>
