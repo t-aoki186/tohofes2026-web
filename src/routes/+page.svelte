@@ -721,7 +721,7 @@
 		<a href="/organizations" class="link-main">
 			<div class="link-main-underline">
 				<i class="fa-solid fa-magnifying-glass"></i>
-				<span>団体/飲食/イベント一覧はこちら</span>
+				<span>参加団体一覧はこちら</span>
 			</div>
 		</a>
 	</div>

@@ -14,14 +14,19 @@
 
 <main class="mt-15 mr-1 ml-1 min-h-screen">
 	<div class="container m-auto mt-25 border-b-2 border-b-(--main-text-color)">
-		<p class="tf26-page-title" style="color: black; margin-bottom: 0; view-transition-name: tfthemetitle-hero;">{pageTitle}</p>
+		<p
+			class="tf26-page-title"
+			style="color: black; margin-bottom: 0; view-transition-name: tfthemetitle-hero;"
+		>
+			{pageTitle}
+		</p>
 	</div>
 	<section class="container mx-auto mt-15 mb-25">
 		<div class="min-w-full">
 			<img
 				src="https://pic.atserver186.jp/img/tohofes/tf26-logo-m-v3.webp"
 				alt="第75回桐朋祭ロゴ"
-				class="m-auto ml-auto mb-4 h-auto w-[20%]"
+				class="m-auto mb-4 ml-auto h-auto w-[20%]"
 				style="view-transition-name: tftheme-hero;"
 			/>
 			<h1 class="tf26-section-title">テーマについて</h1>
@@ -38,6 +43,13 @@
 				ぜひ、「あなたの桐朋祭」を存分に楽しんでください！
 			</p>
 			<hr class="main-hr" />
+			<h1 class="tf26-section-title">ロゴについて</h1>
+			<br />
+			<p class="fade-up-o mb-4 leading-[1.8rem]">
+				ロゴ制作にあたっては、今回のテーマである「結う」の要素をストレートに取り込むことを意識しました。
+				<br />
+				いろどり豊かな2本の帯が重なり合うデザインとし、「あらゆる人と個性が互いに影響し合う」様子を表現しました。
+			</p>
 			<h1 class="tf26-section-title mt-4">桐朋祭とは</h1>
 			<br />
 			<a href="/about" class="link-main">
