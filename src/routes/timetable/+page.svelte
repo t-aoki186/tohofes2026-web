@@ -1,24 +1,25 @@
-<script>
-	const { data } = $props();
-
-	import { onMount } from 'svelte';
-	import { reveal } from '$lib/reveal';
-
-	let pageTitle = 'タイムテーブル';
+<script lang="ts">
+    import type { PageData } from './$types';
+    import Timetable from '$lib/components/Timetable.svelte';
+    
+    let { data }: { data: PageData } = $props();
 </script>
 
-<svelte:head>
-	<title>{pageTitle} | {data.site_title}</title>
-	<meta property="og:title" content="{pageTitle} | {data.site_title}" />
-</svelte:head>
+<div class="page">
+    <h1>イベントタイムテーブル</h1>
+    <Timetable events={data.events} />
+</div>
 
-<main class="mt-15 mr-1 ml-1 min-h-screen">
-	<div class="container m-auto mt-25 border-b-2 border-b-(--main-text-color)">
-		<p class="tf26-page-title" style="color: black; margin-bottom: 0;">{pageTitle}</p>
-	</div>
-	<section class="container mx-auto mt-15 mb-25"></section>
-</main>
-<ol class="main-breadcrumb container mx-auto">
-	<li><a href="/">ホーム</a></li>
-	<li>{pageTitle}</li>
-</ol>
+<style>
+    .page {
+        min-height: 100vh;
+        background: #f5f5f5;
+    }
+    
+    h1 {
+        text-align: center;
+        padding: 20px;
+        margin: 0;
+        color: #333;
+    }
+</style>
