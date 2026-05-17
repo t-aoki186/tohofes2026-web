@@ -31,6 +31,11 @@
 		const currentDate = page.url.searchParams.get('date');
 		return currentDate === value;
 	}
+	
+	// この close 関数を追加または修正
+	const close = () => {
+		show = false;
+	};
 </script>
 
 <svelte:head>
