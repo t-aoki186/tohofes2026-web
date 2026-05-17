@@ -49,13 +49,13 @@
 		<div>
 			<div class="mb-4">
 				<p class="tf26-dialog-title mb-2">公開日</p>
-				<a href="/organizations/?date=1" class="sp-refined-date" class:active={isDateActive('1')}>
+				<a href={getChangedUrl('date', '1')} class="sp-refined-date" class:active={isDateActive('1')}>
 					<p class="text-lg text-(--main-text-color)">06/06(土)</p>
 				</a>
-				<a href="/organizations/?date=2" class="sp-refined-date" class:active={isDateActive('2')}>
+				<a href={getChangedUrl('date', '2')} class="sp-refined-date" class:active={isDateActive('2')}>
 					<p class="text-lg text-(--main-text-color)">06/07(日)</p>
 				</a>
-				<a href="/organizations/?date=3" class="sp-refined-date" class:active={isDateActive('3')}>
+				<a href={getChangedUrl('date', '3')} class="sp-refined-date" class:active={isDateActive('3')}>
 					<p class="text-lg text-(--main-text-color)">06/08(月)</p>
 				</a>
 			</div>
