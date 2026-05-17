@@ -145,12 +145,23 @@
 
 	// 固定の時間グリッド線
 	let timeGridLines = $derived(getTimeGridLines());
+
+    //日付の変換
+    const dayLabelMap: Record<number, string> = {
+        1: '6/6 (Sat)',
+        2: '6/7 (Sun)',
+        3: '6/8 (Mon)'
+    }
+
+    function getDayLabel(day: number) :string {
+        return dayLabelMap[day] || 'Day ${day}';
+    }
 </script>
 
 <div class="timetable-container">
 	{#each availableDays as day}
 		{@const dayEvents = groupedByDay.get(day) || []}
-		<h2 class="day-title">Day {day}</h2>
+		<h2 class="day-title">{getDayLabel(day)}</h2>
 		<div class="timetable-day">
 			{#if dayEvents.length === 0}
 				<p class="no-events">この日のイベントはありません</p>
@@ -161,18 +172,15 @@
 						<div class="time-column-header">時間</div>
 						{#each uniqueLocations as location}
 							<div class="location-header">
-								<i class="fa-solid fa-location-dot mr-1 text-xs"></i>
 								<!-- 条件に応じて追加バッジを表示 -->
 								{#if location === '2階 テラス'}
 									<span class="location-badge stage">ステージ企画</span>
 								{:else if location === '1階 第2体育室'}
 									<span class="location-badge band">バンド</span>
 								{:else if location === '3･4階 関心ラウンジ'}
-									<span class="location-badge band">生徒による授業</span>
-								{:else if location === '3･4階 関心ラウンジ'}
-									<span class="location-badge band">生徒による授業</span>
+									<span class="location-badge lounge">生徒による授業</span>
 								{/if}
-								{location}
+								<p class="text-xs"><i class="fa-solid fa-location-dot"></i>{location}</p>
 							</div>
 						{/each}
 					</div>
@@ -202,22 +210,18 @@
 									<!-- イベントカード -->
 									{#each getEventsForLocationAndDay(dayEvents, location, day) as event (event.id + location + event.startMinutes)}
 										<div
-											class="event-card"
+											class="event-card {event.location === '2階 テラス'
+												? 'card-stage'
+												: event.location === '1階 第2体育室'
+													? 'card-band'
+													: 'card-lounge'}"
 											style={getEventStyle(event)}
-											data-start={formatTime(event.startMinutes)}
-											data-end={formatTime(event.endMinutes)}
 										>
 											<div class="event-time">
 												{formatTime(event.startMinutes)} → {formatTime(event.endMinutes)}
 												<span class="event-duration">（{event.duration}分）</span>
 											</div>
 											<h3 class="event-title">{event.title}</h3>
-											{#if event.body && event.body !== 'test'}
-												<p class="event-body">{event.body}</p>
-											{/if}
-											{#if event.category}
-												<span class="event-category">{event.category}</span>
-											{/if}
 										</div>
 									{/each}
 								</div>
@@ -300,22 +304,27 @@
 
 	.location-badge {
 		display: inline-block;
-		font-size: 10px;
+		font-size: 1rem;
 		padding: 2px 6px;
 		border-radius: 4px;
-		margin-left: 8px;
+		margin-bottom: 8px;
 		font-weight: 500;
 	}
 
 	.location-badge.stage {
-		background: #ff6b6b20;
-		color: #ff6b6b;
+		background: #fce6f0;
+		color: #000000;
 		border: 1px solid #ff6b6b40;
 	}
 
 	.location-badge.band {
-		background: #4ecdc420;
-		color: #4ecdc4;
+		background: #ecf5fb;
+		color: #000000;
+		border: 1px solid #4ecdc440;
+	}
+	.location-badge.lounge {
+		background: #ebf6f1;
+		color: #000000;
 		border: 1px solid #4ecdc440;
 	}
 
@@ -323,12 +332,11 @@
 	.matrix-body {
 		display: flex;
 		position: relative;
-		min-height: 600px;
+		min-height: 1500px;
 	}
 
 	/* 時間軸（Y軸） */
 	.time-axis {
-		margin-top: 10px;
 		width: 80px;
 		flex-shrink: 0;
 		position: relative;
@@ -388,20 +396,33 @@
 		position: absolute;
 		left: 6px;
 		right: 6px;
-		background-color: color-mix(in srgb, var(--main-text-color) 15%, transparent);
-		border-left: 4px solid var(--main-text-color);
 		border-radius: 5px;
 		padding: 8px 10px;
-		cursor: pointer;
 		transition: all 0.2s ease;
-		overflow-y: auto;
-		z-index: 5;
+		z-index: 10;
 	}
 
-	.event-card:hover {
+	/* 場所ごとの個別スタイル */
+	.event-card.card-stage {
+		background-color: #fce6f0;
+		border-left: 4px solid #ff6b6b;
+	}
+
+	.event-card.card-band {
+		background-color: #cdf8f3;
+		border-left: 4px solid #00d5be;
+	}
+
+	.event-card.card-lounge {
+		background-color: #f7fee7;
+		border-left: 4px solid #bbf451;
+	}
+
+	.event-card.card-stage:hover,
+	.event-card.card-band:hover,
+	.event-card.card-lounge:hover {
 		transform: scale(1.01);
 		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-		background-color: color-mix(in srgb, var(--main-text-color) 20%, transparent);
 		z-index: 20;
 	}
 
@@ -423,27 +444,6 @@
 		margin: 4px 0;
 		color: #333;
 		line-height: 1.3;
-	}
-
-	.event-body {
-		font-size: 10px;
-		color: #888;
-		margin: 4px 0 0;
-		display: -webkit-box;
-		line-clamp: 2;
-		-webkit-line-clamp: 2;
-		-webkit-box-orient: vertical;
-		overflow: hidden;
-	}
-
-	.event-category {
-		display: inline-block;
-		font-size: 9px;
-		background: #667eea20;
-		color: #667eea;
-		padding: 2px 6px;
-		border-radius: 4px;
-		margin-top: 4px;
 	}
 
 	/* レスポンシブ対応 */
