@@ -25,14 +25,14 @@
 						<span class="text-xl">お名前</span>
 						<span class="text-lg font-normal text-gray-500">(例: &nbsp;桐朋&nbsp;太郎)</span>
 					</div>
-					<input type="text" class="w-full rounded-3xl outline-none appearance-none" />
+					<input type="text" class="w-full appearance-none rounded-3xl outline-none" />
 				</label>
 				<label class="mb-4">
 					<div class="mb-1 flex items-end justify-between">
 						<span class="text-xl">メールアドレス</span>
 						<span class="text-lg font-normal text-gray-500">(例: &nbsp;hogehoge@example.com)</span>
 					</div>
-					<input type="text" class="w-full rounded-3xl outline-none appearance-none" />
+					<input type="text" class="w-full appearance-none rounded-3xl outline-none" />
 				</label>
 				<label>
 					<div class="mb-1">
@@ -51,6 +51,16 @@
 					class="w-full cursor-pointer rounded-3xl border border-black bg-white p-2 text-xl"
 					>送信</button
 				>
+
+				<div class="mt-4">
+					<a href="https://atserver186.jp" target="_blank">
+						<p class="text-base">
+							Inquiry Powered By<i
+								class="ats-icon-material icon-atserver-mini-logo mb-1 ml-2 text-2xl"
+							></i>
+						</p>
+					</a>
+				</div>
 			</form>
 		</div>
 	</section>

@@ -3,6 +3,8 @@
 
 	import { onMount } from 'svelte';
 	import { reveal } from '$lib/reveal';
+	import { getUrl } from '$lib/utils/getUrl';
+	import { page } from '$app/state';
 
 	let pageTitle = 'サイトマップ';
 </script>
@@ -74,13 +76,21 @@
 					参加団体
 				</h2>
 				<ul class="sitemap-ul">
+					<!---->
+
+					{#if data.random && data.random.length > 0}
+						{#each data.random as item}
+							<li class="flex flex-col gap-2.5">
+								<a href={getUrl(item)}>
+									<span>{item.title}</span>
+								</a>
+							</li>
+						{/each}
+					{:else}
+						<p>お知らせの取得に失敗しました</p>
+					{/if}
 					<li class="flex flex-col gap-2.5">
-						<a href="/">
-							<span>ランダムに5件表示</span>
-						</a>
-					</li>
-					<li class="flex flex-col gap-2.5">
-						<a href="/organization">
+						<a href="/organizations">
 							<span>一覧はこちら</span>
 						</a>
 					</li>
