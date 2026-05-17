@@ -146,23 +146,50 @@
 	// 固定の時間グリッド線
 	let timeGridLines = $derived(getTimeGridLines());
 
-    //日付の変換
-    const dayLabelMap: Record<number, string> = {
-        1: '6/6 (Sat)',
-        2: '6/7 (Sun)',
-        3: '6/8 (Mon)'
-    }
+	//日付の変換
+	const dayLabelMap: Record<number, string> = {
+		1: '6/6 (Sat)',
+		2: '6/7 (Sun)',
+		3: '6/8 (Mon)'
+	};
 
-    function getDayLabel(day: number) :string {
-        return dayLabelMap[day] || 'Day ${day}';
-    }
+	function getDayLabel(day: number): string {
+		return dayLabelMap[day] || 'Day ${day}';
+	}
+
+	//日付選択
+	// 選択されている日（デフォルトは1日目）
+	let selectedDay = $state<number>(1);
+
+	// 日付ボタン用の設定
+	const dayButtons: { day: number; label: string }[] = [
+		{ day: 1, label: '6/6 (Sat)' },
+		{ day: 2, label: '6/7 (Sun)' },
+		{ day: 3, label: '6/8 (Mon)' }
+	];
 </script>
 
 <div class="timetable-container">
-	{#each availableDays as day}
+	<!-- 追加：日付選択ボタン -->
+	<div class="day-selector">
+		{#each dayButtons as button}
+			<button
+				class="day-button {selectedDay === button.day ? 'active' : ''}"
+				onclick={() => (selectedDay = button.day)}
+			>
+				{button.label}
+			</button>
+		{/each}
+	</div>
+
+	<!-- 修正：選択された日のタイムテーブルのみ表示 -->
+	{#if availableDays.includes(selectedDay)}
+		{@const day = selectedDay}
 		{@const dayEvents = groupedByDay.get(day) || []}
-		<h2 class="day-title">{getDayLabel(day)}</h2>
+
 		<div class="timetable-day">
+			<h2 class="day-title">{getDayLabel(day)}</h2>
+
 			{#if dayEvents.length === 0}
 				<p class="no-events">この日のイベントはありません</p>
 			{:else}
@@ -180,7 +207,7 @@
 								{:else if location === '3･4階 関心ラウンジ'}
 									<span class="location-badge lounge">生徒による授業</span>
 								{/if}
-								<p class="text-xs"><i class="fa-solid fa-location-dot"></i>{location}</p>
+								<p class="text-normal"><i class="fa-solid fa-location-dot"></i>{location}</p>
 							</div>
 						{/each}
 					</div>
@@ -218,7 +245,7 @@
 											style={getEventStyle(event)}
 										>
 											<div class="event-time">
-												{formatTime(event.startMinutes)} → {formatTime(event.endMinutes)}
+												{formatTime(event.startMinutes)} - {formatTime(event.endMinutes)}
 												<span class="event-duration">（{event.duration}分）</span>
 											</div>
 											<h3 class="event-title">{event.title}</h3>
@@ -231,7 +258,7 @@
 				</div>
 			{/if}
 		</div>
-	{/each}
+	{/if}
 </div>
 
 <style>
@@ -250,10 +277,12 @@
 	}
 
 	.day-title {
-		color: rgb(0, 0, 0);
+		color: black;
 		margin: 0;
 		padding: 16px 24px;
 		font-size: 1.5rem;
+        background-color: white;
+
 	}
 
 	.no-events {
@@ -282,6 +311,7 @@
 		flex-shrink: 0;
 		padding: 12px 8px;
 		font-weight: 600;
+		font-size: 1.2rem;
 		text-align: center;
 		background: #f8f9fa;
 		border-right: 1px solid #e0e0e0;
@@ -304,7 +334,7 @@
 
 	.location-badge {
 		display: inline-block;
-		font-size: 1rem;
+		font-size: 1.2rem;
 		padding: 2px 6px;
 		border-radius: 4px;
 		margin-bottom: 8px;
@@ -348,7 +378,7 @@
 		position: absolute;
 		transform: translateY(-50%);
 		right: 8px;
-		font-size: 11px;
+		font-size: 1.2rem;
 		color: #666;
 		font-family: monospace;
 		white-space: nowrap;
@@ -405,17 +435,17 @@
 	/* 場所ごとの個別スタイル */
 	.event-card.card-stage {
 		background-color: #fce6f0;
-		border-left: 4px solid #ff6b6b;
+		border-left: 4px solid #b64c6f;
 	}
 
 	.event-card.card-band {
 		background-color: #ecf5fb;
-		border-left: 4px solid #00d5be;
+		border-left: 4px solid #52aed8;
 	}
 
 	.event-card.card-lounge {
 		background-color: #ebf6f1;
-		border-left: 4px solid #bbf451;
+		border-left: 4px solid #35a17a;
 	}
 
 	.event-card.card-stage:hover,
@@ -427,19 +457,19 @@
 	}
 
 	.event-time {
-		font-size: 10px;
+		font-size: 0.8rem;
 		color: var(--main-text-color);
 		font-weight: 600;
 		font-family: monospace;
 	}
 
 	.event-duration {
-		font-size: 9px;
+		font-size: 0.7rem;
 		color: #999;
 	}
 
 	.event-title {
-		font-size: 12px;
+		font-size: 1rem;
 		font-weight: 600;
 		margin: 4px 0;
 		color: #333;
@@ -497,5 +527,31 @@
 
 	.locations-container::-webkit-scrollbar-thumb:hover {
 		background: #555;
+	}
+
+	/* 追加：日付セレクターのスタイル */
+	.day-selector {
+		display: flex;
+		gap: 12px;
+		justify-content: center;
+		margin-bottom: 24px;
+		flex-wrap: wrap;
+	}
+
+	.day-button {
+		font-size: 1rem;
+		background: white;
+		cursor: pointer;
+		transition: all 0.2s ease;
+		color: var(--main-text-color);
+		border: 1px solid var(--main-text-color);
+		margin: 2px;
+		padding: 5px 15px;
+		border-radius: 5px;
+	}
+
+	.day-button.active {
+		font-weight: bold;
+		background-color: color-mix(in srgb, var(--main-text-color) 15%, white);
 	}
 </style>
