@@ -82,18 +82,26 @@
 		return events.filter((event) => event.location === location && event.dayNumber === day);
 	}
 
+	//test
+
+	// 【修正】タイムラインを固定（10:00〜17:00）
+	const FIXED_TIME_RANGE = {
+		min: 9.5 * 60, // 9:30 = 600分
+		max: 17.5 * 60 // 17:30 = 1020分
+	};
+
 	// タイムラインの最小/最大時間を計算
-	function getTimeRange(events: ProcessedEvent[]): { min: number; max: number } {
-		if (events.length === 0) return { min: 540, max: 1020 }; // デフォルト: 9:00 ~ 17:00
-		let min = 1440,
-			max = 0;
-		events.forEach((event) => {
-			min = Math.min(min, event.startMinutes);
-			max = Math.max(max, event.endMinutes);
-		});
-		// 余白を追加（前後30分）
-		return { min: Math.max(0, min - 30), max: Math.min(1440, max + 30) };
-	}
+	//function getTimeRange(events: ProcessedEvent[]): { min: number; max: number } {
+	//	if (events.length === 0) return { min: 540, max: 1020 }; // デフォルト: 9:00 ~ 17:00
+	//	let min = 1440,
+	//		max = 0;
+	//	events.forEach((event) => {
+	//		min = Math.min(min, event.startMinutes);
+	//		max = Math.max(max, event.endMinutes);
+	//	});
+	//	// 余白を追加（前後30分）
+	//	return { min: Math.max(0, min - 30), max: Math.min(1440, max + 30) };
+	//}
 
 	// 分を時間表示に変換
 	function formatTime(minutes: number): string {
@@ -102,24 +110,22 @@
 		return `${hours.toString().padStart(2, '0')}:${mins.toString().padStart(2, '0')}`;
 	}
 
-	// 時間位置をパーセントで計算
-	function getTimePosition(minutes: number, timeRange: { min: number; max: number }): number {
-		return ((minutes - timeRange.min) / (timeRange.max - timeRange.min)) * 100;
+	// 時間位置をパーセントで計算（固定レンジに対して）
+	function getTimePosition(minutes: number): number {
+		return ((minutes - FIXED_TIME_RANGE.min) / (FIXED_TIME_RANGE.max - FIXED_TIME_RANGE.min)) * 100;
 	}
 
 	// イベントカードのスタイルを計算（Y軸の位置と高さ）
-	function getEventStyle(event: ProcessedEvent, timeRange: { min: number; max: number }): string {
-		const topPercent = getTimePosition(event.startMinutes, timeRange);
-		const heightPercent = (event.duration / (timeRange.max - timeRange.min)) * 100;
+	function getEventStyle(event: ProcessedEvent): string {
+		const topPercent = getTimePosition(event.startMinutes);
+		const heightPercent = (event.duration / (FIXED_TIME_RANGE.max - FIXED_TIME_RANGE.min)) * 100;
 		return `top: ${topPercent}%; height: ${heightPercent}%; min-height: 40px;`;
 	}
 
-	// 時間グリッド線を生成（1時間ごと）
-	function getTimeGridLines(timeRange: { min: number; max: number }): number[] {
-		const startHour = Math.floor(timeRange.min / 60);
-		const endHour = Math.ceil(timeRange.max / 60);
+	// 時間グリッド線を生成（1時間ごと、10:00〜17:00）
+	function getTimeGridLines(): number[] {
 		const lines: number[] = [];
-		for (let hour = startHour; hour <= endHour; hour++) {
+		for (let hour = 10; hour <= 17; hour++) {
 			lines.push(hour * 60);
 		}
 		return lines;
@@ -131,13 +137,14 @@
 
 	// 表示する日（データから抽出）
 	let availableDays = $derived(Array.from(groupedByDay.keys()).sort());
+
+	// 固定の時間グリッド線
+	let timeGridLines = $derived(getTimeGridLines());
 </script>
 
 <div class="timetable-container">
 	{#each availableDays as day}
 		{@const dayEvents = groupedByDay.get(day) || []}
-		{@const timeRange = getTimeRange(dayEvents)}
-		{@const timeGridLines = getTimeGridLines(timeRange)}
 		<h2 class="day-title">Day {day}</h2>
 		<div class="timetable-day">
 			{#if dayEvents.length === 0}
@@ -154,56 +161,53 @@
 						{/each}
 					</div>
 
-					<!-- タイムテーブル本体 -->
-					<div class="matrix-body">
-						<!-- 時間軸（Y軸） -->
-						<div class="time-axis">
-							{#each timeGridLines as timeMinutes}
-								<div class="time-label" style="top: {getTimePosition(timeMinutes, timeRange)}%">
-									{formatTime(timeMinutes)}
-								</div>
-							{/each}
-						</div>
-
-						<!-- 場所ごとの列 -->
-						<div class="locations-container">
-							{#each uniqueLocations as location}
-								<div class="location-column">
-									<!-- グリッド線（背景） -->
-									<div class="grid-lines">
-										{#each timeGridLines as timeMinutes}
-											<div
-												class="grid-line"
-												style="top: {getTimePosition(timeMinutes, timeRange)}%"
-											></div>
-										{/each}
-									</div>
-
-									<!-- イベントカード -->
-									{#each getEventsForLocationAndDay(dayEvents, location, day) as event (event.id + location + event.startMinutes)}
-										<div
-											class="event-card"
-											style={getEventStyle(event, timeRange)}
-											data-start={formatTime(event.startMinutes)}
-											data-end={formatTime(event.endMinutes)}
-										>
-											<h3 class="event-title">{event.title}</h3>
-											<div class="event-time">
-												{formatTime(event.startMinutes)} → {formatTime(event.endMinutes)}
-												<span class="event-duration">({event.duration}分)</span>
-											</div>
-											{#if event.body && event.body !== 'test'}
-												<p class="event-body">{event.body}</p>
-											{/if}
-											{#if event.category}
-												<span class="event-category">{event.category}</span>
-											{/if}
-										</div>
-									{/each}
-								</div>
-							{/each}
-						</div>
-					</div>
+<!-- タイムテーブル本体 -->
+                    <div class="matrix-body">
+                        <!-- 時間軸（Y軸） -->
+                        <div class="time-axis">
+                            {#each timeGridLines as timeMinutes}
+                                <div class="time-label" style="top: {getTimePosition(timeMinutes)}%">
+                                    {formatTime(timeMinutes)}
+                                </div>
+                            {/each}
+                        </div>
+                        
+                        <!-- 場所ごとの列 -->
+                        <div class="locations-container">
+                            {#each uniqueLocations as location}
+                                <div class="location-column">
+                                    <!-- グリッド線（背景） -->
+                                    <div class="grid-lines">
+                                        {#each timeGridLines as timeMinutes}
+                                            <div class="grid-line" style="top: {getTimePosition(timeMinutes)}%"></div>
+                                        {/each}
+                                    </div>
+                                    
+                                    <!-- イベントカード -->
+                                    {#each getEventsForLocationAndDay(dayEvents, location, day) as event (event.id + location + event.startMinutes)}
+                                        <div 
+                                            class="event-card"
+                                            style={getEventStyle(event)}
+                                            data-start={formatTime(event.startMinutes)}
+                                            data-end={formatTime(event.endMinutes)}
+                                        >
+                                            <div class="event-time">
+                                                {formatTime(event.startMinutes)} → {formatTime(event.endMinutes)}
+                                                <span class="event-duration">（{event.duration}分）</span>
+                                            </div>
+                                            <h3 class="event-title">{event.title}</h3>
+                                            {#if event.body && event.body !== 'test'}
+                                                <p class="event-body">{event.body}</p>
+                                            {/if}
+                                            {#if event.category}
+                                                <span class="event-category">{event.category}</span>
+                                            {/if}
+                                        </div>
+                                    {/each}
+                                </div>
+                            {/each}
+                        </div>
+                    </div>
 				</div>
 			{/if}
 		</div>
