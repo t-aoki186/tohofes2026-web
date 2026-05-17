@@ -50,15 +50,20 @@
 		return processed.sort((a, b) => a.startMinutes - b.startMinutes);
 	}
 
-	// 開催場所の一覧を取得（ユニーク）
+	// 【修正】開催場所の一覧を指定された順番で取得
 	function getUniqueLocations(events: ProcessedEvent[]): string[] {
-		const locations = new Set<string>();
+		// 指定された順番
+		const locationOrder = ['2階 テラス', '1階 第2体育室', '3･4階 関心ラウンジ'];
+
+		// 存在する場所のみを順番通りにフィルタリング
+		const existingLocations = new Set<string>();
 		events.forEach((event) => {
 			if (event.location) {
-				locations.add(event.location);
+				existingLocations.add(event.location);
 			}
 		});
-		return Array.from(locations).sort();
+
+		return locationOrder.filter((location) => existingLocations.has(location));
 	}
 
 	// 日付ごとにイベントをグループ化
@@ -156,58 +161,69 @@
 						<div class="time-column-header">時間</div>
 						{#each uniqueLocations as location}
 							<div class="location-header">
-								<i class="fa-solid fa-location-dot mr-1 text-xs"></i>{location}
+								<i class="fa-solid fa-location-dot mr-1 text-xs"></i>
+								<!-- 条件に応じて追加バッジを表示 -->
+								{#if location === '2階 テラス'}
+									<span class="location-badge stage">ステージ企画</span>
+								{:else if location === '1階 第2体育室'}
+									<span class="location-badge band">バンド</span>
+								{:else if location === '3･4階 関心ラウンジ'}
+									<span class="location-badge band">生徒による授業</span>
+								{:else if location === '3･4階 関心ラウンジ'}
+									<span class="location-badge band">生徒による授業</span>
+								{/if}
+								{location}
 							</div>
 						{/each}
 					</div>
 
-<!-- タイムテーブル本体 -->
-                    <div class="matrix-body">
-                        <!-- 時間軸（Y軸） -->
-                        <div class="time-axis">
-                            {#each timeGridLines as timeMinutes}
-                                <div class="time-label" style="top: {getTimePosition(timeMinutes)}%">
-                                    {formatTime(timeMinutes)}
-                                </div>
-                            {/each}
-                        </div>
-                        
-                        <!-- 場所ごとの列 -->
-                        <div class="locations-container">
-                            {#each uniqueLocations as location}
-                                <div class="location-column">
-                                    <!-- グリッド線（背景） -->
-                                    <div class="grid-lines">
-                                        {#each timeGridLines as timeMinutes}
-                                            <div class="grid-line" style="top: {getTimePosition(timeMinutes)}%"></div>
-                                        {/each}
-                                    </div>
-                                    
-                                    <!-- イベントカード -->
-                                    {#each getEventsForLocationAndDay(dayEvents, location, day) as event (event.id + location + event.startMinutes)}
-                                        <div 
-                                            class="event-card"
-                                            style={getEventStyle(event)}
-                                            data-start={formatTime(event.startMinutes)}
-                                            data-end={formatTime(event.endMinutes)}
-                                        >
-                                            <div class="event-time">
-                                                {formatTime(event.startMinutes)} → {formatTime(event.endMinutes)}
-                                                <span class="event-duration">（{event.duration}分）</span>
-                                            </div>
-                                            <h3 class="event-title">{event.title}</h3>
-                                            {#if event.body && event.body !== 'test'}
-                                                <p class="event-body">{event.body}</p>
-                                            {/if}
-                                            {#if event.category}
-                                                <span class="event-category">{event.category}</span>
-                                            {/if}
-                                        </div>
-                                    {/each}
-                                </div>
-                            {/each}
-                        </div>
-                    </div>
+					<!-- タイムテーブル本体 -->
+					<div class="matrix-body">
+						<!-- 時間軸（Y軸） -->
+						<div class="time-axis">
+							{#each timeGridLines as timeMinutes}
+								<div class="time-label" style="top: {getTimePosition(timeMinutes)}%">
+									{formatTime(timeMinutes)}
+								</div>
+							{/each}
+						</div>
+
+						<!-- 場所ごとの列 -->
+						<div class="locations-container">
+							{#each uniqueLocations as location}
+								<div class="location-column">
+									<!-- グリッド線（背景） -->
+									<div class="grid-lines">
+										{#each timeGridLines as timeMinutes}
+											<div class="grid-line" style="top: {getTimePosition(timeMinutes)}%"></div>
+										{/each}
+									</div>
+
+									<!-- イベントカード -->
+									{#each getEventsForLocationAndDay(dayEvents, location, day) as event (event.id + location + event.startMinutes)}
+										<div
+											class="event-card"
+											style={getEventStyle(event)}
+											data-start={formatTime(event.startMinutes)}
+											data-end={formatTime(event.endMinutes)}
+										>
+											<div class="event-time">
+												{formatTime(event.startMinutes)} → {formatTime(event.endMinutes)}
+												<span class="event-duration">（{event.duration}分）</span>
+											</div>
+											<h3 class="event-title">{event.title}</h3>
+											{#if event.body && event.body !== 'test'}
+												<p class="event-body">{event.body}</p>
+											{/if}
+											{#if event.category}
+												<span class="event-category">{event.category}</span>
+											{/if}
+										</div>
+									{/each}
+								</div>
+							{/each}
+						</div>
+					</div>
 				</div>
 			{/if}
 		</div>
@@ -280,6 +296,27 @@
 
 	.location-header:last-child {
 		border-right: none;
+	}
+
+	.location-badge {
+		display: inline-block;
+		font-size: 10px;
+		padding: 2px 6px;
+		border-radius: 4px;
+		margin-left: 8px;
+		font-weight: 500;
+	}
+
+	.location-badge.stage {
+		background: #ff6b6b20;
+		color: #ff6b6b;
+		border: 1px solid #ff6b6b40;
+	}
+
+	.location-badge.band {
+		background: #4ecdc420;
+		color: #4ecdc4;
+		border: 1px solid #4ecdc440;
 	}
 
 	/* 本体（Y軸 + 場所列） */
