@@ -23,7 +23,6 @@ export async function load({ url }) {
     results = results.filter((item: any) =>
       item.title.toLowerCase().includes(lower) ||
       item.body.toLowerCase().includes(lower) ||
-      item.heading.toLowerCase().includes(lower) ||
       item.location.toLowerCase().includes(lower)
     );
   }

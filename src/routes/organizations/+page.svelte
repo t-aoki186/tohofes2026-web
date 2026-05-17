@@ -19,6 +19,18 @@
 		searchParams.set(key, String(value));
 		return `?${searchParams.toString()}`;
 	}
+
+	// アクティブ判定用のヘルパー関数
+	function isActive(key: QueryKey, value: string | number): boolean {
+		const currentValue = page.url.searchParams.get(key);
+		return currentValue === String(value);
+	}
+
+	// date用のアクティブ判定（特別な値の場合）
+	function isDateActive(value: string): boolean {
+		const currentDate = page.url.searchParams.get('date');
+		return currentDate === value;
+	}
 </script>
 
 <svelte:head>
@@ -32,44 +44,73 @@
 		<div>
 			<div class="mb-4">
 				<p class="tf26-dialog-title mb-2">公開日</p>
-				<a href="/organizations/?date=1" class="sp-refined-date">
+				<a href="/organizations/?date=1" class="sp-refined-date" class:active={isDateActive('1')}>
 					<p class="text-lg text-(--main-text-color)">06/06(土)</p>
 				</a>
-				<a href="/organizations/?date=2" class="sp-refined-date">
+				<a href="/organizations/?date=2" class="sp-refined-date" class:active={isDateActive('2')}>
 					<p class="text-lg text-(--main-text-color)">06/07(日)</p>
 				</a>
-				<a href="/organizations/?date=3" class="sp-refined-date">
+				<a href="/organizations/?date=3" class="sp-refined-date" class:active={isDateActive('3')}>
 					<p class="text-lg text-(--main-text-color)">06/08(月)</p>
 				</a>
 			</div>
 			<div class="mb-2">
 				<p class="tf26-dialog-title mb-2">カテゴリー</p>
-				<p class="text-lg text-(--main-text-color)">参加団体</p>
-				<br />
-				<a href={getChangedUrl('category', '')} class="sp-refined-date-s">
-					<p class="text-sm text-(--main-text-color)">すべて</p>
+				<a
+					href={getChangedUrl('category', '')}
+					class:active={isActive('category', '')}
+					class="sp-refined-date"
+				>
+					<p class="text-lg text-(--main-text-color)">すべて</p>
 				</a>
-				<a href={getChangedUrl('category', 'club')} class="sp-refined-date-s">
+				<p class="text-lg text-(--main-text-color)">参加団体</p>
+				<a
+					href={getChangedUrl('category', 'club')}
+					class="sp-refined-date-s"
+					class:active={isActive('category', 'club')}
+				>
 					<p class="text-sm text-(--main-text-color)">部活</p>
 				</a>
-				<a href={getChangedUrl('category', 'food')} class="sp-refined-date-s">
+				<a
+					href={getChangedUrl('category', 'food')}
+					class="sp-refined-date-s"
+					class:active={isActive('category', 'food')}
+				>
 					<p class="text-sm text-(--main-text-color)">飲食</p>
 				</a>
-				<a href={getChangedUrl('category', 'sound')} class="sp-refined-date-s">
+				<a
+					href={getChangedUrl('category', 'sound')}
+					class="sp-refined-date-s"
+					class:active={isActive('category', 'sound')}
+				>
 					<p class="text-sm text-(--main-text-color)">音響</p>
 				</a>
-				<a href={getChangedUrl('category', 'plan')} class="sp-refined-date-s">
+				<a
+					href={getChangedUrl('category', 'plan')}
+					class="sp-refined-date-s"
+					class:active={isActive('category', 'plan')}
+				>
 					<p class="text-sm text-(--main-text-color)">企画</p>
 				</a>
-				<a href={getChangedUrl('category', 'event')} class="sp-refined-date-s">
+				<a
+					href={getChangedUrl('category', 'event')}
+					class="sp-refined-date-s"
+					class:active={isActive('category', 'event')}
+				>
 					<p class="text-sm text-(--main-text-color)">イベント</p>
 				</a>
-				<a href={getChangedUrl('category', 'organization-blogs')} class="sp-refined-date-s">
+				<p class="text-lg text-(--main-text-color)">ブログ</p>
+				<a
+					href={getChangedUrl('category', 'organization-blogs')}
+					class="sp-refined-date-s"
+					class:active={isActive('category', 'organization-blogs')}
+				>
 					<p class="text-sm text-(--main-text-color)">参加団体ブログ</p>
 				</a>
 			</div>
 			<div>
 				<p class="tf26-dialog-title mb-2">場所</p>
+				test
 			</div>
 		</div>
 		<!--s:閉じる/リセット-->
@@ -123,8 +164,10 @@
 						><p class="hidden">hidden:エラー対策</p></a
 					>
 					<div class="mb-2 flex">
-						<p class="text-xl font-bold text-(--main-text-color) w-full">{item.title}</p>
-						<p class="whitespace-nowrap text-right text-(--main-text-color)"><i class="fa-solid fa-location-dot mr-1 text-xs"></i>{item.location}</p>
+						<p class="w-full text-xl font-bold text-(--main-text-color)">{item.title}</p>
+						<p class="text-right whitespace-nowrap text-(--main-text-color)">
+							<i class="fa-solid fa-location-dot mr-1 text-xs"></i>{item.location}
+						</p>
 					</div>
 					<div class="flex">
 						<div class="mr-2 flex-col" style="min-width: 0; max-width: 100%;">
@@ -159,4 +202,18 @@
 </ol>
 
 <style>
+	/* アクティブなリンクのスタイル */
+	.active {
+		font-weight: bold;
+		background-color: color-mix(in srgb, var(--main-text-color) 15%, transparent);
+		color: white;
+	}
+
+	/* sp-refined-date と sp-refined-date-s 用のアクティブスタイル */
+	.sp-refined-date.active,
+	.sp-refined-date-s.active {
+		font-weight: bold;
+		color: #0066cc;
+		position: relative;
+	}
 </style>
