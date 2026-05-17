@@ -396,7 +396,7 @@
 		position: absolute;
 		left: 6px;
 		right: 6px;
-		border-radius: 5px;
+		border-radius: 3px;
 		padding: 8px 10px;
 		transition: all 0.2s ease;
 		z-index: 10;
@@ -409,12 +409,12 @@
 	}
 
 	.event-card.card-band {
-		background-color: #cdf8f3;
+		background-color: #ecf5fb;
 		border-left: 4px solid #00d5be;
 	}
 
 	.event-card.card-lounge {
-		background-color: #f7fee7;
+		background-color: #ebf6f1;
 		border-left: 4px solid #bbf451;
 	}
 
