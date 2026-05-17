@@ -76,8 +76,6 @@
 					参加団体
 				</h2>
 				<ul class="sitemap-ul">
-					<!---->
-
 					{#if data.random && data.random.length > 0}
 						{#each data.random as item}
 							<li class="flex flex-col gap-2.5">

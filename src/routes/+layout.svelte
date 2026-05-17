@@ -22,6 +22,8 @@
 	import { setupViewTransition } from 'sveltekit-view-transition';
 	/*モーダル*/
 	import Modal from '$lib/components/Modal.svelte';
+	/*URL生成*/
+	import { getUrl } from '$lib/utils/getUrl';
 	/*SEO*/
 	import { page } from '$app/stores';
 	import { onNavigate } from '$app/navigation';
@@ -39,8 +41,8 @@
 	});
 	/*e:NProgressの設定*/
 
-	//export
-	let { data, children } = $props();
+	type RandomItem = { title: string; type: string; id: string; category?: string };
+	let { data, children } = $props<{ data: { random?: RandomItem[] } }>();
 	let accordionOpen = $state(false);
 
 	/*s:共通変数*/
@@ -142,9 +144,9 @@
 		skipExternalLinkConfirmation = localStorage.getItem('skipExternalLinkConfirmation') === 'true';
 	});
 
-	function openExternalLink(event) {
+	function openExternalLink(event: MouseEvent) {
 		//クリックされた要素から一番近いaタグを探す
-		const anchor = event.target.closest('a');
+		const anchor = (event.target as HTMLElement).closest('a');
 		//`target="_blank"`が設定されている場合にのみ発火
 		if (anchor && anchor.target === '_blank') {
 			if (skipExternalLinkConfirmation) {
@@ -262,7 +264,7 @@
 			<hr class="main-hr" />
 			<p class="mb-5 text-[0.8rem] leading-[1.8rem] break-all text-gray-600">{targetUrl}</p>
 
-			<label class="group flex cursor-pointer items-center mb-5">
+			<label class="group mb-5 flex cursor-pointer items-center">
 				<input class="peer hidden" type="checkbox" bind:checked={skipExternalLinkConfirmation} />
 
 				<span
@@ -286,9 +288,7 @@
 					</svg>
 				</span>
 
-				<span
-					class="ml-3 font-medium text-gray-700 transition-colors duration-300"
-				>
+				<span class="ml-3 font-medium text-gray-700 transition-colors duration-300">
 					以後確認なしでリンクを開く
 				</span>
 			</label>
@@ -549,8 +549,22 @@
 				<div class="footer-flex-content">
 					<h4>参加団体</h4>
 					<ul>
-						<li><a href="/">ランダムに5件表示</a></li>
-						<li><a href="/organizations">すべての参加団体を確認する</a></li>
+						{#if data.random && data.random.length > 0}
+							{#each data.random as item}
+								<li class="flex flex-col gap-2.5">
+									<a href={getUrl(item)}>
+										<span>{item.title}</span>
+									</a>
+								</li>
+							{/each}
+						{:else}
+							<p class="text-white">参加団体の取得に失敗しました</p>
+						{/if}
+						<li class="flex flex-col gap-2.5">
+							<a href="/organizations">
+								<span>一覧はこちら</span>
+							</a>
+						</li>
 					</ul>
 				</div>
 				<div class="footer-flex-content">
