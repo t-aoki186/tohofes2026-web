@@ -1,4 +1,5 @@
 <script lang="ts">
+	/*s: タイムテーブル(基)*/
 	import type { TimetableEvent, ProcessedEvent } from '$lib/types/timetable';
 
 	let { events = [] }: { events?: TimetableEvent[] } = $props();
@@ -50,7 +51,7 @@
 		return processed.sort((a, b) => a.startMinutes - b.startMinutes);
 	}
 
-	// 【修正】開催場所の一覧を指定された順番で取得
+	// 開催場所の一覧を指定された順番で取得
 	function getUniqueLocations(events: ProcessedEvent[]): string[] {
 		// 指定された順番
 		const locationOrder = ['2階 テラス', '1階 第2体育室', '3･4階 関心ラウンジ'];
@@ -87,26 +88,11 @@
 		return events.filter((event) => event.location === location && event.dayNumber === day);
 	}
 
-	//test
-
 	// 【修正】タイムラインを固定（10:00〜17:00）
 	const FIXED_TIME_RANGE = {
 		min: 9.5 * 60, // 9:30 = 600分
 		max: 17.5 * 60 // 17:30 = 1020分
 	};
-
-	// タイムラインの最小/最大時間を計算
-	//function getTimeRange(events: ProcessedEvent[]): { min: number; max: number } {
-	//	if (events.length === 0) return { min: 540, max: 1020 }; // デフォルト: 9:00 ~ 17:00
-	//	let min = 1440,
-	//		max = 0;
-	//	events.forEach((event) => {
-	//		min = Math.min(min, event.startMinutes);
-	//		max = Math.max(max, event.endMinutes);
-	//	});
-	//	// 余白を追加（前後30分）
-	//	return { min: Math.max(0, min - 30), max: Math.min(1440, max + 30) };
-	//}
 
 	// 分を時間表示に変換
 	function formatTime(minutes: number): string {
@@ -145,8 +131,11 @@
 
 	// 固定の時間グリッド線
 	let timeGridLines = $derived(getTimeGridLines());
+	/*e: タイムテーブル(基)*/
 
-	//日付の変換
+	////
+
+	/*s: 日付ラベルのマッピング*/
 	const dayLabelMap: Record<number, string> = {
 		1: '6/6 (Sat)',
 		2: '6/7 (Sun)',
@@ -156,21 +145,36 @@
 	function getDayLabel(day: number): string {
 		return dayLabelMap[day] || 'Day ${day}';
 	}
+	/*e: 日付ラベルのマッピング*/
 
-	//日付選択
-	// 選択されている日（デフォルトは1日目）
+	/*s: 日付選択 */
+	//デフォルトで選択される日付の指定
 	let selectedDay = $state<number>(1);
 
-	// 日付ボタン用の設定
+	//日付選択ボタンの表示用設定
 	const dayButtons: { day: number; label: string }[] = [
 		{ day: 1, label: '6/6 (Sat)' },
 		{ day: 2, label: '6/7 (Sun)' },
 		{ day: 3, label: '6/8 (Mon)' }
 	];
+	/*e: 日付選択*/
+
+	/*s: イベントカードのリンク生成*/
+	function getEventLink(event: ProcessedEvent): string {
+		const category = event.category || 'unknown';
+		const id = event.id || '';
+
+		if (category && id) {
+			return `/organizations/${encodeURIComponent(category)}/${encodeURIComponent(id)}`;
+		}
+		return '';
+	}
+	/*e: イベントカードのリンク生成*/
 </script>
 
+<!--s: タイムテーブル全体-->
 <div class="timetable-container">
-	<!-- 追加：日付選択ボタン -->
+	<!--s: 日付選択ボタン-->
 	<div class="day-selector">
 		{#each dayButtons as button}
 			<button
@@ -181,20 +185,19 @@
 			</button>
 		{/each}
 	</div>
-
-	<!-- 修正：選択された日のタイムテーブルのみ表示 -->
+	<!--s: 日付選択ボタン-->
+	<!---->
+	
 	{#if availableDays.includes(selectedDay)}
 		{@const day = selectedDay}
 		{@const dayEvents = groupedByDay.get(day) || []}
-
 		<div class="timetable-day">
 			<h2 class="day-title">{getDayLabel(day)}</h2>
-
 			{#if dayEvents.length === 0}
 				<p class="no-events">この日のイベントはありません</p>
 			{:else}
 				<div class="matrix-timetable">
-					<!-- ヘッダー行（場所名） -->
+					<!--s: タイムテーブルヘッダー(場所等の表示)-->
 					<div class="matrix-header">
 						<div class="time-column-header">時間</div>
 						{#each uniqueLocations as location}
@@ -211,8 +214,9 @@
 							</div>
 						{/each}
 					</div>
-
-					<!-- タイムテーブル本体 -->
+					<!--e: タイムテーブルヘッダー(場所等の表示)-->
+					<!---->
+					<!--s: -->
 					<div class="matrix-body">
 						<!-- 時間軸（Y軸） -->
 						<div class="time-axis">
@@ -223,43 +227,55 @@
 							{/each}
 						</div>
 
-						<!-- 場所ごとの列 -->
+						<!--s: カテゴリ別列-->
 						<div class="locations-container">
 							{#each uniqueLocations as location}
 								<div class="location-column">
-									<!-- グリッド線（背景） -->
 									<div class="grid-lines">
 										{#each timeGridLines as timeMinutes}
 											<div class="grid-line" style="top: {getTimePosition(timeMinutes)}%"></div>
 										{/each}
 									</div>
-
-									<!-- イベントカード -->
+									<!--s: eventカード-->
 									{#each getEventsForLocationAndDay(dayEvents, location, day) as event (event.id + location + event.startMinutes)}
-										<div
-											class="event-card {event.location === '2階 テラス'
-												? 'card-stage'
-												: event.location === '1階 第2体育室'
-													? 'card-band'
-													: 'card-lounge'}"
-											style={getEventStyle(event)}
-										>
-											<div class="event-time">
-												{formatTime(event.startMinutes)} - {formatTime(event.endMinutes)}
-												<span class="event-duration">（{event.duration}分）</span>
-											</div>
-											<h3 class="event-title">{event.title}</h3>
-										</div>
+										{@const eventLink = getEventLink(event)}
+
+										{#if eventLink}
+											<a href={eventLink} class="event-card-link">
+												<div
+													class="event-card {event.location === '2階 テラス'
+														? 'card-stage'
+														: event.location === '1階 第2体育室'
+															? 'card-band'
+															: 'card-lounge'}"
+													style={getEventStyle(event)}
+												>
+													<div class="event-time">
+														{formatTime(event.startMinutes)} - {formatTime(event.endMinutes)}
+														<span class="event-duration">（{event.duration}分）</span>
+													</div>
+													<h3 class="event-title">{event.title}</h3>
+													{#if event.category}
+														<span class="event-category">{event.category}</span>
+													{/if}
+												</div>
+											</a>
+										{/if}
 									{/each}
+									<!--e: eventカード-->
 								</div>
 							{/each}
 						</div>
+						<!--e: カテゴリ別列-->
 					</div>
+					<!--e: -->
 				</div>
 			{/if}
 		</div>
 	{/if}
 </div>
+
+<!--e: タイムテーブル全体-->
 
 <style>
 	.timetable-container {
@@ -281,8 +297,7 @@
 		margin: 0;
 		padding: 16px 24px;
 		font-size: 1.5rem;
-        background-color: white;
-
+		background-color: white;
 	}
 
 	.no-events {
