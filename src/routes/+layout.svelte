@@ -76,7 +76,7 @@
 	let scrolled = $state(false);
 
 	const headerClass = $derived(
-		`fixed top-0 right-0 left-0 z-20 border border-black/10 bg-white backdrop-blur-md transition-all duration-500 overflow-hidden z-9998` +
+		`fixed top-0 right-0 left-0 z-20 border border-black/10 bg-white backdrop-blur-md transition-all duration-500 overflow-hidden` +
 			(scrolled ? ' scroll-nav' : '') +
 			(otherOpen
 				? ' max-h-[100vh] rounded-b-[1.0rem]'

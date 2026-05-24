@@ -187,7 +187,7 @@
 	</div>
 	<!--s: 日付選択ボタン-->
 	<!---->
-	
+
 	{#if availableDays.includes(selectedDay)}
 		{@const day = selectedDay}
 		{@const dayEvents = groupedByDay.get(day) || []}
@@ -279,10 +279,9 @@
 
 <style>
 	.timetable-container {
-		max-width: 1400px;
 		margin: 0 auto;
-		padding: 20px;
-		overflow-x: auto;
+		overflow-x: auto;  /* ← ここは維持 */
+		width: 100%;  /* ← 追加：幅を100%に */
 	}
 
 	.timetable-day {
@@ -309,6 +308,7 @@
 	.matrix-timetable {
 		display: flex;
 		flex-direction: column;
+		min-width: 800px;
 	}
 
 	/* ヘッダー行 */
@@ -403,6 +403,8 @@
 	.locations-container {
 		flex: 1;
 		display: flex;
+		overflow-x: auto;  /* ← visible から auto に変更！ */
+		/* 横スクロールを有効にするために必要 */
 	}
 
 	.location-column {
@@ -491,59 +493,77 @@
 		line-height: 1.3;
 	}
 
-	/* レスポンシブ対応 */
+	/* レスポンシブ対応 - モバイルでの調整 */
 	@media (max-width: 768px) {
 		.timetable-container {
 			padding: 10px;
+			overflow-x: auto;
+			-webkit-overflow-scrolling: touch;
 		}
-
+		
+		/* matrix-timetable の最小幅を維持 */
+		.matrix-timetable {
+			min-width: 700px;
+			width: 100%;  /* ← 追加 */
+		}
+		
 		.time-column-header,
 		.time-axis {
 			width: 60px;
+			flex-shrink: 0;
 		}
-
+		
+		.location-header {
+			min-width: 180px;  /* ← min-width に変更 */
+			flex-shrink: 0;  /* ← 追加：縮小しない */
+		}
+		
 		.location-column {
 			min-width: 180px;
+			flex-shrink: 0;  /* ← この行は既にあるが確認 */
 		}
-
-		.event-title {
-			font-size: 11px;
-		}
-
-		.event-time {
-			font-size: 9px;
-		}
-
-		.time-label {
-			font-size: 9px;
-			right: 4px;
-		}
-
-		.location-header {
-			font-size: 0.8rem;
-			padding: 8px 4px;
+		
+		/* locations-container 内のスクロールを有効に */
+		.locations-container {
+			overflow-x: auto;
 		}
 	}
-
-	/* スクロールバースタイル */
-	.locations-container::-webkit-scrollbar {
-		height: 8px;
+    
+/* デスクトップでは通常表示 */
+	@media (min-width: 769px) {
+		.matrix-timetable {
+			min-width: auto;
+		}
+		
+		.location-column {
+			flex: 1;
+			min-width: 200px;
+		}
+		
+		/* デスクトップでは横スクロールを無効に */
+		.locations-container {
+			overflow-x: visible;
+		}
 	}
-
-	.locations-container::-webkit-scrollbar-track {
-		background: #f1f1f1;
-		border-radius: 4px;
-	}
-
-	.locations-container::-webkit-scrollbar-thumb {
-		background: #888;
-		border-radius: 4px;
-	}
-
-	.locations-container::-webkit-scrollbar-thumb:hover {
-		background: #555;
-	}
-
+    
+    /* スクロールバーのスタイル（任意） */
+    .timetable-container::-webkit-scrollbar {
+        height: 8px;
+    }
+    
+    .timetable-container::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 4px;
+    }
+    
+    .timetable-container::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 4px;
+    }
+    
+    .timetable-container::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
 	/* 追加：日付セレクターのスタイル */
 	.day-selector {
 		display: flex;

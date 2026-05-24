@@ -14,19 +14,14 @@
 
 <main class="mt-15 mr-1 ml-1 min-h-screen">
 	<div class="container m-auto mt-25 border-b-2 border-b-(--main-text-color)">
-		<p
-			class="tf26-page-title"
-			style="color: black; margin-bottom: 0; view-transition-name: tfthemetitle-hero;"
-		>
-			{pageTitle}
-		</p>
+		<p class="tf26-page-title" style="color: black; margin-bottom: 0;">{pageTitle}</p>
 	</div>
 	<section class="container mx-auto mt-15 mb-25">
 		<div class="min-w-full">
 			<img
-				src="https://pic.atserver186.jp/img/tohofes/tf26-logo-m-v3.webp"
+				src="https://pic.atserver186.jp/img/tohofes/about/logo-main.webp"
 				alt="第75回桐朋祭ロゴ"
-				class="m-auto mb-4 ml-auto h-auto w-[20%]"
+				class="m-auto ml-auto mb-4 h-auto w-[20%]"
 				style="view-transition-name: tftheme-hero;"
 			/>
 			<h1 class="tf26-section-title">テーマについて</h1>
@@ -36,11 +31,11 @@
 				「細かいところまで気を配り完成していく様子」 「すべてのものや人が活かされる様子」
 				を重視することにしました。
 				<br />
-				その上で話し合いを重ね、「桐朋生一人一人が個性を出しつつも、それが結束することで美しい調和と流れを伴った力を生み出す」という意味を込めた、「結う」という言葉をテーマに決定しました。
+				その上で話し合いを重ね、「桐朋生一人一人が個性を出しつつも、それが結束することで美しい調和と流れを伴った力を生み出す」という意味を込めた、<strong>「結う」</strong>という言葉をテーマに決定しました。
 				<br />
 				「結う」は英語の"You"ともかかっており、昨年度のテーマである「舞(my)」の桐朋祭からさらに進化し、お客様一人一人に重きを置いた「あなた(you)」の桐朋祭を作り上げようという目標も表しています。
 				<br />
-				ぜひ、「あなたの桐朋祭」を存分に楽しんでください！
+				ぜひ、<strong>「あなたの桐朋祭」</strong>を存分に楽しんでください！
 			</p>
 			<hr class="main-hr" />
 			<h1 class="tf26-section-title">ロゴについて</h1>
@@ -50,6 +45,7 @@
 				<br />
 				いろどり豊かな2本の帯が重なり合うデザインとし、「あらゆる人と個性が互いに影響し合う」様子を表現しました。
 			</p>
+			<hr class="main-hr" />
 			<h1 class="tf26-section-title mt-4">桐朋祭とは</h1>
 			<br />
 			<a href="/about" class="link-main">

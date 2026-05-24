@@ -31,7 +31,7 @@
 		const currentDate = page.url.searchParams.get('date');
 		return currentDate === value;
 	}
-	
+
 	// この close 関数を追加または修正
 	const close = () => {
 		show = false;
@@ -49,13 +49,25 @@
 		<div>
 			<div class="mb-4">
 				<p class="tf26-dialog-title mb-2">公開日</p>
-				<a href={getChangedUrl('date', '1')} class="sp-refined-date" class:active={isDateActive('1')}>
+				<a
+					href={getChangedUrl('date', '1')}
+					class="sp-refined-date"
+					class:active={isDateActive('1')}
+				>
 					<p class="text-lg text-(--main-text-color)">06/06(土)</p>
 				</a>
-				<a href={getChangedUrl('date', '2')} class="sp-refined-date" class:active={isDateActive('2')}>
+				<a
+					href={getChangedUrl('date', '2')}
+					class="sp-refined-date"
+					class:active={isDateActive('2')}
+				>
 					<p class="text-lg text-(--main-text-color)">06/07(日)</p>
 				</a>
-				<a href={getChangedUrl('date', '3')} class="sp-refined-date" class:active={isDateActive('3')}>
+				<a
+					href={getChangedUrl('date', '3')}
+					class="sp-refined-date"
+					class:active={isDateActive('3')}
+				>
 					<p class="text-lg text-(--main-text-color)">06/08(月)</p>
 				</a>
 			</div>
@@ -84,16 +96,16 @@
 					<p class="text-sm text-(--main-text-color)">飲食</p>
 				</a>
 				<a
-					href={getChangedUrl('category', 'sound')}
+					href={getChangedUrl('category', 'bands')}
 					class="sp-refined-date-s"
-					class:active={isActive('category', 'sound')}
+					class:active={isActive('category', 'bands')}
 				>
-					<p class="text-sm text-(--main-text-color)">音響</p>
+					<p class="text-sm text-(--main-text-color)">バンド</p>
 				</a>
 				<a
-					href={getChangedUrl('category', 'plan')}
+					href={getChangedUrl('category', 'stage')}
 					class="sp-refined-date-s"
-					class:active={isActive('category', 'plan')}
+					class:active={isActive('category', 'stage')}
 				>
 					<p class="text-sm text-(--main-text-color)">企画</p>
 				</a>
@@ -103,6 +115,13 @@
 					class:active={isActive('category', 'event')}
 				>
 					<p class="text-sm text-(--main-text-color)">イベント</p>
+				</a>
+				<a
+					href={getChangedUrl('category', 'student-lessons')}
+					class="sp-refined-date-s"
+					class:active={isActive('category', 'student-lessons')}
+				>
+					<p class="text-sm text-(--main-text-color)">生徒による授業</p>
 				</a>
 				<p class="text-lg text-(--main-text-color)">ブログ</p>
 				<a

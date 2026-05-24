@@ -21,9 +21,9 @@ export async function load({ url }) {
   if (search) {
     const lower = search.toLowerCase();
     results = results.filter((item: any) =>
-      item.title.toLowerCase().includes(lower) ||
-      item.body.toLowerCase().includes(lower) ||
-      item.location.toLowerCase().includes(lower)
+      item.title?.toLowerCase().includes(lower) ||
+      item.body?.toLowerCase().includes(lower) ||
+      item.location?.toLowerCase().includes(lower)
     );
   }
 
