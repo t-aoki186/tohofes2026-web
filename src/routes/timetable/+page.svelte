@@ -17,10 +17,18 @@
 		<p class="tf26-page-title" style="color: black; margin-bottom: 0;">{pageTitle}</p>
 	</div>
 	<section class="container mx-auto mt-15 mb-25">
-		<Timetable events={data.events} />
+		<div class="scroll-container">
+			<div class="slide-item">
+				<Timetable events={data.events} />
+			</div>
+		</div>
 	</section>
 </main>
 <ol class="main-breadcrumb container mx-auto">
 	<li><a href="/">ホーム</a></li>
 	<li>{pageTitle}</li>
 </ol>
+
+<style>
+
+</style>

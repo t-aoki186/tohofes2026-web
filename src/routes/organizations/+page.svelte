@@ -11,7 +11,9 @@
 
 	let pageTitle = '参加団体';
 
-	// --- 絞り込み検索用
+	import { getCategoryLabel, getCategoryInfo } from '$lib/utils/orgCategoryMap.js';
+
+	/*s: 絞り込み検索*/
 	type QueryKey = 'category' | 'place' | 'date';
 
 	function getChangedUrl(key: QueryKey, value: string | number): string {
@@ -36,6 +38,7 @@
 	const close = () => {
 		show = false;
 	};
+	/*e: 絞り込み検索*/
 </script>
 
 <svelte:head>
@@ -47,30 +50,6 @@
 	<Modal bind:showModal={show}>
 		<p class="mb-4 text-center text-xl font-bold text-(--main-text-color)">絞り込み検索</p>
 		<div>
-			<div class="mb-4">
-				<p class="tf26-dialog-title mb-2">公開日</p>
-				<a
-					href={getChangedUrl('date', '1')}
-					class="sp-refined-date"
-					class:active={isDateActive('1')}
-				>
-					<p class="text-lg text-(--main-text-color)">06/06(土)</p>
-				</a>
-				<a
-					href={getChangedUrl('date', '2')}
-					class="sp-refined-date"
-					class:active={isDateActive('2')}
-				>
-					<p class="text-lg text-(--main-text-color)">06/07(日)</p>
-				</a>
-				<a
-					href={getChangedUrl('date', '3')}
-					class="sp-refined-date"
-					class:active={isDateActive('3')}
-				>
-					<p class="text-lg text-(--main-text-color)">06/08(月)</p>
-				</a>
-			</div>
 			<div class="mb-2">
 				<p class="tf26-dialog-title mb-2">カテゴリー</p>
 				<a
@@ -82,11 +61,11 @@
 				</a>
 				<p class="text-lg text-(--main-text-color)">参加団体</p>
 				<a
-					href={getChangedUrl('category', 'club')}
+					href={getChangedUrl('category', 'general')}
 					class="sp-refined-date-s"
-					class:active={isActive('category', 'club')}
+					class:active={isActive('category', 'general')}
 				>
-					<p class="text-sm text-(--main-text-color)">部活</p>
+					<p class="text-sm text-(--main-text-color)">一般</p>
 				</a>
 				<a
 					href={getChangedUrl('category', 'food')}
@@ -103,39 +82,120 @@
 					<p class="text-sm text-(--main-text-color)">バンド</p>
 				</a>
 				<a
-					href={getChangedUrl('category', 'stage')}
+					href={getChangedUrl('category', 'other')}
 					class="sp-refined-date-s"
-					class:active={isActive('category', 'stage')}
+					class:active={isActive('category', 'other')}
 				>
-					<p class="text-sm text-(--main-text-color)">企画</p>
+					<p class="text-sm text-(--main-text-color)">その他</p>
+				</a>
+				<p class="text-lg text-(--main-text-color)">企画カテゴリ</p>
+				<a
+					href={getChangedUrl('category', '展示')}
+					class="sp-refined-date-s"
+					class:active={isActive('category', '展示')}
+				>
+					<p class="text-sm text-(--main-text-color)">展示</p>
 				</a>
 				<a
-					href={getChangedUrl('category', 'event')}
+					href={getChangedUrl('category', 'パフォーマンス')}
 					class="sp-refined-date-s"
-					class:active={isActive('category', 'event')}
+					class:active={isActive('category', 'パフォーマンス')}
 				>
-					<p class="text-sm text-(--main-text-color)">イベント</p>
+					<p class="text-sm text-(--main-text-color)">パフォーマンス</p>
 				</a>
 				<a
-					href={getChangedUrl('category', 'student-lessons')}
+					href={getChangedUrl('category', '体験')}
 					class="sp-refined-date-s"
-					class:active={isActive('category', 'student-lessons')}
+					class:active={isActive('category', '体験')}
 				>
-					<p class="text-sm text-(--main-text-color)">生徒による授業</p>
+					<p class="text-sm text-(--main-text-color)">体験</p>
+				</a>
+				<a
+					href={getChangedUrl('category', 'アクティビティ')}
+					class="sp-refined-date-s"
+					class:active={isActive('category', 'アクティビティ')}
+				>
+					<p class="text-sm text-(--main-text-color)">アクティビティ</p>
+				</a>
+				<a
+					href={getChangedUrl('category', 'bands')}
+					class="sp-refined-date-s"
+					class:active={isActive('category', 'bands')}
+				>
+					<p class="text-sm text-(--main-text-color)">バンド</p>
+				</a>
+				<a
+					href={getChangedUrl('category', '屋台')}
+					class="sp-refined-date-s"
+					class:active={isActive('category', '屋台')}
+				>
+					<p class="text-sm text-(--main-text-color)">屋台</p>
+				</a>
+				<a
+					href={getChangedUrl('category', '喫茶')}
+					class="sp-refined-date-s"
+					class:active={isActive('category', '喫茶')}
+				>
+					<p class="text-sm text-(--main-text-color)">喫茶</p>
+				</a>
+				<p class="text-lg text-(--main-text-color)">企画特記事項</p>
+				<a
+					href={getChangedUrl('category', 'グループ向け')}
+					class="sp-refined-date-s"
+					class:active={isActive('category', 'グループ向け')}
+				>
+					<p class="text-sm text-(--main-text-color)">グループ向け</p>
+				</a>
+				<a
+					href={getChangedUrl('category', '受験生向け')}
+					class="sp-refined-date-s"
+					class:active={isActive('category', '受験生向け')}
+				>
+					<p class="text-sm text-(--main-text-color)">受験生向け</p>
+				</a>
+				<a
+					href={getChangedUrl('category', '配布物あり')}
+					class="sp-refined-date-s"
+					class:active={isActive('category', '配布物あり')}
+				>
+					<p class="text-sm text-(--main-text-color)">配布物あり</p>
+				</a>
+				<a
+					href={getChangedUrl('category', '所要時間短め')}
+					class="sp-refined-date-s"
+					class:active={isActive('category', '所要時間短め')}
+				>
+					<p class="text-sm text-(--main-text-color)">所要時間短め</p>
+				</a>
+				<a
+					href={getChangedUrl('category', 'SNS映え')}
+					class="sp-refined-date-s"
+					class:active={isActive('category', 'SNS映え')}
+				>
+					<p class="text-sm text-(--main-text-color)">SNS映え</p>
+				</a>
+				<a
+					href={getChangedUrl('category', '有志団体')}
+					class="sp-refined-date-s"
+					class:active={isActive('category', '有志団体')}
+				>
+					<p class="text-sm text-(--main-text-color)">有志団体</p>
 				</a>
 				<p class="text-lg text-(--main-text-color)">ブログ</p>
 				<a
-					href={getChangedUrl('category', 'organization-blogs')}
+					href={getChangedUrl('category', 'article')}
 					class="sp-refined-date-s"
-					class:active={isActive('category', 'organization-blogs')}
+					class:active={isActive('category', 'article')}
 				>
-					<p class="text-sm text-(--main-text-color)">参加団体ブログ</p>
+					<p class="text-sm text-(--main-text-color)">参加団体特設記事</p>
 				</a>
 			</div>
+			<!--
 			<div>
 				<p class="tf26-dialog-title mb-2">場所</p>
 				test
 			</div>
+			-->
 		</div>
 		<!--s:閉じる/リセット-->
 		<div class="mt-auto">
@@ -195,11 +255,8 @@
 					</div>
 					<div class="flex">
 						<div class="mr-2 flex-col" style="min-width: 0; max-width: 100%;">
-							<p
-								class="sp-search-result-text text-xs"
-								style="color: color-mix(in srgb, var(--main-text-color), transparent 50%);"
-							>
-								{item.category || 'ニュース'}
+							<p class="sp-search-result-text text-xs text-(--main-text-color)">
+								<i class="fa-solid fa-tag mr-1"></i>{getCategoryLabel(item.category)}
 							</p>
 							<p class="sp-search-result-heading h-1/2 text-sm text-gray-600">
 								{item.heading}
@@ -208,12 +265,18 @@
 								{item.body}
 							</p>
 						</div>
-						<img
-							src={item.thumbnail ||
-								'https://pic.atserver186.jp/img/tohofes/thumbnail/webp/no-image.webp'}
-							alt="サンプル00"
-							class="ml-auto w-1/2 rounded-lg"
-						/>
+						<div class="mr-0 items-end">
+							<div
+								style="width: 120px; height: 120px; position: relative; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;"
+							>
+								<img
+									src={item.thumbnail ||
+										'https://pic.atserver186.jp/img/tohofes/thumbnail/webp/no-image.webp'}
+									alt="{item.title}サムネイル"
+									class="ml-auto rounded-lg"
+								/>
+							</div>
+						</div>
 					</div>
 				</article>
 			{/each}

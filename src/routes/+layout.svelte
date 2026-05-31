@@ -245,7 +245,7 @@
 				<div class="tp-search-method">
 					<a href="/timetable" class="dash-link">
 						<i class="fa-solid fa-list"></i>
-						<p>タイムテーブルから<br />探す</p>
+						<p>企画タイムテーブルから<br />探す</p>
 					</a>
 				</div>
 			</div>
@@ -332,13 +332,9 @@
 		<!---->
 		<div class="flex items-center md:hidden">
 			<!--s:スマホ用検索ボタン-->
-			<button
-				onclick={() => openModal('search')}
-				type="button"
-				title="検索する"
-				class="mr-4 cursor-pointer text-sm"
-				><i class="fa-solid fa-magnifying-glass text-(--main-text-color)"></i></button
-			>
+			<p class="mr-4 cursor-not-allowed text-sm">
+				<i class="fa-solid fa-magnifying-glass text-gray-500"></i>
+			</p>
 			<!--e:スマホ用検索ボタン-->
 			<!-- ハンバーガー / その他メニュー閉じる（スマホ用） -->
 			<div class="grid">
@@ -397,8 +393,13 @@
 					>
 				</li>
 				<li>
+					<p class="ml-3 cursor-no-drop text-xs tracking-wider text-gray-500 transition">
+						飲食団体
+					</p>
+				</li>
+				<li>
 					<a href="/timetable" class="header-text ml-3 text-xs tracking-wider transition"
-						>タイムテーブル</a
+						>企画タイムテーブル</a
 					>
 				</li>
 				<li class="mr-6">
@@ -419,7 +420,8 @@
 				<li><a href="/about" class="header-text">桐朋祭とは</a></li>
 				<li><a href="/visitor" class="header-text">来場者の皆様へ</a></li>
 				<li><a href="/organizations" class="header-text">参加団体</a></li>
-				<li><a href="/timetable" class="header-text">タイムテーブル</a></li>
+				<li><p class="cursor-no-drop text-gray-500">飲食団体</p></li>
+				<li><a href="/timetable" class="header-text">企画タイムテーブル</a></li>
 				<li>
 					<button class="header-text" onclick={() => (otherOpen = !otherOpen)}>その他</button>
 				</li>
@@ -449,11 +451,6 @@
 				<li>
 					<a href="/site/sitemap" class="header-text"
 						><i class="fa-solid fa-sitemap mr-1 text-xs"></i>サイトマップ</a
-					>
-				</li>
-				<li>
-					<a href="/qa" class="header-text"
-						><i class="fa-solid fa-circle-question mr-1 text-xs"></i>よくある質問</a
 					>
 				</li>
 				<li>
@@ -488,7 +485,7 @@
 					>
 				</li>
 				<li>
-					<a href="https://2026.tcc-archive.club/" target="_blank" class="header-text"
+					<a href="https://fes.tcc-archive.club/2026/" target="_blank" class="header-text"
 						><i class="fa-solid fa-arrow-up-right-from-square mr-1 text-xs"
 						></i>コンピューター部桐朋祭用特設HP</a
 					>
@@ -538,8 +535,7 @@
 						<li><a href="/about">桐朋祭について</a></li>
 						<li><a href="/visitor">来場者の皆様へ</a></li>
 						<li><a href="/access">本校へのアクセス</a></li>
-						<li><a href="/timetable">タイムテーブル</a></li>
-						<li><a href="/qa">よくある質問</a></li>
+						<li><a href="/timetable">企画タイムテーブル</a></li>
 						<li><a href="/news">お知らせ</a></li>
 						<li><a href="/site/info">サイト情報</a></li>
 						<li><a href="/site/sitemap">サイトマップ</a></li>
@@ -595,7 +591,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="https://2026.tcc-archive.club" target="_blank">
+							<a href="https://fes.tcc-archive.club/2026/" target="_blank">
 								<i class="fa-solid fa-arrow-up-right-from-square mr-1 text-xs"></i>
 								<span>コンピューター部桐朋祭用特設HP</span>
 							</a>
@@ -633,8 +629,7 @@
 						<li><a href="/about">桐朋祭について</a></li>
 						<li><a href="/visitor">来場者の皆様へ</a></li>
 						<li><a href="/access">本校へのアクセス</a></li>
-						<li><a href="/timetable">タイムテーブル</a></li>
-						<li><a href="/qa">よくある質問</a></li>
+						<li><a href="/timetable">企画タイムテーブル</a></li>
 						<li><a href="/news">お知らせ</a></li>
 						<li><a href="/site/info">サイト情報</a></li>
 						<li><a href="/site/sitemap">サイトマップ</a></li>
@@ -644,8 +639,22 @@
 				<details class="accordion-main mb-4 min-w-full">
 					<summary class="font-bold">参加団体</summary>
 					<ul class="pt-2 pl-2">
-						<li><a href="/">ランダムに5件表示</a></li>
-						<li><a href="/organizations">すべての参加団体を確認する</a></li>
+						{#if data.random && data.random.length > 0}
+							{#each data.random as item}
+								<li class="flex flex-col gap-2.5">
+									<a href={getUrl(item)}>
+										<span>{item.title}</span>
+									</a>
+								</li>
+							{/each}
+						{:else}
+							<p class="text-white">参加団体の取得に失敗しました</p>
+						{/if}
+						<li class="flex flex-col gap-2.5">
+							<a href="/organizations">
+								<span>一覧はこちら</span>
+							</a>
+						</li>
 					</ul>
 				</details>
 				<details class="accordion-main min-w-full">
@@ -676,7 +685,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="https://2026.tcc-archive.club" target="_blank">
+							<a href="https://fes.tcc-archive.club/2026/" target="_blank">
 								<i class="fa-solid fa-arrow-up-right-from-square mr-1 text-xs"></i>
 								<span>コンピューター部桐朋祭用特設HP</span>
 							</a>

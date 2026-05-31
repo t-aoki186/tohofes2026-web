@@ -1,12 +1,16 @@
 import { fetchOrganizations } from '$lib/server/organizations';
-import { param } from 'drizzle-orm';
+
+function normalizeCategory(category?: string) {
+	if (!category || typeof category !== 'string') return '';
+	return category.split(',')[0].trim();
+}
 
 export async function load({ params }) {
 	const { category, id } = params;
 
 	const orgs = await fetchOrganizations();
 
-	const item = orgs.find((o:any) => o.category === category && o.id === id);
+	const item = orgs.find((o:any) => normalizeCategory(o.category) === category && String(o.id) === id);
 
     /*記事が見つからなかった時の処理*/
     if (!item){

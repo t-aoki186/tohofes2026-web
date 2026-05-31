@@ -174,6 +174,18 @@
 
 <!--s: タイムテーブル全体-->
 <div class="timetable-container">
+	<div class="mb-4 block rounded-lg bg-(--main-text-color) p-4 md:hidden">
+		<p class="text-lg text-white">
+			現在、タイムテーブルは<span class="font-bold">パソコン（PC）版のみ</span
+			>の対応となっております。
+			<br />
+			スマートフォンへの対応につきましては、現在急ぎ準備を進めております。
+			<br />
+			対応完了まで今しばらくお待ちいただけますようお願い申し上げます。
+			<br /><br />
+			もしスマートフォンで閲覧したい場合は、ブラウザの<span class="font-bold">「PC版サイトを見る」</span>機能をお試しください。
+		</p>
+	</div>
 	<!--s: 日付選択ボタン-->
 	<div class="day-selector">
 		{#each dayButtons as button}
@@ -255,9 +267,6 @@
 														<span class="event-duration">（{event.duration}分）</span>
 													</div>
 													<h3 class="event-title">{event.title}</h3>
-													{#if event.category}
-														<span class="event-category">{event.category}</span>
-													{/if}
 												</div>
 											</a>
 										{/if}
@@ -280,8 +289,8 @@
 <style>
 	.timetable-container {
 		margin: 0 auto;
-		overflow-x: auto;  /* ← ここは維持 */
-		width: 100%;  /* ← 追加：幅を100%に */
+		overflow-x: auto; /* ← ここは維持 */
+		width: 100%; /* ← 追加：幅を100%に */
 	}
 
 	.timetable-day {
@@ -403,7 +412,7 @@
 	.locations-container {
 		flex: 1;
 		display: flex;
-		overflow-x: auto;  /* ← visible から auto に変更！ */
+		overflow-x: auto; /* ← visible から auto に変更！ */
 		/* 横スクロールを有効にするために必要 */
 	}
 
@@ -500,70 +509,70 @@
 			overflow-x: auto;
 			-webkit-overflow-scrolling: touch;
 		}
-		
+
 		/* matrix-timetable の最小幅を維持 */
 		.matrix-timetable {
 			min-width: 700px;
-			width: 100%;  /* ← 追加 */
+			width: 100%; /* ← 追加 */
 		}
-		
+
 		.time-column-header,
 		.time-axis {
 			width: 60px;
 			flex-shrink: 0;
 		}
-		
+
 		.location-header {
-			min-width: 180px;  /* ← min-width に変更 */
-			flex-shrink: 0;  /* ← 追加：縮小しない */
+			min-width: 180px; /* ← min-width に変更 */
+			flex-shrink: 0; /* ← 追加：縮小しない */
 		}
-		
+
 		.location-column {
 			min-width: 180px;
-			flex-shrink: 0;  /* ← この行は既にあるが確認 */
+			flex-shrink: 0; /* ← この行は既にあるが確認 */
 		}
-		
+
 		/* locations-container 内のスクロールを有効に */
 		.locations-container {
 			overflow-x: auto;
 		}
 	}
-    
-/* デスクトップでは通常表示 */
+
+	/* デスクトップでは通常表示 */
 	@media (min-width: 769px) {
 		.matrix-timetable {
 			min-width: auto;
 		}
-		
+
 		.location-column {
 			flex: 1;
 			min-width: 200px;
 		}
-		
+
 		/* デスクトップでは横スクロールを無効に */
 		.locations-container {
 			overflow-x: visible;
 		}
 	}
-    
-    /* スクロールバーのスタイル（任意） */
-    .timetable-container::-webkit-scrollbar {
-        height: 8px;
-    }
-    
-    .timetable-container::-webkit-scrollbar-track {
-        background: #f1f1f1;
-        border-radius: 4px;
-    }
-    
-    .timetable-container::-webkit-scrollbar-thumb {
-        background: #888;
-        border-radius: 4px;
-    }
-    
-    .timetable-container::-webkit-scrollbar-thumb:hover {
-        background: #555;
-    }
+
+	/* スクロールバーのスタイル（任意） */
+	.timetable-container::-webkit-scrollbar {
+		height: 8px;
+	}
+
+	.timetable-container::-webkit-scrollbar-track {
+		background: #f1f1f1;
+		border-radius: 4px;
+	}
+
+	.timetable-container::-webkit-scrollbar-thumb {
+		background: #888;
+		border-radius: 4px;
+	}
+
+	.timetable-container::-webkit-scrollbar-thumb:hover {
+		background: #555;
+	}
 	/* 追加：日付セレクターのスタイル */
 	.day-selector {
 		display: flex;

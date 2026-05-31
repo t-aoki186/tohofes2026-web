@@ -61,6 +61,7 @@
 		"aos": "^2.3.4",
 		"marked": "^17.0.3",
 		"nprogress": "^0.2.0",
-		"postgres": "^3.4.8"
+		"postgres": "^3.4.8",
+		"swiper": "^12.2.0"
 	}
 }
