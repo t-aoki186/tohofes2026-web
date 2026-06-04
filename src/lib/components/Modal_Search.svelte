@@ -21,7 +21,6 @@
 	const close = () => {
 		showModal = false;
 	};
-	
 </script>
 
 {#if visible}

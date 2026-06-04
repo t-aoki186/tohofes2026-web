@@ -1,10 +1,17 @@
+// 取得したいJSONのURLを指定
+const NEWS_URL = 'https://api.atserver186.jp/tf26/api/json/news.json';
+
 export async function fetchNews() {
   try {
-    const res = await fetch("https://api.atserver186.jp/tf26/api/json/news.json");
-    if (!res.ok) throw new Error("内容の取得に失敗しました。");
-    const data = await res.json();
-    return data;
+    const response = await fetch(NEWS_URL);
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    return await response.json();
   } catch (e) {
+    console.error('News fetch error:', e);
     return [];
   }
 }

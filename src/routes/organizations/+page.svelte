@@ -255,11 +255,8 @@
 					</div>
 					<div class="flex">
 						<div class="mr-2 flex-col" style="min-width: 0; max-width: 100%;">
-							<p class="sp-search-result-text text-xs text-(--main-text-color)">
+							<p class="sp-search-result-text text-xs text-(--main-text-color) mb-4">
 								<i class="fa-solid fa-tag mr-1"></i>{getCategoryLabel(item.category)}
-							</p>
-							<p class="sp-search-result-heading h-1/2 text-sm text-gray-600">
-								{item.heading}
 							</p>
 							<p class="sp-search-result-text text-left-decoration items-end text-sm text-gray-600">
 								{item.body}

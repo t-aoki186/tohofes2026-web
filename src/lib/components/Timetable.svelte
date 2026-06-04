@@ -456,6 +456,7 @@
 		padding: 8px 10px;
 		transition: all 0.2s ease;
 		z-index: 10;
+		border: 2px solid white;
 	}
 
 	/* 場所ごとの個別スタイル */
@@ -467,6 +468,7 @@
 	.event-card.card-band {
 		background-color: #ecf5fb;
 		border-left: 4px solid #52aed8;
+		display: flex;
 	}
 
 	.event-card.card-lounge {
@@ -479,7 +481,6 @@
 	.event-card.card-lounge:hover {
 		transform: scale(1.01);
 		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-		z-index: 20;
 	}
 
 	.event-time {

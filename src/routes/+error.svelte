@@ -9,8 +9,14 @@
 		</div>
 		<section class="container mx-auto mt-25 mb-25">
 			<div class="mt-4 min-w-full">
-				<p>テスト</p>
+				<p class="text-3xl">お探しのページは見つかりませんでした。</p>
 			</div>
+			<a href="/" class="link-main">
+				<div class="link-main-underline">
+					<i class="fa-solid fa-arrow-right-long"></i>
+					<span>トップページに戻る</span>
+				</div>
+			</a>
 		</section>
 	</main>
 	<ol class="main-breadcrumb container mx-auto">

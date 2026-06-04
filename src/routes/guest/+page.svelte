@@ -1,54 +1,28 @@
 <script lang="ts">
 	const { data } = $props();
 
-	const item = $derived(data.item);
-
-	// 複数カテゴリがカンマ区切りで与えられた場合、先頭のカテゴリのみを主カテゴリとして扱う
-	function getPrimaryCategory(category: string | null | undefined): string {
-		if (!category || typeof category !== 'string') return '';
-		return category.split(',')[0].trim();
-	}
-
-	// 修正点2: primaryCategory も $derived にする（item に依存するため）
-	const primaryCategory = $derived(getPrimaryCategory(item.category));
-
 	import { onMount } from 'svelte';
-	import { reveal } from '$lib/reveal';
-	import { mdToHtml } from '$lib/utils/markdown';
 
-	/*カテゴリ変換マップ*/
-	import { getCategoryLabel, getCategoryInfo } from '$lib/utils/orgCategoryMap.js';
+	let pageTitle = '講演者';
 
-	/*s: カルーセル*/
+	/*s:カルーセル*/
 	import Swiper from 'swiper';
 	import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 	import 'swiper/css';
 	import 'swiper/css/navigation';
 	import 'swiper/css/pagination';
-	import { setupViewTransition } from 'sveltekit-view-transition';
-	import { afterNavigate, beforeNavigate } from '$app/navigation';
-
 	let swiperContainer: HTMLDivElement | null = null;
 	let swiperInstance: any = null;
 
-	function getImageArray(): string[] {
-		if (!item.top_img) {
-			return [
-				item.thumbnail || 'https://pic.atserver186.jp/img/tohofes/thumbnail/webp/no-image.webp'
-			];
+	//カルーセルの内容
+	const slides = [
+		{
+			id: 1,
+			title: 'No Image',
+			image: 'https://pic.atserver186.jp/img/tohofes/thumbnail/webp/no-image.webp'
 		}
-		const images = item.top_img.split(',').map((img: string) => img.trim());
-		return images.filter((img: string) => img.length > 0);
-	}
-
-	const slides = $derived(
-		getImageArray().map((imageUrl: string, index: number) => ({
-			id: index + 1,
-			title: index === 0 ? item.title : `${item.title} - ${index + 1}`,
-			image: imageUrl
-		}))
-	);
+	];
 
 	onMount(() => {
 		if (swiperContainer) {
@@ -61,18 +35,18 @@
 				pagination: { el: '.swiper-pagination', clickable: true },
 				autoplay: { delay: 3000, disableOnInteraction: false },
 				spaceBetween: 20,
-				slidesPerView: 1,
-				loop: slides.length > 1 // 画像が1枚の場合はループしない
+				slidesPerView: 1, // 修正: slidersPreview → slidesPerView
+				loop: true
 			});
 		}
-
-		return () => {
-			if (swiperInstance) {
-				swiperInstance.destroy(true, true);
-			}
-		};
 	});
 	/*e:カルーセル*/
+
+	// 未定義の変数を定義
+	const primaryCategory = 'example-category';
+	const item = {
+		location: 'サンプル場所'
+	};
 
 	/*s: 共有機能*/
 	function getShareDescription() {
@@ -103,15 +77,14 @@
 	/*e: 共有機能*/
 </script>
 
-<!-- 以下、HTML部分はそのままでも動作しますが、念のため全体を記載 -->
 <svelte:head>
-	<title>{item.title} | {data.site_title}</title>
-	<meta property="og:title" content="{item.title} | {data.site_title}" />
+	<title>{pageTitle} | {data?.site_title || 'サイト'}</title>
+	<meta property="og:title" content="{pageTitle} | {data?.site_title || 'サイト'}" />
 </svelte:head>
 
 <main class="mt-15 mr-1 ml-1 min-h-screen">
 	<div class="container m-auto mt-25 border-b-2 border-b-(--main-text-color)">
-		<p class="tf26-page-title" style="color: black; margin-bottom: 0;">{item.title}</p>
+		<p class="tf26-page-title" style="color: black; margin-bottom: 0;">{pageTitle}</p>
 	</div>
 	<section class="container mx-auto mt-15 mb-25">
 		<div class="orgp-top-content">
@@ -155,13 +128,42 @@
 					href="/organizations/?category={primaryCategory}"
 					class="mb-4 inline-block text-2xl text-(--main-text-color)"
 				>
-					<i class="fa-solid fa-tag mr-1"></i>{getCategoryLabel(primaryCategory)}
+					<i class="fa-solid fa-tag mr-1"></i>{pageTitle}
 				</a>
 				<p
-					class="text-2xl text-(--main-text-color)"
+					class="mb-4 text-2xl text-(--main-text-color)"
 					title="場所については紙のパンフレットをご覧ください。"
 				>
-					<i class="fa-solid fa-location-dot mr-1"></i>{item.location}
+					<i class="fa-solid fa-location-dot mr-1"></i>1階 ホール
+				</p>
+				<p
+					class="mb-4 text-2xl text-(--main-text-color)"
+					title="場所については紙のパンフレットをご覧ください。"
+				>
+					<i class="fa-regular fa-calendar mr-1"></i>6/6(土) 14:00 ~ 15:00
+				</p>
+				<p
+					class="mb-2 text-4xl text-(--main-text-color)"
+					title="場所については紙のパンフレットをご覧ください。"
+				>
+					<i class="tf26-icon-material icon-no-camera ml-4"></i>
+					<i class="tf26-icon-material icon-no-phone ml-4"></i>
+					<i class="tf26-icon-material icon-no-food ml-4"></i>
+				</p>
+				<p>
+					講演の<span class="text-bold text-red-600">録画・録音</span>、ホール内の<span
+						class="text-bold text-red-600">飲食</span
+					>を禁じます。
+				</p>
+				<hr class="main-hr" />
+				<p>
+					※生徒および保護者の、<span class="text-bold underline">入場券をお持ちの方</span
+					>のみ入場可能です。
+					<br />
+					※一般のお客様は、教科教室棟1階<strong>視聴覚室</strong
+					>および食堂のディスプレイにて中継をご覧いただけます。 視聴覚室への入場は13:30からの<strong
+						>先着順</strong
+					>となります。
 				</p>
 				<hr class="main-hr" />
 				<button
@@ -178,36 +180,40 @@
 				<hr class="main-hr" />
 			</div>
 		</div>
-		{#if item.body && item.body.trim() !== ''}
-			<div class="prose mt-8 min-w-full text-xl">
-				{@html mdToHtml(item.body)}
-			</div>
-		{/if}
+		<div class="prose mt-8 min-w-full text-xl">
+			<strong>「イモニイ」</strong>こと井本陽久(いもと はるひさ)氏は、元
+			栄光学園中学・高等学校の数学教師で、型破りな授業を行い、絶大な人気を誇っていました。
+			NHKの番組の「プロフェッショナル仕事の流儀」にも出演しており、栄光学園を退職した現在では<strong
+				>「いもいも」</strong
+			>教室を主宰するカリスマ教育者です。
+			<br />
+			既存の知識詰め込み型教育ではなく、子供たちが自ら考え、心が揺さぶられる (ぷるっとする)体験を通じた「本当の思考力」を育てることを重視した教育活動で知られています。
+		</div>
 	</section>
 </main>
 <ol class="main-breadcrumb container mx-auto">
 	<li><a href="/">ホーム</a></li>
-	<li><a href="/organizations">参加団体</a></li>
-	<li>{item.title}</li>
+	<li>{pageTitle}</li>
 </ol>
 
 <style>
 	.orgp-top-content {
 		display: grid;
-		grid-template-columns: 4fr 3fr; /*左:右 = 4:3*/
-		gap: 2rem; /*アイテム間に余白を追加する場合*/
+		grid-template-columns: 4fr 3fr;
+		gap: 2rem;
 	}
 
 	@media (max-width: 768px) {
 		.orgp-top-content {
-			grid-template-columns: 1fr; /*縦並び*/
+			grid-template-columns: 1fr;
 		}
 	}
+
 	/*swiper*/
 	.slide-container {
 		position: relative;
 		width: 100%;
-		padding-bottom: 56.25%; /* 16:9 = 9/16 = 0.5625 */
+		padding-bottom: 56.25%;
 		background: #1a1a1a;
 		overflow: hidden;
 		border-radius: 12px;
@@ -224,7 +230,7 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		filter: blur(20px) brightness(0.7);
-		transform: scale(1.1); /* ぼかしのエッジを隠す */
+		transform: scale(1.1);
 		z-index: 1;
 	}
 
@@ -247,7 +253,7 @@
 		max-height: 100%;
 		width: auto;
 		height: auto;
-		object-fit: contain; /* 画像のアスペクト比を維持 */
+		object-fit: contain;
 		border-radius: 8px;
 		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 	}
@@ -257,7 +263,7 @@
 	}
 
 	:global(.ats-swiper) {
-		--swiper-navication-color: var(--main-text-color);
+		--swiper-navigation-color: var(--main-text-color);
 		--swiper-pagination-color: var(--main-text-color);
 	}
 

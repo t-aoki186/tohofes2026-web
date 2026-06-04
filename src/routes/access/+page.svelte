@@ -14,7 +14,7 @@
 
 <main class="mt-15 mr-1 ml-1 min-h-screen">
 	<div class="container m-auto mt-15 border-b-2 border-b-(--main-text-color)">
-		<p class="tf26-page-title" style="color: black; margin-bottom: 0; view-transition-name: tfaccesstitle-hero;">{pageTitle}</p>
+		<p class="tf26-page-title" style="color: black; margin-bottom: 0;">{pageTitle}</p>
 	</div>
 	<section class="container mx-auto mt-25 mb-25">
 		<p class="my-auto mb-4 text-2xl text-(--main-text-color)">
@@ -33,8 +33,7 @@
 		></iframe>
 		<a
 			href="https://www.google.com/maps?ll=35.689932,139.444952&z=16&t=m&hl=ja&gl=JP&mapclient=embed&cid=17005709833707924776"
-			class="link-main"
-			target="_blank"
+			class="link-main" target="_blank"
 		>
 			<div class="link-main-underline">
 				<i class="fa-solid fa-arrow-right-long"></i>
@@ -48,13 +47,13 @@
 			</li>
 			<li>
 				大学通りを南へ徒歩15分
-				<br />立川バス「矢川駅」方面行き5分バス停「桐朋」徒歩1分
+				<br />立川バス/京王バス「矢川駅」方面行き5分バス停「桐朋」徒歩1分
 			</li>
 			<li class="mt-4 mb-2 text-xl text-(--main-text-color)">
 				<i class="fa-solid fa-square mr-2"></i>JR南武線 谷保駅下車
 			</li>
 			<li>
-				北へ徒歩15分
+				大学通りを北へ徒歩15分
 				<br />
 				立川バス「国立駅南口」方面行き5分バス停「桐朋」徒歩1分
 			</li>
@@ -65,7 +64,6 @@
 			style="max-width: 95%;"
 			class="mb-4"
 		/>
-		<h1 class="tf26-section-title">校内マップ</h1>
 	</section>
 </main>
 <ol class="main-breadcrumb container mx-auto">
