@@ -1,10 +1,22 @@
-<script>
-	const { data } = $props();
-
+<script lang="ts">
 	import { onMount } from 'svelte';
 	import { reveal } from '$lib/reveal';
 
+	// 型定義
+	type Item = {
+		category: string;
+		name: string;
+	};
+
 	let pageTitle = 'サイト情報';
+
+	export let data;
+	const { serverLocation, items } = data as { serverLocation: string; items: Item[] };
+
+	// カテゴリー別にフィルタリング
+	$: siteDevItems = items.filter((item: Item) => item.category === 'site_dev');
+	$: siteDesignItems = items.filter((item: Item) => item.category === 'site_disign');
+	$: manageItems = items.filter((item: Item) => item.category === 'manage');
 </script>
 
 <svelte:head>
@@ -18,45 +30,17 @@
 	</div>
 	<section class="container mx-auto mt-15 mb-25">
 		<div class="mt-4">
-		<div class="mb-4 rounded-2xl bg-gray-50 p-4">
-			<p>Connected to: {data.serverLocation}</p>
-		</div>
+			<div class="mb-4 rounded-2xl bg-gray-50 p-4">
+				<p>Connected to: {data.serverLocation}</p>
+			</div>
 			<div class="mb-4 rounded-2xl bg-gray-50 p-4">
 				<h2 class="text-lg font-semibold">サーバ構成</h2>
-				<div class="grid grid-cols-2 gap-4">
-					<div class="flex flex-col">
-						<p class="m-1 text-[0.9rem] font-bold">サーバ1</p>
-						<div class="mx-auto mb-4 flex flex-col">
-							<i class="fa-solid fa-server mx-auto text-7xl"></i>
-							<ul class="mt-4 ml-4 text-sm">
-								<li>運用期間:&nbsp;常時</li>
-								<li>用途:&nbsp;本サイトの運用</li>
-								<li>所在地:&nbsp;</li>
-								<li>スペック:&nbsp;<i class="fa-solid fa-up-right-from-square text-xs"></i><a href="https://2026.tcc-archive.club/l/tfjp-sinfo-s1s" target="_blank">こちらをご覧ください。</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="flex flex-col">
-						<p class="m-1 text-[0.9rem] font-bold">サーバ2</p>
-						<div class="mx-auto mb-4 flex flex-col">
-							<i class="fa-solid fa-server mx-auto text-7xl"></i>
-							<ul class="mt-4 ml-4 text-sm">
-								<li>運用期間:&nbsp;桐朋祭が開催される3日間</li>
-								<li>用途:&nbsp;本サイトの運用 / サーバ1の負荷分散用</li>
-								<li>所在地:&nbsp;桐朋祭&nbsp;コンピューター部ブース</li>
-								<li>スペック:&nbsp;<i class="fa-solid fa-up-right-from-square text-xs"></i><a href="https://2026.tcc-archive.club/l/tfjp-sinfo-s2s" target="_blank">こちらをご覧ください。</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<p class="mt-4 text-sm">※桐朋祭が開催される三日間以外はサーバ1のみで運用されます。</p>
+
+				<p class="mt-4 text-lg">準備中です</p>
 			</div>
 			<div class="mb-4 rounded-2xl bg-gray-50 p-4">
 				<h2 class="text-lg font-semibold">ステータス</h2>
-				<div class="grid grid-cols-2 gap-4">
-					<div class="bg-blue-200">test</div>
-					<div class="bg-green-200"></div>
-				</div>
+				<p class="mt-4 text-lg">準備中です</p>
 			</div>
 			<div class="mb-4 rounded-2xl bg-gray-50 p-4">
 				<h2 class="text-lg font-semibold">推奨動作環境</h2>
@@ -69,9 +53,29 @@
 			</div>
 			<div class="mb-4 rounded-2xl bg-gray-50 p-4">
 				<h2 class="text-lg font-semibold">制作</h2>
-				<div class="grid grid-cols-2 gap-4">
-					<div class="bg-blue-200">test</div>
-					<div class="bg-green-200"></div>
+				<div class="mt-4 text-lg">
+					<span class="font-bold">ホームページ開発:</span>
+					{#each siteDevItems as item}
+						<ul>
+							<li>{item.name}</li>
+						</ul>
+					{/each}
+				</div>
+				<div class="mt-4 text-lg">
+					<span class="font-bold">ホームページデザイン:</span>
+					{#each siteDesignItems as item}
+						<ul>
+							<li>{item.name}</li>
+						</ul>
+					{/each}
+				</div>
+				<div class="mt-4 text-lg">
+					<span class="font-bold">ホームページ管理/運用:</span>
+					{#each manageItems as item}
+						<ul>
+							<li>{item.name}</li>
+						</ul>
+					{/each}
 				</div>
 			</div>
 		</div>

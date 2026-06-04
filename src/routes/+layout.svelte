@@ -213,7 +213,7 @@
 
 <Modal bind:showModal>
 	{#if modalType === 'search'}
-		<form class="s-search-form mb-4" action="/organizations/" method="GET">
+		<form class="s-search-form mb-4" action="/organizations/" style="border-radius: 50px !important; border: none !important;" method="GET">
 			<input
 				class="s-search-input"
 				type="text"
@@ -225,7 +225,7 @@
 				><i class="fas fa-search"></i></button
 			>
 		</form>
-		<div class="relative m-auto mt-10 mb-4 max-w-125 bg-white">
+		<div class="relative m-auto mt-10 mb-4 w-full bg-white/50 rounded-t-2xl">
 			<!-- 左下の角 -->
 			<span
 				class="absolute bottom-0 left-0 h-4 w-4 border-b-2 border-l-2 border-(--main-text-color)"
@@ -332,9 +332,9 @@
 		<!---->
 		<div class="flex items-center md:hidden">
 			<!--s:スマホ用検索ボタン-->
-			<p class="mr-4 cursor-not-allowed text-sm">
-				<i class="fa-solid fa-magnifying-glass text-gray-500"></i>
-			</p>
+			<button onclick={() => openModal('search')} class="mr-4 cursor-pointer" title="検索する">
+				<i class="fa-solid fa-magnifying-glass text-(--main-text-color)"></i>
+			</button>
 			<!--e:スマホ用検索ボタン-->
 			<!-- ハンバーガー / その他メニュー閉じる（スマホ用） -->
 			<div class="grid">
@@ -393,20 +393,38 @@
 					>
 				</li>
 				<li>
-					<p class="ml-3 cursor-no-drop text-xs tracking-wider text-gray-500 transition">
-						飲食団体
-					</p>
+					<a href="/foods" class="header-text ml-3 text-xs tracking-wider transition">飲食情報</a>
 				</li>
 				<li>
 					<a href="/timetable" class="header-text ml-3 text-xs tracking-wider transition"
 						>企画タイムテーブル</a
 					>
 				</li>
-				<li class="mr-6">
+				<li>
 					<button
 						class="header-text ml-3 cursor-pointer text-xs tracking-wider transition"
 						onclick={() => (otherOpen = !otherOpen)}>その他</button
 					>
+				</li>
+				<li>
+					<a
+						href="https://www.instagram.com/tohofes_2026/"
+						class="header-text ml-3 text-xs tracking-wider transition"
+						title="Instagram"
+						target="_blank"
+					>
+						<i class="fa-brands fa-instagram"></i>
+					</a>
+				</li>
+				<li class="mr-6">
+					<a
+						href="https://x.com/tohofes_2026"
+						class="header-text ml-3 text-xs tracking-wider transition"
+						title="X(旧Twitter)"
+						target="_blank"
+					>
+						<i class="fa-brands fa-x-twitter"></i>
+					</a>
 				</li>
 			</ul>
 		</nav>
@@ -420,12 +438,27 @@
 				<li><a href="/about" class="header-text">桐朋祭とは</a></li>
 				<li><a href="/visitor" class="header-text">来場者の皆様へ</a></li>
 				<li><a href="/organizations" class="header-text">参加団体</a></li>
-				<li><p class="cursor-no-drop text-gray-500">飲食団体</p></li>
+				<li><a href="foods" class="header-text">飲食情報</a></li>
 				<li><a href="/timetable" class="header-text">企画タイムテーブル</a></li>
 				<li>
 					<button class="header-text" onclick={() => (otherOpen = !otherOpen)}>その他</button>
 				</li>
 			</ul>
+			<hr class="main-hr" />
+			<div class="flex gap-2 text-center" style="">
+				<a
+					href="https://www.instagram.com/tohofes_2026/"
+					class="text-xl header-text"
+					target="_blank"
+					title="第75回桐朋祭実行委員会公式Instagram"><i class="fa-brands fa-instagram"></i></a
+				>
+				<a
+					href="https://x.com/tohofes_2026"
+					class="text-xl header-text"
+					target="_blank"
+					title="第75回桐朋祭実行委員会公式X(旧Twitter)"><i class="fa-brands fa-x-twitter"></i></a
+				>
+			</div>
 		</nav>
 	{/if}
 
@@ -557,8 +590,8 @@
 							<p class="text-white">参加団体の取得に失敗しました</p>
 						{/if}
 						<li class="flex flex-col gap-2.5">
-							<a href="/organizations">
-								<span>一覧はこちら</span>
+							<a href="/organizations" class="font-bold">
+								<i class="fa-solid fa-list"></i><span>一覧はこちら</span>
 							</a>
 						</li>
 					</ul>
@@ -567,21 +600,15 @@
 					<h4>各種SNS / リンク</h4>
 					<ul>
 						<li>
-							<a href="https://x.com" target="_blank">
+							<a href="https://x.com/tohofes_2026" target="_blank">
 								<i class="fa-brands fa-x-twitter mr-1 text-xs"></i>
 								<span>X(Twitter)</span>
 							</a>
 						</li>
 						<li>
-							<a href="https://www.instagram.com" target="_blank">
+							<a href="https://www.instagram.com/tohofes_2026/" target="_blank">
 								<i class="fa-brands fa-instagram mr-1 text-xs"></i>
 								<span>Instagram</span>
-							</a>
-						</li>
-						<li>
-							<a href="https://atserver186.jp" target="_blank">
-								<i class="fa-solid fa-arrow-up-right-from-square mr-1 text-xs"></i>
-								<span>ATSocial</span>
 							</a>
 						</li>
 						<li>
@@ -651,8 +678,8 @@
 							<p class="text-white">参加団体の取得に失敗しました</p>
 						{/if}
 						<li class="flex flex-col gap-2.5">
-							<a href="/organizations">
-								<span>一覧はこちら</span>
+							<a href="/organizations" class="font-bold">
+								<i class="fa-solid fa-list"></i><span>一覧はこちら</span>
 							</a>
 						</li>
 					</ul>
@@ -661,21 +688,15 @@
 					<summary class="font-bold">各種SNS / リンク</summary>
 					<ul class="pt-2 pl-2">
 						<li>
-							<a href="https://x.com" target="_blank">
+							<a href="https://x.com/tohofes_2026" target="_blank">
 								<i class="fa-brands fa-x-twitter mr-1 text-xs"></i>
 								<span>X(Twitter)</span>
 							</a>
 						</li>
 						<li>
-							<a href="https://www.instagram.com" target="_blank">
+							<a href="https://www.instagram.com/tohofes_2026/" target="_blank">
 								<i class="fa-brands fa-instagram mr-1 text-xs"></i>
 								<span>Instagram</span>
-							</a>
-						</li>
-						<li>
-							<a href="https://atserver186.jp" target="_blank">
-								<i class="fa-solid fa-arrow-up-right-from-square mr-1 text-xs"></i>
-								<span>ATSocial</span>
 							</a>
 						</li>
 						<li>

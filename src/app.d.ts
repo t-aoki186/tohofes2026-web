@@ -16,3 +16,8 @@ declare global {
 }
 
 export {};
+
+declare module '@splidejs/svelte-splide/css/*' {
+  const content: string;
+  export default content;
+}

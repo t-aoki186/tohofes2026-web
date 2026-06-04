@@ -86,7 +86,7 @@
 
 <svelte:head>
 	<title>{data.site_title}</title>
-	<meta property="og:title" content="第75回桐朋祭(桐朋祭2026)" />
+	<meta property="og:title" content={data.site_title} />
 </svelte:head>
 
 <Modal bind:showModal>
@@ -214,7 +214,7 @@
 			で決済方法が以下の通り異なりますので、あらかじめご確認ください。
 		</p>
 		<img
-			src="https://pic.atserver186.jp/img/tohofes/top-page/top-page-important-1.webp"
+			src="https://pic.atserver186.jp/img/tohofes/top-page/top-page-important-1_v3.webp"
 			alt="「食堂・パン売り場」と「飲食団体（屋台・喫茶）」に関する支払い方法の案内。左側には食堂・パン売り場の説明があり、購入時には硬貨と千円札のみ利用できることが明記されている。左側には飲食団体の説明があり、交通系ICカード(モバイルSuica等を含む)のみが利用できることが明記されている。"
 			class="w-full"
 		/>
@@ -342,60 +342,10 @@
 	</div>
 	<!--e:お知らせ-->
 	<!---->
-	<!--s:アクセス-->
-	<div class="container m-auto mt-10 rounded-xl bg-(--title-bg-color)" data-aos="fade-up">
-		<p use:reveal class="tf26-page-title" style="view-transition-name: tfaccesstitle-hero;">
-			{#each 'アクセス'.split('') as char, i}
-				<span class="char" style={`--d: ${i * 0.12}s`}>{char}</span>
-			{/each}
-		</p>
-	</div>
-	<div class="container mx-auto mt-4 mb-12" data-aos="fade-up">
-		<div class="main-link">
-			<div class="link-2">
-				<!--テーマ説明-->
-				<div class="map-text">
-					<p class="my-auto text-xl text-(--main-text-color)">
-						桐朋中学・高等学校<br />〒186-0004<br /><i class="fa-solid fa-location-dot mr-1 text-xs"
-						></i>東京都国立市中3-1-10
-					</p>
-				</div>
-				<hr class="main-hr" />
-				<div class="map-text">
-					<p class="my-auto text-xl text-(--main-text-color)">
-						<i class="fa-solid fa-train mr-1 text-xs"></i>JR中央線国立駅より徒歩20分<br /><i
-							class="fa-solid fa-train mr-1 text-xs"
-						></i>JR南武線谷保駅より徒歩15分
-					</p>
-				</div>
-			</div>
-			<div class="link-2" style="padding: 0 !important;">
-				<iframe
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.4746059148924!2d139.44237747639895!3d35.68993672949453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018e3f60c18b89b%3A0xec006afe5f872d28!2z5qGQ5pyL5Lit5a2m5qCh44O75qGQ5pyL6auY562J5a2m5qCh!5e0!3m2!1sja!2sjp!4v1771772582613!5m2!1sja!2sjp"
-					width="100%"
-					height="450"
-					style="border:0;"
-					loading="lazy"
-					referrerpolicy="no-referrer-when-downgrade"
-					title="Google Map"
-					class="rounded-lg"
-				></iframe>
-			</div>
-		</div>
-		<br />
-		<a href="/access" class="link-main">
-			<div class="link-main-underline">
-				<i class="fa-solid fa-arrow-right-long"></i>
-				<span>アクセスの詳細はこちら</span>
-			</div>
-		</a>
-	</div>
-	<!--e:アクセス-->
-	<!---->
-	<!--s:ご案内-->
+	<!--s:来場者の皆様へ-->
 	<div class="container m-auto mt-10 rounded-xl bg-(--title-bg-color)" data-aos="fade-up">
 		<p use:reveal class="tf26-page-title" style="view-transition-name: tfvisitortitle-hero;">
-			{#each 'ご案内'.split('') as char, i}
+			{#each '来場者の皆様へ'.split('') as char, i}
 				<span class="char" style={`--d: ${i * 0.12}s`}>{char}</span>
 			{/each}
 		</p>
@@ -479,7 +429,7 @@
 								<div class="truncate-parent flex-col">
 									<p class="truncate-title guid-title-text ml-2 font-bold text-(--main-text-color)">
 										<i class="tf26-icon-material icon-baby-bottle mr-2"></i>
-										乳幼児をお連れのご来場者様へ
+										小さなお子様をお連れの方へ
 									</p>
 								</div>
 								<div class="news-list-icon my-auto ml-auto">
@@ -494,7 +444,7 @@
 							>
 								<div class="truncate-parent flex-col">
 									<p class="truncate-title guid-title-text ml-2 font-bold text-(--main-text-color)">
-										<i class="tf26-icon-material icon-poor-health mr-2"></i>体調不良について
+										<i class="tf26-icon-material icon-poor-health mr-2"></i>体調がすぐれない場合
 									</p>
 								</div>
 								<div class="news-list-icon my-auto ml-auto">
@@ -513,7 +463,7 @@
 			</div>
 		</a>
 	</div>
-	<!--e:ご案内-->
+	<!--e:来場者の皆様へ-->
 	<!---->
 	<!--s:企画情報-->
 	<div class="container m-auto mt-10 rounded-xl bg-(--title-bg-color)" data-aos="fade-up">
@@ -550,7 +500,7 @@
 				<div class="tp-search-method">
 					<a href="/organizations" class="dash-link">
 						<i class="fa-solid fa-list"></i>
-						<p>絞り込む</p>
+						<p>企画一覧を見る</p>
 					</a>
 				</div>
 				<div class="tp-search-method">
@@ -562,213 +512,6 @@
 			</div>
 		</div>
 	</div>
-
-	<div class="mb-2 ml-10" style="border-left: solid 4px var(--main-text-color);">
-		<p use:reveal class="news-section-title ml-2" style="padding: 0;">
-			{#each '参加団体一覧'.split('') as char, i}
-				<span class="char text-(--main-text-color)" style={`--d: ${i * 0.12}s`}>{char}</span>
-			{/each}
-		</p>
-	</div>
-	<section
-		class="auto-scroll-organization-section mb-10 rounded-2xl rounded-l-none border border-l-0 border-(--main-text-color) p-4 pl-0"
-	>
-		<Splide options={optionsLeft} extensions={{ AutoScroll }} style="width: 100%;">
-			<SplideSlide>
-				<a href="/organizations/1">
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-00.webp"
-						alt="サンプル00"
-						class="rounded-xl"
-					/>
-				</a>
-			</SplideSlide>
-			<SplideSlide>
-				<a href="/organizations/2">
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-01.webp"
-						alt="サンプル01"
-						class="rounded-xl"
-					/>
-				</a>
-			</SplideSlide>
-			<SplideSlide>
-				<a href="/organizations/3">
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-02.webp"
-						alt="サンプル02"
-						class="rounded-xl"
-					/>
-				</a>
-			</SplideSlide>
-			<SplideSlide>
-				<a href="/organizations/4">
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-03.webp"
-						alt="サンプル03"
-						class="rounded-xl"
-					/>
-				</a>
-			</SplideSlide>
-			<SplideSlide>
-				<a href="/organizations/5">
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-04.webp"
-						alt="サンプル04"
-						class="rounded-xl"
-					/>
-				</a>
-			</SplideSlide>
-			<SplideSlide>
-				<a href="/organizations/6">
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-05.webp"
-						alt="サンプル05"
-						class="rounded-xl"
-					/>
-				</a>
-			</SplideSlide>
-			<SplideSlide>
-				<a href="/organizations/7">
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-06.webp"
-						alt="サンプル06"
-						class="rounded-xl"
-					/>
-				</a>
-			</SplideSlide>
-			<SplideSlide>
-				<a href="/organizations/8">
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-07.webp"
-						alt="サンプル07"
-						class="rounded-xl"
-					/>
-				</a>
-			</SplideSlide>
-			<SplideSlide>
-				<a href="/organizations/9">
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-08.webp"
-						alt="サンプル08"
-						class="rounded-xl"
-					/>
-				</a>
-			</SplideSlide>
-			<SplideSlide>
-				<a href="/organizations/10">
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-09.webp"
-						alt="サンプル09"
-						class="rounded-xl"
-					/>
-				</a>
-			</SplideSlide>
-		</Splide>
-	</section>
-	<div class="mr-10 mb-2" style="border-right: solid 4px var(--main-text-color);">
-		<p use:reveal class="news-section-title mr-2" style="padding: 0; text-align: right !important;">
-			{#each '参加団体ブログ'.split('') as char, i}
-				<span class="char text-(--main-text-color)" style={`--d: ${i * 0.12}s`}>{char}</span>
-			{/each}
-		</p>
-	</div>
-	<section
-		class="auto-scroll-organization-section mb-10 ml-auto rounded-2xl rounded-r-none border border-r-0 border-(--main-text-color) p-4 pr-0"
-	>
-		<Splide options={optionsRight} extensions={{ AutoScroll }} style="width: 100%;">
-			<SplideSlide>
-				<a href="/organizations/1">
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-00.webp"
-						alt="サンプル00"
-						class="rounded-xl"
-					/>
-				</a>
-			</SplideSlide>
-			<SplideSlide>
-				<a href="/organizations/2">
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-01.webp"
-						alt="サンプル01"
-						class="rounded-xl"
-					/>
-				</a>
-			</SplideSlide>
-			<SplideSlide>
-				<a href="/organizations/3">
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-02.webp"
-						alt="サンプル02"
-						class="rounded-xl"
-					/>
-				</a>
-			</SplideSlide>
-			<SplideSlide>
-				<a href="/organizations/4">
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-03.webp"
-						alt="サンプル03"
-						class="rounded-xl"
-					/>
-				</a>
-			</SplideSlide>
-			<SplideSlide>
-				<a href="/organizations/5">
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-04.webp"
-						alt="サンプル04"
-						class="rounded-xl"
-					/>
-				</a>
-			</SplideSlide>
-			<SplideSlide>
-				<a href="/organizations/6">
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-05.webp"
-						alt="サンプル05"
-						class="rounded-xl"
-					/>
-				</a>
-			</SplideSlide>
-			<SplideSlide>
-				<a href="/organizations/7">
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-06.webp"
-						alt="サンプル06"
-						class="rounded-xl"
-					/>
-				</a>
-			</SplideSlide>
-			<SplideSlide>
-				<a href="/organizations/8">
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-07.webp"
-						alt="サンプル07"
-						class="rounded-xl"
-					/>
-				</a>
-			</SplideSlide>
-			<SplideSlide>
-				<a href="/organizations/9">
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-08.webp"
-						alt="サンプル08"
-						class="rounded-xl"
-					/>
-				</a>
-			</SplideSlide>
-			<SplideSlide>
-				<a href="/organizations/10">
-					<img
-						src="https://pic.atserver186.jp/img/tohofes/dev-test/sample-img/sample-09.webp"
-						alt="サンプル09"
-						class="rounded-xl"
-					/>
-				</a>
-			</SplideSlide>
-		</Splide>
-	</section>
 	<div class="container mx-auto mt-4 mb-12">
 		<a href="/organizations" class="link-main">
 			<div class="link-main-underline">
@@ -779,9 +522,58 @@
 	</div>
 	<!--e:企画情報-->
 	<!---->
+	<!--s:アクセス-->
+	<div class="container m-auto mt-10 rounded-xl bg-(--title-bg-color)" data-aos="fade-up">
+		<p use:reveal class="tf26-page-title">
+			{#each 'アクセス'.split('') as char, i}
+				<span class="char" style={`--d: ${i * 0.12}s`}>{char}</span>
+			{/each}
+		</p>
+	</div>
+	<div class="container mx-auto mt-4 mb-12" data-aos="fade-up">
+		<div class="main-link">
+			<div class="link-2">
+				<div class="map-text">
+					<p class="my-auto text-xl text-(--main-text-color)">
+						桐朋中学・高等学校<br />〒186-0004<br /><i class="fa-solid fa-location-dot mr-1 text-xs"
+						></i>東京都国立市中3-1-10
+					</p>
+				</div>
+				<hr class="main-hr" />
+				<div class="map-text">
+					<p class="my-auto text-xl text-(--main-text-color)">
+						<i class="fa-solid fa-train mr-1 text-xs"></i>JR中央線&nbsp;国立駅より徒歩15分<br /><i
+							class="fa-solid fa-train mr-1 text-xs"
+						></i>JR南武線&nbsp;谷保駅より徒歩15分
+					</p>
+				</div>
+			</div>
+			<div class="link-2">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.4746059148924!2d139.44237747639895!3d35.68993672949453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018e3f60c18b89b%3A0xec006afe5f872d28!2z5qGQ5pyL5Lit5a2m5qCh44O75qGQ5pyL6auY562J5a2m5qCh!5e0!3m2!1sja!2sjp!4v1771772582613!5m2!1sja!2sjp"
+					width="100%"
+					height="450"
+					loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"
+					title="Google Map"
+					class="rounded-lg"
+					style="border:0;"
+				></iframe>
+			</div>
+		</div>
+		<br />
+		<a href="/access" class="link-main">
+			<div class="link-main-underline">
+				<i class="fa-solid fa-arrow-right-long"></i>
+				<span>アクセスの詳細はこちら</span>
+			</div>
+		</a>
+	</div>
+	<!--e:アクセス-->
+	<!---->
 	<!--s:桐朋祭とは-->
 	<div class="container m-auto mt-10 rounded-xl bg-(--title-bg-color)" data-aos="fade-up">
-		<p use:reveal class="tf26-page-title" style="view-transition-name: tfabouttitle-hero;">
+		<p use:reveal class="tf26-page-title">
 			{#each '桐朋祭とは'.split('') as char, i}
 				<span class="char" style={`--d: ${i * 0.12}s`}>{char}</span>
 			{/each}
@@ -789,12 +581,11 @@
 	</div>
 	<div class="container mx-auto mt-4 mb-12" data-aos="fade-up">
 		<div class="main-link">
-			<div class="link-2 bg-white" style="padding: 0 !important;">
+			<div class="link-2 bg-white" style="padding: 0 !important; margin: 0 !important;">
 				<img
 					src="https://pic.atserver186.jp/img/tohofes/past_tohofes.webp"
 					alt="桐朋祭画像"
-					class="h-auto w-full rounded-xl"
-					style="view-transition-name: tfabout-hero;"
+					class="h-auto w-full rounded-lg"
 				/>
 			</div>
 			<div class="link-2">
@@ -818,7 +609,7 @@
 	<!---->
 	<!--s:テーマについて-->
 	<div class="container m-auto mt-10 rounded-xl bg-(--title-bg-color)" data-aos="fade-up">
-		<p use:reveal class="tf26-page-title" style="view-transition-name: tfthemetitle-hero;">
+		<p use:reveal class="tf26-page-title">
 			{#each 'テーマについて'.split('') as char, i}
 				<span class="char" style={`--d: ${i * 0.12}s`}>{char}</span>
 			{/each}
@@ -844,7 +635,7 @@
 			</div>
 		</div>
 		<br />
-		<a href="/theme" class="link-main">
+		<a href="/about/#theme" class="link-main">
 			<div class="link-main-underline">
 				<i class="fa-solid fa-arrow-right-long"></i>
 				<span>詳しくはこちら</span>
@@ -853,16 +644,62 @@
 	</div>
 	<!--e:テーマについて-->
 	<!---->
+	<!--s:講演者-->
+	<div class="container m-auto mt-10 rounded-xl bg-(--title-bg-color)" data-aos="fade-up">
+		<p use:reveal class="tf26-page-title">
+			{#each '講演者'.split('') as char, i}
+				<span class="char" style={`--d: ${i * 0.12}s`}>{char}</span>
+			{/each}
+		</p>
+	</div>
+	<div class="container mx-auto mt-4 mb-12" data-aos="fade-up">
+		<div class="main-link">
+			<div class="link-2" style="padding: 0 !important; margin: 0 !important;">
+				<img
+					src="https://pic.atserver186.jp/img/tohofes/guest/guest_v2.webp"
+					alt="桐朋祭画像"
+					class="m-auto ml-auto block h-auto w-[50%]"
+				/>
+			</div>
+			<div class="link-2">
+				<!--テーマ説明-->
+				<p use:reveal class="split-text my-auto text-(--main-text-color)">
+					今年の講演者は、「イモニイ」こと井本陽久(いもと はるひさ)氏です。
+				</p>
+			</div>
+		</div>
+		<br />
+		<a href="/guest" class="link-main">
+			<div class="link-main-underline">
+				<i class="fa-solid fa-arrow-right-long"></i>
+				<span>詳しくはこちら</span>
+			</div>
+		</a>
+	</div>
+	<!--e:講演者-->
+	<!---->
 	<hr class="main-hr" />
-	<!--s:アニメーションを再視聴-->
-	<div class="container m-auto my-10">
+	<!---->
+	<div class="container m-auto my-10 flex">
+		<!--s:アニメーションを再視聴-->
 		<button onclick={replayAnimation} class="link-main">
 			<div class="link-main-underline">
 				<i class="fa-solid fa-circle-play"></i>
 				<span>アニメーションをもう一度視聴する</span>
 			</div>
 		</button>
+		<!--e:アニメーションを再視聴-->
+		<!---->
+		<!--s: クレジット-->
+		<a href="/site/info/" class="link-main">
+			<div class="link-main-underline">
+				<i class="fa-solid fa-arrow-right-long"></i>
+				<span>クレジット</span>
+			</div>
+		</a>
+		<!--e: クレジット-->
 	</div>
+	<!---->
 </main>
 
 <style>
@@ -947,16 +784,6 @@
 
 		.tp-news-bg-icon i {
 			opacity: 0.5;
-		}
-	}
-
-	.auto-scroll-organization-section {
-		width: 80%;
-	}
-
-	@media (max-width: 768px) {
-		.auto-scroll-organization-section {
-			width: 95%;
 		}
 	}
 </style>

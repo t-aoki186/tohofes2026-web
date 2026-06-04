@@ -18,7 +18,7 @@
 		<p class="tf26-page-title" style="color: black; margin-bottom: 0;">{pageTitle}</p>
 	</div>
 	<section class="container mx-auto mt-15 mb-25 flex flex-col">
-		<p>test</p>
+		<p>お問い合わせフォーム作成後に追加します。</p>
 	</section>
 </main>
 <ol class="main-breadcrumb container mx-auto">

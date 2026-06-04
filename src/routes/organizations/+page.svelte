@@ -82,6 +82,13 @@
 					<p class="text-sm text-(--main-text-color)">バンド</p>
 				</a>
 				<a
+					href={getChangedUrl('category', 'イベント')}
+					class="sp-refined-date-s"
+					class:active={isActive('category', 'イベント')}
+				>
+					<p class="text-sm text-(--main-text-color)">イベント</p>
+				</a>
+				<a
 					href={getChangedUrl('category', 'other')}
 					class="sp-refined-date-s"
 					class:active={isActive('category', 'other')}
@@ -255,11 +262,8 @@
 					</div>
 					<div class="flex">
 						<div class="mr-2 flex-col" style="min-width: 0; max-width: 100%;">
-							<p class="sp-search-result-text text-xs text-(--main-text-color)">
+							<p class="sp-search-result-text mb-4 text-xs text-(--main-text-color)">
 								<i class="fa-solid fa-tag mr-1"></i>{getCategoryLabel(item.category)}
-							</p>
-							<p class="sp-search-result-heading h-1/2 text-sm text-gray-600">
-								{item.heading}
 							</p>
 							<p class="sp-search-result-text text-left-decoration items-end text-sm text-gray-600">
 								{item.body}

@@ -44,12 +44,7 @@
 					</li>
 					<li>
 						<a href="/timetable">
-							<span>タイムテーブル</span>
-						</a>
-					</li>
-					<li>
-						<a href="/qa" target="_blank">
-							<span>よくある質問</span>
+							<span>企画タイムテーブル</span>
 						</a>
 					</li>
 					<li>
@@ -88,8 +83,8 @@
 						<p>お知らせの取得に失敗しました</p>
 					{/if}
 					<li class="flex flex-col gap-2.5">
-						<a href="/organizations">
-							<span>一覧はこちら</span>
+						<a href="/organizations" class="font-bold">
+							<i class="fa-solid fa-list"></i><span>一覧はこちら</span>
 						</a>
 					</li>
 				</ul>
@@ -102,21 +97,15 @@
 				</h2>
 				<ul class="sitemap-ul">
 					<li>
-						<a href="https://x.com" target="_blank">
+						<a href="https://x.com/tohofes_2026" target="_blank">
 							<i class="fa-brands fa-x-twitter mr-1 text-xs"></i>
 							<span>X(Twitter)</span>
 						</a>
 					</li>
 					<li>
-						<a href="https://www.instagram.com" target="_blank">
+						<a href="https://www.instagram.com/tohofes_2026/" target="_blank">
 							<i class="fa-brands fa-instagram mr-1 text-xs"></i>
 							<span>Instagram</span>
-						</a>
-					</li>
-					<li>
-						<a href="https://atserver186.jp" target="_blank">
-							<i class="fa-solid fa-arrow-up-right-from-square mr-1 text-xs"></i>
-							<span>ATSocial</span>
 						</a>
 					</li>
 					<li>

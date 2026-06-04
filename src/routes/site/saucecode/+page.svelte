@@ -8,7 +8,7 @@
 </script>
 
 <svelte:head>
-	<title>{pageTitle} | {data.site_title}</title>
+	<title>{data.site_title}</title>
 	<meta property="og:title" content="{pageTitle} | {data.site_title}" />
 </svelte:head>
 
@@ -18,7 +18,7 @@
 	</div>
 	<section class="container mx-auto mt-15 mb-25">
 		<p>
-			セキュリティの観点からソースコードの公開は第75回桐朋祭の終了後にGithubにて行います。
+			セキュリティの観点からソースコードの公開は第75回桐朋祭の終了後にGithubとGitlabにて行います。
 			<br />
 			公開後、こちらのページにてURLをお知らせします。
 		</p>
