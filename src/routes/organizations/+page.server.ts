@@ -23,16 +23,18 @@ export async function load({ url }) {
 
 	//全データを取得し、指定されたカテゴリを除外
 	const allData = await fetchOrganizations();
-	const filteredData = allData.filter(
+	const allResults = allData.filter(
 		(item: any) => !excludeCategories.some((exclude) => hasCategory(item.category, exclude))
 	);
 
-	let results = filteredData;
+	let results = allResults;
 
-	//category/typeでの検索
+	//category/typeでの検索（複数カテゴリに対応）
 	if (categoryParam) {
-		results = filteredData.filter((item: any) => {
-			return hasCategory(item.category, categoryParam) || item.type === categoryParam;
+		const selectedCategories = getCategories(categoryParam);
+		results = allResults.filter((item: any) => {
+			// 選択されたカテゴリのいずれかに該当するか、またはtypeが一致するかをチェック
+			return selectedCategories.some((cat) => hasCategory(item.category, cat) || item.type === cat);
 		});
 	}
 
@@ -47,5 +49,5 @@ export async function load({ url }) {
 		);
 	}
 
-	return { results, category: categoryParam, search };
+	return { results, allResults, category: categoryParam, search };
 }

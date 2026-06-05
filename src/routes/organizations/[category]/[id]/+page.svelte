@@ -151,12 +151,20 @@
 				</div>
 			</div>
 			<div class="orgp-top-grid-item">
-				<a
-					href="/organizations/?category={primaryCategory}"
-					class="mb-4 inline-block text-2xl text-(--main-text-color)"
-				>
-					<i class="fa-solid fa-tag mr-1"></i>{getCategoryLabel(primaryCategory)}
-				</a>
+				<div class="mb-4">
+					{#each item.category
+						.split(',')
+						.map((c) => c.trim())
+						.filter((c) => c.length > 0) as cat}
+						<a href={`/organizations/?category=${cat}`} class="text-decoration-none">
+							<span
+								class="m-1 inline-flex items-center gap-1 rounded bg-gray-100 text-(--main-text-color) px-0.5 py-px text-xl"
+							>
+								<i class="fa-solid fa-tag"></i>{getCategoryLabel(cat)}
+							</span>
+						</a>
+					{/each}
+				</div>
 				<p
 					class="text-2xl text-(--main-text-color)"
 					title="場所については紙のパンフレットをご覧ください。"
