@@ -345,6 +345,9 @@
 				><i class="fas fa-search"></i></button
 			>
 		</form>
+
+		<p class="text-(--main-text-color)"><i class="fa-solid fa-sliders"></i>を押すことで絞り込み検索ができます。</p>
+
 		<p class="my-4">{filteredResults.length}件の {pageTitle} が見つかりました。</p>
 		<div class="flex flex-wrap justify-center gap-4">
 			{#each filteredResults as item}

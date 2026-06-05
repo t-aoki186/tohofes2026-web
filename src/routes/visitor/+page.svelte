@@ -42,7 +42,7 @@
 			<span class="underline">桐朋祭スタッフはこちらのデザインのTシャツを着用しております。</span>
 		</p>
 		<img
-			src="https://pic.atserver186.jp/img/tohofes/visitor/t-shirt-design.webp"
+			src="https://pic.atserver186.jp/img/tohofes/visitor/t-shirt-design_v2.webp"
 			alt="桐朋祭スタッフTシャツのデザイン"
 			class="t-shirt-design-img"
 		/>
@@ -69,7 +69,7 @@
 			で決済方法が以下の通り異なりますので、あらかじめご確認ください。
 		</p>
 		<img
-			src="https://pic.atserver186.jp/img/tohofes/top-page/top-page-important-1.webp"
+			src="https://pic.atserver186.jp/img/tohofes/top-page/top-page-important-1_v3.webp"
 			alt="「食堂・パン売り場」と「飲食団体（屋台・喫茶）」に関する支払い方法の案内。左側には食堂・パン売り場の説明があり、購入時には硬貨と千円札のみ利用できることが明記されている。左側には飲食団体の説明があり、交通系ICカード(モバイルSuica等を含む)のみが利用できることが明記されている。"
 			class="payment-method-img"
 		/>

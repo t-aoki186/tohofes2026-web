@@ -22,6 +22,7 @@
 			src="https://pic.atserver186.jp/img/tohofes/foods/menu/toho_lunch_menu.webp"
 			alt="食堂のメニューの画像。カツカレーは650円、カルビクッパは600円、ソフトクリームは380円、串からあげは280円、アメリカンドッグは220円、牛丼は600円、タンメンは600円、ハリケーンポテトは280円、揚げもちは220円、フランクフルトは220円である。"
 			loading="lazy"
+			class="my-4 rounded-2xl"
 		/>
 		<hr class="main-hr" />
 		<h1 class="tf26-section-title mt-4" id="theme">パン売り場 / Bakery</h1>
@@ -29,6 +30,7 @@
 			src="https://pic.atserver186.jp/img/tohofes/foods/menu/bread_menu.webp"
 			alt="焼き立てパンのメニュー一覧の画像。それぞれ220円。チョコチップメロンパン、ショコラデニッシュ、クリームデニッシュ、りんごカスタードデニッシュ、チーズデニッシュ棒がある。"
 			loading="lazy"
+			class="my-4 rounded-2xl"
 		/>
 		<hr class="main-hr" />
 		<h1 class="tf26-section-title mt-4" id="theme">決済方法</h1>
@@ -52,7 +54,7 @@
 			で決済方法が以下の通り異なりますので、あらかじめご確認ください。
 		</p>
 		<img
-			src="https://pic.atserver186.jp/img/tohofes/top-page/top-page-important-1.webp"
+			src="https://pic.atserver186.jp/img/tohofes/top-page/top-page-important-1_v3.webp"
 			alt="「食堂・パン売り場」と「飲食団体（屋台・喫茶）」に関する支払い方法の案内。左側には食堂・パン売り場の説明があり、購入時には硬貨と千円札のみ利用できることが明記されている。左側には飲食団体の説明があり、交通系ICカード(モバイルSuica等を含む)のみが利用できることが明記されている。"
 			class="payment-method-img"
 		/>
@@ -85,6 +87,45 @@
 				</tr>
 			</tbody>
 		</table>
+		<hr class="main-hr" />
+		<h1 class="tf26-section-title mt-4" id="theme">飲食参加団体</h1>
+		<p class="mb-2 text-lg leading-[2.2rem]">
+			飲食参加団体のメニューは以下のリンクからご確認いただけます。
+		</p>
+		<ul class="list-disc pl-5">
+			<li>
+				<a href="/organizations/food/ragucafe" target="_blank" class=" underline">ラグカフェ</a>
+			</li>
+			<li>
+				<a href="/organizations/food/shiratama" target="_blank" class=" underline">しらたま</a>
+			</li>
+			<li>
+				<a href="/organizations/food/morino_kasuteraya" target="_blank" class=" underline"
+					>森のカステラ屋</a
+				>
+			</li>
+			<li>
+				<a href="/organizations/food/hawaiian_cafe" target="_blank" class=" underline"
+					>ハワイアンカフェ アロハ・エ・コモ・マイ</a
+				>
+			</li>
+			<li>
+				<a href="/organizations/food/okutamanokafun" target="_blank" class=" underline"
+					>奥多摩の花粉</a
+				>
+			</li>
+			<li>
+				<a href="/organizations/food/sutabar" target="_blank" class=" underline">スタBar</a>
+			</li>
+			<li>
+				<a href="/organizations/food/eis_bahn" target="_blank" class=" underline">EIS BAHN</a>
+			</li>
+			<li>
+				<a href="/organizations/food/dog_stand_82" target="_blank" class=" underline"
+					>Dog Stand 82</a
+				>
+			</li>
+		</ul>
 	</section>
 </main>
 <ol class="main-breadcrumb container mx-auto">
@@ -130,7 +171,6 @@
 		border-bottom: none;
 	}
 
-	
 	/* 時間カラム (2列目) スタイル */
 	.food_time td:last-child,
 	.food_time th:last-child {
