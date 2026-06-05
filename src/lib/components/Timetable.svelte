@@ -1,7 +1,8 @@
 <script lang="ts">
 	/*s: タイムテーブル(基)*/
 	import type { TimetableEvent, ProcessedEvent } from '$lib/types/timetable';
-
+import { page } from '$app/stores';
+import { goto } from '$app/navigation';
 	let { events = [] }: { events?: TimetableEvent[] } = $props();
 
 	// 時間文字列を分に変換
@@ -148,9 +149,18 @@
 	/*e: 日付ラベルのマッピング*/
 
 	/*s: 日付選択 */
-	//デフォルトで選択される日付の指定
-	let selectedDay = $state<number>(1);
+let selectedDay = $state(1);
 
+$effect(() => {
+	const dateParam = Number($page.url.searchParams.get('date'));
+	selectedDay = [1, 2, 3].includes(dateParam) ? dateParam : 1;
+});
+
+function setSelectedDay(day: number) {
+	const searchParams = new URLSearchParams($page.url.searchParams);
+	searchParams.set('date', String(day));
+	goto(`?${searchParams.toString()}`, { replaceState: true, noScroll: true, keepFocus: true });
+}
 	//日付選択ボタンの表示用設定
 	const dayButtons: { day: number; label: string }[] = [
 		{ day: 1, label: '6/6 (Sat)' },
@@ -189,16 +199,7 @@
 	</div>
 	-->
 	<!--s: 日付選択ボタン-->
-	<div class="day-selector">
-		{#each dayButtons as button}
-			<button
-				class="day-button {selectedDay === button.day ? 'active' : ''}"
-				onclick={() => (selectedDay = button.day)}
-			>
-				{button.label}
-			</button>
-		{/each}
-	</div>
+
 	<!--s: 日付選択ボタン-->
 	<!---->
 
@@ -575,30 +576,5 @@
 
 	.timetable-container::-webkit-scrollbar-thumb:hover {
 		background: #555;
-	}
-	/* 追加：日付セレクターのスタイル */
-	.day-selector {
-		display: flex;
-		gap: 12px;
-		justify-content: center;
-		margin-bottom: 24px;
-		flex-wrap: wrap;
-	}
-
-	.day-button {
-		font-size: 1rem;
-		background: white;
-		cursor: pointer;
-		transition: all 0.2s ease;
-		color: var(--main-text-color);
-		border: 1px solid var(--main-text-color);
-		margin: 2px;
-		padding: 5px 15px;
-		border-radius: 5px;
-	}
-
-	.day-button.active {
-		font-weight: bold;
-		background-color: color-mix(in srgb, var(--main-text-color) 15%, white);
 	}
 </style>

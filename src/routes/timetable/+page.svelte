@@ -17,11 +17,18 @@
 		<p class="tf26-page-title" style="color: black; margin-bottom: 0;">{pageTitle}</p>
 	</div>
 	<section class="container mx-auto mt-15 mb-25">
-		<div class="bg-gray-100 rounded-xl block md:hidden">
-			<img src="https://pic.atserver186.jp/img/tohofes/material/x_scroll.webp" alt="横にスクロールしてください。" class="mx-auto w-[30%] pt-10 pb-2" />
-			<p class="text-center text-lg text-gray-600 pb-10">
-				タイムテーブルは横にスクロールできます
-			</p>
+		<div class="block rounded-xl bg-gray-100 md:hidden">
+			<img
+				src="https://pic.atserver186.jp/img/tohofes/material/x_scroll.webp"
+				alt="横にスクロールしてください。"
+				class="mx-auto w-[30%] pt-10 pb-2"
+			/>
+			<p class="pb-10 text-center text-lg text-gray-600">タイムテーブルは横にスクロールできます</p>
+		</div>
+		<div class="day-selector">
+			<a href="?date=1" class="day-button">6/6(Sat)</a>
+			<a href="?date=2" class="day-button">6/7(Sun)</a>
+			<a href="?date=3" class="day-button">6/8(Mon)</a>
 		</div>
 		<div class="scroll-container">
 			<div class="slide-item">
@@ -79,5 +86,30 @@
 
 	.scroll-container::-webkit-scrollbar-thumb:hover {
 		background: #555;
+	}
+
+		.day-selector {
+		display: flex;
+		gap: 12px;
+		justify-content: center;
+		margin-bottom: 24px;
+		flex-wrap: wrap;
+	}
+
+	.day-button {
+		font-size: 1rem;
+		background: white;
+		cursor: pointer;
+		transition: all 0.2s ease;
+		color: var(--main-text-color);
+		border: 1px solid var(--main-text-color);
+		margin: 2px;
+		padding: 5px 15px;
+		border-radius: 5px;
+	}
+
+	.day-button.active {
+		font-weight: bold;
+		background-color: color-mix(in srgb, var(--main-text-color) 15%, white);
 	}
 </style>
