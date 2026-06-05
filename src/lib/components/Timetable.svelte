@@ -174,6 +174,7 @@
 
 <!--s: タイムテーブル全体-->
 <div class="timetable-container">
+	<!--
 	<div class="mb-4 block rounded-lg bg-(--main-text-color) p-4 md:hidden">
 		<p class="text-lg text-white">
 			現在、タイムテーブルは<span class="font-bold">パソコン（PC）版のみ</span
@@ -186,6 +187,7 @@
 			もしスマートフォンで閲覧したい場合は、ブラウザの<span class="font-bold">「PC版サイトを見る」</span>機能をお試しください。
 		</p>
 	</div>
+	-->
 	<!--s: 日付選択ボタン-->
 	<div class="day-selector">
 		{#each dayButtons as button}
