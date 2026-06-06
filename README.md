@@ -1,7 +1,7 @@
 # 2026年度桐朋祭Webサイト
 
 ### 2026年度の桐朋祭のWebサイトです。
-[2026.tcc-archive.club](https://2026.tcc-archive.club/)
+[tohofes.jp](https://tohofes.jp)
 
 ## 依存関係のインストール
 `node.js`と`npm`が開発用PCに入っていることを確認してください。
