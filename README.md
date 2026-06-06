@@ -44,3 +44,7 @@ nano /etc/environment
 SERVER_LOCATION="サーバのざっくりとした場所"
 ```
 を追加してください。
+
+---
+
+test
