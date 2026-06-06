@@ -1,8 +1,8 @@
 <script lang="ts">
 	/*s: タイムテーブル(基)*/
 	import type { TimetableEvent, ProcessedEvent } from '$lib/types/timetable';
-import { page } from '$app/stores';
-import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
+	import { goto } from '$app/navigation';
 	let { events = [] }: { events?: TimetableEvent[] } = $props();
 
 	// 時間文字列を分に変換
@@ -149,18 +149,18 @@ import { goto } from '$app/navigation';
 	/*e: 日付ラベルのマッピング*/
 
 	/*s: 日付選択 */
-let selectedDay = $state(1);
+	let selectedDay = $state(1);
 
-$effect(() => {
-	const dateParam = Number($page.url.searchParams.get('date'));
-	selectedDay = [1, 2, 3].includes(dateParam) ? dateParam : 1;
-});
+	$effect(() => {
+		const dateParam = Number($page.url.searchParams.get('date'));
+		selectedDay = [1, 2, 3].includes(dateParam) ? dateParam : 1;
+	});
 
-function setSelectedDay(day: number) {
-	const searchParams = new URLSearchParams($page.url.searchParams);
-	searchParams.set('date', String(day));
-	goto(`?${searchParams.toString()}`, { replaceState: true, noScroll: true, keepFocus: true });
-}
+	function setSelectedDay(day: number) {
+		const searchParams = new URLSearchParams($page.url.searchParams);
+		searchParams.set('date', String(day));
+		goto(`?${searchParams.toString()}`, { replaceState: true, noScroll: true, keepFocus: true });
+	}
 	//日付選択ボタンの表示用設定
 	const dayButtons: { day: number; label: string }[] = [
 		{ day: 1, label: '6/6 (Sat)' },
@@ -292,8 +292,8 @@ function setSelectedDay(day: number) {
 <style>
 	.timetable-container {
 		margin: 0 auto;
-		overflow-x: auto; /* ← ここは維持 */
-		width: 100%; /* ← 追加：幅を100%に */
+		overflow-x: auto;
+		width: 100%;
 	}
 
 	.timetable-day {
@@ -506,18 +506,33 @@ function setSelectedDay(day: number) {
 		line-height: 1.3;
 	}
 
-	/* レスポンシブ対応 - モバイルでの調整 */
+	@media (max-width: 768px) {
+		.event-time {
+			font-size: 0.7rem;
+			color: var(--main-text-color);
+			font-weight: 600;
+			font-family: monospace;
+		}
+
+		.event-title {
+			font-size: 0.8rem;
+			font-weight: 600;
+			margin: 4px 0;
+			color: #333;
+			line-height: 1.3;
+		}
+	}
+
+	/*
 	@media (max-width: 768px) {
 		.timetable-container {
 			padding: 10px;
 			overflow-x: auto;
 			-webkit-overflow-scrolling: touch;
 		}
-
-		/* matrix-timetable の最小幅を維持 */
 		.matrix-timetable {
 			min-width: 700px;
-			width: 100%; /* ← 追加 */
+			width: 100%;
 		}
 
 		.time-column-header,
@@ -527,20 +542,19 @@ function setSelectedDay(day: number) {
 		}
 
 		.location-header {
-			min-width: 180px; /* ← min-width に変更 */
-			flex-shrink: 0; /* ← 追加：縮小しない */
+			min-width: 180px;
+			flex-shrink: 0; 
 		}
 
 		.location-column {
 			min-width: 180px;
-			flex-shrink: 0; /* ← この行は既にあるが確認 */
+			flex-shrink: 0;
 		}
-
-		/* locations-container 内のスクロールを有効に */
 		.locations-container {
 			overflow-x: auto;
 		}
 	}
+		*/
 
 	/* デスクトップでは通常表示 */
 	@media (min-width: 769px) {
@@ -557,24 +571,5 @@ function setSelectedDay(day: number) {
 		.locations-container {
 			overflow-x: visible;
 		}
-	}
-
-	/* スクロールバーのスタイル（任意） */
-	.timetable-container::-webkit-scrollbar {
-		height: 8px;
-	}
-
-	.timetable-container::-webkit-scrollbar-track {
-		background: #f1f1f1;
-		border-radius: 4px;
-	}
-
-	.timetable-container::-webkit-scrollbar-thumb {
-		background: #888;
-		border-radius: 4px;
-	}
-
-	.timetable-container::-webkit-scrollbar-thumb:hover {
-		background: #555;
 	}
 </style>

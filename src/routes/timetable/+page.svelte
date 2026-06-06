@@ -107,9 +107,4 @@
 		padding: 5px 15px;
 		border-radius: 5px;
 	}
-
-	.day-button.active {
-		font-weight: bold;
-		background-color: color-mix(in srgb, var(--main-text-color) 15%, white);
-	}
 </style>
