@@ -13,10 +13,12 @@
 
 	// 時間範囲を解析
 	function parseTimeRange(timeRange: string): { start: number; end: number } {
-		const [startStr, endStr] = timeRange.split(' ~ ');
+		const normalized = timeRange.replace(/\s+/g, '');
+		const parts = normalized.includes('~') ? normalized.split('~') : normalized.split('-');
+		const [startStr, endStr] = parts;
 		return {
-			start: timeToMinutes(startStr),
-			end: timeToMinutes(endStr)
+			start: timeToMinutes(startStr || '0:00'),
+			end: timeToMinutes(endStr || '0:00')
 		};
 	}
 
@@ -54,18 +56,25 @@
 
 	// 開催場所の一覧を指定された順番で取得
 	function getUniqueLocations(events: ProcessedEvent[]): string[] {
-		// 指定された順番
 		const locationOrder = ['2階 テラス', '1階 第2体育室', '3･4階 関心ラウンジ'];
+		const seenLocations: string[] = [];
+		const locationSet = new Set<string>();
 
-		// 存在する場所のみを順番通りにフィルタリング
-		const existingLocations = new Set<string>();
 		events.forEach((event) => {
-			if (event.location) {
-				existingLocations.add(event.location);
+			if (event.location && !locationSet.has(event.location)) {
+				locationSet.add(event.location);
+				seenLocations.push(event.location);
 			}
 		});
 
-		return locationOrder.filter((location) => existingLocations.has(location));
+		const orderedLocations = locationOrder.filter((location) => locationSet.has(location));
+		seenLocations.forEach((location) => {
+			if (!orderedLocations.includes(location)) {
+				orderedLocations.push(location);
+			}
+		});
+
+		return orderedLocations;
 	}
 
 	// 日付ごとにイベントをグループ化
@@ -80,13 +89,16 @@
 		return grouped;
 	}
 
-	// 指定された場所と日のイベントを取得
-	function getEventsForLocationAndDay(
-		events: ProcessedEvent[],
-		location: string,
-		day: number
-	): ProcessedEvent[] {
-		return events.filter((event) => event.location === location && event.dayNumber === day);
+	function buildEventMap(events: ProcessedEvent[]): Map<string, ProcessedEvent[]> {
+		const map = new Map<string, ProcessedEvent[]>();
+		events.forEach((event) => {
+			const key = `${event.dayNumber}-${event.location || ''}`;
+			if (!map.has(key)) {
+				map.set(key, []);
+			}
+			map.get(key)!.push(event);
+		});
+		return map;
 	}
 
 	// 【修正】タイムラインを固定（10:00〜17:00）
@@ -104,13 +116,15 @@
 
 	// 時間位置をパーセントで計算（固定レンジに対して）
 	function getTimePosition(minutes: number): number {
-		return ((minutes - FIXED_TIME_RANGE.min) / (FIXED_TIME_RANGE.max - FIXED_TIME_RANGE.min)) * 100;
+		const position = ((minutes - FIXED_TIME_RANGE.min) / (FIXED_TIME_RANGE.max - FIXED_TIME_RANGE.min)) * 100;
+		return Math.min(100, Math.max(0, position));
 	}
 
 	// イベントカードのスタイルを計算（Y軸の位置と高さ）
 	function getEventStyle(event: ProcessedEvent): string {
 		const topPercent = getTimePosition(event.startMinutes);
-		const heightPercent = (event.duration / (FIXED_TIME_RANGE.max - FIXED_TIME_RANGE.min)) * 100;
+		const rawHeightPercent = (event.duration / (FIXED_TIME_RANGE.max - FIXED_TIME_RANGE.min)) * 100;
+		const heightPercent = Math.max(4, Math.min(100 - topPercent, rawHeightPercent));
 		return `top: ${topPercent}%; height: ${heightPercent}%; min-height: 40px;`;
 	}
 
@@ -126,6 +140,7 @@
 	let processedEvents = $derived(processEvents());
 	let groupedByDay = $derived(groupByDay(processedEvents));
 	let uniqueLocations = $derived(getUniqueLocations(processedEvents));
+	let eventsByDayAndLocation = $derived(buildEventMap(processedEvents));
 
 	// 表示する日（データから抽出）
 	let availableDays = $derived(Array.from(groupedByDay.keys()).sort());
@@ -144,7 +159,7 @@
 	};
 
 	function getDayLabel(day: number): string {
-		return dayLabelMap[day] || 'Day ${day}';
+		return dayLabelMap[day] || `Day ${day}`;
 	}
 	/*e: 日付ラベルのマッピング*/
 
@@ -153,7 +168,7 @@
 
 	$effect(() => {
 		const dateParam = Number($page.url.searchParams.get('date'));
-		selectedDay = [1, 2, 3].includes(dateParam) ? dateParam : 1;
+		selectedDay = [1, 2, 3].includes(dateParam) ? dateParam : (availableDays[0] || 1);
 	});
 
 	function setSelectedDay(day: number) {
@@ -245,6 +260,7 @@
 						<!--s: カテゴリ別列-->
 						<div class="locations-container">
 							{#each uniqueLocations as location}
+								{@const locationEvents = eventsByDayAndLocation.get(`${day}-${location}`) || []}
 								<div class="location-column">
 									<div class="grid-lines">
 										{#each timeGridLines as timeMinutes}
@@ -252,9 +268,8 @@
 										{/each}
 									</div>
 									<!--s: eventカード-->
-									{#each getEventsForLocationAndDay(dayEvents, location, day) as event (event.id + location + event.startMinutes)}
+									{#each locationEvents as event (event.id + location + event.startMinutes)}
 										{@const eventLink = getEventLink(event)}
-
 										{#if eventLink}
 											<a href={eventLink} class="event-card-link">
 												<div
