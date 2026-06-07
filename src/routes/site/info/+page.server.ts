@@ -1,19 +1,25 @@
 import { env } from '$env/dynamic/private';
 import type { PageServerLoad } from './$types';
+import promises from 'fs';
+import path from 'path';
 
 export const load: PageServerLoad = async () => {
-    // JSONデータを取得
-    const response = await fetch('https://pic.atserver186.jp/json/tf26/credit.json');
-    
-    if (!response.ok) {
-        throw new Error(`データの取得に失敗しました: ${response.status}`);
+    try {
+        //ファイルパスを解決（プロジェクトのルートディレクトリ基準）
+        const filePath = path.resolve('src/lib/server/data/credit.json');
+        
+        //ファイルを非同期で読み込み
+        const fileContent = await promises.promises.readFile(filePath, 'utf-8');
+        
+        //JSON文字列をオブジェクトに変換
+        const items = JSON.parse(fileContent);
+        
+        return {
+            //サーバーに設定した名前を表示(/etc/environment)
+            serverLocation: env.SERVER_LOCATION || 'Unknown Server',
+            items: items
+        };
+    } catch (error) {
+        throw new Error(`データの取得に失敗しました: ${error instanceof Error ? error.message : String(error)}`);
     }
-    
-    const items = await response.json();
-    
-    return {
-        // OS側の /etc/environment 等に設定した変数名
-        serverLocation: env.SERVER_LOCATION || 'Unknown Server',
-        items: items
-    };
 };
