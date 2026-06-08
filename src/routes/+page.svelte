@@ -264,7 +264,7 @@
 	<!--s: 重要-->
 	<div class="tp-info container mx-auto mt-10 rounded-xl p-4" data-aos="fade-up">
 		<p class="mb-4 text-center text-xl font-bold md:text-2xl">
-			桐朋祭が無事終了しました！
+			第75回桐朋祭が無事終了しました！
 		</p>
 		<p class="text-bace mb-2 text-center md:text-lg">
 			たくさんのご来場ありがとうございました！
