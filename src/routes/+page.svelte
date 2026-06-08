@@ -264,21 +264,11 @@
 	<!--s: 重要-->
 	<div class="tp-info container mx-auto mt-10 rounded-xl p-4" data-aos="fade-up">
 		<p class="mb-4 text-center text-xl font-bold md:text-2xl">
-			<i class="fa-solid fa-triangle-exclamation"></i>飲食の決済方法について
+			桐朋祭が無事終了しました！
 		</p>
 		<p class="text-bace mb-2 text-center md:text-lg">
-			今年度から、生徒による飲食団体は&nbsp;<strong class="text-lg underline md:text-xl"
-				>交通系ICカード決済限定</strong
-			>&nbsp;です。
-			<br />
-			駅などであらかじめチャージの上、お越しください。
+			たくさんのご来場ありがとうございました！
 		</p>
-		<button onclick={() => openModal('topp-important')} class="link-main">
-			<div class="link-main-underline">
-				<i class="fa-solid fa-arrow-right-long"></i>
-				<span>詳細はこちら</span>
-			</div>
-		</button>
 	</div>
 	<!--e: 重要-->
 	<!---->
