@@ -1,1119 +1,1119 @@
 [
-    {
-        "id": "computer-club",
-        "title": "コンピューター部",
-        "heading": null,
-        "body": "コンピューター部が、今年も桐朋祭にやってくる！\r\n部員が制作したゲーム・曲・映像・サーバーをご照覧あれ！\r\n\r\n###### ※ゲームはプレイ可",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/7055c068-4ba6-420b-8389-8529d15d32c1.webp",
-        "type": "organization",
-        "date": null,
-        "category": "general,展示,体験,アクティビティ,配布物あり",
-        "location": "3-1,3-2",
-        "top_img": null
-    },
-    {
-        "id": "sll-1",
-        "title": "中央線と輸送力課題",
-        "heading": null,
-        "body": "test",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/62245b2f-ee50-42f8-8071-d4dec19af7bb.webp",
-        "type": "organization",
-        "date": null,
-        "category": "student-lessons",
-        "location": "3･4階 関心ラウンジ",
-        "schedule": [
-            {
-                "day": "1",
-                "time": "12:30 ~ 13:10"
-            }
-        ],
-        "top_img": null
-    },
-    {
-        "id": "opening",
-        "title": "開会式",
-        "heading": null,
-        "body": "いよいよ桐朋祭の幕開け!\r\n\r\n音楽部のファンファーレに包まれながら、3日間続く桐朋祭の火蓋が切って落とされる!",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/1ed85e68-aef5-48b6-9850-1d72bbb7f6df.PNG",
-        "type": "organization",
-        "date": null,
-        "category": "stage",
-        "location": "2階 テラス",
-        "schedule": [
-            {
-                "day": "1",
-                "time": "12:00 ~ 12:30"
-            }
-        ],
-        "top_img": null
-    },
-    {
-        "id": "closing",
-        "title": "閉会式",
-        "heading": null,
-        "body": "とうとう桐朋祭に終わりが告げられる･･･。\r\n\r\n果たして一番人気を勝ち得た参加団体はどこなのか!?",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/1f8922b5-0f4c-4fe4-8779-ebbda3b33b17.PNG",
-        "type": "organization",
-        "date": null,
-        "category": "stage",
-        "location": "2階 テラス",
-        "schedule": [
-            {
-                "day": "3",
-                "time": "13:00 ~ 13:30"
-            }
-        ],
-        "top_img": null
-    },
-    {
-        "id": "dj",
-        "title": "DJ",
-        "heading": null,
-        "body": "### ミニ企画",
-        "thumbnail": null,
-        "type": "organization",
-        "date": null,
-        "category": "stage",
-        "location": "2階 テラス",
-        "schedule": [
-            {
-                "day": "1",
-                "time": "15:00 ~ 15:30"
-            },
-            {
-                "day": "2",
-                "time": "14:30 ~ 15:00"
-            }
-        ],
-        "top_img": null
-    },
-    {
-        "id": "Mr_x_Ms_Toho",
-        "title": "Mr. x Ms. TOHO",
-        "heading": null,
-        "body": "桐朋一のイケメン高校生と美少女が、ついに夢のコラボ! 選ばれしファイナリストたちが男女でカップルを組み、 芸を披露! シンクロ率が高いベストカップルを選びます!",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/87257523-c76d-4cb9-84e0-45a5e22b5ca0.PNG",
-        "type": "organization",
-        "date": null,
-        "category": "stage",
-        "location": "2階 テラス",
-        "schedule": [
-            {
-                "day": "2",
-                "time": "11:15 ~ 12:15"
-            }
-        ],
-        "top_img": null
-    },
-    {
-        "id": "interim-announcement",
-        "title": "中間発表",
-        "heading": null,
-        "body": "2日目の開会式!\r\n\r\n土曜までの桐朋祭大賞得票数が上位の参加団体の代表によるあいさつがあります!",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/95fc0ac2-9574-4f7b-8c35-84ac3130903f.PNG",
-        "type": "organization",
-        "date": null,
-        "category": "stage",
-        "location": "2階 テラス",
-        "schedule": [
-            {
-                "day": "2",
-                "time": "10:00 ~ 10:30"
-            }
-        ],
-        "top_img": null
-    },
-    {
-        "id": "jumprope-club-s",
-        "title": "なわとび部",
-        "heading": null,
-        "body": "### ミニ企画",
-        "thumbnail": null,
-        "type": "organization",
-        "date": null,
-        "category": "stage",
-        "location": "2階 テラス",
-        "schedule": [
-            {
-                "day": "2",
-                "time": "12:30 ~ 13:00"
-            }
-        ],
-        "top_img": null
-    },
-    {
-        "id": "toho-collection",
-        "title": "TOHO COLLECTION",
-        "heading": null,
-        "body": "服装自由な桐朋高校に通う生徒は、ファッションセンスがずば抜けている。他校では想像できない、衣服を超えた芸術作品をとくとご覧あれ!",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/e03d1e53-80b4-4a78-b68f-8acd6e6c0c1f.PNG",
-        "type": "organization",
-        "date": null,
-        "category": "stage",
-        "location": "2階 テラス",
-        "schedule": [
-            {
-                "day": "1",
-                "time": "15:30 ~ 16:30"
-            }
-        ],
-        "top_img": null
-    },
-    {
-        "id": "no_no_boys",
-        "title": "No No Boys",
-        "heading": null,
-        "body": "某人気オーディション番組が桐朋に!?\r\n\r\nいままで、「No」と言われてきた、または自分に「No」を突きつけてきた男たちが、自らの個性を武器に最強のグループを決めるダンスプロジェクトが今始まる!",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/44aafada-6173-4fe6-add7-872f05bff579.PNG",
-        "type": "organization",
-        "date": null,
-        "category": "stage",
-        "location": "2階 テラス",
-        "schedule": [
-            {
-                "day": "2",
-                "time": "13:00 ~ 14:00"
-            }
-        ],
-        "top_img": null
-    },
-    {
-        "id": "toho_mc_battle",
-        "title": "TOHO MC BATTLE",
-        "heading": null,
-        "body": "「俺が桐朋で一番強いラッパーだよ」\r\n\r\n「いや俺だよ」\r\n\r\n「じゃあ、桐朋祭で決めよっか」",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/c37bd33d-7fe8-45bf-b7fe-959c57b08a14.PNG",
-        "type": "organization",
-        "date": null,
-        "category": "stage",
-        "location": "2階 テラス",
-        "schedule": [
-            {
-                "day": "2",
-                "time": "15:00 ~ 15:45"
-            }
-        ],
-        "top_img": null
-    },
-    {
-        "id": "teacher's_hidden_talent",
-        "title": "教員かくし芸",
-        "heading": null,
-        "body": "すごいのは生徒だけじゃない! はちゃめちゃな桐朋生を育てる先生はなんでもできる! そんな教員たちの、普段は見ることができない知られざるかくし芸をお楽しみください!",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/16c69f7d-cdb4-4844-966b-79e3d48b015e.webp",
-        "type": "organization",
-        "date": null,
-        "category": "stage",
-        "location": "2階 テラス",
-        "schedule": [
-            {
-                "day": "3",
-                "time": "11:30 ~ 12:30"
-            }
-        ],
-        "top_img": null
-    },
-    {
-        "id": "teacher_vs_student",
-        "title": "教員 VS 生徒",
-        "heading": null,
-        "body": "教員と桐朋生、結局どっちが優れてるの? 人生経験豊富な先生と、未来を託された若き学生があらゆる分野で戦います!",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/e17178b7-2ff3-4f0e-8c5c-8c0e83fb58f9.PNG",
-        "type": "organization",
-        "date": null,
-        "category": "stage",
-        "location": "2階 テラス",
-        "schedule": [
-            {
-                "day": "3",
-                "time": "10:00 ~ 11:00"
-            }
-        ],
-        "top_img": null
-    },
-    {
-        "id": "ragucafe",
-        "title": "ラグカフェ",
-        "heading": null,
-        "body": "屈強なメイドが「美味しくなる魔法」を注入。鍛え抜いた腕で焼く至高のパンケーキを、極上のギャップと共にお召し上がりください。\r\n\r\n## メニュー\r\n\r\n### ホットケーキ 各200円\r\n- チョコ\r\n- メープル\r\n- キャラメル\r\n\r\n### ドリンク 各200円\r\n- カルピスアップル\r\n- カルピスオレンジ\r\n\r\n#### ホットケーキ & ドリンクセット 300円",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/c3756451-cde5-4219-a20b-ce5217cf423e.png",
-        "type": "organization",
-        "date": null,
-        "category": "food,喫茶,グループ向け",
-        "location": "1-1",
-        "top_img": null
-    },
-    {
-        "id": "shiratama",
-        "title": "しらたま",
-        "heading": null,
-        "body": "もちもち食感がクセになる白玉スイーツ！ ひんやり甘くて何度でも食べたくなる一品をぜひ味わってください！\r\n\r\n## メニュー\r\n\r\n### しらたま\r\n- あんこ & きなこ 200円\r\n- みたらし 200円\r\n- 黒蜜きなこ 200円\r\n- フルーツポンチ 300円",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/7333eeb6-5677-4f2e-bb0c-5b4dce66dbf7.jpeg",
-        "type": "organization",
-        "date": null,
-        "category": "food,喫茶",
-        "location": "1-4",
-        "top_img": null
-    },
-    {
-        "id": "morino_kasuteraya",
-        "title": "森のカステラ屋",
-        "heading": null,
-        "body": "昨年の飲食大賞店がリニューアルして、今年もオープン！提供の速さ、味、見た目のすべてが自信あり！是非、ご賞味あれ。\r\n\r\n## メニュー\r\n\r\n### ベビーカステラ\r\n- プレーン 250円\r\n- いちご 300円\r\n- チョコ 300円\r\n- メープル 300円",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/4dd6b02c-5a8a-4e79-b403-529c498be2a0.jpg",
-        "type": "organization",
-        "date": null,
-        "category": "food,喫茶,所要時間短め,SNS映え",
-        "location": "1-5",
-        "top_img": null
-    },
-    {
-        "id": "toho_trpg",
-        "title": "桐朋TRPG",
-        "heading": null,
-        "body": "ついに桐朋祭にTRPGができました!\r\nサイコロ振って大冒険　全く知らないって人も大歓迎　家族とも友達とも一緒に体験できます",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/e26addcb-8167-4591-88ea-cb6137f00083.jpg",
-        "type": "organization",
-        "date": null,
-        "category": "general,体験,グループ向け,有志団体",
-        "location": "2-1",
-        "top_img": null
-    },
-    {
-        "id": "grade1_participation",
-        "title": "中1学年参加",
-        "heading": null,
-        "body": "86期中１は名画を自画像風に改作したり自分たちを登場させたりしてみました！素材作品が同じでも個性あふれる絵にぬっています！",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/79804afc-b36d-474b-98fd-f01694586137.JPG",
-        "type": "organization",
-        "date": null,
-        "category": "general,展示,受験生向け,SNS映え",
-        "location": "2-2,2-3",
-        "top_img": null
-    },
-    {
-        "id": "grade2_participation",
-        "title": "中2学年参加",
-        "heading": null,
-        "body": "最近、新聞を読んでいますか？85期学年参加では、班に分かれて新聞を作ってみました！一面記事は何かな？",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/01e73480-9b9a-431b-864e-6eb3141b909b.webp",
-        "type": "organization",
-        "date": null,
-        "category": "general,展示",
-        "location": "2-4",
-        "top_img": null
-    },
-    {
-        "id": "grade3_participation",
-        "title": "中3学年参加",
-        "heading": null,
-        "body": "84期生憧れの職業を取材をもとに展示や発表を行います。ランキング、職業体験、クイズがあり賞状も用意しています。",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/45958283-d248-49e2-849c-4ff1d8b80b20.webp",
-        "type": "organization",
-        "date": null,
-        "category": "general,展示,パフォーマンス,アクティビティ",
-        "location": "2-5,2-6",
-        "top_img": null
-    },
-    {
-        "id": "touban_deguchi",
-        "title": "桐番出口",
-        "heading": null,
-        "body": "ゲーム「8番出口」をイメージして作った脱出ゲームです！異常を全て見つけて教室から脱出しましょう！",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/108bfdc1-eab4-4904-98f1-abf46d118e38.webp",
-        "type": "organization",
-        "date": null,
-        "category": "general,体験,アクティビティ,グループ向け,有志団体",
-        "location": "3-3",
-        "top_img": null
-    },
-    {
-        "id": "senritsu_toho",
-        "title": "戦慄桐朋",
-        "heading": null,
-        "body": "桐朋祭大賞を目指して。 82期伝統のお化け屋敷。 桐朋で唯一、合法的に叫べる場所。",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/b9e0c1e9-e1c8-4369-915a-2546fdc9407a.webp",
-        "type": "organization",
-        "date": null,
-        "category": "general,体験,グループ向け,有志団体",
-        "location": "特1,特2",
-        "top_img": null
-    },
-    {
-        "id": "kyousuki",
-        "title": "香、好きになりました。",
-        "heading": null,
-        "body": "将棋部員との指導対局や、お客様同士の自由対局ができます!! 全国4位の部員と対局できます。",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/fcaff196-9e05-40e5-b70c-fe51ac00dd85.webp",
-        "type": "organization",
-        "date": null,
-        "category": "general,体験,配布物あり",
-        "location": "特3,特4",
-        "top_img": null
-    },
-    {
-        "id": "tekken",
-        "title": "てっけん！",
-        "heading": null,
-        "body": "## ～あなたの日常に！を～\r\n## ～非日常な体験を あなたに～\r\n\r\n## 巨大ジオラマ\r\nてっけんの代名詞ともいえる、一辺が５m以上もある巨大ジオラマ。部員たちは一年間の活動の大半をこのジオラマの製作に費やしています。\r\nまた、ジオラマ上を走る鉄道模型は眺めるだけでなく、あなたの手で運転することもできます！手作りで再現された運転台に座り、ジオラマに没入して運転ができる、例年人気の高い体験です。\r\n今年度は、整理券制ではございませんので、お並び頂ければどなたでも体験できます。\r\n※当日のジオラマの整備状況などにより、急遽中止させていただく場合もございます。\r\n\r\n## 部員による研究\r\n当部活の部員有志により制作された研究誌「桐の鉄」を毎年桐朋祭にて配布しています。配布できる部数には限りがございます。web上での掲載も行っていますので、そちらもあわせてご覧ください。\r\n\r\n## 鉄道運転シミュレーター\r\nリアルな運転台と迫力の大画面で鉄道の運転体験ができるシミュレーターです。まるで運転士になったかのような体験ができます。\r\nこちらも今年度は、整理券制ではございませんので、お並び頂ければどなたでも体験できます\r\n\r\n## 発車メロディー操作体験\r\n実際に駅で使用されているスイッチで発車メロディーを鳴らす体験ができます。スタッフに、「〇〇駅の曲」や、「〇〇（曲名）」と言えば、リクエストに応じて流す曲を変えてくれるサービスもございます。\r\n\r\n## 鉄道研究模造紙\r\n今年開業100周年を迎えた国立駅や東急渋谷駅に関する研究や身近な鉄道に関する知識などを模造紙にまとめ、展示します。\r\n\r\n## 鉄道クイズ\r\n部員が考えた鉄道にまつわるクイズを解いていただけます。難易度は初級と上級に分かれており、初級は実力問題に加え、会場内の展示に答えがある問題もありますので、鉄道の知識が少ない方でも存分にお楽しみいただけます。また、クイズを解いた方全員に、参加賞をプレゼント！さらに、上級の全問正解者には特別な景品もご用意しております！\r\n※景品には限りがございますので、状況によってはお渡しできない場合がございます。\r\n※景品の内容に変更が発生する場合がございます。\r\n\r\n上記以外にも様々な展示を用意しています。また、今年度は内装・外装も鉄道を感じられるようにこだわっております。\r\n是非一度1-A、1-B教室「てっけん！」にお越しください！\r\n\r\n## リンク\r\n[てっけん！桐朋祭特設サイト](https:\/\/tohotekken.wixsite.com\/2026)\r\n\r\n展示の詳細や教室内のマップ、部誌などがご覧いただけます。\r\n\r\n[X（＠touhoutekken）](https:\/\/x.com\/touhoutekken)\r\n\r\n桐朋祭準備の様子や桐朋祭当日の混雑状況など、インフォメーションとして機能します。\r\n\r\n[Instagram（＠toho_railwayclub）](https:\/\/www.instagram.com\/toho_railwayclub\/)\r\n\r\n普段の活動の様子などがご覧いただけます。\r\n\r\n---\r\n\r\n## イベント情報\r\n\r\n### 鉄道運転シミュレーター @高校棟4階 1-A・B\r\n**常時開催**\r\n\r\n迫力の大画面で、横浜線などの運転体験ができます。\r\n\r\n整理券等は不要ですのでお気軽にお越しください！",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/d185d05d-7582-4717-b706-394247745608.webp",
-        "type": "organization",
-        "date": null,
-        "category": "general,展示,体験,グループ向け,受験生向け,配布物あり,SNS映え,article,イベント",
-        "location": "1-A,1-B",
-        "top_img": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/80b36a54-70cf-458f-b380-c226f9bdcb65.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/c5995795-9a10-40d6-ae18-1f22b6d766f5.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/c22d2dfe-c006-4d49-841b-d9c0eec32d23.webp"
-    },
-    {
-        "id": "aka_tombo",
-        "title": "交通研究部「赤とんぼ」",
-        "heading": null,
-        "body": "プラモデル展示、ラジコンショーなどを行っています！飛行機や戦車、船やガンダムの精密な模型をどうぞご覧下さい！\r\n\r\n---\r\n\r\n## イベント情報\r\n\r\n### さよならラジコンショー\r\n**※常時開催**\r\n\r\n大迫力のラジコンを見学できます！",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/ddd9928c-0418-4333-a43c-4a52a0fabaac.webp",
-        "type": "organization",
-        "date": null,
-        "category": "general,展示,パフォーマンス,SNS映え,イベント",
-        "location": "1-C",
-        "top_img": null
-    },
-    {
-        "id": "putt_x_putt_golf",
-        "title": "Putt×Putt Golf",
-        "heading": null,
-        "body": "## ⛳ Putt×Putt GOLF ⛳\r\n\r\n高校塔4階1-E教室で、ゴルフの楽しさを気軽に体験できる「Putt×Putt GOLF」を開催します！\r\n\r\n教室の入り口にデカい緑色のアーチがあり、そこがPutt×Putt GOLFの目印です！\r\n\r\n会場には全部で4つのパターゴルフコースを用意しています。コースごとに難易度や特徴が異なるので、初心者の方から経験者の方まで幅広く楽しむことができます。友達同士でスコアを競ったり、親子で協力しながら挑戦したりと、世代を問わず盛り上がれるアトラクションです。\r\n\r\nさらに、ランキングボードも設置しています。高得点を目指して挑戦し、ぜひ上位ランクインを狙ってみてください！\r\n\r\nまた、この企画を運営しているゴルフ部は、普段は野球場の奥にあるゴルフ部専用の練習スペースで活動しています。活動日は月曜日・木曜日・土曜日です。毎週木曜日には学校近くの打ちっぱなし練習場でも練習を行い、技術向上に励んでいます。\r\n\r\nゴルフ部では初心者・経験者を問わず部員を募集しています。クラブなどの用具は部室に揃っているため、自分の道具を持っていなくても気軽に始めることができます。また、春と夏には合宿も行っており、部員同士で楽しく交流しながら技術を磨いています。\r\n\r\nパターゴルフを楽しみながら、ぜひゴルフ部の魅力も感じてください。皆さまのご来場をお待ちしています！🏌️‍♂️✨",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/56860f31-dbc8-4bd1-a54d-c6f77c248567.webp",
-        "type": "organization",
-        "date": null,
-        "category": "general,体験,アクティビティ,グループ向け,受験生向け,article",
-        "location": "1-E",
-        "top_img": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/25d0462c-18bf-4cd9-a5f5-9a47f5c463dc.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/a55fe586-390c-442e-8c21-054f74aed5db.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/fda73d71-f34f-47d1-b184-72976a6553ab.webp"
-    },
-    {
-        "id": "toho_photo_club",
-        "title": "桐朋写真部",
-        "heading": null,
-        "body": "シャッターの先に、新しい世界。",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/4be74a08-0e61-4540-987b-9197355a6658.webp",
-        "type": "organization",
-        "date": null,
-        "category": "general,展示,受験生向け,所要時間短め,SNS映え",
-        "location": "1-F",
-        "top_img": null
-    },
-    {
-        "id": "godzilla_kenkyushitsu",
-        "title": "ゴジラ研究室",
-        "heading": null,
-        "body": "ゴジラを各々で研究している研究室です。メンバーが集めたグッズなども展示されてるのでお見逃しなく!!",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/d85c2f72-7b93-459c-acb7-449bc95f25ea.webp",
-        "type": "organization",
-        "date": null,
-        "category": "general,展示,有志団体",
-        "location": "2-A",
-        "top_img": null
-    },
-    {
-        "id": "tokusatsu_doukoukai",
-        "title": "特撮同好会",
-        "heading": null,
-        "body": "特撮作品の玩具等の展示や35種類以上の作品クイズがあり、去年人気を博したゴチゾウは圧巻の340個以上の展示。観る価値アリ",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/d33d9f90-d78b-47f1-9da9-920c219b4ef9.webp",
-        "type": "organization",
-        "date": null,
-        "category": "general,展示,体験,SNS映え",
-        "location": "2-B",
-        "top_img": null
-    },
-    {
-        "id": "tdk",
-        "title": "桐朋電子研",
-        "heading": null,
-        "body": "桐朋電子研では、「射的プリンター」や「黒電話モグラ叩き」など、廃材を使った作品を展示しています。是非お越しください！",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/b23ec6e7-5f90-41c9-b8e4-4e0e35a28b59.webp",
-        "type": "organization",
-        "date": null,
-        "category": "general",
-        "location": "2-G"
-    },
-    {
-        "id": "dousoukai",
-        "title": "同窓会",
-        "heading": null,
-        "body": "卒業生の皆さん、桐朋祭をお楽しみいただいた後はこちらでお休みください。同期の待機場所としてもご利用いただけます。",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/8c772ff3-52d5-423e-96d1-04e8cfc2f496.webp",
-        "type": "organization",
-        "date": null,
-        "category": "other",
-        "location": "1-G"
-    },
-    {
-        "id": "art_club_origami_exhibition",
-        "title": "美術部折り紙展",
-        "heading": null,
-        "body": "去年、桐朋祭初参加で大きな反響を呼んだ折り紙展。今年は2教室になって再び登場！\r\n\r\n個性あふれる精巧な作品、迫力満点な巨大作品などを展示中。折り紙のガチャガチャで折り紙作品をゲット!?\r\n体験コーナーもあるので折り紙初心者でも大歓迎！\r\n\r\n高校棟3階 2-C、2-Dで出展予定。\r\nぜひ遊びに来てください。\r\n\r\n---\r\n\r\n[部のTwitter: https:\/\/x.com\/toho_origami](https:\/\/x.com\/toho_origami)",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/5590bc32-4fb0-407a-b6ab-a971f80a35d7.webp",
-        "type": "organization",
-        "date": null,
-        "category": "general,展示,体験,article",
-        "location": "2-C,2-D",
-        "top_img": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/f69af09d-ec70-4d66-8065-6eeea57cd4e5.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/69e0cb6b-d8e9-499e-ae56-4c4bf76e6884.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/8ee7568a-b78f-4993-b9dd-2436a7297b52.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/3d4f1f60-259e-41bd-b462-f2dbcb3dbe3e.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/4f9b7611-d29c-4ae1-bed3-82a1551ec4a2.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/4f2b30cb-9498-47fd-97ec-e4a315c55efa.webp"
-    },
-    {
-        "id": "zuka",
-        "title": "ZUKA",
-        "heading": null,
-        "body": "超爆裂究極展示「ZUKA」 「石塚」の思考の全てを投影した究極空間。 インドに行ったくらい世界観変わる。必ず。",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/15fc5b2e-d315-4f02-9f45-930d7ecc9856.webp",
-        "type": "organization",
-        "date": null,
-        "category": "general,展示,配布物あり,所要時間短め",
-        "location": "2-F",
-        "top_img": null
-    },
-    {
-        "id": "library_committee",
-        "title": "図書委員会",
-        "heading": null,
-        "body": "図書委員会です。委員達の熱いビブリオバトルや桐朋の誇る図書館のツアーがあるのでぜひ来てください。古本配布もあります。\r\n\r\n## イベント情報\r\n自分がおすすめしたい本を紹介する、ビブリオバトルを行います！\r\n\r\n普段本を読む人もそうでない人もぜひお越しください。\r\n### 6\/6(土) 14:00 ~ 15:00 , 15:30 ~ 16:30\r\n### 6\/7(日) 10:30 ~ 11:30 , 12:30 ~ 13:30 , 14:30 ~ 15:30",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/0b4328ce-2ca2-4541-a9c1-278e56fd100f.webp",
-        "type": "organization",
-        "date": null,
-        "category": "general,展示,パフォーマンス,イベント",
-        "location": "高校棟 2階 3-A",
-        "top_img": null
-    },
-    {
-        "id": "hawaiian_cafe",
-        "title": "ハワイアンカフェ アロハ・エ・コモ・マイ",
-        "heading": null,
-        "body": "ハワイアンカフェ アロハ・エ・コモ・マイでワッフルを提供中。ここ桐朋でハワイの雰囲気感じちゃってください。ALOHA！\r\n\r\n## メニュー\r\n\r\n### ワッフル & ドリンクセット 550円\r\n\r\n:::note warn\r\n※ 単品注文はできません\r\n:::\r\n\r\n### ワッフル\r\n- チョコ\r\n- メープル\r\n\r\n### ドリンク\r\n- アップルティー\r\n- ブルーハワイサンダー\r\n- レモンサイダー",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/73d37ec1-91f8-424d-b495-e89214d61eb9.webp",
-        "type": "organization",
-        "date": null,
-        "category": "food,喫茶,グループ向け,SNS映え,有志団体",
-        "location": "3-B,3-C",
-        "top_img": null
-    },
-    {
-        "id": "okutamanokafun",
-        "title": "奥多摩の花粉",
-        "heading": null,
-        "body": "ワンダーフォーゲル部の飲食が久しぶりに復活！ひまわりの種と6種の味のサクサクポップコーンを是非ご賞味あれ！\r\n\r\n## ポップコーン 各200円\r\n- 塩\r\n- 醤油バター\r\n- カレー\r\n- コンソメ\r\n- ガーリック\r\n- のりしお\r\n## ひまわりの種 100円\r\n\r\n## ポップコーン & ひまわりセット 250円",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/84945303-c993-4e1c-ade9-1c780b1b45ce.webp",
-        "type": "organization",
-        "date": null,
-        "category": "food,喫茶,所要時間短め",
-        "location": "3-D",
-        "top_img": null
-    },
-    {
-        "id": "sutabar",
-        "title": "スタBar",
-        "heading": null,
-        "body": "雰囲気オシャレで映える桐朋祭限定のBar、記憶に残る一杯を求めてご来店ください。\r\n\r\n## ミニクレープ 250円\r\n\r\n## ドリンク\r\n- ココアラテ 250円\r\n- いちごラテ 250円\r\n- 抹茶ラテ 300円\r\n- ブルーサイダー 200円\r\n- レモンスカッシュ 200円\r\n- マンゴーソーダ 250円\r\n- メロンソーダ 250円",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/8d2433e4-782f-4074-bd8f-a9f9c0e3a930.webp",
-        "type": "organization",
-        "date": null,
-        "category": "food,喫茶,有志団体",
-        "location": "3-F,3-G",
-        "top_img": null
-    },
-    {
-        "id": "sasuke",
-        "title": "SASUKE",
-        "heading": null,
-        "body": "恒例のSASUKEが今年も登場！体操器具を使った本格的なアスレチックです。小学生の方でもぜひ楽しんでください！",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/49bf41c9-c62f-4da3-8c70-7017fe7c5ed9.webp",
-        "type": "organization",
-        "date": null,
-        "category": "general,アクティビティ",
-        "location": "第3体育館",
-        "top_img": null
-    },
-    {
-        "id": "eis_bahn",
-        "title": "EIS BAHN",
-        "heading": null,
-        "body": "我らスキー部が今年もかき氷屋を出店します!!!!「桐朋祭といえばスキー部のかき氷！」なんて声も聞こえたり…\r\n\r\n## かき氷 各200円\r\n- いちご\r\n- グレープ\r\n- レモン\r\n- ピーチ\r\n- オレンジ\r\n- コーヒー\r\n- メロン\r\n- ハワイアンブルー\r\n- 抹茶\r\n- マンゴー\r\n- コーラ\r\n\r\n## トッピング 各50円\r\n- パチパチパニック\r\n- 練乳",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/90745a0a-ff8d-4db9-968b-a4fd3580806a.webp",
-        "type": "organization",
-        "date": null,
-        "category": "food,屋台,グループ向け,受験生向け,所要時間短め,SNS映え,有志団体",
-        "location": "屋台",
-        "top_img": null
-    },
-    {
-        "id": "dog_stand_82",
-        "title": "Dog Stand 82",
-        "heading": null,
-        "body": "屋台スペースで営業中。 ケチャップ、マスタードの王道系からタルタルソースなど、すこしひねりの効いた逸品まで。\r\n\r\n## ホットドッグ 各350円\r\n- ケチャップ & マスタード\r\n- サルサソース\r\n- タルタルソース\r\n\r\n※タルタルソースは個数限定",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/6d5da659-949e-4da0-8327-6546ca5061c8.webp",
-        "type": "organization",
-        "date": null,
-        "category": "food,屋台,グループ向け,有志団体",
-        "location": "屋台",
-        "top_img": null
-    },
-    {
-        "id": "luggage_storage",
-        "title": "荷物預かり",
-        "heading": null,
-        "body": "桐朋祭をまわる際にかさばる靴や傘、預かります。荷物も心も軽くして桐朋祭をまわってみてはいかがですか？",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/97eaecfa-4e92-4fe1-8b0d-6039bd7c9a46.webp",
-        "type": "organization",
-        "date": null,
-        "category": "other,所要時間短め,その他",
-        "location": "スタディエリア",
-        "top_img": null
-    },
-    {
-        "id": "school_information_session_by_students",
-        "title": "生徒による学校説明会",
-        "heading": null,
-        "body": "生徒目線で、生徒だけで桐朋の魅力を語ります！桐朋に興味のある人必見！ぜひ見に来てください！\r\n\r\n## イベント情報\r\n### 6\/7(日) 14:00 ~ 15:00",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/5e492b54-4d27-4a88-b1b9-41a53d482281.webp",
-        "type": "organization",
-        "date": null,
-        "category": "other,イベント",
-        "location": "1階 ホール",
-        "top_img": null
-    },
-    {
-        "id": "toho_daibakuhatsu",
-        "title": "桐朋大爆発",
-        "heading": null,
-        "body": "何者かによって桐朋に爆弾が設置された… あなたの手で謎を解き、爆弾を解除せよ！！",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/a9ae3341-46de-411b-ba7a-9a481f7d5d88.webp",
-        "type": "organization",
-        "date": null,
-        "category": "general,体験,アクティビティ,グループ向け,有志団体",
-        "location": "社会科A",
-        "top_img": null
-    },
-    {
-        "id": "toho_mountain",
-        "title": "登峰 -TOHO-",
-        "heading": null,
-        "body": "教科書に載っていない景色を求めて氷河の世界へ。地球の果て、ヒマラヤには想像を絶する光景が広がっていました。",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/cb1479e7-bcb8-43b4-9c6f-3c5a0d7ff890.webp",
-        "type": "organization",
-        "date": null,
-        "category": "general,展示,パフォーマンス,その他,グループ向け,受験生向け,所要時間短め,有志団体",
-        "location": "社会科B",
-        "top_img": null
-    },
-    {
-        "id": "music_club",
-        "title": "音楽部",
-        "heading": null,
-        "body": "我々音楽部は音楽室でのアンサンブル、そして6\/7（日）14時頃から小学校講堂にて校内演奏会を行います。是非お越しください！！\r\n\r\n---\r\n\r\n## イベント情報\r\n\r\n### 第41回校内演奏会 @小学校講堂\r\n\r\n### 6\/7(日) 12:30 開場　・ 14:00 開演\r\n\r\n### 【曲名】\r\nPuszta \/ J. V. der Roost\r\n\r\nFate of the Gods \/ S. Reineke\r\n\r\nScootin’ On Hardrock \/ David R. Holsinger\r\n\r\nほか",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/1dc4bc73-570e-4ab6-a084-0f544f07cd6f.webp",
-        "type": "organization",
-        "date": null,
-        "category": "general,パフォーマンス,グループ向け,受験生向け,SNS映え",
-        "location": "音楽室A・B",
-        "top_img": null
-    },
-    {
-        "id": "chemistry_club",
-        "title": "化学部",
-        "heading": null,
-        "body": "@教科教室棟3F奥\r\n化学実験室、講義室\r\n\r\n化学部は大実験ショー、小実験ショー、体験実験•展示の３つのブースで五感を使って楽しめる化学実験を行っています。またスライム作りなど、小さなお子様からとても楽しめる様な実験も多数ありますのでぜひお越し下さい。ここではそれぞれのブースの特徴、内容と大まかな時間をご紹介します。\r\n[大実験ショー]\r\n「普段教科書で見ることはあっても授業でやったり生で見たことはない…」大実験ショーではそんな非日常を感じられるような実験を行っています。どれもとても特徴のある、それでいて見ていて派手で、面白い内容となっています。土曜日は13:00から、日曜日は10:30から45分ごとに開催しております。詳しい時間割はパンフレットか、化学部前の時間案内をご確認ください。\r\n\r\n[小実験ショー]\r\n大実験ショーと並行して化学実験室Bで行っている小実験ショー。「小」の字は決して地味ということではなく、むしろ大実験ショーで扱うには小回りが効かないような大規模なものもおこなっています。大実験ショーより短い間隔で、約３０分ごとに開催しています。\r\n\r\n[体験実験•展示]\r\n体験実験では毎年大人気のスライム作りを今年も行っております。また、展示ブースでは化学部員が日々の実験で作り上げた、美しい結晶や不思議な化学アートを用意しております。\r\n\r\n---\r\n\r\n## イベント情報 \r\n\r\n### 大実験ショー @教科教室棟 3階 化学講義室\r\n化学発光や炎を扱う大きく派手な実験ショーを行います。\r\n\r\n化学部の目玉の出し物ですので是非お越しください。\r\n\r\n画像から読み取れるテキストの配置を再現したマークダウンは以下の通りです。\r\n\r\n---\r\n\r\n### 6\/6（土） 13:00 〜 13:30 , 13:45 〜 14:15 , 14:30 〜 15:00 , 15:15 〜 15:45 , 16:00 〜 16:30\r\n\r\n### 6\/7（日） 10:30 〜 11:00 , 11:15 〜 11:45 , 12:00 〜 12:30 , 12:45 〜 13:15 , 13:30 〜 14:00 , 14:15 〜 14:45 , 15:00 〜 15:30 , 15:45 〜 16:15 , 16:30 〜 17:00\r\n\r\n### 6\/8（月） 10:30 〜 11:00 , 11:30 〜 12:00",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/600943a0-87a6-4e14-820e-711a06b022be.webp",
-        "type": "organization",
-        "date": null,
-        "category": "general,展示,パフォーマンス,体験,グループ向け,受験生向け,配布物あり,SNS映え,article,イベント",
-        "location": "化講,化実A・B",
-        "top_img": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/39350700-a259-4ec4-bcd7-f702ea395c5f.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/6d6dcbd2-6445-42ba-abe1-a902ed3efe21.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/f705a168-e8cb-4d5f-96da-b6e086539dd9.webp"
-    },
-    {
-        "id": "quiz_club",
-        "title": "クイズ研究部",
-        "heading": null,
-        "body": "クイズ研究部では、例年通り早押しクイズ体験をします。ぜひ一度体験しにきてみてください！",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/75ce9ac4-0cad-4afd-b872-27a68304b629.webp",
-        "type": "organization",
-        "date": null,
-        "category": "general,体験",
-        "location": "数学教室",
-        "top_img": null
-    },
-    {
-        "id": "toho_chigakubu",
-        "title": "地学部",
-        "heading": null,
-        "body": "地学部では、地学・天文に関係する様々なことを展示・発表します。ここでは、その展示・発表の中でも特に注目していただきたい五つを紹介します。\r\n\r\n## 1.砂金掘り体験\r\n幾数万粒の砂利から数粒の小さな砂金を見つけ出して、その精度と時間を競うスポーツ。砂金掘り。我ら地学部は、その全国大会である砂金堀り甲子園で三年連続優勝を誇り、テレビ東京やNHKをはじめとする多くのメディアでも取り上げていただいた実力を持っています。この展示では、そんな“プロ„の砂金掘り師たちが直接教える砂金掘り、是非体験してみてください。\r\n\r\n## プラネタリウム公演\r\n地学部の天文班が練習した、プラネタリウムの公演。星座の歴史について解説する、「星座史」。未来の夜空を解説する、「Future Sky」。太陽系や銀河系の星々を間近に見ながら解説する、「銀河系フライト」。そして、様々な星の“音„を聞く、「大空之声」などのプログラムを発表します。\r\n\r\n## ロケット発射\r\n火薬エンジンを利用して、紙や木、プラスチックなどの身近なものを作ったモデルロケットを、野球場にて打ち上げます。この時発射されるモデルロケットは、春と秋にJAXAの筑波宇宙センターで開催されるモデルロケットの大会でも発射されており、高度とパラシュート滞空時間の二種で競っています。\r\n打ち上げは各日13：30～です。時間をご確認のうえお越しください。\r\n\r\n## 模造紙展示\r\n地学部の部員が地学や天文に関する事柄について各自で調査し、その結果をまとめた模造紙を展示します。今回は、地球の構造を知って地球を「食べて」みる「地球食のすゝめ」、宇宙空間に存在する不思議な暗黒星雲を紹介する「暗黒星雲」、人類を再び月へ送るためのアルテミス計画を紹介する「アルテミス計画」などを展示しています。\r\n\r\n## 鉱石展示\r\n地学部が所有している岩のうち、綺麗なモノや蛍光するモノ、固有の特徴を持ったモノなどを展示します。さらに、展示されている鉱石を実際に触ったりしてその特徴を知ることができるほか、担当の部員に声をかけて下さればその岩石の解説を行います。\r\n\r\nこの5つの展示・発表以外にも様々な展示を行っております。是非お越しください！\r\n\r\n---\r\n\r\n部公式X: [https:\/\/x.com\/toho_chigakubu](https:\/\/x.com\/toho_chigakubu)\r\n\r\n## イベント情報\r\n\r\n### プラネタリウム @教科教室棟 4階\r\n### 6\/6(土) 12:30 ~ , 13:00 ~ , 13:30 ~ , 14:00 ~ , 14:30 ~ ,15:00 ~ , 15:30 ~ , 16:00 ~ , 16:30 ~ \r\n### 6\/7(日) 10:00 ~ , 10:30 ~ ,11:00 ~ , 11:30 ~ , 12:00 ~ , 12:30 ~ , 13:00 ~ , 13:30 ~ , 14:00 ~ , 14:30 ~ , 15:00 ~ , 15:30 ~ , 16:00 ~ , 16:30 ~\r\n### 6\/8(月) 10:00 ~ , 10:30 ~ , 11:00 ~ , 11:30 ~ , 12:00 ~ , 12:30 ~\r\n\r\n### モデルロケット打ち上げ @東グラウンド\r\n### 6\/6(土)・6\/7(日) 13:00 ~",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/53a4ec8f-c990-4a3a-8bdf-a7c1a7216c44.webp",
-        "type": "organization",
-        "date": null,
-        "category": "general,展示,パフォーマンス,体験,アクティビティ,グループ向け,受験生向け,配布物あり,SNS映え,article,イベント",
-        "location": "プラ,地学,国語",
-        "top_img": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/7d7d648f-2452-486e-ba55-1f971a052a2e.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/f6235dc7-3d8c-418d-b171-4baf9f3bfcd1.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/e674f132-5589-4758-92ef-46d1141900f5.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/6929908f-8a54-415f-bdf7-6d68e800c45e.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/d187e6a4-67d0-4b51-8e0c-40f81325e022.webp"
-    },
-    {
-        "id": "toho_biology_club",
-        "title": "桐朋生物部",
-        "heading": null,
-        "body": "生物部では、**博物館×水族館**をテーマに部員が日本各地、時には海外まで赴き採集した生き物を数１００種類展示しています。 \r\n\r\nカメやヒトデと触れ合うことができるタッチプールや、毎日をみや林と共に過ごしている鳥類班・昆虫班員が案内するみや林のツアーなど、生物を己の身体で体験できるコーナーも充実。場所は**教科教室棟４F**の最奥・**生物実験室A・Ｂ**にて、お待ちしています！！ \r\n\r\nここからは、班ごとに展示の見どころを紹介！ \r\n\r\n## 🐍両生類・爬虫類班 \r\n桐朋周辺でも見られるアオダイショウから八重山4珍のひとつにも数えられるサキシマバイカダをはじめとする沖縄限定のヘビまで、部室で飼育している多種多様なヘビちたちがお出迎え！また環境省レッドリストで絶滅危惧種Ⅱ類に指定されているヒガシヒダサンショウウオの生きた姿も拝むことができます。 \r\n\r\n## 🐟魚類班 \r\n沖縄を含む日本全国で採集した色とりどりの魚たちがゆうゆうと泳ぐ姿はまるで水族館！ファイディングニモとは別種で有名なカクレクマノミや、間抜けづらの可愛いハリセンボンからマニア向けの種まで。 \r\n\r\n今年は教室の照明を一部屋丸々落としてライトアップしており、インスタ映え間違いなしです。 \r\n\r\n## 🦅鳥類班 \r\n今年の鳥類班のテーマは、「鳥の形」。主将でもあるN氏が4年間かけて集めた、200種を超えるコレクションの中から厳選された羽が並ぶ圧巻の展示です。また、部員が自分たちの手で作った剥製や、これまた主将が丹精込めて作った翼標本など、普通に生きているだけでは知ることのできない鳥たちの真の姿、どうかお見逃しなく！ \r\n\r\n## 🦋昆虫班 \r\n６種類と生体では過去最多種数のクワガタや、200種を超えるチョウ・ガの標本など、マニア必見の豊富な展示が目白押し！虫には抵抗のある方もいらっしゃると思いますが、部員が優しく解説するので、身を任せるもよし、質問攻めにするもよし。まるで昆虫館に来たかのようなワクワク感です。 \r\n\r\n## 🕷️蜘蛛班 \r\n毎年細々と地道にクモの魅力を発信している蜘蛛班。今年もハエトリグモをメインに身近な種からマニアックな種まで、多種多様なクモたちが揃っています。身近にも関わらず嫌厭されがちなクモですが、目を凝らしてみると溢れ出る魅力に気づけることうけあいです。 \r\n\r\n生き物が好きな方もそうでない方も楽しめる、最高の展示を用意しています。日本最大級の規模で送る生物部展示、しかと見届けてください！ \r\n\r\nまた、桐朋祭大賞を目指しているので、生物部への投票もよろしくお願いします！ \r\n\r\n各種SNSにて、情報発信中！ \r\n\r\n・X(旧Twitter) \r\n\r\nhttps:\/\/x.com\/TDKTOHObiologyc?s=20 \r\n\r\n鳥類班 \r\n\r\nhttps:\/\/x.com\/tohobirdgroup?s=20 \r\n\r\n蜘蛛班 \r\n\r\nhttps:\/\/x.com\/tohobio_web \r\n\r\n \r\n\r\n・Instagram \r\n\r\nhttps:\/\/www.instagram.com\/tohobiologyc?igsh=MTRnMmVhYzAya253 \r\n\r\n \r\n\r\n・はてなブログ \r\n\r\nhttps:\/\/th-biology-c.hatenablog.com\/\r\n\r\n---\r\n\r\n## イベント情報\r\n\r\n### みや林での生き物観察会 @みや林入り口集合\r\n### 6\/6(土)・6\/7(日) 15:00 ~ 15:30",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/5ec11dfb-75d8-4f38-8c3a-cfa75bd6617a.webp",
-        "type": "organization",
-        "date": null,
-        "category": "general,展示,体験,アクティビティ,受験生向け,配布物あり,SNS映え,article,イベント",
-        "location": "生物実験室A・B",
-        "top_img": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/8ad92c79-3297-4792-9e77-0e9192b2d621.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/eb573c3f-bcad-4884-b305-e5b3201a4c45.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/441c2c99-9873-498d-97bf-ec30407eba75.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/98884098-a4c9-44f4-b8a2-4182d87f2bb4.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/5a22b38c-783c-46a7-a1cf-dee77bcee268.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/89bcd4ed-0514-4eff-88c9-0b803df42617.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/7d5f581d-0bdf-4663-9536-446757c78808.webp"
-    },
-    {
-        "id": "qufestion",
-        "title": "QuFestion!",
-        "heading": null,
-        "body": "誰でも手軽に参加できる、移動型ミステリー。校内を「結う」ように存在する謎を解き明かすのは、あなただ。",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/6a71b910-c97f-4e3b-a8af-9cadfc9957b1.webp",
-        "type": "organization",
-        "date": null,
-        "category": "general,体験,アクティビティ,その他,SNS映え,有志団体",
-        "location": null,
-        "top_img": null
-    },
-    {
-        "id": "the_bill",
-        "title": "THE BILL",
-        "heading": null,
-        "body": "スーパースターになったら \/ backnumber\r\n\r\nSUN \/ 星野源\r\n\r\n楓 \/ スピッツ\r\n\r\nノーダウト \/ Official髭男dism\r\n\r\n完全感覚Dreamer \/ ONE OK ROCK\r\n\r\nケダマ虫放浪記 (第75回桐朋祭テーマソング)",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/66e5492c-e2ef-4773-a045-4c29e713a5a3.webp",
-        "type": "organization",
-        "date": null,
-        "category": "bands",
-        "location": "1階 第2体育室",
-        "schedule": [
-            {
-                "day": "1",
-                "time": "13:35 ~ 13:50"
-            },
-            {
-                "day": "2",
-                "time": "11:05 ~ 11:35"
-            }
-        ],
-        "top_img": null
-    },
-    {
-        "id": "dramlin",
-        "title": "DRAMLIN",
-        "heading": null,
-        "body": "リンダリンダ \/ THE BLUE HEARTS\r\n\r\nTRAIM-TRAIN \/ THE BLUE HEARTS\r\n\r\nFxxkin' you, Fxxkin' me \/ DRAMLIN\r\n\r\n世界の終わり \/ THEE MICHELLE GUN ELEPHANT\r\n\r\n透明少女 \/ NUMBER GIRL\r\n\r\nAmerican Idiot \/ GREEN DAY",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/5068c32e-fccd-485b-b58e-687098d9d9af.webp",
-        "type": "organization",
-        "date": null,
-        "category": "bands",
-        "location": "1階 第2体育室",
-        "schedule": [
-            {
-                "day": "1",
-                "time": "15:40 ~ 15:55"
-            },
-            {
-                "day": "2",
-                "time": "13:05 ~ 13:35"
-            }
-        ],
-        "top_img": null
-    },
-    {
-        "id": "fantasista_suzy",
-        "title": "Fantasista Suzy",
-        "heading": null,
-        "body": "学園天国 \/ フィンガー 5\r\n\r\nシグナル \/ WANIMA\r\n\r\n分かってないよ \/ WurtS\r\n\r\n怪獣の花唱 \/ Vaundy\r\n\r\n新宝島 \/ サカナクション",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/eb2241cc-ed94-4b07-aae4-c47f672a04b2.webp",
-        "type": "organization",
-        "date": null,
-        "category": "bands",
-        "location": "1階 第2体育室",
-        "schedule": [
-            {
-                "day": "1",
-                "time": "15:15 ~ 15:30"
-            },
-            {
-                "day": "2",
-                "time": "11:45 ~ 12:15"
-            }
-        ],
-        "top_img": null
-    },
-    {
-        "id": "macaroniiies",
-        "title": "macaroniiies",
-        "heading": null,
-        "body": "拝啓、少年よ \/ Hump Back\r\n\r\nシルエット \/ KANA-BOON\r\n\r\n天体観測 \/ BUMP OF CHICKEN",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/3fb1690e-ce6c-4e72-881b-fb4ec5ea24a4.webp",
-        "type": "organization",
-        "date": null,
-        "category": "bands",
-        "location": "1階 第2体育室",
-        "schedule": [
-            {
-                "day": "1",
-                "time": "12:30 ~ 12:45"
-            },
-            {
-                "day": "2",
-                "time": "10:25 ~ 10:55"
-            }
-        ],
-        "top_img": null
-    },
-    {
-        "id": "sumikkogurashi",
-        "title": "すみっこぐらし",
-        "heading": null,
-        "body": "我逢人 \/ Mrs. GREEN APPLE\r\n\r\n踊り子 \/ Voundy",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/05be6a85-3251-464b-9c2a-c55702e66206.webp",
-        "type": "organization",
-        "date": null,
-        "category": "bands",
-        "location": "1階 第2体育室",
-        "schedule": [
-            {
-                "day": "1",
-                "time": "12:55 ~ 13:10"
-            }
-        ],
-        "top_img": null
-    },
-    {
-        "id": "underrdog",
-        "title": "Underrdog",
-        "heading": null,
-        "body": "StaRt \/ Mrs. GREEN APPLE\r\n\r\nそんな bitter な話 \/ Vaundy\r\n\r\nブルーバード \/ いきものがかり\r\n\r\n君と羊と青 \/ RADWIMPS\r\n\r\n結び目 \/ Underrdog",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/9c4dd520-d1fa-4f2b-a9a8-10dd40bf7636.JPG",
-        "type": "organization",
-        "date": null,
-        "category": "bands",
-        "location": "1階 第2体育室",
-        "schedule": [
-            {
-                "day": "1",
-                "time": "16:05 ~ 16:20"
-            },
-            {
-                "day": "2",
-                "time": "12:25 ~ 12:55"
-            }
-        ],
-        "top_img": null
-    },
-    {
-        "id": "chahaya",
-        "title": "CHAHAYA",
-        "heading": null,
-        "body": "逆光 \/ Ado\r\n\r\nSnowball \/ CHAHAYA\r\n\r\n火蓋 \/ CHAHAYA\r\n\r\nバッドトリップ \/ CHAHAYA\r\n\r\nLOSER \/ 米津玄師\r\n\r\nGet Wild \/ TM NETWORK",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/abd96bd0-e65c-4c55-aeb9-cfd56dd802e1.webp",
-        "type": "organization",
-        "date": null,
-        "category": "bands",
-        "location": "1階 第2体育室",
-        "schedule": [
-            {
-                "day": "1",
-                "time": "16:30 ~ 16:45"
-            },
-            {
-                "day": "2",
-                "time": "13:45 ~ 14:15"
-            }
-        ],
-        "top_img": null
-    },
-    {
-        "id": "pta_bazaar",
-        "title": "PTAバザー",
-        "heading": null,
-        "body": "学生服、Yシャツ、ジャージなどのリサイクル販売を行います。入場整理券は、9時半よりバザー会場前にて配布します。",
-        "thumbnail": null,
-        "type": "organization",
-        "date": null,
-        "category": "other",
-        "location": "3-5,3-6"
-    },
-    {
-        "id": "sll-2",
-        "title": "指輸物語入門",
-        "heading": null,
-        "body": "null",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/62245b2f-ee50-42f8-8071-d4dec19af7bb.webp",
-        "type": "organization",
-        "date": null,
-        "category": "student-lessons",
-        "location": "3･4階 関心ラウンジ",
-        "schedule": [
-            {
-                "day": "1",
-                "time": "13:15 ~ 14:00"
-            }
-        ],
-        "top_img": null
-    },
-    {
-        "id": "sll-3",
-        "title": "穴の開いた貨幣の1200年",
-        "heading": null,
-        "body": "null",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/62245b2f-ee50-42f8-8071-d4dec19af7bb.webp",
-        "type": "organization",
-        "date": null,
-        "category": "student-lessons",
-        "location": "3･4階 関心ラウンジ",
-        "schedule": [
-            {
-                "day": "1",
-                "time": "14:05 ~ 14:45"
-            }
-        ],
-        "top_img": null
-    },
-    {
-        "id": "sll-4",
-        "title": "北条時行を追う",
-        "heading": null,
-        "body": "null",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/62245b2f-ee50-42f8-8071-d4dec19af7bb.webp",
-        "type": "organization",
-        "date": null,
-        "category": "student-lessons",
-        "location": "3･4階 関心ラウンジ",
-        "schedule": [
-            {
-                "day": "1",
-                "time": "14:50 ~ 15:30"
-            }
-        ],
-        "top_img": null
-    },
-    {
-        "id": "sll-5",
-        "title": "洋楽について",
-        "heading": null,
-        "body": "null",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/62245b2f-ee50-42f8-8071-d4dec19af7bb.webp",
-        "type": "organization",
-        "date": null,
-        "category": "student-lessons",
-        "location": "3･4階 関心ラウンジ",
-        "schedule": [
-            {
-                "day": "1",
-                "time": "15:35 ~ 16:15"
-            }
-        ],
-        "top_img": null
-    },
-    {
-        "id": "sll-6",
-        "title": "YouTubeの光と闇",
-        "heading": null,
-        "body": "null",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/62245b2f-ee50-42f8-8071-d4dec19af7bb.webp",
-        "type": "organization",
-        "date": null,
-        "category": "student-lessons",
-        "location": "3･4階 関心ラウンジ",
-        "schedule": [
-            {
-                "day": "1",
-                "time": "16:20 ~ 17:00"
-            }
-        ],
-        "top_img": null
-    },
-    {
-        "id": "sll-7",
-        "title": "留学ノススメ\/移民について",
-        "heading": null,
-        "body": "null",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/62245b2f-ee50-42f8-8071-d4dec19af7bb.webp",
-        "type": "organization",
-        "date": null,
-        "category": "student-lessons",
-        "location": "3･4階 関心ラウンジ",
-        "schedule": [
-            {
-                "day": "2",
-                "time": "09:35 ~ 10:15"
-            }
-        ],
-        "top_img": null
-    },
-    {
-        "id": "sll-8",
-        "title": "ムクドリねぐら",
-        "heading": null,
-        "body": "null",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/62245b2f-ee50-42f8-8071-d4dec19af7bb.webp",
-        "type": "organization",
-        "date": null,
-        "category": "student-lessons",
-        "location": "3･4階 関心ラウンジ",
-        "schedule": [
-            {
-                "day": "2",
-                "time": "10:17 ~ 10:57"
-            }
-        ],
-        "top_img": null
-    },
-    {
-        "id": "sll-9",
-        "title": "写真の上手な撮り方",
-        "heading": null,
-        "body": "null",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/62245b2f-ee50-42f8-8071-d4dec19af7bb.webp",
-        "type": "organization",
-        "date": null,
-        "category": "student-lessons",
-        "location": "3･4階 関心ラウンジ",
-        "schedule": [
-            {
-                "day": "2",
-                "time": "11:05 ~ 11:45"
-            }
-        ],
-        "top_img": null
-    },
-    {
-        "id": "sll-10",
-        "title": "Shall we hack?",
-        "heading": null,
-        "body": "null",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/62245b2f-ee50-42f8-8071-d4dec19af7bb.webp",
-        "type": "organization",
-        "date": null,
-        "category": "student-lessons",
-        "location": "3･4階 関心ラウンジ",
-        "schedule": [
-            {
-                "day": "2",
-                "time": "11:50 ~ 12:30"
-            }
-        ],
-        "top_img": null
-    },
-    {
-        "id": "sll-11",
-        "title": "人よ、ゴリラへ進化せよ",
-        "heading": null,
-        "body": "null",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/62245b2f-ee50-42f8-8071-d4dec19af7bb.webp",
-        "type": "organization",
-        "date": null,
-        "category": "student-lessons",
-        "location": "3･4階 関心ラウンジ",
-        "schedule": [
-            {
-                "day": "2",
-                "time": "12:35 ~ 13:15"
-            }
-        ],
-        "top_img": null
-    },
-    {
-        "id": "sll-12",
-        "title": "三線について",
-        "heading": null,
-        "body": "null",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/62245b2f-ee50-42f8-8071-d4dec19af7bb.webp",
-        "type": "organization",
-        "date": null,
-        "category": "student-lessons",
-        "location": "3･4階 関心ラウンジ",
-        "schedule": [
-            {
-                "day": "2",
-                "time": "13:20 ~ 14:00"
-            }
-        ],
-        "top_img": null
-    },
-    {
-        "id": "sll-13",
-        "title": "安倍公房マジで良いから",
-        "heading": null,
-        "body": "null",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/62245b2f-ee50-42f8-8071-d4dec19af7bb.webp",
-        "type": "organization",
-        "date": null,
-        "category": "student-lessons",
-        "location": "3･4階 関心ラウンジ",
-        "schedule": [
-            {
-                "day": "2",
-                "time": "14:05 ~ 14:45"
-            }
-        ],
-        "top_img": null
-    },
-    {
-        "id": "sll-14",
-        "title": "アニメのOP\/ED論",
-        "heading": null,
-        "body": "null",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/62245b2f-ee50-42f8-8071-d4dec19af7bb.webp",
-        "type": "organization",
-        "date": null,
-        "category": "student-lessons",
-        "location": "3･4階 関心ラウンジ",
-        "schedule": [
-            {
-                "day": "2",
-                "time": "14:50 ~ 15:30"
-            }
-        ],
-        "top_img": null
-    },
-    {
-        "id": "sll-15",
-        "title": "ヴェネツィア x ジェノヴァ",
-        "heading": null,
-        "body": "null",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/62245b2f-ee50-42f8-8071-d4dec19af7bb.webp",
-        "type": "organization",
-        "date": null,
-        "category": "student-lessons",
-        "location": "3･4階 関心ラウンジ",
-        "schedule": [
-            {
-                "day": "2",
-                "time": "15:35 ~ 16:15"
-            }
-        ],
-        "top_img": null
-    },
-    {
-        "id": "sll-16",
-        "title": "パラオ基礎",
-        "heading": null,
-        "body": "null",
-        "thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/62245b2f-ee50-42f8-8071-d4dec19af7bb.webp",
-        "type": "organization",
-        "date": null,
-        "category": "student-lessons",
-        "location": "3･4階 関心ラウンジ",
-        "schedule": [
-            {
-                "day": "2",
-                "time": "16:20 ~ 17:00"
-            }
-        ],
-        "top_img": null
-    },
-    {
-        "id": "tohofes_organizing_committee",
-        "title": "桐朋祭実行委員会特設記事",
-        "heading": null,
-        "body": "null",
-        "thumbnail": null,
-        "type": "organization",
-        "date": null,
-        "category": "article",
-        "location": null,
-        "top_img": null
-    }
+	{
+		"id": "computer-club",
+		"title": "コンピューター部",
+		"heading": null,
+		"body": "コンピューター部が、今年も桐朋祭にやってくる！\r\n部員が制作したゲーム・曲・映像・サーバーをご照覧あれ！\r\n\r\n###### ※ゲームはプレイ可",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/7055c068-4ba6-420b-8389-8529d15d32c1.webp",
+		"type": "organization",
+		"date": null,
+		"category": "general,展示,体験,アクティビティ,配布物あり",
+		"location": "3-1,3-2",
+		"top_img": null
+	},
+	{
+		"id": "sll-1",
+		"title": "中央線と輸送力課題",
+		"heading": null,
+		"body": "test",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/62245b2f-ee50-42f8-8071-d4dec19af7bb.webp",
+		"type": "organization",
+		"date": null,
+		"category": "student-lessons",
+		"location": "3･4階 関心ラウンジ",
+		"schedule": [
+			{
+				"day": "1",
+				"time": "12:30 ~ 13:10"
+			}
+		],
+		"top_img": null
+	},
+	{
+		"id": "opening",
+		"title": "開会式",
+		"heading": null,
+		"body": "いよいよ桐朋祭の幕開け!\r\n\r\n音楽部のファンファーレに包まれながら、3日間続く桐朋祭の火蓋が切って落とされる!",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/1ed85e68-aef5-48b6-9850-1d72bbb7f6df.PNG",
+		"type": "organization",
+		"date": null,
+		"category": "stage",
+		"location": "2階 テラス",
+		"schedule": [
+			{
+				"day": "1",
+				"time": "12:00 ~ 12:30"
+			}
+		],
+		"top_img": null
+	},
+	{
+		"id": "closing",
+		"title": "閉会式",
+		"heading": null,
+		"body": "とうとう桐朋祭に終わりが告げられる･･･。\r\n\r\n果たして一番人気を勝ち得た参加団体はどこなのか!?",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/1f8922b5-0f4c-4fe4-8779-ebbda3b33b17.PNG",
+		"type": "organization",
+		"date": null,
+		"category": "stage",
+		"location": "2階 テラス",
+		"schedule": [
+			{
+				"day": "3",
+				"time": "13:00 ~ 13:30"
+			}
+		],
+		"top_img": null
+	},
+	{
+		"id": "dj",
+		"title": "DJ",
+		"heading": null,
+		"body": "### ミニ企画",
+		"thumbnail": null,
+		"type": "organization",
+		"date": null,
+		"category": "stage",
+		"location": "2階 テラス",
+		"schedule": [
+			{
+				"day": "1",
+				"time": "15:00 ~ 15:30"
+			},
+			{
+				"day": "2",
+				"time": "14:30 ~ 15:00"
+			}
+		],
+		"top_img": null
+	},
+	{
+		"id": "Mr_x_Ms_Toho",
+		"title": "Mr. x Ms. TOHO",
+		"heading": null,
+		"body": "桐朋一のイケメン高校生と美少女が、ついに夢のコラボ! 選ばれしファイナリストたちが男女でカップルを組み、 芸を披露! シンクロ率が高いベストカップルを選びます!",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/87257523-c76d-4cb9-84e0-45a5e22b5ca0.PNG",
+		"type": "organization",
+		"date": null,
+		"category": "stage",
+		"location": "2階 テラス",
+		"schedule": [
+			{
+				"day": "2",
+				"time": "11:15 ~ 12:15"
+			}
+		],
+		"top_img": null
+	},
+	{
+		"id": "interim-announcement",
+		"title": "中間発表",
+		"heading": null,
+		"body": "2日目の開会式!\r\n\r\n土曜までの桐朋祭大賞得票数が上位の参加団体の代表によるあいさつがあります!",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/95fc0ac2-9574-4f7b-8c35-84ac3130903f.PNG",
+		"type": "organization",
+		"date": null,
+		"category": "stage",
+		"location": "2階 テラス",
+		"schedule": [
+			{
+				"day": "2",
+				"time": "10:00 ~ 10:30"
+			}
+		],
+		"top_img": null
+	},
+	{
+		"id": "jumprope-club-s",
+		"title": "なわとび部",
+		"heading": null,
+		"body": "### ミニ企画",
+		"thumbnail": null,
+		"type": "organization",
+		"date": null,
+		"category": "stage",
+		"location": "2階 テラス",
+		"schedule": [
+			{
+				"day": "2",
+				"time": "12:30 ~ 13:00"
+			}
+		],
+		"top_img": null
+	},
+	{
+		"id": "toho-collection",
+		"title": "TOHO COLLECTION",
+		"heading": null,
+		"body": "服装自由な桐朋高校に通う生徒は、ファッションセンスがずば抜けている。他校では想像できない、衣服を超えた芸術作品をとくとご覧あれ!",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/e03d1e53-80b4-4a78-b68f-8acd6e6c0c1f.PNG",
+		"type": "organization",
+		"date": null,
+		"category": "stage",
+		"location": "2階 テラス",
+		"schedule": [
+			{
+				"day": "1",
+				"time": "15:30 ~ 16:30"
+			}
+		],
+		"top_img": null
+	},
+	{
+		"id": "no_no_boys",
+		"title": "No No Boys",
+		"heading": null,
+		"body": "某人気オーディション番組が桐朋に!?\r\n\r\nいままで、「No」と言われてきた、または自分に「No」を突きつけてきた男たちが、自らの個性を武器に最強のグループを決めるダンスプロジェクトが今始まる!",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/44aafada-6173-4fe6-add7-872f05bff579.PNG",
+		"type": "organization",
+		"date": null,
+		"category": "stage",
+		"location": "2階 テラス",
+		"schedule": [
+			{
+				"day": "2",
+				"time": "13:00 ~ 14:00"
+			}
+		],
+		"top_img": null
+	},
+	{
+		"id": "toho_mc_battle",
+		"title": "TOHO MC BATTLE",
+		"heading": null,
+		"body": "「俺が桐朋で一番強いラッパーだよ」\r\n\r\n「いや俺だよ」\r\n\r\n「じゃあ、桐朋祭で決めよっか」",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/c37bd33d-7fe8-45bf-b7fe-959c57b08a14.PNG",
+		"type": "organization",
+		"date": null,
+		"category": "stage",
+		"location": "2階 テラス",
+		"schedule": [
+			{
+				"day": "2",
+				"time": "15:00 ~ 15:45"
+			}
+		],
+		"top_img": null
+	},
+	{
+		"id": "teacher's_hidden_talent",
+		"title": "教員かくし芸",
+		"heading": null,
+		"body": "すごいのは生徒だけじゃない! はちゃめちゃな桐朋生を育てる先生はなんでもできる! そんな教員たちの、普段は見ることができない知られざるかくし芸をお楽しみください!",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/16c69f7d-cdb4-4844-966b-79e3d48b015e.webp",
+		"type": "organization",
+		"date": null,
+		"category": "stage",
+		"location": "2階 テラス",
+		"schedule": [
+			{
+				"day": "3",
+				"time": "11:30 ~ 12:30"
+			}
+		],
+		"top_img": null
+	},
+	{
+		"id": "teacher_vs_student",
+		"title": "教員 VS 生徒",
+		"heading": null,
+		"body": "教員と桐朋生、結局どっちが優れてるの? 人生経験豊富な先生と、未来を託された若き学生があらゆる分野で戦います!",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/e17178b7-2ff3-4f0e-8c5c-8c0e83fb58f9.PNG",
+		"type": "organization",
+		"date": null,
+		"category": "stage",
+		"location": "2階 テラス",
+		"schedule": [
+			{
+				"day": "3",
+				"time": "10:00 ~ 11:00"
+			}
+		],
+		"top_img": null
+	},
+	{
+		"id": "ragucafe",
+		"title": "ラグカフェ",
+		"heading": null,
+		"body": "屈強なメイドが「美味しくなる魔法」を注入。鍛え抜いた腕で焼く至高のパンケーキを、極上のギャップと共にお召し上がりください。\r\n\r\n## メニュー\r\n\r\n### ホットケーキ 各200円\r\n- チョコ\r\n- メープル\r\n- キャラメル\r\n\r\n### ドリンク 各200円\r\n- カルピスアップル\r\n- カルピスオレンジ\r\n\r\n#### ホットケーキ & ドリンクセット 300円",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/c3756451-cde5-4219-a20b-ce5217cf423e.png",
+		"type": "organization",
+		"date": null,
+		"category": "food,喫茶,グループ向け",
+		"location": "1-1",
+		"top_img": null
+	},
+	{
+		"id": "shiratama",
+		"title": "しらたま",
+		"heading": null,
+		"body": "もちもち食感がクセになる白玉スイーツ！ ひんやり甘くて何度でも食べたくなる一品をぜひ味わってください！\r\n\r\n## メニュー\r\n\r\n### しらたま\r\n- あんこ & きなこ 200円\r\n- みたらし 200円\r\n- 黒蜜きなこ 200円\r\n- フルーツポンチ 300円",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/7333eeb6-5677-4f2e-bb0c-5b4dce66dbf7.jpeg",
+		"type": "organization",
+		"date": null,
+		"category": "food,喫茶",
+		"location": "1-4",
+		"top_img": null
+	},
+	{
+		"id": "morino_kasuteraya",
+		"title": "森のカステラ屋",
+		"heading": null,
+		"body": "昨年の飲食大賞店がリニューアルして、今年もオープン！提供の速さ、味、見た目のすべてが自信あり！是非、ご賞味あれ。\r\n\r\n## メニュー\r\n\r\n### ベビーカステラ\r\n- プレーン 250円\r\n- いちご 300円\r\n- チョコ 300円\r\n- メープル 300円",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/4dd6b02c-5a8a-4e79-b403-529c498be2a0.jpg",
+		"type": "organization",
+		"date": null,
+		"category": "food,喫茶,所要時間短め,SNS映え",
+		"location": "1-5",
+		"top_img": null
+	},
+	{
+		"id": "toho_trpg",
+		"title": "桐朋TRPG",
+		"heading": null,
+		"body": "ついに桐朋祭にTRPGができました!\r\nサイコロ振って大冒険　全く知らないって人も大歓迎　家族とも友達とも一緒に体験できます",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/e26addcb-8167-4591-88ea-cb6137f00083.jpg",
+		"type": "organization",
+		"date": null,
+		"category": "general,体験,グループ向け,有志団体",
+		"location": "2-1",
+		"top_img": null
+	},
+	{
+		"id": "grade1_participation",
+		"title": "中1学年参加",
+		"heading": null,
+		"body": "86期中１は名画を自画像風に改作したり自分たちを登場させたりしてみました！素材作品が同じでも個性あふれる絵にぬっています！",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/79804afc-b36d-474b-98fd-f01694586137.JPG",
+		"type": "organization",
+		"date": null,
+		"category": "general,展示,受験生向け,SNS映え",
+		"location": "2-2,2-3",
+		"top_img": null
+	},
+	{
+		"id": "grade2_participation",
+		"title": "中2学年参加",
+		"heading": null,
+		"body": "最近、新聞を読んでいますか？85期学年参加では、班に分かれて新聞を作ってみました！一面記事は何かな？",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/01e73480-9b9a-431b-864e-6eb3141b909b.webp",
+		"type": "organization",
+		"date": null,
+		"category": "general,展示",
+		"location": "2-4",
+		"top_img": null
+	},
+	{
+		"id": "grade3_participation",
+		"title": "中3学年参加",
+		"heading": null,
+		"body": "84期生憧れの職業を取材をもとに展示や発表を行います。ランキング、職業体験、クイズがあり賞状も用意しています。",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/45958283-d248-49e2-849c-4ff1d8b80b20.webp",
+		"type": "organization",
+		"date": null,
+		"category": "general,展示,パフォーマンス,アクティビティ",
+		"location": "2-5,2-6",
+		"top_img": null
+	},
+	{
+		"id": "touban_deguchi",
+		"title": "桐番出口",
+		"heading": null,
+		"body": "ゲーム「8番出口」をイメージして作った脱出ゲームです！異常を全て見つけて教室から脱出しましょう！",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/108bfdc1-eab4-4904-98f1-abf46d118e38.webp",
+		"type": "organization",
+		"date": null,
+		"category": "general,体験,アクティビティ,グループ向け,有志団体",
+		"location": "3-3",
+		"top_img": null
+	},
+	{
+		"id": "senritsu_toho",
+		"title": "戦慄桐朋",
+		"heading": null,
+		"body": "桐朋祭大賞を目指して。 82期伝統のお化け屋敷。 桐朋で唯一、合法的に叫べる場所。",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/b9e0c1e9-e1c8-4369-915a-2546fdc9407a.webp",
+		"type": "organization",
+		"date": null,
+		"category": "general,体験,グループ向け,有志団体",
+		"location": "特1,特2",
+		"top_img": null
+	},
+	{
+		"id": "kyousuki",
+		"title": "香、好きになりました。",
+		"heading": null,
+		"body": "将棋部員との指導対局や、お客様同士の自由対局ができます!! 全国4位の部員と対局できます。",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/fcaff196-9e05-40e5-b70c-fe51ac00dd85.webp",
+		"type": "organization",
+		"date": null,
+		"category": "general,体験,配布物あり",
+		"location": "特3,特4",
+		"top_img": null
+	},
+	{
+		"id": "tekken",
+		"title": "てっけん！",
+		"heading": null,
+		"body": "## ～あなたの日常に！を～\r\n## ～非日常な体験を あなたに～\r\n\r\n## 巨大ジオラマ\r\nてっけんの代名詞ともいえる、一辺が５m以上もある巨大ジオラマ。部員たちは一年間の活動の大半をこのジオラマの製作に費やしています。\r\nまた、ジオラマ上を走る鉄道模型は眺めるだけでなく、あなたの手で運転することもできます！手作りで再現された運転台に座り、ジオラマに没入して運転ができる、例年人気の高い体験です。\r\n今年度は、整理券制ではございませんので、お並び頂ければどなたでも体験できます。\r\n※当日のジオラマの整備状況などにより、急遽中止させていただく場合もございます。\r\n\r\n## 部員による研究\r\n当部活の部員有志により制作された研究誌「桐の鉄」を毎年桐朋祭にて配布しています。配布できる部数には限りがございます。web上での掲載も行っていますので、そちらもあわせてご覧ください。\r\n\r\n## 鉄道運転シミュレーター\r\nリアルな運転台と迫力の大画面で鉄道の運転体験ができるシミュレーターです。まるで運転士になったかのような体験ができます。\r\nこちらも今年度は、整理券制ではございませんので、お並び頂ければどなたでも体験できます\r\n\r\n## 発車メロディー操作体験\r\n実際に駅で使用されているスイッチで発車メロディーを鳴らす体験ができます。スタッフに、「〇〇駅の曲」や、「〇〇（曲名）」と言えば、リクエストに応じて流す曲を変えてくれるサービスもございます。\r\n\r\n## 鉄道研究模造紙\r\n今年開業100周年を迎えた国立駅や東急渋谷駅に関する研究や身近な鉄道に関する知識などを模造紙にまとめ、展示します。\r\n\r\n## 鉄道クイズ\r\n部員が考えた鉄道にまつわるクイズを解いていただけます。難易度は初級と上級に分かれており、初級は実力問題に加え、会場内の展示に答えがある問題もありますので、鉄道の知識が少ない方でも存分にお楽しみいただけます。また、クイズを解いた方全員に、参加賞をプレゼント！さらに、上級の全問正解者には特別な景品もご用意しております！\r\n※景品には限りがございますので、状況によってはお渡しできない場合がございます。\r\n※景品の内容に変更が発生する場合がございます。\r\n\r\n上記以外にも様々な展示を用意しています。また、今年度は内装・外装も鉄道を感じられるようにこだわっております。\r\n是非一度1-A、1-B教室「てっけん！」にお越しください！\r\n\r\n## リンク\r\n[てっけん！桐朋祭特設サイト](https:\/\/tohotekken.wixsite.com\/2026)\r\n\r\n展示の詳細や教室内のマップ、部誌などがご覧いただけます。\r\n\r\n[X（＠touhoutekken）](https:\/\/x.com\/touhoutekken)\r\n\r\n桐朋祭準備の様子や桐朋祭当日の混雑状況など、インフォメーションとして機能します。\r\n\r\n[Instagram（＠toho_railwayclub）](https:\/\/www.instagram.com\/toho_railwayclub\/)\r\n\r\n普段の活動の様子などがご覧いただけます。\r\n\r\n---\r\n\r\n## イベント情報\r\n\r\n### 鉄道運転シミュレーター @高校棟4階 1-A・B\r\n**常時開催**\r\n\r\n迫力の大画面で、横浜線などの運転体験ができます。\r\n\r\n整理券等は不要ですのでお気軽にお越しください！",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/d185d05d-7582-4717-b706-394247745608.webp",
+		"type": "organization",
+		"date": null,
+		"category": "general,展示,体験,グループ向け,受験生向け,配布物あり,SNS映え,article,イベント",
+		"location": "1-A,1-B",
+		"top_img": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/80b36a54-70cf-458f-b380-c226f9bdcb65.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/c5995795-9a10-40d6-ae18-1f22b6d766f5.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/c22d2dfe-c006-4d49-841b-d9c0eec32d23.webp"
+	},
+	{
+		"id": "aka_tombo",
+		"title": "交通研究部「赤とんぼ」",
+		"heading": null,
+		"body": "プラモデル展示、ラジコンショーなどを行っています！飛行機や戦車、船やガンダムの精密な模型をどうぞご覧下さい！\r\n\r\n---\r\n\r\n## イベント情報\r\n\r\n### さよならラジコンショー\r\n**※常時開催**\r\n\r\n大迫力のラジコンを見学できます！",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/ddd9928c-0418-4333-a43c-4a52a0fabaac.webp",
+		"type": "organization",
+		"date": null,
+		"category": "general,展示,パフォーマンス,SNS映え,イベント",
+		"location": "1-C",
+		"top_img": null
+	},
+	{
+		"id": "putt_x_putt_golf",
+		"title": "Putt×Putt Golf",
+		"heading": null,
+		"body": "## ⛳ Putt×Putt GOLF ⛳\r\n\r\n高校塔4階1-E教室で、ゴルフの楽しさを気軽に体験できる「Putt×Putt GOLF」を開催します！\r\n\r\n教室の入り口にデカい緑色のアーチがあり、そこがPutt×Putt GOLFの目印です！\r\n\r\n会場には全部で4つのパターゴルフコースを用意しています。コースごとに難易度や特徴が異なるので、初心者の方から経験者の方まで幅広く楽しむことができます。友達同士でスコアを競ったり、親子で協力しながら挑戦したりと、世代を問わず盛り上がれるアトラクションです。\r\n\r\nさらに、ランキングボードも設置しています。高得点を目指して挑戦し、ぜひ上位ランクインを狙ってみてください！\r\n\r\nまた、この企画を運営しているゴルフ部は、普段は野球場の奥にあるゴルフ部専用の練習スペースで活動しています。活動日は月曜日・木曜日・土曜日です。毎週木曜日には学校近くの打ちっぱなし練習場でも練習を行い、技術向上に励んでいます。\r\n\r\nゴルフ部では初心者・経験者を問わず部員を募集しています。クラブなどの用具は部室に揃っているため、自分の道具を持っていなくても気軽に始めることができます。また、春と夏には合宿も行っており、部員同士で楽しく交流しながら技術を磨いています。\r\n\r\nパターゴルフを楽しみながら、ぜひゴルフ部の魅力も感じてください。皆さまのご来場をお待ちしています！🏌️‍♂️✨",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/56860f31-dbc8-4bd1-a54d-c6f77c248567.webp",
+		"type": "organization",
+		"date": null,
+		"category": "general,体験,アクティビティ,グループ向け,受験生向け,article",
+		"location": "1-E",
+		"top_img": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/25d0462c-18bf-4cd9-a5f5-9a47f5c463dc.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/a55fe586-390c-442e-8c21-054f74aed5db.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/fda73d71-f34f-47d1-b184-72976a6553ab.webp"
+	},
+	{
+		"id": "toho_photo_club",
+		"title": "桐朋写真部",
+		"heading": null,
+		"body": "シャッターの先に、新しい世界。",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/4be74a08-0e61-4540-987b-9197355a6658.webp",
+		"type": "organization",
+		"date": null,
+		"category": "general,展示,受験生向け,所要時間短め,SNS映え",
+		"location": "1-F",
+		"top_img": null
+	},
+	{
+		"id": "godzilla_kenkyushitsu",
+		"title": "ゴジラ研究室",
+		"heading": null,
+		"body": "ゴジラを各々で研究している研究室です。メンバーが集めたグッズなども展示されてるのでお見逃しなく!!",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/d85c2f72-7b93-459c-acb7-449bc95f25ea.webp",
+		"type": "organization",
+		"date": null,
+		"category": "general,展示,有志団体",
+		"location": "2-A",
+		"top_img": null
+	},
+	{
+		"id": "tokusatsu_doukoukai",
+		"title": "特撮同好会",
+		"heading": null,
+		"body": "特撮作品の玩具等の展示や35種類以上の作品クイズがあり、去年人気を博したゴチゾウは圧巻の340個以上の展示。観る価値アリ",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/d33d9f90-d78b-47f1-9da9-920c219b4ef9.webp",
+		"type": "organization",
+		"date": null,
+		"category": "general,展示,体験,SNS映え",
+		"location": "2-B",
+		"top_img": null
+	},
+	{
+		"id": "tdk",
+		"title": "桐朋電子研",
+		"heading": null,
+		"body": "桐朋電子研では、「射的プリンター」や「黒電話モグラ叩き」など、廃材を使った作品を展示しています。是非お越しください！",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/b23ec6e7-5f90-41c9-b8e4-4e0e35a28b59.webp",
+		"type": "organization",
+		"date": null,
+		"category": "general",
+		"location": "2-G"
+	},
+	{
+		"id": "dousoukai",
+		"title": "同窓会",
+		"heading": null,
+		"body": "卒業生の皆さん、桐朋祭をお楽しみいただいた後はこちらでお休みください。同期の待機場所としてもご利用いただけます。",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/8c772ff3-52d5-423e-96d1-04e8cfc2f496.webp",
+		"type": "organization",
+		"date": null,
+		"category": "other",
+		"location": "1-G"
+	},
+	{
+		"id": "art_club_origami_exhibition",
+		"title": "美術部折り紙展",
+		"heading": null,
+		"body": "去年、桐朋祭初参加で大きな反響を呼んだ折り紙展。今年は2教室になって再び登場！\r\n\r\n個性あふれる精巧な作品、迫力満点な巨大作品などを展示中。折り紙のガチャガチャで折り紙作品をゲット!?\r\n体験コーナーもあるので折り紙初心者でも大歓迎！\r\n\r\n高校棟3階 2-C、2-Dで出展予定。\r\nぜひ遊びに来てください。\r\n\r\n---\r\n\r\n[部のTwitter: https:\/\/x.com\/toho_origami](https:\/\/x.com\/toho_origami)",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/5590bc32-4fb0-407a-b6ab-a971f80a35d7.webp",
+		"type": "organization",
+		"date": null,
+		"category": "general,展示,体験,article",
+		"location": "2-C,2-D",
+		"top_img": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/f69af09d-ec70-4d66-8065-6eeea57cd4e5.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/69e0cb6b-d8e9-499e-ae56-4c4bf76e6884.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/8ee7568a-b78f-4993-b9dd-2436a7297b52.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/3d4f1f60-259e-41bd-b462-f2dbcb3dbe3e.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/4f9b7611-d29c-4ae1-bed3-82a1551ec4a2.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/4f2b30cb-9498-47fd-97ec-e4a315c55efa.webp"
+	},
+	{
+		"id": "zuka",
+		"title": "ZUKA",
+		"heading": null,
+		"body": "超爆裂究極展示「ZUKA」 「石塚」の思考の全てを投影した究極空間。 インドに行ったくらい世界観変わる。必ず。",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/15fc5b2e-d315-4f02-9f45-930d7ecc9856.webp",
+		"type": "organization",
+		"date": null,
+		"category": "general,展示,配布物あり,所要時間短め",
+		"location": "2-F",
+		"top_img": null
+	},
+	{
+		"id": "library_committee",
+		"title": "図書委員会",
+		"heading": null,
+		"body": "図書委員会です。委員達の熱いビブリオバトルや桐朋の誇る図書館のツアーがあるのでぜひ来てください。古本配布もあります。\r\n\r\n## イベント情報\r\n自分がおすすめしたい本を紹介する、ビブリオバトルを行います！\r\n\r\n普段本を読む人もそうでない人もぜひお越しください。\r\n### 6\/6(土) 14:00 ~ 15:00 , 15:30 ~ 16:30\r\n### 6\/7(日) 10:30 ~ 11:30 , 12:30 ~ 13:30 , 14:30 ~ 15:30",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/0b4328ce-2ca2-4541-a9c1-278e56fd100f.webp",
+		"type": "organization",
+		"date": null,
+		"category": "general,展示,パフォーマンス,イベント",
+		"location": "高校棟 2階 3-A",
+		"top_img": null
+	},
+	{
+		"id": "hawaiian_cafe",
+		"title": "ハワイアンカフェ アロハ・エ・コモ・マイ",
+		"heading": null,
+		"body": "ハワイアンカフェ アロハ・エ・コモ・マイでワッフルを提供中。ここ桐朋でハワイの雰囲気感じちゃってください。ALOHA！\r\n\r\n## メニュー\r\n\r\n### ワッフル & ドリンクセット 550円\r\n\r\n:::note warn\r\n※ 単品注文はできません\r\n:::\r\n\r\n### ワッフル\r\n- チョコ\r\n- メープル\r\n\r\n### ドリンク\r\n- アップルティー\r\n- ブルーハワイサンダー\r\n- レモンサイダー",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/73d37ec1-91f8-424d-b495-e89214d61eb9.webp",
+		"type": "organization",
+		"date": null,
+		"category": "food,喫茶,グループ向け,SNS映え,有志団体",
+		"location": "3-B,3-C",
+		"top_img": null
+	},
+	{
+		"id": "okutamanokafun",
+		"title": "奥多摩の花粉",
+		"heading": null,
+		"body": "ワンダーフォーゲル部の飲食が久しぶりに復活！ひまわりの種と6種の味のサクサクポップコーンを是非ご賞味あれ！\r\n\r\n## ポップコーン 各200円\r\n- 塩\r\n- 醤油バター\r\n- カレー\r\n- コンソメ\r\n- ガーリック\r\n- のりしお\r\n## ひまわりの種 100円\r\n\r\n## ポップコーン & ひまわりセット 250円",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/84945303-c993-4e1c-ade9-1c780b1b45ce.webp",
+		"type": "organization",
+		"date": null,
+		"category": "food,喫茶,所要時間短め",
+		"location": "3-D",
+		"top_img": null
+	},
+	{
+		"id": "sutabar",
+		"title": "スタBar",
+		"heading": null,
+		"body": "雰囲気オシャレで映える桐朋祭限定のBar、記憶に残る一杯を求めてご来店ください。\r\n\r\n## ミニクレープ 250円\r\n\r\n## ドリンク\r\n- ココアラテ 250円\r\n- いちごラテ 250円\r\n- 抹茶ラテ 300円\r\n- ブルーサイダー 200円\r\n- レモンスカッシュ 200円\r\n- マンゴーソーダ 250円\r\n- メロンソーダ 250円",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/8d2433e4-782f-4074-bd8f-a9f9c0e3a930.webp",
+		"type": "organization",
+		"date": null,
+		"category": "food,喫茶,有志団体",
+		"location": "3-F,3-G",
+		"top_img": null
+	},
+	{
+		"id": "sasuke",
+		"title": "SASUKE",
+		"heading": null,
+		"body": "恒例のSASUKEが今年も登場！体操器具を使った本格的なアスレチックです。小学生の方でもぜひ楽しんでください！",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/49bf41c9-c62f-4da3-8c70-7017fe7c5ed9.webp",
+		"type": "organization",
+		"date": null,
+		"category": "general,アクティビティ",
+		"location": "第3体育館",
+		"top_img": null
+	},
+	{
+		"id": "eis_bahn",
+		"title": "EIS BAHN",
+		"heading": null,
+		"body": "我らスキー部が今年もかき氷屋を出店します!!!!「桐朋祭といえばスキー部のかき氷！」なんて声も聞こえたり…\r\n\r\n## かき氷 各200円\r\n- いちご\r\n- グレープ\r\n- レモン\r\n- ピーチ\r\n- オレンジ\r\n- コーヒー\r\n- メロン\r\n- ハワイアンブルー\r\n- 抹茶\r\n- マンゴー\r\n- コーラ\r\n\r\n## トッピング 各50円\r\n- パチパチパニック\r\n- 練乳",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/90745a0a-ff8d-4db9-968b-a4fd3580806a.webp",
+		"type": "organization",
+		"date": null,
+		"category": "food,屋台,グループ向け,受験生向け,所要時間短め,SNS映え,有志団体",
+		"location": "屋台",
+		"top_img": null
+	},
+	{
+		"id": "dog_stand_82",
+		"title": "Dog Stand 82",
+		"heading": null,
+		"body": "屋台スペースで営業中。 ケチャップ、マスタードの王道系からタルタルソースなど、すこしひねりの効いた逸品まで。\r\n\r\n## ホットドッグ 各350円\r\n- ケチャップ & マスタード\r\n- サルサソース\r\n- タルタルソース\r\n\r\n※タルタルソースは個数限定",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/6d5da659-949e-4da0-8327-6546ca5061c8.webp",
+		"type": "organization",
+		"date": null,
+		"category": "food,屋台,グループ向け,有志団体",
+		"location": "屋台",
+		"top_img": null
+	},
+	{
+		"id": "luggage_storage",
+		"title": "荷物預かり",
+		"heading": null,
+		"body": "桐朋祭をまわる際にかさばる靴や傘、預かります。荷物も心も軽くして桐朋祭をまわってみてはいかがですか？",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/97eaecfa-4e92-4fe1-8b0d-6039bd7c9a46.webp",
+		"type": "organization",
+		"date": null,
+		"category": "other,所要時間短め,その他",
+		"location": "スタディエリア",
+		"top_img": null
+	},
+	{
+		"id": "school_information_session_by_students",
+		"title": "生徒による学校説明会",
+		"heading": null,
+		"body": "生徒目線で、生徒だけで桐朋の魅力を語ります！桐朋に興味のある人必見！ぜひ見に来てください！\r\n\r\n## イベント情報\r\n### 6\/7(日) 14:00 ~ 15:00",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/5e492b54-4d27-4a88-b1b9-41a53d482281.webp",
+		"type": "organization",
+		"date": null,
+		"category": "other,イベント",
+		"location": "1階 ホール",
+		"top_img": null
+	},
+	{
+		"id": "toho_daibakuhatsu",
+		"title": "桐朋大爆発",
+		"heading": null,
+		"body": "何者かによって桐朋に爆弾が設置された… あなたの手で謎を解き、爆弾を解除せよ！！",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/a9ae3341-46de-411b-ba7a-9a481f7d5d88.webp",
+		"type": "organization",
+		"date": null,
+		"category": "general,体験,アクティビティ,グループ向け,有志団体",
+		"location": "社会科A",
+		"top_img": null
+	},
+	{
+		"id": "toho_mountain",
+		"title": "登峰 -TOHO-",
+		"heading": null,
+		"body": "教科書に載っていない景色を求めて氷河の世界へ。地球の果て、ヒマラヤには想像を絶する光景が広がっていました。",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/cb1479e7-bcb8-43b4-9c6f-3c5a0d7ff890.webp",
+		"type": "organization",
+		"date": null,
+		"category": "general,展示,パフォーマンス,その他,グループ向け,受験生向け,所要時間短め,有志団体",
+		"location": "社会科B",
+		"top_img": null
+	},
+	{
+		"id": "music_club",
+		"title": "音楽部",
+		"heading": null,
+		"body": "我々音楽部は音楽室でのアンサンブル、そして6\/7（日）14時頃から小学校講堂にて校内演奏会を行います。是非お越しください！！\r\n\r\n---\r\n\r\n## イベント情報\r\n\r\n### 第41回校内演奏会 @小学校講堂\r\n\r\n### 6\/7(日) 12:30 開場　・ 14:00 開演\r\n\r\n### 【曲名】\r\nPuszta \/ J. V. der Roost\r\n\r\nFate of the Gods \/ S. Reineke\r\n\r\nScootin’ On Hardrock \/ David R. Holsinger\r\n\r\nほか",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/1dc4bc73-570e-4ab6-a084-0f544f07cd6f.webp",
+		"type": "organization",
+		"date": null,
+		"category": "general,パフォーマンス,グループ向け,受験生向け,SNS映え",
+		"location": "音楽室A・B",
+		"top_img": null
+	},
+	{
+		"id": "chemistry_club",
+		"title": "化学部",
+		"heading": null,
+		"body": "@教科教室棟3F奥\r\n化学実験室、講義室\r\n\r\n化学部は大実験ショー、小実験ショー、体験実験•展示の３つのブースで五感を使って楽しめる化学実験を行っています。またスライム作りなど、小さなお子様からとても楽しめる様な実験も多数ありますのでぜひお越し下さい。ここではそれぞれのブースの特徴、内容と大まかな時間をご紹介します。\r\n[大実験ショー]\r\n「普段教科書で見ることはあっても授業でやったり生で見たことはない…」大実験ショーではそんな非日常を感じられるような実験を行っています。どれもとても特徴のある、それでいて見ていて派手で、面白い内容となっています。土曜日は13:00から、日曜日は10:30から45分ごとに開催しております。詳しい時間割はパンフレットか、化学部前の時間案内をご確認ください。\r\n\r\n[小実験ショー]\r\n大実験ショーと並行して化学実験室Bで行っている小実験ショー。「小」の字は決して地味ということではなく、むしろ大実験ショーで扱うには小回りが効かないような大規模なものもおこなっています。大実験ショーより短い間隔で、約３０分ごとに開催しています。\r\n\r\n[体験実験•展示]\r\n体験実験では毎年大人気のスライム作りを今年も行っております。また、展示ブースでは化学部員が日々の実験で作り上げた、美しい結晶や不思議な化学アートを用意しております。\r\n\r\n---\r\n\r\n## イベント情報 \r\n\r\n### 大実験ショー @教科教室棟 3階 化学講義室\r\n化学発光や炎を扱う大きく派手な実験ショーを行います。\r\n\r\n化学部の目玉の出し物ですので是非お越しください。\r\n\r\n画像から読み取れるテキストの配置を再現したマークダウンは以下の通りです。\r\n\r\n---\r\n\r\n### 6\/6（土） 13:00 〜 13:30 , 13:45 〜 14:15 , 14:30 〜 15:00 , 15:15 〜 15:45 , 16:00 〜 16:30\r\n\r\n### 6\/7（日） 10:30 〜 11:00 , 11:15 〜 11:45 , 12:00 〜 12:30 , 12:45 〜 13:15 , 13:30 〜 14:00 , 14:15 〜 14:45 , 15:00 〜 15:30 , 15:45 〜 16:15 , 16:30 〜 17:00\r\n\r\n### 6\/8（月） 10:30 〜 11:00 , 11:30 〜 12:00",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/600943a0-87a6-4e14-820e-711a06b022be.webp",
+		"type": "organization",
+		"date": null,
+		"category": "general,展示,パフォーマンス,体験,グループ向け,受験生向け,配布物あり,SNS映え,article,イベント",
+		"location": "化講,化実A・B",
+		"top_img": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/39350700-a259-4ec4-bcd7-f702ea395c5f.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/6d6dcbd2-6445-42ba-abe1-a902ed3efe21.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/f705a168-e8cb-4d5f-96da-b6e086539dd9.webp"
+	},
+	{
+		"id": "quiz_club",
+		"title": "クイズ研究部",
+		"heading": null,
+		"body": "クイズ研究部では、例年通り早押しクイズ体験をします。ぜひ一度体験しにきてみてください！",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/75ce9ac4-0cad-4afd-b872-27a68304b629.webp",
+		"type": "organization",
+		"date": null,
+		"category": "general,体験",
+		"location": "数学教室",
+		"top_img": null
+	},
+	{
+		"id": "toho_chigakubu",
+		"title": "地学部",
+		"heading": null,
+		"body": "地学部では、地学・天文に関係する様々なことを展示・発表します。ここでは、その展示・発表の中でも特に注目していただきたい五つを紹介します。\r\n\r\n## 1.砂金掘り体験\r\n幾数万粒の砂利から数粒の小さな砂金を見つけ出して、その精度と時間を競うスポーツ。砂金掘り。我ら地学部は、その全国大会である砂金堀り甲子園で三年連続優勝を誇り、テレビ東京やNHKをはじめとする多くのメディアでも取り上げていただいた実力を持っています。この展示では、そんな“プロ„の砂金掘り師たちが直接教える砂金掘り、是非体験してみてください。\r\n\r\n## プラネタリウム公演\r\n地学部の天文班が練習した、プラネタリウムの公演。星座の歴史について解説する、「星座史」。未来の夜空を解説する、「Future Sky」。太陽系や銀河系の星々を間近に見ながら解説する、「銀河系フライト」。そして、様々な星の“音„を聞く、「大空之声」などのプログラムを発表します。\r\n\r\n## ロケット発射\r\n火薬エンジンを利用して、紙や木、プラスチックなどの身近なものを作ったモデルロケットを、野球場にて打ち上げます。この時発射されるモデルロケットは、春と秋にJAXAの筑波宇宙センターで開催されるモデルロケットの大会でも発射されており、高度とパラシュート滞空時間の二種で競っています。\r\n打ち上げは各日13：30～です。時間をご確認のうえお越しください。\r\n\r\n## 模造紙展示\r\n地学部の部員が地学や天文に関する事柄について各自で調査し、その結果をまとめた模造紙を展示します。今回は、地球の構造を知って地球を「食べて」みる「地球食のすゝめ」、宇宙空間に存在する不思議な暗黒星雲を紹介する「暗黒星雲」、人類を再び月へ送るためのアルテミス計画を紹介する「アルテミス計画」などを展示しています。\r\n\r\n## 鉱石展示\r\n地学部が所有している岩のうち、綺麗なモノや蛍光するモノ、固有の特徴を持ったモノなどを展示します。さらに、展示されている鉱石を実際に触ったりしてその特徴を知ることができるほか、担当の部員に声をかけて下さればその岩石の解説を行います。\r\n\r\nこの5つの展示・発表以外にも様々な展示を行っております。是非お越しください！\r\n\r\n---\r\n\r\n部公式X: [https:\/\/x.com\/toho_chigakubu](https:\/\/x.com\/toho_chigakubu)\r\n\r\n## イベント情報\r\n\r\n### プラネタリウム @教科教室棟 4階\r\n### 6\/6(土) 12:30 ~ , 13:00 ~ , 13:30 ~ , 14:00 ~ , 14:30 ~ ,15:00 ~ , 15:30 ~ , 16:00 ~ , 16:30 ~ \r\n### 6\/7(日) 10:00 ~ , 10:30 ~ ,11:00 ~ , 11:30 ~ , 12:00 ~ , 12:30 ~ , 13:00 ~ , 13:30 ~ , 14:00 ~ , 14:30 ~ , 15:00 ~ , 15:30 ~ , 16:00 ~ , 16:30 ~\r\n### 6\/8(月) 10:00 ~ , 10:30 ~ , 11:00 ~ , 11:30 ~ , 12:00 ~ , 12:30 ~\r\n\r\n### モデルロケット打ち上げ @東グラウンド\r\n### 6\/6(土)・6\/7(日) 13:00 ~",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/53a4ec8f-c990-4a3a-8bdf-a7c1a7216c44.webp",
+		"type": "organization",
+		"date": null,
+		"category": "general,展示,パフォーマンス,体験,アクティビティ,グループ向け,受験生向け,配布物あり,SNS映え,article,イベント",
+		"location": "プラ,地学,国語",
+		"top_img": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/7d7d648f-2452-486e-ba55-1f971a052a2e.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/f6235dc7-3d8c-418d-b171-4baf9f3bfcd1.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/e674f132-5589-4758-92ef-46d1141900f5.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/6929908f-8a54-415f-bdf7-6d68e800c45e.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/d187e6a4-67d0-4b51-8e0c-40f81325e022.webp"
+	},
+	{
+		"id": "toho_biology_club",
+		"title": "桐朋生物部",
+		"heading": null,
+		"body": "生物部では、**博物館×水族館**をテーマに部員が日本各地、時には海外まで赴き採集した生き物を数１００種類展示しています。 \r\n\r\nカメやヒトデと触れ合うことができるタッチプールや、毎日をみや林と共に過ごしている鳥類班・昆虫班員が案内するみや林のツアーなど、生物を己の身体で体験できるコーナーも充実。場所は**教科教室棟４F**の最奥・**生物実験室A・Ｂ**にて、お待ちしています！！ \r\n\r\nここからは、班ごとに展示の見どころを紹介！ \r\n\r\n## 🐍両生類・爬虫類班 \r\n桐朋周辺でも見られるアオダイショウから八重山4珍のひとつにも数えられるサキシマバイカダをはじめとする沖縄限定のヘビまで、部室で飼育している多種多様なヘビちたちがお出迎え！また環境省レッドリストで絶滅危惧種Ⅱ類に指定されているヒガシヒダサンショウウオの生きた姿も拝むことができます。 \r\n\r\n## 🐟魚類班 \r\n沖縄を含む日本全国で採集した色とりどりの魚たちがゆうゆうと泳ぐ姿はまるで水族館！ファイディングニモとは別種で有名なカクレクマノミや、間抜けづらの可愛いハリセンボンからマニア向けの種まで。 \r\n\r\n今年は教室の照明を一部屋丸々落としてライトアップしており、インスタ映え間違いなしです。 \r\n\r\n## 🦅鳥類班 \r\n今年の鳥類班のテーマは、「鳥の形」。主将でもあるN氏が4年間かけて集めた、200種を超えるコレクションの中から厳選された羽が並ぶ圧巻の展示です。また、部員が自分たちの手で作った剥製や、これまた主将が丹精込めて作った翼標本など、普通に生きているだけでは知ることのできない鳥たちの真の姿、どうかお見逃しなく！ \r\n\r\n## 🦋昆虫班 \r\n６種類と生体では過去最多種数のクワガタや、200種を超えるチョウ・ガの標本など、マニア必見の豊富な展示が目白押し！虫には抵抗のある方もいらっしゃると思いますが、部員が優しく解説するので、身を任せるもよし、質問攻めにするもよし。まるで昆虫館に来たかのようなワクワク感です。 \r\n\r\n## 🕷️蜘蛛班 \r\n毎年細々と地道にクモの魅力を発信している蜘蛛班。今年もハエトリグモをメインに身近な種からマニアックな種まで、多種多様なクモたちが揃っています。身近にも関わらず嫌厭されがちなクモですが、目を凝らしてみると溢れ出る魅力に気づけることうけあいです。 \r\n\r\n生き物が好きな方もそうでない方も楽しめる、最高の展示を用意しています。日本最大級の規模で送る生物部展示、しかと見届けてください！ \r\n\r\nまた、桐朋祭大賞を目指しているので、生物部への投票もよろしくお願いします！ \r\n\r\n各種SNSにて、情報発信中！ \r\n\r\n・X(旧Twitter) \r\n\r\nhttps:\/\/x.com\/TDKTOHObiologyc?s=20 \r\n\r\n鳥類班 \r\n\r\nhttps:\/\/x.com\/tohobirdgroup?s=20 \r\n\r\n蜘蛛班 \r\n\r\nhttps:\/\/x.com\/tohobio_web \r\n\r\n \r\n\r\n・Instagram \r\n\r\nhttps:\/\/www.instagram.com\/tohobiologyc?igsh=MTRnMmVhYzAya253 \r\n\r\n \r\n\r\n・はてなブログ \r\n\r\nhttps:\/\/th-biology-c.hatenablog.com\/\r\n\r\n---\r\n\r\n## イベント情報\r\n\r\n### みや林での生き物観察会 @みや林入り口集合\r\n### 6\/6(土)・6\/7(日) 15:00 ~ 15:30",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/5ec11dfb-75d8-4f38-8c3a-cfa75bd6617a.webp",
+		"type": "organization",
+		"date": null,
+		"category": "general,展示,体験,アクティビティ,受験生向け,配布物あり,SNS映え,article,イベント",
+		"location": "生物実験室A・B",
+		"top_img": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/8ad92c79-3297-4792-9e77-0e9192b2d621.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/eb573c3f-bcad-4884-b305-e5b3201a4c45.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/441c2c99-9873-498d-97bf-ec30407eba75.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/98884098-a4c9-44f4-b8a2-4182d87f2bb4.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/5a22b38c-783c-46a7-a1cf-dee77bcee268.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/89bcd4ed-0514-4eff-88c9-0b803df42617.webp,http:\/\/api.atserver186.jp\/tf26\/api\/files\/7d5f581d-0bdf-4663-9536-446757c78808.webp"
+	},
+	{
+		"id": "qufestion",
+		"title": "QuFestion!",
+		"heading": null,
+		"body": "誰でも手軽に参加できる、移動型ミステリー。校内を「結う」ように存在する謎を解き明かすのは、あなただ。",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/6a71b910-c97f-4e3b-a8af-9cadfc9957b1.webp",
+		"type": "organization",
+		"date": null,
+		"category": "general,体験,アクティビティ,その他,SNS映え,有志団体",
+		"location": null,
+		"top_img": null
+	},
+	{
+		"id": "the_bill",
+		"title": "THE BILL",
+		"heading": null,
+		"body": "スーパースターになったら \/ backnumber\r\n\r\nSUN \/ 星野源\r\n\r\n楓 \/ スピッツ\r\n\r\nノーダウト \/ Official髭男dism\r\n\r\n完全感覚Dreamer \/ ONE OK ROCK\r\n\r\nケダマ虫放浪記 (第75回桐朋祭テーマソング)",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/66e5492c-e2ef-4773-a045-4c29e713a5a3.webp",
+		"type": "organization",
+		"date": null,
+		"category": "bands",
+		"location": "1階 第2体育室",
+		"schedule": [
+			{
+				"day": "1",
+				"time": "13:35 ~ 13:50"
+			},
+			{
+				"day": "2",
+				"time": "11:05 ~ 11:35"
+			}
+		],
+		"top_img": null
+	},
+	{
+		"id": "dramlin",
+		"title": "DRAMLIN",
+		"heading": null,
+		"body": "リンダリンダ \/ THE BLUE HEARTS\r\n\r\nTRAIM-TRAIN \/ THE BLUE HEARTS\r\n\r\nFxxkin' you, Fxxkin' me \/ DRAMLIN\r\n\r\n世界の終わり \/ THEE MICHELLE GUN ELEPHANT\r\n\r\n透明少女 \/ NUMBER GIRL\r\n\r\nAmerican Idiot \/ GREEN DAY",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/5068c32e-fccd-485b-b58e-687098d9d9af.webp",
+		"type": "organization",
+		"date": null,
+		"category": "bands",
+		"location": "1階 第2体育室",
+		"schedule": [
+			{
+				"day": "1",
+				"time": "15:40 ~ 15:55"
+			},
+			{
+				"day": "2",
+				"time": "13:05 ~ 13:35"
+			}
+		],
+		"top_img": null
+	},
+	{
+		"id": "fantasista_suzy",
+		"title": "Fantasista Suzy",
+		"heading": null,
+		"body": "学園天国 \/ フィンガー 5\r\n\r\nシグナル \/ WANIMA\r\n\r\n分かってないよ \/ WurtS\r\n\r\n怪獣の花唱 \/ Vaundy\r\n\r\n新宝島 \/ サカナクション",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/eb2241cc-ed94-4b07-aae4-c47f672a04b2.webp",
+		"type": "organization",
+		"date": null,
+		"category": "bands",
+		"location": "1階 第2体育室",
+		"schedule": [
+			{
+				"day": "1",
+				"time": "15:15 ~ 15:30"
+			},
+			{
+				"day": "2",
+				"time": "11:45 ~ 12:15"
+			}
+		],
+		"top_img": null
+	},
+	{
+		"id": "macaroniiies",
+		"title": "macaroniiies",
+		"heading": null,
+		"body": "拝啓、少年よ \/ Hump Back\r\n\r\nシルエット \/ KANA-BOON\r\n\r\n天体観測 \/ BUMP OF CHICKEN",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/3fb1690e-ce6c-4e72-881b-fb4ec5ea24a4.webp",
+		"type": "organization",
+		"date": null,
+		"category": "bands",
+		"location": "1階 第2体育室",
+		"schedule": [
+			{
+				"day": "1",
+				"time": "12:30 ~ 12:45"
+			},
+			{
+				"day": "2",
+				"time": "10:25 ~ 10:55"
+			}
+		],
+		"top_img": null
+	},
+	{
+		"id": "sumikkogurashi",
+		"title": "すみっこぐらし",
+		"heading": null,
+		"body": "我逢人 \/ Mrs. GREEN APPLE\r\n\r\n踊り子 \/ Voundy",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/05be6a85-3251-464b-9c2a-c55702e66206.webp",
+		"type": "organization",
+		"date": null,
+		"category": "bands",
+		"location": "1階 第2体育室",
+		"schedule": [
+			{
+				"day": "1",
+				"time": "12:55 ~ 13:10"
+			}
+		],
+		"top_img": null
+	},
+	{
+		"id": "underrdog",
+		"title": "Underrdog",
+		"heading": null,
+		"body": "StaRt \/ Mrs. GREEN APPLE\r\n\r\nそんな bitter な話 \/ Vaundy\r\n\r\nブルーバード \/ いきものがかり\r\n\r\n君と羊と青 \/ RADWIMPS\r\n\r\n結び目 \/ Underrdog",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/9c4dd520-d1fa-4f2b-a9a8-10dd40bf7636.JPG",
+		"type": "organization",
+		"date": null,
+		"category": "bands",
+		"location": "1階 第2体育室",
+		"schedule": [
+			{
+				"day": "1",
+				"time": "16:05 ~ 16:20"
+			},
+			{
+				"day": "2",
+				"time": "12:25 ~ 12:55"
+			}
+		],
+		"top_img": null
+	},
+	{
+		"id": "chahaya",
+		"title": "CHAHAYA",
+		"heading": null,
+		"body": "逆光 \/ Ado\r\n\r\nSnowball \/ CHAHAYA\r\n\r\n火蓋 \/ CHAHAYA\r\n\r\nバッドトリップ \/ CHAHAYA\r\n\r\nLOSER \/ 米津玄師\r\n\r\nGet Wild \/ TM NETWORK",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/abd96bd0-e65c-4c55-aeb9-cfd56dd802e1.webp",
+		"type": "organization",
+		"date": null,
+		"category": "bands",
+		"location": "1階 第2体育室",
+		"schedule": [
+			{
+				"day": "1",
+				"time": "16:30 ~ 16:45"
+			},
+			{
+				"day": "2",
+				"time": "13:45 ~ 14:15"
+			}
+		],
+		"top_img": null
+	},
+	{
+		"id": "pta_bazaar",
+		"title": "PTAバザー",
+		"heading": null,
+		"body": "学生服、Yシャツ、ジャージなどのリサイクル販売を行います。入場整理券は、9時半よりバザー会場前にて配布します。",
+		"thumbnail": null,
+		"type": "organization",
+		"date": null,
+		"category": "other",
+		"location": "3-5,3-6"
+	},
+	{
+		"id": "sll-2",
+		"title": "指輸物語入門",
+		"heading": null,
+		"body": "null",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/62245b2f-ee50-42f8-8071-d4dec19af7bb.webp",
+		"type": "organization",
+		"date": null,
+		"category": "student-lessons",
+		"location": "3･4階 関心ラウンジ",
+		"schedule": [
+			{
+				"day": "1",
+				"time": "13:15 ~ 14:00"
+			}
+		],
+		"top_img": null
+	},
+	{
+		"id": "sll-3",
+		"title": "穴の開いた貨幣の1200年",
+		"heading": null,
+		"body": "null",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/62245b2f-ee50-42f8-8071-d4dec19af7bb.webp",
+		"type": "organization",
+		"date": null,
+		"category": "student-lessons",
+		"location": "3･4階 関心ラウンジ",
+		"schedule": [
+			{
+				"day": "1",
+				"time": "14:05 ~ 14:45"
+			}
+		],
+		"top_img": null
+	},
+	{
+		"id": "sll-4",
+		"title": "北条時行を追う",
+		"heading": null,
+		"body": "null",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/62245b2f-ee50-42f8-8071-d4dec19af7bb.webp",
+		"type": "organization",
+		"date": null,
+		"category": "student-lessons",
+		"location": "3･4階 関心ラウンジ",
+		"schedule": [
+			{
+				"day": "1",
+				"time": "14:50 ~ 15:30"
+			}
+		],
+		"top_img": null
+	},
+	{
+		"id": "sll-5",
+		"title": "洋楽について",
+		"heading": null,
+		"body": "null",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/62245b2f-ee50-42f8-8071-d4dec19af7bb.webp",
+		"type": "organization",
+		"date": null,
+		"category": "student-lessons",
+		"location": "3･4階 関心ラウンジ",
+		"schedule": [
+			{
+				"day": "1",
+				"time": "15:35 ~ 16:15"
+			}
+		],
+		"top_img": null
+	},
+	{
+		"id": "sll-6",
+		"title": "YouTubeの光と闇",
+		"heading": null,
+		"body": "null",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/62245b2f-ee50-42f8-8071-d4dec19af7bb.webp",
+		"type": "organization",
+		"date": null,
+		"category": "student-lessons",
+		"location": "3･4階 関心ラウンジ",
+		"schedule": [
+			{
+				"day": "1",
+				"time": "16:20 ~ 17:00"
+			}
+		],
+		"top_img": null
+	},
+	{
+		"id": "sll-7",
+		"title": "留学ノススメ\/移民について",
+		"heading": null,
+		"body": "null",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/62245b2f-ee50-42f8-8071-d4dec19af7bb.webp",
+		"type": "organization",
+		"date": null,
+		"category": "student-lessons",
+		"location": "3･4階 関心ラウンジ",
+		"schedule": [
+			{
+				"day": "2",
+				"time": "09:35 ~ 10:15"
+			}
+		],
+		"top_img": null
+	},
+	{
+		"id": "sll-8",
+		"title": "ムクドリねぐら",
+		"heading": null,
+		"body": "null",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/62245b2f-ee50-42f8-8071-d4dec19af7bb.webp",
+		"type": "organization",
+		"date": null,
+		"category": "student-lessons",
+		"location": "3･4階 関心ラウンジ",
+		"schedule": [
+			{
+				"day": "2",
+				"time": "10:17 ~ 10:57"
+			}
+		],
+		"top_img": null
+	},
+	{
+		"id": "sll-9",
+		"title": "写真の上手な撮り方",
+		"heading": null,
+		"body": "null",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/62245b2f-ee50-42f8-8071-d4dec19af7bb.webp",
+		"type": "organization",
+		"date": null,
+		"category": "student-lessons",
+		"location": "3･4階 関心ラウンジ",
+		"schedule": [
+			{
+				"day": "2",
+				"time": "11:05 ~ 11:45"
+			}
+		],
+		"top_img": null
+	},
+	{
+		"id": "sll-10",
+		"title": "Shall we hack?",
+		"heading": null,
+		"body": "null",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/62245b2f-ee50-42f8-8071-d4dec19af7bb.webp",
+		"type": "organization",
+		"date": null,
+		"category": "student-lessons",
+		"location": "3･4階 関心ラウンジ",
+		"schedule": [
+			{
+				"day": "2",
+				"time": "11:50 ~ 12:30"
+			}
+		],
+		"top_img": null
+	},
+	{
+		"id": "sll-11",
+		"title": "人よ、ゴリラへ進化せよ",
+		"heading": null,
+		"body": "null",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/62245b2f-ee50-42f8-8071-d4dec19af7bb.webp",
+		"type": "organization",
+		"date": null,
+		"category": "student-lessons",
+		"location": "3･4階 関心ラウンジ",
+		"schedule": [
+			{
+				"day": "2",
+				"time": "12:35 ~ 13:15"
+			}
+		],
+		"top_img": null
+	},
+	{
+		"id": "sll-12",
+		"title": "三線について",
+		"heading": null,
+		"body": "null",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/62245b2f-ee50-42f8-8071-d4dec19af7bb.webp",
+		"type": "organization",
+		"date": null,
+		"category": "student-lessons",
+		"location": "3･4階 関心ラウンジ",
+		"schedule": [
+			{
+				"day": "2",
+				"time": "13:20 ~ 14:00"
+			}
+		],
+		"top_img": null
+	},
+	{
+		"id": "sll-13",
+		"title": "安倍公房マジで良いから",
+		"heading": null,
+		"body": "null",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/62245b2f-ee50-42f8-8071-d4dec19af7bb.webp",
+		"type": "organization",
+		"date": null,
+		"category": "student-lessons",
+		"location": "3･4階 関心ラウンジ",
+		"schedule": [
+			{
+				"day": "2",
+				"time": "14:05 ~ 14:45"
+			}
+		],
+		"top_img": null
+	},
+	{
+		"id": "sll-14",
+		"title": "アニメのOP\/ED論",
+		"heading": null,
+		"body": "null",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/62245b2f-ee50-42f8-8071-d4dec19af7bb.webp",
+		"type": "organization",
+		"date": null,
+		"category": "student-lessons",
+		"location": "3･4階 関心ラウンジ",
+		"schedule": [
+			{
+				"day": "2",
+				"time": "14:50 ~ 15:30"
+			}
+		],
+		"top_img": null
+	},
+	{
+		"id": "sll-15",
+		"title": "ヴェネツィア x ジェノヴァ",
+		"heading": null,
+		"body": "null",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/62245b2f-ee50-42f8-8071-d4dec19af7bb.webp",
+		"type": "organization",
+		"date": null,
+		"category": "student-lessons",
+		"location": "3･4階 関心ラウンジ",
+		"schedule": [
+			{
+				"day": "2",
+				"time": "15:35 ~ 16:15"
+			}
+		],
+		"top_img": null
+	},
+	{
+		"id": "sll-16",
+		"title": "パラオ基礎",
+		"heading": null,
+		"body": "null",
+		"thumbnail": "http:\/\/api.atserver186.jp\/tf26\/api\/files\/62245b2f-ee50-42f8-8071-d4dec19af7bb.webp",
+		"type": "organization",
+		"date": null,
+		"category": "student-lessons",
+		"location": "3･4階 関心ラウンジ",
+		"schedule": [
+			{
+				"day": "2",
+				"time": "16:20 ~ 17:00"
+			}
+		],
+		"top_img": null
+	},
+	{
+		"id": "tohofes_organizing_committee",
+		"title": "桐朋祭実行委員会特設記事",
+		"heading": null,
+		"body": "## 桐朋祭を支える実行委員会 \r\n\r\n桐朋祭の主役はもちろん、参加団体と来場者のみなさん。 \r\nそして、彼らが桐朋祭を最高に楽しめるように裏から支える組織が、私たち「桐朋祭実行委員会」です。 \r\nここでは、そんな桐朋祭実行委員会の活動を、少し紹介します。 \r\n\r\n## 桐朋祭実行委員会ってどんな組織？ \r\n\r\n桐朋祭実行委員会では、実行委員長(1名)・副実行委員長(2名)のもとに、以下の8部門を設置。多岐にわたる\r\n業務を分担しています。 \r\n各部門が「○○委員会」を名乗っていますが、いずれも桐朋祭実行委員会の下部組織。 \r\n正副実行委員長はいずれの部門にも所属せず、桐朋祭実行委員会全体の管理を行います。 \r\n\r\n**【総務委員会】** \r\n\r\n桐朋生向けの広報作成、桐朋祭大賞の集計など、桐朋祭全体にかかわる広範な業務を担当する委員会。 \r\n桐朋祭で困ったことがあったら、総合案内所の総務委員へ Let's ask! \r\n\r\n**【飲食委員会】** \r\n\r\nほっぺたが落ちる絶品をみなさんに提供する、生徒による飲食団体を管理する委員会。 \r\n飲食団体へ徹底した衛生管理を指導する飲食委員会は、来場者の安全を守る要です。 \r\n\r\n**【会計委員会】** \r\n\r\n桐朋祭にかかわる資金の動きを統括する会計委員会は、厳密な情報管理と計算が求められる重要職。 \r\n桐朋祭終了後、他の委員たちが打ち上げに興じている間も、会計委員だけは手を休められないのだと\r\nか…。 \r\n\r\n**【音響委員会】** \r\n\r\n桐朋祭に華を添えるバンドの熱狂的な演奏は、音響委員会の支えあってこその賜物。 \r\nステージでも音響系の機材管理を担当し、桐朋生の作り出す「音」を盛り上げます。 \r\n\r\n**【催物委員会】** \r\n\r\n毎年大人気のステージ企画では、催物委員会が立案・出演者集め・台本作成などをすべて担当。 \r\n個性の爆発を抑えきれない桐朋生たちへ、究極の自己表現の場を提供します。 \r\n\r\n**【物品委員会】** \r\n\r\n桐朋祭で使用する数々の備品を管理する物品委員会は、桐朋祭の根幹を支える縁の下の力持ち。 \r\n「俺の机と椅子が消えた！」なんて事態を防ぐため、1個たりとも数え間違いが許されない、シビアな業務で\r\nす。 \r\n\r\n**【装飾委員会】** \r\n\r\n入場門や大垂れ幕、階段アートなど、桐朋祭ならではの工夫が凝らされた装飾を制作する委員会。 \r\n今年は「タコ」を全体のモチーフとしたため、校内のいたるところにタコがあふれているはず！ \r\n\r\n**【プログラム委員会】** \r\n\r\n来場者のみなさんが手に取るパンフレットや街中に貼り出されたポスターは、プログラム委員会が制作したも\r\nの。 \r\n今年は校内の案内表示などと統一されたサインシステムを採用し、日本一わかりやすい案内を目指しました。 \r\n\r\n## 第75回桐朋祭実行委員会の沿革 \r\n\r\n桐朋祭実行委員会は、当日のシフトを除いて、毎年高校2年生が業務のほとんどを担っています。 \r\n当然、実行委員長や各部門の委員長も、全員が初めての経験。先輩に頂いた引き継ぎ資料を頼りに、手探りで\r\n仕事を進めてきました。 - 昨年 9月中旬 … 第1回ミーティング開催。まずは前の桐朋祭の改善点を挙げるところからスタート。実行\r\n委員長の選挙方法をめぐり、初回にして紛糾する。 -    \r\nした。 -   \r\n9 月下旬 … なんとか選挙方法を決め、実行委員長選挙を実施。激戦の末、正副実行委員長3名が決定\r\n10 月中旬 … 実行委員長たちとの面接などを経て、各部門の委員長8名が任命。テーマなどの議論が始\r\nまるが、委員長会議でまたも紛糾。 -   \r\n11 月上旬 … なんとか話をまとめ、テーマ「結う」とロゴが決定！ちなみに、テーマの最終候補は「結\r\nう」「わ！」「Voltage」だった。 - 今年 1月下旬 … 桐朋祭1次説明会を実施。参加団体の募集を始めた。 -    \r\n2 月下旬 … 2次説明会を実施。このあたりで参加団体がおおむね決定し、業務が徐々に本格化！ -    -    -    -    -    -    -    \r\n4 月上旬 … 新年度に入り、委員長陣は高校2年生に。4月中旬ごろに講演者が決定。 \r\n4 月下旬 … 3次説明会を実施。 \r\n5 月上旬 … 委員長陣の自費によって桐朋祭委員会室の床にマットが敷かれ、寝転べるようになる。 \r\n5 月中旬 … パンフレット入稿のため、この頃までに桐朋祭の内容やスケジュールがおおむね確定。 \r\n6 月上旬 … 中間試験が終わり、桐朋祭まで残り1週間！作業が大詰めに入る。 \r\n6 月 3日 … 桐朋祭まで残り3日のタイミングでまさかの台風、休校になってしまう。 \r\n6 月 6日 … **いよいよ桐朋祭本番！！！！！** \r\n\r\n## で、なんでタコなの？ \r\n\r\n第75回桐朋祭の統一モチーフに採用されたのは、あの海洋生物「タコ」。 \r\n一見謎なモチーフに感じられますが、実はちゃんと深い意味が込められています。 \r\nタコの特徴といえば、**「3つの心臓」**と**「8本の足」**。 \r\nこの「3つの心臓」は、桐朋祭を創り上げる3つの要素「参加団体」「来場者」「桐朋祭実行委員会」を、「8本の足」は、桐朋祭実行委員会の8つの部門を象徴しています。 \r\nタコの3つの心臓は、どれが欠けても生きていけません。そして、その体から伸びる8本の足が動くことで、\r\nタコという生物（=桐朋祭）が完成するのです…！ \r\nきょう、みなさまが桐朋祭にお越しくださったことで、とうとう「3つの心臓」が全てそろい、タコは元気よく桐朋を泳ぎ始めました。 \r\n校内に棲むたくさんのタコたちと共に、桐朋祭をめいっぱいお楽しみいただければ幸いです。",
+		"thumbnail": null,
+		"type": "organization",
+		"date": null,
+		"category": "article",
+		"location": null,
+		"top_img": null
+	}
 ]
