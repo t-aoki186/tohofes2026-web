@@ -34,15 +34,6 @@
 				<p>Connected to: {data.serverLocation}</p>
 			</div>
 			<div class="mb-4 rounded-2xl bg-gray-50 p-4">
-				<h2 class="text-lg font-semibold">サーバ構成</h2>
-
-				<p class="mt-4 text-lg">準備中です</p>
-			</div>
-			<div class="mb-4 rounded-2xl bg-gray-50 p-4">
-				<h2 class="text-lg font-semibold">ステータス</h2>
-				<p class="mt-4 text-lg">準備中です</p>
-			</div>
-			<div class="mb-4 rounded-2xl bg-gray-50 p-4">
 				<h2 class="text-lg font-semibold">推奨動作環境</h2>
 				<p class="mt-1 text-sm">
 					本サイトは、Microsoft Edge/Google Chrome/Safari/Mozilla
